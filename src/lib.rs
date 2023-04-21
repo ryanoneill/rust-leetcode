@@ -13,4 +13,6 @@ pub mod swap_nodes_in_pairs; // 24
 
 pub mod remove_duplicates_from_sorted_list; // 83
 
+pub mod reverse_linked_list_ii; // 92
+
 pub mod reverse_linked_list; // 206
