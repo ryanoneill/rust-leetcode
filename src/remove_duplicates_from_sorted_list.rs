@@ -28,7 +28,7 @@ impl Solution {
             let mut last_value = Self::get_value(previous);
             let mut current = Self::take_next(previous);
 
-            while let Some(node) = current.as_mut() {
+            while let Some(node) = current.as_ref() {
                 if node.val != last_value {
                     last_value = node.val;
                     Self::set_next(previous, current);

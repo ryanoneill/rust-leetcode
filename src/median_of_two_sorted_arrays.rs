@@ -7,7 +7,9 @@ pub struct Solution;
 impl Solution {
 
     // TODO: Implement
-    pub fn find_median_sorted_arrays(_nums1: Vec<i32>, _nums2: Vec<i32>) -> f64 {
+    pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+        let _total_len = nums1.len() + nums2.len();
+
         0.0
     }
 
@@ -17,13 +19,15 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore] #[test]
+    #[ignore]
+    #[test]
     fn example_1() {
         let result = Solution::find_median_sorted_arrays(vec![1, 3], vec![2]);
         assert_eq!(result, 2.0);
     }
 
-    #[ignore] #[test]
+    #[ignore]
+    #[test]
     fn example_2() {
         let result = Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4]);
         assert_eq!(result, 2.5);
