@@ -1,41 +1,26 @@
 use crate::list_node::ListNode;
+use crate::list_node_additions::ListNodeAdditions;
 
 struct Solution;
 
 impl Solution {
-
-    fn set_next(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
-        node.as_mut().unwrap().next = value
-    }
-
-    fn take_next(node: &mut Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        node.as_mut().unwrap().next.take()
-    }
-
-    fn refer_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next
-    }
-
-    fn get_value(node: &mut Option<Box<ListNode>>) -> i32 {
-        node.as_ref().unwrap().val
-    }
 
     pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut head = head;
 
         if head != None {
             let mut previous = &mut head;
-            let mut last_value = Self::get_value(previous);
-            let mut current = Self::take_next(previous);
+            let mut last_value = previous.get_value();
+            let mut current = previous.take_next();
 
             while let Some(node) = current.as_ref() {
                 if node.val != last_value {
                     last_value = node.val;
-                    Self::set_next(previous, current);
-                    previous = Self::refer_next(previous);
-                    current = Self::take_next(previous);
+                    previous.set_next(current);
+                    previous = previous.refer_next();
+                    current = previous.take_next();
                 } else {
-                    current = Self::take_next(&mut current);
+                    current = current.take_next();
                 }
             }
 
@@ -49,9 +34,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
-
     use super::Solution;
-
 
     #[test]
     fn example_1() {

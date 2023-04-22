@@ -1,4 +1,5 @@
 use crate::list_node::ListNode;
+use crate::list_node_additions::ListNodeAdditions;
 
 /// You are given the head of a linked list. Delete the middle node, and return
 /// the `head` of the modified linked list.
@@ -13,59 +14,17 @@ pub struct Solution;
 
 impl Solution {
 
-    fn has_next(node: &Option<Box<ListNode>>) -> bool {
-        node.as_ref().unwrap().next.is_some()
-    }
-
-    fn refer_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next
-    }
-
-    fn refer_next_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next.as_mut().unwrap().next
-    }
-
-    fn take_next(node: &mut Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        node.as_mut().unwrap().next.take()
-    }
-
-    fn set_next(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
-        node.as_mut().unwrap().next = value
-    }
-
-    fn count(node: &Option<Box<ListNode>>) -> usize {
-        let mut result = 0;
-        let mut current = node;
-
-        while current.as_ref().is_some() {
-            result += 1;
-            current = &current.as_ref().unwrap().next;
-        }
-
-        result
-    }
-
-    fn find_node(node: &mut Option<Box<ListNode>>, n: usize) -> &mut Option<Box<ListNode>> {
-        let mut result = node;
-
-        for _ in 1..=n {
-            result = Self::refer_next(result);
-        }
-
-        result
-    }
-
     pub fn delete_middle(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut head = head;
-        if head.as_ref().is_none() { None }
-        else if !Self::has_next(&head) { None }
+        if head.is_empty() { None }
+        else if !head.has_next() { None }
         else {
-            let count = Self::count(&head);
+            let count = head.len();
             let to_find = count / 2 - 1;
-            let before_middle = Self::find_node(&mut head, to_find);
-            let mut middle = Self::take_next(before_middle);
-            let continued = Self::take_next(&mut middle);
-            Self::set_next(before_middle, continued);
+            let before_middle = head.advance(to_find);
+            let mut middle = before_middle.take_next();
+            let continued = middle.take_next();
+            before_middle.set_next(continued);
 
             head
         }

@@ -4,7 +4,10 @@ pub trait ListNodeAdditions {
 
     fn add_to_end(&mut self, value: Self);
     fn advance(&mut self, n: usize) -> &mut Self;
+    fn get_value(&self) -> i32;
     fn has_next(&self) -> bool;
+    fn is_empty(&self) -> bool;
+    fn len(&self) -> usize;
     fn refer_next(&mut self) -> &mut Self;
     fn reverse(self) -> Self;
     fn set_next(&mut self, value: Self);
@@ -30,8 +33,29 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
         result
     }
 
+    fn get_value(&self) -> i32 {
+        self.as_ref().unwrap().val
+    }
+
     fn has_next(&self) -> bool {
         self.as_ref().unwrap().next.is_some()
+    }
+
+    fn is_empty(&self) -> bool {
+        self.as_ref().is_none()
+    }
+
+    fn len(&self) -> usize {
+        let mut result = 0;
+        let mut current = self;
+
+        while current.as_ref().is_some() {
+            result += 1;
+            current = &current.as_ref().unwrap().next;
+        }
+
+        result
+
     }
 
     fn refer_next(&mut self) -> &mut Self {
