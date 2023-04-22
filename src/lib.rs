@@ -17,6 +17,8 @@ pub mod merge_two_sorted_lists; // 21
 
 pub mod swap_nodes_in_pairs; // 24
 
+pub mod simplify_path; // 71
+
 pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
