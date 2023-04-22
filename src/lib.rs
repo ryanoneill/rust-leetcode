@@ -26,6 +26,8 @@ pub mod reverse_linked_list_ii; // 92
 
 pub mod reverse_linked_list; // 206
 
+pub mod moving_average_from_data_stream; // 346
+
 pub mod number_of_recent_calls; // 933
 
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
