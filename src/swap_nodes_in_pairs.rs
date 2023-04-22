@@ -1,4 +1,4 @@
-use crate::list_node::ListNode;
+use crate::{list_node::ListNode, list_node_additions::ListNodeAdditions};
 
 /// Given a linked list, swap every two adjacent nodes and return its head.
 /// You must solve the problem without modifying the values in the list's nodes
@@ -6,26 +6,6 @@ use crate::list_node::ListNode;
 struct Solution;
 
 impl Solution {
-
-    fn set_next(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
-        node.as_mut().unwrap().next = value
-    }
-
-    fn take_next(node: &mut Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        node.as_mut().unwrap().next.take()
-    }
-
-    fn refer_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next
-    }
-
-    fn refer_next_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next.as_mut().unwrap().next
-    }
-
-    fn has_pair(node: &Option<Box<ListNode>>) -> bool {
-        node.as_ref().is_some() && node.as_ref().unwrap().next.is_some()
-    }
 
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut current = head;
@@ -37,28 +17,28 @@ impl Solution {
             let mut result = None;
             let mut first = true;
 
-            while Self::has_pair(&current) {
+            while current.has_pair() {
                 if first {
                     // current is head, and taking head.next here
-                    result = Self::take_next(&mut current); // 2
+                    result = current.take_next(); // 2
                     let former_head = current; // 1
-                    current = Self::take_next(&mut result); // 3
-                    Self::set_next(&mut result, former_head); // 2 -> 1
-                    previous = Self::refer_next(&mut result); // 1
+                    current = result.take_next(); // 3
+                    result.set_next(former_head); // 2 -> 3
+                    previous = result.refer_next(); // 1
                     first = false;
                 } else {
                     // current is 3
-                    let mut next = Self::take_next(&mut current); // 4
+                    let mut next = current.take_next(); // 4
                     let former_current = current; // 3
-                    current = Self::take_next(&mut next); // 5
-                    Self::set_next(&mut next, former_current); // 4 -> 3
-                    Self::set_next(previous, next); // 1 -> 4
-                    previous = Self::refer_next_next(previous);
+                    current = next.take_next(); // 5
+                    next.set_next(former_current); // 4 -> 3
+                    previous.set_next(next); // 1 -> 4
+                    previous = previous.refer_next_next();
                 }
             }
             // if last value has no pair
             if current.is_some() {
-                Self::set_next(previous, current);
+                previous.set_next(current);
             }
 
             result
