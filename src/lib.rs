@@ -9,6 +9,8 @@ pub mod length_of_longest_substring; // 3
 pub mod median_of_two_sorted_arrays; // 4
 pub mod longest_palindromic_substring; // 5
 
+pub mod remove_nth_node_from_end_of_list; // 19
+
 pub mod swap_nodes_in_pairs; // 24
 
 pub mod remove_duplicates_from_sorted_list; // 83
