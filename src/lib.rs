@@ -24,4 +24,6 @@ pub mod reverse_linked_list_ii; // 92
 
 pub mod reverse_linked_list; // 206
 
+pub mod remove_all_adjacent_duplicates_in_string; // 1047
+
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
