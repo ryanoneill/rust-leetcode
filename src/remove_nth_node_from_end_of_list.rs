@@ -1,4 +1,5 @@
 use crate::list_node::ListNode;
+use crate::list_node_additions::ListNodeAdditions;
 
 /// Given the `head` of a linked list, remove the `nth` node from the end of
 /// the list and return its head.
@@ -6,9 +7,19 @@ pub struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn remove_nth_node_from_end(_head: Option<Box<ListNode>>, _n: i32) -> Option<Box<ListNode>> {
-        None
+    pub fn remove_nth_node_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
+        let n = n as usize;
+        let mut head = head;
+        let len = head.len();
+        if n >= len {
+            head.take_next()
+        } else {
+            let steps = len - n - 1;
+            let before = head.advance(steps);
+            before.remove_next();
+
+            head
+        }
     }
 
 }
@@ -18,7 +29,6 @@ mod tests {
     use crate::list_node::ListNode;
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 4, 5];
@@ -27,7 +37,6 @@ mod tests {
         assert_eq!(ListNode::to_vec(result), vec![1, 2, 3, 5]);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let items = vec![1];
@@ -36,7 +45,6 @@ mod tests {
         assert_eq!(ListNode::to_vec(result), vec![]);
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let items = vec![1, 2];
