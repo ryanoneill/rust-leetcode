@@ -1,4 +1,5 @@
 use crate::list_node::ListNode;
+use crate::list_node_additions::ListNodeAdditions;
 
 /// Given the `head` of a singly linked list and two integers `left` and
 /// `right` where `left <= right`, reverse the nodes of the list from position
@@ -7,69 +8,31 @@ struct Solution;
 
 impl Solution {
 
-    fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut previous = None;
-        let mut current = head;
-
-        while current.is_some() {
-            let next_node = Self::take_next(&mut current);
-            Self::set_next(&mut current, previous);
-            previous = current;
-            current = next_node;
-        }
-
-        previous
-    }
-
-    fn advance(node: &mut Option<Box<ListNode>>, n: usize) -> &mut Option<Box<ListNode>> {
-        let mut result = node;
-        for _ in 1..=n {
-            result = Self::refer_next(result);
-        }
-        result
-    }
-
-    fn refer_next(node: &mut Option<Box<ListNode>>) -> &mut Option<Box<ListNode>> {
-        &mut node.as_mut().unwrap().next
-    }
-
-    fn has_next(node: &mut Option<Box<ListNode>>) -> bool {
-        node.as_ref().unwrap().next.is_some()
-    }
-
-    fn take_next(node: &mut Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        node.as_mut().unwrap().next.take()
-    }
-
-    fn set_next(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
-        node.as_mut().unwrap().next = value
-    }
-
     fn add_to_end(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
         let mut current = node;
-        while Self::has_next(current) {
-            current = Self::refer_next(current);
+        while current.has_next() {
+            current = current.refer_next();
         }
-        Self::set_next(current, value);
+        current.set_next(value);
     }
 
     pub fn reverse_between(head: Option<Box<ListNode>>, left: i32, right: i32) -> Option<Box<ListNode>> {
         let mut head = head;
         if left >= right { head }
         else if left == 1 {
-            let right_node = Self::advance(&mut head, right as usize - 1);
-            let rest = Self::take_next(right_node);
-            let mut result = Self::reverse_list(head);
-            Self::add_to_end(&mut result, rest);
+            let right_node = head.advance(right as usize - 1);
+            let rest = right_node.take_next();
+            let mut result = head.reverse();
+            result.add_to_end(rest);
             result
         } else {
-            let before_left = Self::advance(&mut head, left as usize - 2);
-            let mut start = Self::take_next(before_left);
-            let right_node = Self::advance(&mut start, (right - left) as usize);
-            let rest = Self::take_next(right_node);
-            let mut reversed = Self::reverse_list(start);
-            Self::add_to_end(&mut reversed, rest);
-            Self::add_to_end(&mut head, reversed);
+            let before_left = head.advance(left as usize - 2);
+            let mut start = before_left.take_next();
+            let right_node = start.advance((right - left) as usize);
+            let rest = right_node.take_next();
+            let mut reversed = start.reverse();
+            reversed.add_to_end(rest);
+            head.add_to_end(reversed);
 
             head
         }
