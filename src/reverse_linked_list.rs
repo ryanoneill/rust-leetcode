@@ -1,4 +1,5 @@
 use crate::list_node::ListNode;
+use crate::list_node_additions::ListNodeAdditions;
 
 /// Given the `head` of a singly linked list, reverse the list, and return the reversed list.
 struct Solution;
@@ -6,17 +7,7 @@ struct Solution;
 impl Solution {
 
     pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut previous: Option<Box<ListNode>> = None;
-        let mut current: Option<Box<ListNode>> = head;
-
-        while let Some(current_node) = current.as_mut() {
-            let next_node = current_node.next.take();
-            current.as_mut().unwrap().next = previous;
-            previous = current;
-            current = next_node;
-        }
-
-        previous
+        head.reverse()
     }
 
 }

@@ -13,9 +13,9 @@ impl Solution {
             let mut last_value = previous.get_value();
             let mut current = previous.take_next();
 
-            while let Some(node) = current.as_ref() {
-                if node.val != last_value {
-                    last_value = node.val;
+            while !current.is_empty() {
+                if current.get_value() != last_value {
+                    last_value = current.get_value();
                     previous.set_next(current);
                     previous = previous.refer_next();
                     current = previous.take_next();
