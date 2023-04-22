@@ -1,3 +1,5 @@
+use crate::stack::Stack;
+
 /// You are given a string `s` consisting of lowercase English letters. A
 /// duplicate removal consists of choosing two adjacent and equal letters and
 /// removing them.
@@ -10,9 +12,19 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn remove_duplicates(_s: String) -> String {
-        "".to_string()
+    pub fn remove_duplicates(s: String) -> String {
+        let mut stack = Stack::new();
+        for c in s.chars() {
+            match stack.peek() {
+                Some(v) if c == *v => { stack.pop(); } // remove duplicate from stack and continue
+                _ => { stack.push(c); }
+            }
+        }
+        let mut result = "".to_string();
+        while !stack.is_empty() {
+            result.push(stack.pop().unwrap());
+        }
+        result.chars().rev().collect()
     }
 
 }
@@ -21,7 +33,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let s = "abbaca".to_string();
@@ -29,12 +40,18 @@ mod tests {
         assert_eq!(result, "ca");
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let s = "azxxzy".to_string();
         let result = Solution::remove_duplicates(s);
         assert_eq!(result, "ay");
+    }
+
+    #[test]
+    fn all_removed() {
+        let s = "abcdeedcba".to_string();
+        let result = Solution::remove_duplicates(s);
+        assert_eq!(result, "");
     }
 
 }
