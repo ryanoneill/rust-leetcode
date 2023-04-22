@@ -14,6 +14,7 @@ pub mod remove_nth_node_from_end_of_list; // 19
 
 pub mod swap_nodes_in_pairs; // 24
 
+pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
 pub mod reverse_linked_list_ii; // 92
