@@ -13,18 +13,14 @@ struct Solution;
 impl Solution {
 
     pub fn remove_duplicates(s: String) -> String {
-        let mut stack = Stack::new();
+        let mut stack = String::from("");
         for c in s.chars() {
-            match stack.peek() {
-                Some(v) if c == *v => { stack.pop(); } // remove duplicate from stack and continue
+            match stack.chars().last() {
+                Some(v) if c == v => { stack.pop(); }
                 _ => { stack.push(c); }
             }
         }
-        let mut result = "".to_string();
-        while !stack.is_empty() {
-            result.push(stack.pop().unwrap());
-        }
-        result.chars().rev().collect()
+        stack
     }
 
 }
