@@ -1,3 +1,5 @@
+use std::iter::FromIterator;
+
 pub struct Stack<T> {
     items: Vec<T>,
 }
@@ -24,8 +26,25 @@ impl<T> Stack<T> {
     pub fn pop(&mut self) -> Option<T> {
         self.items.pop()
     }
+
     pub fn push(&mut self, elem: T) {
         self.items.push(elem);
+    }
+
+    pub fn reverse(&mut self) {
+        let mut new_items = Vec::with_capacity(self.len());
+        while !self.is_empty() {
+            new_items.push(self.pop().unwrap());
+        }
+        self.items = new_items;
+    }
+
+}
+
+impl Stack<&str> {
+
+    pub fn join(&self, sep: &str) -> String {
+        self.items.join(sep)
     }
 
 }

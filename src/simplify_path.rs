@@ -1,3 +1,5 @@
+use crate::stack::Stack;
+
 /// Given a string `path`, which is an absolute path (starting with a slash
 /// '/') to a file or directory in a Unix-style file system, convert it to
 /// the simplified canonical path.
@@ -21,9 +23,18 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn simplify_path(_path: String) -> String {
-        "".to_string()
+    pub fn simplify_path(path: String) -> String {
+        let mut stack = Stack::new();
+        for part in path.split('/') {
+            match part {
+                "" | "." => { } // ignore empty or same directory
+                ".." => { stack.pop(); }
+                _ => { stack.push(part); }
+            }
+        }
+        let mut result = String::from("/");
+        result.push_str(&stack.join("/"));
+        result
     }
 
 }
@@ -32,7 +43,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let path = "/home/".to_string();
@@ -40,7 +50,6 @@ mod tests {
         assert_eq!(result, "/home");
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let path = "/../".to_string();
@@ -48,12 +57,18 @@ mod tests {
         assert_eq!(result, "/");
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let path = "/home//foo/".to_string();
         let result = Solution::simplify_path(path);
         assert_eq!(result, "/home/foo");
+    }
+
+    #[test]
+    fn bells_and_whistles() {
+        let path = "/home/../usr//local/./bin/".to_string();
+        let result = Solution::simplify_path(path);
+        assert_eq!(result, "/usr/local/bin");
     }
 
 }
