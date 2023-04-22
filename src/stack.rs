@@ -49,6 +49,14 @@ impl Stack<&str> {
 
 }
 
+impl Stack<char> {
+
+    pub fn to_string(&self) -> String {
+        String::from_iter(self.items.iter())
+    }
+
+}
+
 #[cfg(test)]
 mod tests {
     use super::Stack;
