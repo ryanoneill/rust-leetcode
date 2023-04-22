@@ -26,7 +26,11 @@ pub mod reverse_linked_list_ii; // 92
 
 pub mod reverse_linked_list; // 206
 
+pub mod sliding_window_maximum; // 239
+
 pub mod moving_average_from_data_stream; // 346
+
+pub mod daily_temperatures; // 739
 
 pub mod number_of_recent_calls; // 933
 
