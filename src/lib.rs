@@ -45,3 +45,5 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 pub mod make_the_string_great; // 1544
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
+
+pub mod removing_stars_from_a_string; // 2390
