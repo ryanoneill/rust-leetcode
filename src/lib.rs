@@ -5,6 +5,7 @@ pub mod list_node;
 pub mod list_node_additions;
 pub mod stack;
 pub mod tree_node;
+pub mod tree_node_additions;
 
 pub mod two_sum; // 1
 pub mod add_two_numbers; // 2
