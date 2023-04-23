@@ -30,6 +30,8 @@ pub mod reverse_linked_list_ii; // 92
 
 pub mod maximum_depth_of_binary_tree; // 104
 
+pub mod path_sum; // 112
+
 pub mod reverse_linked_list; // 206
 
 pub mod sliding_window_maximum; // 239
