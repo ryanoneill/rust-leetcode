@@ -32,6 +32,8 @@ pub mod moving_average_from_data_stream; // 346
 
 pub mod next_greater_element_i; // 496
 
+pub mod binary_search; // 704
+
 pub mod daily_temperatures; // 739
 
 pub mod number_of_recent_calls; // 933
