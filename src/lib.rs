@@ -4,6 +4,7 @@
 pub mod list_node;
 pub mod list_node_additions;
 pub mod stack;
+pub mod tree_node;
 
 pub mod two_sum; // 1
 pub mod add_two_numbers; // 2
@@ -25,6 +26,8 @@ pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
 pub mod reverse_linked_list_ii; // 92
+
+pub mod maximum_depth_of_binary_tree; // 104
 
 pub mod reverse_linked_list; // 206
 
