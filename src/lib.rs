@@ -50,6 +50,8 @@ pub mod number_of_recent_calls; // 933
 
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
+pub mod count_good_nodes_in_binary_tree; // 1448
+
 pub mod make_the_string_great; // 1544
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
