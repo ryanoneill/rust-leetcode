@@ -65,36 +65,37 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let items1 = vec![1, 2, 4];
-        let list1 = ListNode::from_vec(items1);
+        let list1 = ListNodeAdditions::from_vec(items1);
         let items2 = vec![1, 3, 4];
-        let list2 = ListNode::from_vec(items2);
+        let list2 = ListNodeAdditions::from_vec(items2);
         let result = Solution::merge_two_lists(list1, list2);
-        assert_eq!(ListNode::to_vec(result), vec![1,1,2,3,4,4]);
+        assert_eq!(result.to_vec(), vec![1,1,2,3,4,4]);
     }
 
     #[test]
     fn example_2() {
         let items1 = vec![];
-        let list1 = ListNode::from_vec(items1);
+        let list1 = ListNodeAdditions::from_vec(items1);
         let items2 = vec![];
-        let list2 = ListNode::from_vec(items2);
+        let list2 = ListNodeAdditions::from_vec(items2);
         let result = Solution::merge_two_lists(list1, list2);
-        assert_eq!(ListNode::to_vec(result), vec![]);
+        assert_eq!(result.to_vec(), vec![]);
     }
 
     #[test]
     fn example_3() {
         let items1 = vec![];
-        let list1 = ListNode::from_vec(items1);
+        let list1 = ListNodeAdditions::from_vec(items1);
         let items2 = vec![0];
-        let list2 = ListNode::from_vec(items2);
+        let list2 = ListNodeAdditions::from_vec(items2);
         let result = Solution::merge_two_lists(list1, list2);
-        assert_eq!(ListNode::to_vec(result), vec![0]);
+        assert_eq!(result.to_vec(), vec![0]);
     }
 
 }

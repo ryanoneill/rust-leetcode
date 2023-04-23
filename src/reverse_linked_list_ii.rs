@@ -8,14 +8,6 @@ struct Solution;
 
 impl Solution {
 
-    fn add_to_end(node: &mut Option<Box<ListNode>>, value: Option<Box<ListNode>>) {
-        let mut current = node;
-        while current.has_next() {
-            current = current.refer_next();
-        }
-        current.set_next(value);
-    }
-
     pub fn reverse_between(head: Option<Box<ListNode>>, left: i32, right: i32) -> Option<Box<ListNode>> {
         let mut head = head;
         if left >= right { head }
@@ -42,46 +34,47 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 4, 5];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_between(nodes, 2, 4);
-        assert_eq!(ListNode::to_vec(result), vec![1, 4, 3, 2, 5]);
+        assert_eq!(result.to_vec(), vec![1, 4, 3, 2, 5]);
     }
 
     #[test]
     fn example_2() {
         let items = vec![5];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_between(nodes, 1, 1);
-        assert_eq!(ListNode::to_vec(result), vec![5]);
+        assert_eq!(result.to_vec(), vec![5]);
     }
 
     #[test]
     fn reverse_beginning() {
         let items = vec![10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_between(nodes, 1, 5);
-        assert_eq!(ListNode::to_vec(result), vec![6, 7, 8, 9, 10, 5, 4, 3, 2, 1]);
+        assert_eq!(result.to_vec(), vec![6, 7, 8, 9, 10, 5, 4, 3, 2, 1]);
     }
 
     #[test]
     fn reverse_end() {
         let items = vec![10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_between(nodes, 3, 10);
-        assert_eq!(ListNode::to_vec(result), vec![10, 9, 1, 2, 3, 4, 5, 6, 7, 8]);
+        assert_eq!(result.to_vec(), vec![10, 9, 1, 2, 3, 4, 5, 6, 7, 8]);
     }
 
     #[test]
     fn reverse_middle() {
         let items = vec![10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_between(nodes, 4, 9);
-        assert_eq!(ListNode::to_vec(result), vec![10, 9, 8, 2, 3, 4, 5, 6, 7, 1]);
+        assert_eq!(result.to_vec(), vec![10, 9, 8, 2, 3, 4, 5, 6, 7, 1]);
     }
 
 }

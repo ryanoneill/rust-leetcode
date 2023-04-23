@@ -34,33 +34,35 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let head = ListNode::from_vec(vec![1, 1, 2]);
+        let head = ListNodeAdditions::from_vec(vec![1, 1, 2]);
         let result = Solution::delete_duplicates(head);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2]);
+        assert_eq!(result.to_vec(), vec![1, 2]);
     }
 
     #[test]
     fn example_2() {
-        let head = ListNode::from_vec(vec![1, 1, 2, 3, 3]);
+        let head = ListNodeAdditions::from_vec(vec![1, 1, 2, 3, 3]);
         let result = Solution::delete_duplicates(head);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2, 3]);
+        assert_eq!(result.to_vec(), vec![1, 2, 3]);
     }
 
     #[test]
     fn all_ones() {
-        let head = ListNode::from_vec(vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+        let head = ListNodeAdditions::from_vec(vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
         let result = Solution::delete_duplicates(head);
-        assert_eq!(ListNode::to_vec(result), vec![1]);
+        assert_eq!(result.to_vec(), vec![1]);
     }
 
     #[test]
     fn one_one_two_two() {
-        let head = ListNode::from_vec(vec![1, 1, 2, 2, 1, 1, 2, 2]);
+        let head = ListNodeAdditions::from_vec(vec![1, 1, 2, 2, 1, 1, 2, 2]);
         let result = Solution::delete_duplicates(head);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2, 1, 2]);
+        assert_eq!(result.to_vec(), vec![1, 2, 1, 2]);
     }
+
 }

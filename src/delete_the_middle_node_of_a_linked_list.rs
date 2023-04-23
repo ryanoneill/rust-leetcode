@@ -35,38 +35,39 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let items = vec![1, 3, 4, 7, 1, 2, 6];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_middle(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![1, 3, 4, 1, 2, 6]);
+        assert_eq!(result.to_vec(), vec![1, 3, 4, 1, 2, 6]);
     }
 
     #[test]
     fn example_2() {
         let items = vec![1, 2, 3, 4];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_middle(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2, 4]);
+        assert_eq!(result.to_vec(), vec![1, 2, 4]);
     }
 
     #[test]
     fn example_3() {
         let items = vec![2, 1];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_middle(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![2]);
+        assert_eq!(result.to_vec(), vec![2]);
     }
 
     #[test]
     fn empty() {
         let items = vec![];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_middle(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![]);
+        assert_eq!(result.to_vec(), vec![]);
     }
 
 }

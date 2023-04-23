@@ -76,30 +76,31 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let l1 = ListNode::from_vec(vec![2, 4, 3]);
-        let l2 = ListNode::from_vec(vec![5, 6, 4]);
+        let l1 = ListNodeAdditions::from_vec(vec![2, 4, 3]);
+        let l2 = ListNodeAdditions::from_vec(vec![5, 6, 4]);
         let result = Solution::add_two_numbers(l1, l2);
-        assert_eq!(ListNode::to_vec(result), vec![7, 0, 8]);
+        assert_eq!(result.to_vec(), vec![7, 0, 8]);
     }
 
     #[test]
     fn example_2() {
-        let l1 = ListNode::from_vec(vec![0]);
-        let l2 = ListNode::from_vec(vec![0]);
+        let l1 = ListNodeAdditions::from_vec(vec![0]);
+        let l2 = ListNodeAdditions::from_vec(vec![0]);
         let result = Solution::add_two_numbers(l1, l2);
-        assert_eq!(ListNode::to_vec(result), vec![0]);
+        assert_eq!(result.to_vec(), vec![0]);
     }
 
     #[test]
     fn example_3() {
-        let l1 = ListNode::from_vec(vec![9,9,9,9,9,9,9]);
-        let l2 = ListNode::from_vec(vec![9,9,9,9]);
+        let l1 = ListNodeAdditions::from_vec(vec![9,9,9,9,9,9,9]);
+        let l2 = ListNodeAdditions::from_vec(vec![9,9,9,9]);
         let result = Solution::add_two_numbers(l1, l2);
-        assert_eq!(ListNode::to_vec(result), vec![8,9,9,9,0,0,0,1]);
+        assert_eq!(result.to_vec(), vec![8,9,9,9,0,0,0,1]);
     }
 
 }

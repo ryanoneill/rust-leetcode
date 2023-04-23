@@ -27,30 +27,31 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 4, 5];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::remove_nth_node_from_end(nodes, 2);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2, 3, 5]);
+        assert_eq!(result.to_vec(), vec![1, 2, 3, 5]);
     }
 
     #[test]
     fn example_2() {
         let items = vec![1];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::remove_nth_node_from_end(nodes, 1);
-        assert_eq!(ListNode::to_vec(result), vec![]);
+        assert_eq!(result.to_vec(), vec![]);
     }
 
     #[test]
     fn example_3() {
         let items = vec![1, 2];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::remove_nth_node_from_end(nodes, 1);
-        assert_eq!(ListNode::to_vec(result), vec![1]);
+        assert_eq!(result.to_vec(), vec![1]);
     }
 
 }

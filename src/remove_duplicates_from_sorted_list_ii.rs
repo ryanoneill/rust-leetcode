@@ -18,24 +18,25 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[ignore]
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 3, 4, 4, 5];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_duplicates(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![1, 2, 5]);
+        assert_eq!(result.to_vec(), vec![1, 2, 5]);
     }
 
     #[ignore]
     #[test]
     fn example_2() {
         let items = vec![1, 1, 1, 2, 3];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::delete_duplicates(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![2, 3]);
+        assert_eq!(result.to_vec(), vec![2, 3]);
     }
 
 }

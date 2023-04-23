@@ -15,30 +15,31 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::list_node::ListNode;
+    use crate::list_node_additions::ListNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 4, 5];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_list(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![5, 4, 3, 2, 1]);
+        assert_eq!(result.to_vec(), vec![5, 4, 3, 2, 1]);
     }
 
     #[test]
     fn example_2() {
         let items = vec![1, 2];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_list(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![2, 1]);
+        assert_eq!(result.to_vec(), vec![2, 1]);
     }
 
     #[test]
     fn example_3() {
         let items = vec![];
-        let nodes = ListNode::from_vec(items);
+        let nodes = ListNodeAdditions::from_vec(items);
         let result = Solution::reverse_list(nodes);
-        assert_eq!(ListNode::to_vec(result), vec![]);
+        assert_eq!(result.to_vec(), vec![]);
     }
 
 }
