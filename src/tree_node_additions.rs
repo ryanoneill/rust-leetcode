@@ -10,9 +10,12 @@ pub trait TreeNodeAdditions {
     fn with_children(val: i32, left: Self, right: Self) -> Self;
     fn from_vec(items: Vec<Option<i32>>) -> Self;
 
+    fn get_value(&self) -> Option<i32>;
+    fn is_leaf(&self) -> bool;
     fn max_depth(&self) -> usize;
     fn set_left(&mut self, value: Self);
     fn set_right(&mut self, value: Self);
+
     fn to_vec(&self) -> Vec<Option<i32>>;
 
 }
@@ -30,6 +33,20 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
     // TODO: Implement
     fn from_vec(_items: Vec<Option<i32>>) -> Self {
         None
+    }
+
+    fn get_value(&self) -> Option<i32> {
+        self.as_ref().map(|rc| {
+            let node = rc.borrow();
+            node.val
+        })
+    }
+
+    fn is_leaf(&self) -> bool {
+        self.as_ref().map(|rc| {
+            let node = rc.borrow();
+            node.left.is_none() && node.right.is_none()
+        }).unwrap_or(false)
     }
 
     fn max_depth(&self) -> usize {
