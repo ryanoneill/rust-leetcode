@@ -1,4 +1,5 @@
 use crate::tree_node::TreeNode;
+use crate::tree_node_additions::TreeNodeAdditions;
 use std::cell::RefCell;
 use std::cmp::max;
 use std::rc::Rc;
@@ -11,21 +12,39 @@ struct Solution;
 
 impl Solution {
 
-    fn get_max_depth(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        match root {
-            None => 0,
-            Some(rc) => {
-                let node = rc.borrow();
-                let left = Self::get_max_depth(&node.left);
-                let right = Self::get_max_depth(&node.right);
-
-                1 + max(left, right)
-            }
-        }
+    pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+        root.max_depth() as i32
     }
 
-    pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        Self::get_max_depth(&root)
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::tree_node::TreeNode;
+    use crate::tree_node_additions::TreeNodeAdditions;
+    use super::Solution;
+
+    // TODO: Remove creation of individual nodes when from_vec is working.
+
+    #[test]
+    fn example_1() {
+        // let items = [Some(3), Some(9), Some(20), None, None, Some(15), Some(7)];
+        let nine = TreeNodeAdditions::new(9);
+        let fifteen = TreeNodeAdditions::new(15);
+        let seven = TreeNodeAdditions::new(7);
+        let twenty = TreeNodeAdditions::with_children(20, fifteen, seven);
+        let three = TreeNodeAdditions::with_children(3, nine, twenty);
+        let result = Solution::max_depth(three);
+        assert_eq!(result, 3);
+    }
+
+    #[test]
+    fn example_2() {
+        // let items = vec![Some(1), None, Some(2)];
+        let two = TreeNodeAdditions::new(2);
+        let one = TreeNodeAdditions::with_children(1, None, two);
+        let result = Solution::max_depth(one);
+        assert_eq!(result, 2);
     }
 
 }
