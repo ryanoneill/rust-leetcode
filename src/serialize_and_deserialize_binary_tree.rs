@@ -239,7 +239,32 @@ mod tests {
         assert_eq!(result, one);
     }
 
+    #[test]
+    fn real_example_6() {
+        let data = "[3,9,20,null,null,15,7]".to_string();
 
+        let nine = TreeNodeAdditions::new(9);
+        let fifteen = TreeNodeAdditions::new(15);
+        let seven = TreeNodeAdditions::new(7);
+        let twenty = TreeNodeAdditions::with_children(20, fifteen, seven);
+        let three = TreeNodeAdditions::with_children(3, nine, twenty);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data);
+        assert_eq!(result, three);
+    }
+
+    #[test]
+    fn real_example_7() {
+        let data = "[1,null,2]".to_string();
+
+        let two = TreeNodeAdditions::new(2);
+        let one = TreeNodeAdditions::with_children(1, None, two);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data);
+        assert_eq!(result, one);
+    }
 
 }
 

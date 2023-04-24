@@ -20,6 +20,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
     use super::Solution;
@@ -28,22 +29,19 @@ mod tests {
 
     #[test]
     fn example_1() {
-        // let items = [Some(3), Some(9), Some(20), None, None, Some(15), Some(7)];
-        let nine = TreeNodeAdditions::new(9);
-        let fifteen = TreeNodeAdditions::new(15);
-        let seven = TreeNodeAdditions::new(7);
-        let twenty = TreeNodeAdditions::with_children(20, fifteen, seven);
-        let three = TreeNodeAdditions::with_children(3, nine, twenty);
-        let result = Solution::max_depth(three);
+        let data = "[3,9,20,null,null,15,7]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::max_depth(root);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_2() {
-        // let items = vec![Some(1), None, Some(2)];
-        let two = TreeNodeAdditions::new(2);
-        let one = TreeNodeAdditions::with_children(1, None, two);
-        let result = Solution::max_depth(one);
+        let data = "[1,null,2]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::max_depth(root);
         assert_eq!(result, 2);
     }
 
