@@ -163,7 +163,7 @@ mod tests {
     #[test]
     fn real_example_1() {
         let data = "[3,9,20,null,null,15,7]".to_string();
-        // let items = vec![Some(3), Some(9), Some(20), None, None, Some(15), Some(7)];
+
         let seven = TreeNodeAdditions::new(7);
         let fifteen = TreeNodeAdditions::new(15);
         let twenty = TreeNodeAdditions::with_children(20, fifteen, seven);
@@ -178,7 +178,7 @@ mod tests {
     #[test]
     fn real_example_2() {
         let data = "[2,null,3,null,4,null,5,null,6]".to_string();
-        // let items = vec![Some(2), None, Some(3), None, Some(4), None, Some(5), None, Some(6)];
+
         let six = TreeNodeAdditions::new(6);
         let five = TreeNodeAdditions::with_children(5, None, six);
         let four = TreeNodeAdditions::with_children(4, None, five);
