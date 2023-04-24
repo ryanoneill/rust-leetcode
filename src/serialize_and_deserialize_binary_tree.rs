@@ -91,7 +91,7 @@ impl Codec {
 
                 for index in 1..items.len() {
                     if is_left {
-                        current = queue.pop_front().unwrap(); // within length of items
+                        current = queue.pop_front().unwrap();
                         let left = &items[index];
                         current.set_left(left.clone());
                         if left.is_some() {
