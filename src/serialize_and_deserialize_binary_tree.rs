@@ -171,8 +171,11 @@ mod tests {
         let three = TreeNodeAdditions::with_children(3, nine, twenty);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, three);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -186,8 +189,11 @@ mod tests {
         let two = TreeNodeAdditions::with_children(2, None, three);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, two);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -207,8 +213,11 @@ mod tests {
         let five = TreeNodeAdditions::with_children(5, four_left, eight);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, five);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -217,8 +226,11 @@ mod tests {
         let two = TreeNodeAdditions::new(2);
         let one = TreeNodeAdditions::with_children(1, two, None);
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, one);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -235,8 +247,11 @@ mod tests {
         let one = TreeNodeAdditions::with_children(1, neg_two_left, neg_three);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, one);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -250,8 +265,11 @@ mod tests {
         let three = TreeNodeAdditions::with_children(3, nine, twenty);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, three);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
     #[test]
@@ -262,8 +280,11 @@ mod tests {
         let one = TreeNodeAdditions::with_children(1, None, two);
 
         let codec = Codec::new();
-        let result = codec.deserialize(data);
+        let result = codec.deserialize(data.clone());
         assert_eq!(result, one);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
     }
 
 }
