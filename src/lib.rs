@@ -34,6 +34,8 @@ pub mod maximum_depth_of_binary_tree; // 104
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 
+pub mod binary_tree_right_side_view; // 199
+
 pub mod reverse_linked_list; // 206
 
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236
