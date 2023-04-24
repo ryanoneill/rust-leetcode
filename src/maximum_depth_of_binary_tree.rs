@@ -25,8 +25,6 @@ mod tests {
     use crate::tree_node_additions::TreeNodeAdditions;
     use super::Solution;
 
-    // TODO: Remove creation of individual nodes when from_vec is working.
-
     #[test]
     fn example_1() {
         let data = "[3,9,20,null,null,15,7]".to_string();
