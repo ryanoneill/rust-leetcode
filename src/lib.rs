@@ -54,6 +54,7 @@ pub mod online_stock_span; // 901
 
 pub mod number_of_recent_calls; // 933
 
+pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod count_good_nodes_in_binary_tree; // 1448
