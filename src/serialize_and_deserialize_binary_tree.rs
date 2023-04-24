@@ -287,5 +287,44 @@ mod tests {
         assert_eq!(round_trip, data);
     }
 
+    #[test]
+    fn real_example_8() {
+        let data = "[3,1,4,3,null,1,5]".to_string();
+
+        let five = TreeNodeAdditions::new(5);
+        let one_right = TreeNodeAdditions::new(1);
+        let four = TreeNodeAdditions::with_children(4, one_right, five);
+
+        let three_left = TreeNodeAdditions::new(3);
+        let one_left = TreeNodeAdditions::with_children(1, three_left, None);
+
+        let three = TreeNodeAdditions::with_children(3, one_left, four);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data.clone());
+        assert_eq!(result, three);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
+    }
+
+    #[test]
+    fn real_example_9() {
+        let data = "[3,3,null,4,2]".to_string();
+
+        let two = TreeNodeAdditions::new(2);
+        let four = TreeNodeAdditions::new(4);
+        let three_left = TreeNodeAdditions::with_children(3, four, two);
+        let three = TreeNodeAdditions::with_children(3, three_left, None);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data.clone());
+        assert_eq!(result, three);
+
+        let round_trip = codec.serialize(result);
+        assert_eq!(round_trip, data);
+    }
+
+
 }
 

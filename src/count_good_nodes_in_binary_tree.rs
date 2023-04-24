@@ -40,42 +40,35 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
-
     use super::Solution;
 
     #[test]
     fn example_1() {
-        // let items = vec![Some(3), Some(1), Some(4), Some(3), None, Some(1), Some(5)];
-        let five = TreeNodeAdditions::new(5);
-        let one_right = TreeNodeAdditions::new(1);
-        let four = TreeNodeAdditions::with_children(4, one_right, five);
-
-        let three_left = TreeNodeAdditions::new(3);
-        let one_left = TreeNodeAdditions::with_children(1, three_left, None);
-
-        let three = TreeNodeAdditions::with_children(3, one_left, four);
-        let result = Solution::good_nodes(three);
+        let data = "[3,1,4,3,null,1,5]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::good_nodes(root);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_2() {
-        // let items = vec![Some(3), Some(3), None, Some(4), Some(2)];
-        let two = TreeNodeAdditions::new(2);
-        let four = TreeNodeAdditions::new(4);
-        let three_left = TreeNodeAdditions::with_children(3, four, two);
-        let three = TreeNodeAdditions::with_children(3, three_left, None);
-        let result = Solution::good_nodes(three);
+        let data = "[3,3,null,4,2]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::good_nodes(root);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_3() {
-        // let items = vec![Some(1)];
-        let one = TreeNodeAdditions::new(1);
-        let result = Solution::good_nodes(one);
+        let data = "[1]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::good_nodes(root);
         assert_eq!(result, 1);
     }
 
