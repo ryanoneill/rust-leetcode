@@ -46,6 +46,8 @@ pub mod moving_average_from_data_stream; // 346
 
 pub mod next_greater_element_i; // 496
 
+pub mod diameter_of_binary_tree; // 543
+
 pub mod binary_search; // 704
 
 pub mod daily_temperatures; // 739
