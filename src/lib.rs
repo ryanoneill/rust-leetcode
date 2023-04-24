@@ -34,6 +34,8 @@ pub mod path_sum; // 112
 
 pub mod reverse_linked_list; // 206
 
+pub mod lowest_common_ancestor_of_a_binary_tree; // 236
+
 pub mod sliding_window_maximum; // 239
 
 pub mod moving_average_from_data_stream; // 346
