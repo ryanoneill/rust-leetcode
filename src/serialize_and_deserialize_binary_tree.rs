@@ -190,5 +190,56 @@ mod tests {
         assert_eq!(result, two);
     }
 
+    #[test]
+    fn real_example_3() {
+        let data = "[5,4,8,11,null,13,4,7,2,null,null,null,1]".to_string();
+
+        let one = TreeNodeAdditions::new(1);
+        let four_right = TreeNodeAdditions::with_children(4, None, one);
+        let thirteen = TreeNodeAdditions::new(13);
+        let eight = TreeNodeAdditions::with_children(8, thirteen, four_right);
+
+        let two = TreeNodeAdditions::new(2);
+        let seven = TreeNodeAdditions::new(7);
+        let eleven = TreeNodeAdditions::with_children(11, seven, two);
+        let four_left = TreeNodeAdditions::with_children(4, eleven, None);
+
+        let five = TreeNodeAdditions::with_children(5, four_left, eight);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data);
+        assert_eq!(result, five);
+    }
+
+    #[test]
+    fn real_example_4() {
+        let data = "[1,2]".to_string();
+        let two = TreeNodeAdditions::new(2);
+        let one = TreeNodeAdditions::with_children(1, two, None);
+        let codec = Codec::new();
+        let result = codec.deserialize(data);
+        assert_eq!(result, one);
+    }
+
+    #[test]
+    fn real_example_5() {
+        let data = "[1,-2,-3,1,3,-2,null,-1]".to_string();
+        let neg_two_right = TreeNodeAdditions::new(-2);
+        let neg_three = TreeNodeAdditions::with_children(-3, neg_two_right, None);
+
+        let three = TreeNodeAdditions::new(3);
+        let neg_one = TreeNodeAdditions::new(-1);
+        let one_left = TreeNodeAdditions::with_children(1, neg_one, None);
+        let neg_two_left = TreeNodeAdditions::with_children(-2, one_left, three);
+
+        let one = TreeNodeAdditions::with_children(1, neg_two_left, neg_three);
+
+        let codec = Codec::new();
+        let result = codec.deserialize(data);
+        assert_eq!(result, one);
+    }
+
+
+
 }
 

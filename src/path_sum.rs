@@ -39,6 +39,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
     use super::Solution;
@@ -47,61 +48,46 @@ mod tests {
 
     #[test]
     fn example_1() {
-        // let items = vec![Some(5), Some(4), Some(8), Some(11), None, Some(13), Some(4), Some(7), Some(2), None, None, None, Some(1)];
-        let one = TreeNodeAdditions::new(1);
-        let four_right = TreeNodeAdditions::with_children(4, None, one);
-        let thirteen = TreeNodeAdditions::new(13);
-        let eight = TreeNodeAdditions::with_children(8, thirteen, four_right);
-
-        let two = TreeNodeAdditions::new(2);
-        let seven = TreeNodeAdditions::new(7);
-        let eleven = TreeNodeAdditions::with_children(11, seven, two);
-        let four_left = TreeNodeAdditions::with_children(4, eleven, None);
-
-        let five = TreeNodeAdditions::with_children(5, four_left, eight);
-        let result = Solution::has_path_sum(five, 22);
+        let data = "[5,4,8,11,null,13,4,7,2,null,null,null,1]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::has_path_sum(root, 22);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        // let items = vec![Some(1), Some(2), Some(3)]
-        let three = TreeNodeAdditions::new(3);
-        let two = TreeNodeAdditions::new(2);
-        let one = TreeNodeAdditions::with_children(1, two, three);
-        let result = Solution::has_path_sum(one, 5);
+        let data = "[1,2,3]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::has_path_sum(root, 5);
         assert!(!result);
     }
 
     #[test]
     fn example_3() {
-        // let items = vec![]
-        let result = Solution::has_path_sum(None, 0);
+        let data = "[]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::has_path_sum(root, 0);
         assert!(!result);
     }
 
     #[test]
     fn must_be_leaf() {
-        // let items = vec![Some(1), Some(2)];
-        let two = TreeNodeAdditions::new(2);
-        let one = TreeNodeAdditions::with_children(1, two, None);
-        let result = Solution::has_path_sum(one, 1);
+        let data = "[1,2]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::has_path_sum(root, 1);
         assert!(!result);
     }
 
     #[test]
     fn negative_target_sum() {
-        // let items = vec![Some(1), Some(-2), Some(-3), Some(1), Some(3), Some(-2), None, Some(-1)];
-        let neg_two_right = TreeNodeAdditions::new(-2);
-        let neg_three = TreeNodeAdditions::with_children(-3, neg_two_right, None);
-
-        let three = TreeNodeAdditions::new(3);
-        let neg_one = TreeNodeAdditions::new(-1);
-        let one_left = TreeNodeAdditions::with_children(1, neg_one, None);
-        let neg_two_left = TreeNodeAdditions::with_children(-2, one_left, three);
-
-        let one = TreeNodeAdditions::with_children(1, neg_two_left, neg_three);
-        let result = Solution::has_path_sum(one, -1);
+        let data = "[1,-2,-3,1,3,-2,null,-1]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::has_path_sum(root, -1);
         assert!(result);
     }
 
