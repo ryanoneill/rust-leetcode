@@ -82,6 +82,8 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod deepest_leaves_sum; // 1302
 
+pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
+
 pub mod count_good_nodes_in_binary_tree; // 1448
 
 pub mod running_sum_of_1d_array; // 1480
