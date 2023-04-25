@@ -1,5 +1,7 @@
 use crate::tree_node::TreeNode;
+use crate::tree_node_additions::TreeNodeAdditions;
 use std::cell::RefCell;
+use std::collections::VecDeque;
 use std::rc::Rc;
 
 /// Given the `root` of a binary tree, imagine yourself standing on the right
@@ -9,25 +11,42 @@ struct Solution;
 
 impl Solution {
 
-    fn right_side_view_ref(root: &Option<Rc<RefCell<TreeNode>>>, result: &mut Vec<i32>) {
-        match root {
-            Some(rc) => {
-                let node = rc.borrow();
-                result.push(node.val);
-                Self::right_side_view_ref(&node.right, result)
-            }
-            None => {
-                // do nothing
-            }
-        }
-    }
-
-    // TODO: Implement
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         if root.is_none() { vec![] }
         else {
             let mut result = Vec::new();
-            Self::right_side_view_ref(&root, &mut result);
+            let mut queue = VecDeque::new();
+
+            queue.push_back(root.clone());
+
+            while !queue.is_empty() {
+                let len = queue.len();
+                let right_side = queue.back().unwrap();
+                right_side.get_value().map(|v| {
+                    result.push(v);
+                    v
+                });
+
+                for _ in 0..len {
+                    let item = queue.pop_front().unwrap();
+
+                    match item {
+                        Some(rc) => {
+                            let node = rc.borrow();
+                            if node.left.is_some() {
+                                queue.push_back(node.left.clone());
+                            }
+                            if node.right.is_some() {
+                                queue.push_back(node.right.clone());
+                            }
+                        }
+                        None => {
+                            // do nothing
+                        }
+                    }
+                }
+
+            }
 
             result
         }
@@ -65,6 +84,15 @@ mod tests {
         let root = codec.deserialize(data);
         let result = Solution::right_side_view(root);
         assert_eq!(result, vec![]);
+    }
+
+    #[test]
+    fn example_4() {
+        let data = "[1,2]".to_string();
+        let codec = Codec::new();
+        let root = codec.deserialize(data);
+        let result = Solution::right_side_view(root);
+        assert_eq!(result, vec![1,2]);
     }
 
 }
