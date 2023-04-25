@@ -47,6 +47,8 @@ pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod moving_average_from_data_stream; // 346
 
+pub mod fizz_buzz; // 412
+
 pub mod next_greater_element_i; // 496
 
 pub mod find_largest_value_in_each_tree_row; // 515
