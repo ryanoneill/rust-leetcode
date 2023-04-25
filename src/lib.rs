@@ -92,6 +92,8 @@ pub mod make_the_string_great; // 1544
 
 pub mod richest_customer_wealth; // 1672
 
+pub mod maximum_population_year; // 1854
+
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
 
 pub mod smallest_number_in_infinite_set; // 2336
