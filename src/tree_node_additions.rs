@@ -11,6 +11,8 @@ pub trait TreeNodeAdditions {
     fn with_children(val: i32, left: Self, right: Self) -> Self;
 
     fn get_value(&self) -> Option<i32>;
+    fn in_order(&self) -> Vec<i32>;
+    fn in_order_worker<F: FnMut(i32)>(&self, f: &mut F);
     fn is_leaf(&self) -> bool;
     fn max_depth(&self) -> usize;
     fn min_depth(&self) -> usize;
@@ -34,6 +36,32 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
             let node = rc.borrow();
             node.val
         })
+    }
+
+    fn in_order_worker<F: FnMut(i32)>(&self, f: &mut F) {
+        match self {
+            Some(rc) => {
+                let node = rc.borrow();
+                if node.left.is_some() {
+                    node.left.in_order_worker(f);
+                }
+                f(node.val);
+                if node.right.is_some() {
+                    node.right.in_order_worker(f);
+                }
+            }
+            None => {
+                // do nothing
+            }
+        }
+    }
+
+    fn in_order(&self) -> Vec<i32> {
+        let mut result = Vec::new();
+        self.in_order_worker(&mut |val| {
+            result.push(val);
+        });
+        result
     }
 
     fn is_leaf(&self) -> bool {
