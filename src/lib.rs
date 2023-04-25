@@ -45,6 +45,8 @@ pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod sliding_window_maximum; // 239
 
+pub mod closest_binary_search_tree_value; // 270
+
 pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod moving_average_from_data_stream; // 346
