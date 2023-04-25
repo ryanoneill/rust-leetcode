@@ -29,6 +29,8 @@ pub mod remove_duplicates_from_sorted_list; // 83
 
 pub mod reverse_linked_list_ii; // 92
 
+pub mod validate_binary_search_tree; // 98
+
 pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104
 
@@ -60,6 +62,8 @@ pub mod diameter_of_binary_tree; // 543
 pub mod binary_search; // 704
 
 pub mod daily_temperatures; // 739
+
+pub mod minimum_distance_between_bst_nodes; // 783
 
 pub mod online_stock_span; // 901
 
