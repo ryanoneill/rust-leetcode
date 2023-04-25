@@ -65,6 +65,8 @@ pub mod maximum_difference_between_node_and_ancestor; // 1026
 pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
+pub mod deepest_leaves_sum; // 1302
+
 pub mod count_good_nodes_in_binary_tree; // 1448
 
 pub mod running_sum_of_1d_array; // 1480
