@@ -5,18 +5,16 @@ struct Solution;
 impl Solution {
 
     pub fn add_digits(num: i32) -> i32 {
-        let mut result = 0;
         let mut current = num;
 
         while current > 9 {
-            result += 1;
             let s = current.to_string();
             current = s.split("")
                 .filter(|s| *s != "")
                 .map(|d| { d.parse::<i32>().unwrap() })
                 .sum();
         }
-        result
+        current
     }
 
 }
@@ -37,6 +35,13 @@ mod tests {
         let num = 0;
         let result = Solution::add_digits(num);
         assert_eq!(result, 0);
+    }
+
+    #[test]
+    fn one() {
+        let num = 1;
+        let result = Solution::add_digits(num);
+        assert_eq!(result, 1);
     }
 
 }
