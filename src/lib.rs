@@ -61,6 +61,8 @@ pub mod minimum_absolute_difference_in_bst; // 530
 
 pub mod diameter_of_binary_tree; // 543
 
+pub mod number_of_provinces; // 547
+
 pub mod insert_into_a_binary_search_tree; // 701
 
 pub mod binary_search; // 704
