@@ -7,6 +7,8 @@ pub mod stack;
 pub mod tree_node;
 pub mod tree_node_additions;
 pub mod vec_additions;
+pub mod grid;
+pub mod grid_marker;
 
 pub mod two_sum; // 1
 pub mod add_two_numbers; // 2
