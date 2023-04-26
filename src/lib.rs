@@ -38,6 +38,7 @@ pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 
 pub mod binary_tree_right_side_view; // 199
+pub mod number_of_islands; // 200
 
 pub mod reverse_linked_list; // 206
 
