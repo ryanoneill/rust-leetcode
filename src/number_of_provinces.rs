@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
-use std::collections::VecDeque;
 use std::hash::Hash;
 
 /// There are `n` cities. Some of them are connected, while some are not. If
@@ -41,22 +40,22 @@ impl Solution {
         }
 
         let mut seen: HashSet<usize> = HashSet::new();
-        let mut queue = VecDeque::new();
+        let mut stack = Vec::new();
         let mut result = 0;
 
         for i in 0..n {
             if !seen.contains(&i) {
                 seen.insert(i);
                 result += 1;
-                queue.push_back(i);
+                stack.push(i);
 
-                while !queue.is_empty() {
-                    let j = queue.pop_front().unwrap();
+                while !stack.is_empty() {
+                    let j = stack.pop().unwrap();
                     let neighbors = &graph[&j];
                     for n in neighbors {
                         if !seen.contains(&n) {
                             seen.insert(*n);
-                            queue.push_back(*n);
+                            stack.push(*n);
                         }
                     }
                 }
