@@ -1,7 +1,8 @@
+use crate::position::Position;
 use std::collections::HashSet;
 
 struct GridMarker {
-    seen: HashSet<(usize, usize)>
+    seen: HashSet<Position>
 }
 
 impl GridMarker {
@@ -10,12 +11,12 @@ impl GridMarker {
         GridMarker { seen: HashSet::new() }
     }
 
-    pub fn is_marked(&self, row: usize, col: usize) -> bool {
-        self.seen.contains(&(row, col))
+    pub fn is_marked(&self, position: &Position) -> bool {
+        self.seen.contains(position)
     }
 
-    pub fn mark(&mut self, row: usize, col: usize) {
-        self.seen.insert((row, col));
+    pub fn mark(&mut self, position: Position) {
+        self.seen.insert(position);
     }
 
 }

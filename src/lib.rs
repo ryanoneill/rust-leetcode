@@ -7,6 +7,8 @@ pub mod stack;
 pub mod tree_node;
 pub mod tree_node_additions;
 pub mod vec_additions;
+pub mod direction;
+pub mod position;
 pub mod grid;
 pub mod grid_marker;
 
