@@ -26,6 +26,8 @@ pub mod range_sum_query_immutable; // 30
 
 pub mod search_insert_position; // 35
 
+pub mod length_of_last_word; // 58
+
 pub mod simplify_path; // 71
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82
