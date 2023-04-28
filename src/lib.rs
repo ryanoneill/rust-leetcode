@@ -70,6 +70,8 @@ pub mod fizz_buzz; // 412
 
 pub mod next_greater_element_i; // 496
 
+pub mod fibonacci_number; // 509
+
 pub mod find_largest_value_in_each_tree_row; // 515
 
 pub mod minimum_absolute_difference_in_bst; // 530
