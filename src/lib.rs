@@ -60,6 +60,8 @@ pub mod number_of_connected_components_in_an_undirected_graph; // 323
 
 pub mod moving_average_from_data_stream; // 346
 
+pub mod ransom_note; // 383
+
 pub mod fizz_buzz; // 412
 
 pub mod next_greater_element_i; // 496
