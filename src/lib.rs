@@ -80,6 +80,8 @@ pub mod daily_temperatures; // 739
 
 pub mod minimum_distance_between_bst_nodes; // 783
 
+pub mod keys_and_rooms; // 841
+
 pub mod middle_of_the_linked_list; // 876
 
 pub mod online_stock_span; // 901
