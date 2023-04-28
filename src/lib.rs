@@ -119,6 +119,8 @@ pub mod richest_customer_wealth; // 1672
 
 pub mod maximum_population_year; // 1854
 
+pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
+
 pub mod find_if_path_exists_in_graph; // 1971
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
