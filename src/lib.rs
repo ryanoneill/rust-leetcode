@@ -56,6 +56,8 @@ pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod bulb_switcher; // 319
 
+pub mod number_of_connected_components_in_an_undirected_graph; // 323
+
 pub mod moving_average_from_data_stream; // 346
 
 pub mod fizz_buzz; // 412
