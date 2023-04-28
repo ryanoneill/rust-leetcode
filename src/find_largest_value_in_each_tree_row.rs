@@ -4,6 +4,8 @@ use std::cmp::max;
 use std::collections::VecDeque;
 use std::rc::Rc;
 
+/// Given the `root` of a binary tree, return an array of the largest value in
+/// each row of the tree (0-indexed).
 struct Solution;
 
 impl Solution {
