@@ -149,4 +149,6 @@ pub mod delete_the_middle_node_of_a_linked_list; // 2095
 
 pub mod smallest_number_in_infinite_set; // 2336
 
+pub mod reachable_nodes_with_restrictions; // 2368
+
 pub mod removing_stars_from_a_string; // 2390
