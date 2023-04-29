@@ -22,6 +22,8 @@ pub mod merge_two_sorted_lists; // 21
 
 pub mod swap_nodes_in_pairs; // 24
 
+pub mod remove_duplicates_from_sorted_array; // 26
+
 pub mod range_sum_query_immutable; // 30
 
 pub mod search_insert_position; // 35
