@@ -66,6 +66,8 @@ pub mod add_digits; // 258
 
 pub mod closest_binary_search_tree_value; // 270
 
+pub mod move_zeroes; // 283
+
 pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod bulb_switcher; // 319
