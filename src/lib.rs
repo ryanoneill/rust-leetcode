@@ -49,6 +49,8 @@ pub mod path_sum; // 112
 
 pub mod best_time_to_buy_and_sell_stock; // 121
 
+pub mod valid_palindrome; // 125
+
 pub mod missing_ranges; // 163
 
 pub mod majority_element; // 169
@@ -124,6 +126,8 @@ pub mod maximum_difference_between_node_and_ancestor; // 1026
 
 pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
+
+pub mod shortest_path_in_binary_matrix; // 1091
 
 pub mod deepest_leaves_sum; // 1302
 
