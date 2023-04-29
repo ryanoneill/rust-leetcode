@@ -32,6 +32,8 @@ pub mod length_of_last_word; // 58
 
 pub mod simplify_path; // 71
 
+pub mod remove_duplicates_from_sorted_array_ii; // 80
+
 pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
