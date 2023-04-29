@@ -63,7 +63,8 @@ mod tests {
         let mut nums = vec![1,1,2];
         let result = Solution::remove_duplicates(&mut nums);
         assert_eq!(result, 2);
-        assert!(Solution::is_valid(&nums, result));
+        let _ = nums.split_off(2);
+        assert_eq!(nums, vec![1,2]);
     }
 
     #[test]
@@ -71,7 +72,8 @@ mod tests {
         let mut nums = vec![0,0,1,1,1,2,2,3,3,4];
         let result = Solution::remove_duplicates(&mut nums);
         assert_eq!(result, 5);
-        assert!(Solution::is_valid(&nums, result));
+        let _ = nums.split_off(5);
+        assert_eq!(nums, vec![0,1,2,3,4]);
     }
 
 }
