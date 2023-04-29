@@ -47,7 +47,11 @@ pub mod maximum_depth_of_binary_tree; // 104
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 
+pub mod best_time_to_buy_and_sell_stock; // 121
+
 pub mod missing_ranges; // 163
+
+pub mod majority_element; // 169
 
 pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
@@ -71,6 +75,8 @@ pub mod number_of_connected_components_in_an_undirected_graph; // 323
 pub mod moving_average_from_data_stream; // 346
 
 pub mod ransom_note; // 383
+
+pub mod is_subsequence; // 392
 
 pub mod fizz_buzz; // 412
 
