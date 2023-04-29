@@ -143,6 +143,8 @@ pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
 
 pub mod richest_customer_wealth; // 1672
 
+pub mod checking_existence_of_edge_length_limited_paths; // 1697
+
 pub mod maximum_population_year; // 1854
 
 pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
