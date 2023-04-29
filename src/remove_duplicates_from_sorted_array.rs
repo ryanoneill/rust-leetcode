@@ -34,24 +34,6 @@ impl Solution {
         }
     }
 
-    fn is_valid(nums: &Vec<i32>, k: i32) -> bool {
-        let k = k as usize;
-        if k == 0 { true }
-        else {
-            let mut last = nums[0];
-            let mut result = true;
-            for i in 1..k {
-                if nums[i] <= last {
-                    result = false;
-                    break;
-                } else {
-                    last = nums[i];
-                }
-            }
-            result
-        }
-    }
-
 }
 
 #[cfg(test)]
