@@ -2,6 +2,8 @@ use crate::tree_node::TreeNode;
 use std::cell::RefCell;
 use std::cmp::max;
 use std::cmp::min;
+use std::collections::HashMap;
+use std::collections::HashSet;
 use std::collections::VecDeque;
 use std::rc::Rc;
 
@@ -9,6 +11,17 @@ pub trait TreeNodeAdditions {
 
     fn new(val: i32) -> Self;
     fn with_children(val: i32, left: Self, right: Self) -> Self;
+
+    fn clone_left(&self) -> Self;
+    fn clone_right(&self) -> Self;
+
+    /// For use with Binary Trees of Nodes.
+    fn find_children(&self) -> HashMap<i32, HashSet<i32>>;
+    fn find_children_worker(&self, children: &mut HashMap<i32, HashSet<i32>>);
+
+    /// For use with Binary Trees of Nodes.
+    fn find_parents(&self) -> HashMap<i32, i32>;
+    fn find_parents_worker(&self, parents: &mut HashMap<i32, i32>);
 
     fn get_value(&self) -> Option<i32>;
     fn in_order(&self) -> Vec<i32>;
@@ -29,6 +42,84 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
 
     fn with_children(val: i32, left: Self, right: Self) -> Self {
         Some(Rc::new(RefCell::new(TreeNode { val, left, right })))
+    }
+
+    fn clone_left(&self) -> Self {
+        self.as_ref().and_then(|rc| rc.borrow().left.clone())
+    }
+
+    fn clone_right(&self) -> Self {
+        self.as_ref().and_then(|rc| rc.borrow().right.clone())
+    }
+
+    fn find_children(&self) -> HashMap<i32, HashSet<i32>> {
+        let mut children = HashMap::new();
+        self.find_children_worker(&mut children);
+        children
+    }
+
+    fn find_children_worker(&self, children: &mut HashMap<i32, HashSet<i32>>) {
+        match self {
+            Some(rc) => {
+                let node = rc.borrow();
+                let val = node.val;
+                let left_value = node.left.get_value();
+                match left_value {
+                    Some(left_val) => {
+                        children
+                            .entry(val)
+                            .or_insert(HashSet::new())
+                            .insert(left_val);
+                        node.left.find_children_worker(children);
+                    }
+                    None => { }
+                }
+                let right_value = node.right.get_value();
+                match right_value {
+                    Some(right_val) => {
+                        children
+                            .entry(val)
+                            .or_insert(HashSet::new())
+                            .insert(right_val);
+                        node.right.find_children_worker(children);
+                    }
+                    None => { }
+                }
+            }
+            None => { }
+        }
+    }
+
+    fn find_parents(&self) -> HashMap<i32, i32> {
+        let mut parents = HashMap::new();
+        self.find_parents_worker(&mut parents);
+        parents
+    }
+
+    fn find_parents_worker(&self, parents: &mut HashMap<i32, i32>) {
+        match self {
+            Some(rc) => {
+                let node = rc.borrow();
+                let val = node.val;
+                let left_value = node.left.get_value();
+                match left_value {
+                    Some(left_val) => {
+                        parents.insert(left_val, val);
+                        node.left.find_parents_worker(parents);
+                    }
+                    None => { }
+                }
+                let right_value = node.right.get_value();
+                match right_value {
+                    Some(right_val) => {
+                        parents.insert(right_val, val);
+                        node.right.find_parents_worker(parents);
+                    }
+                    None => { }
+                }
+            }
+            None => { }
+        }
     }
 
     fn get_value(&self) -> Option<i32> {

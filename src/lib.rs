@@ -115,6 +115,8 @@ pub mod similar_string_groups; // 839
 
 pub mod keys_and_rooms; // 841
 
+pub mod all_nodes_distance_k_in_binary_tree; // 863
+
 pub mod middle_of_the_linked_list; // 876
 
 pub mod online_stock_span; // 901
