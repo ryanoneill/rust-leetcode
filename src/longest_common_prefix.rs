@@ -5,7 +5,6 @@
 struct Solution;
 
 impl Solution {
-
     fn prefix_compare(s1: &str, s2: &str) -> usize {
         let mut result = 0;
 
@@ -17,7 +16,9 @@ impl Solution {
                 (Some(c1), Some(c2)) if c1 == c2 => {
                     result += 1;
                 }
-                _ => { break; }
+                _ => {
+                    break;
+                }
             }
         }
 
@@ -30,12 +31,14 @@ impl Solution {
 
         let mut result = "".to_string();
 
-        if n == 0 { }
-        else if n == 1 { result = strs.pop().unwrap(); }
-        else {
+        if n == 0 {
+        } else if n == 1 {
+            result = strs.pop().unwrap();
+        } else {
             let last = strs.pop().unwrap();
-            let length = strs.iter()
-                .map(|s| { Self::prefix_compare(&last, s) })
+            let length = strs
+                .iter()
+                .map(|s| Self::prefix_compare(&last, s))
                 .min()
                 .unwrap_or_default();
             if length > 0 {
@@ -44,9 +47,7 @@ impl Solution {
         }
 
         result
-
     }
-
 }
 
 #[cfg(test)]
@@ -68,5 +69,4 @@ mod tests {
         let result = Solution::longest_common_prefix(strs);
         assert_eq!(result, "");
     }
-
 }

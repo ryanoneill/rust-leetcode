@@ -18,7 +18,6 @@ use std::hash::Hash;
 struct Solution;
 
 impl Solution {
-
     pub fn find_circle_num(is_connected: Vec<Vec<i32>>) -> i32 {
         let mut graph: HashMap<usize, HashSet<usize>> = HashMap::new();
 
@@ -31,10 +30,12 @@ impl Solution {
         for i in 0..n {
             for j in i + 1..n {
                 if is_connected[i][j] == 1 {
-                    graph.entry(i)
-                        .and_modify(|e| { e.insert(j); });
-                    graph.entry(j)
-                        .and_modify(|e| { e.insert(i); });
+                    graph.entry(i).and_modify(|e| {
+                        e.insert(j);
+                    });
+                    graph.entry(j).and_modify(|e| {
+                        e.insert(i);
+                    });
                 }
             }
         }
@@ -64,7 +65,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -73,16 +73,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let is_connected = vec![vec![1,1,0],vec![1,1,0],vec![0,0,1]];
+        let is_connected = vec![vec![1, 1, 0], vec![1, 1, 0], vec![0, 0, 1]];
         let result = Solution::find_circle_num(is_connected);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_2() {
-        let is_connected = vec![vec![1,0,0], vec![0,1,0], vec![0,0,1]];
+        let is_connected = vec![vec![1, 0, 0], vec![0, 1, 0], vec![0, 0, 1]];
         let result = Solution::find_circle_num(is_connected);
         assert_eq!(result, 3);
     }
-
 }

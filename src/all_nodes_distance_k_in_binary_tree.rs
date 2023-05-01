@@ -14,11 +14,10 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn distance_k(
         root: Option<Rc<RefCell<TreeNode>>>,
         target: Option<Rc<RefCell<TreeNode>>>,
-        k: i32
+        k: i32,
     ) -> Vec<i32> {
         let result: Vec<i32>;
 
@@ -60,20 +59,19 @@ impl Solution {
 
                 result = queue.into_iter().collect();
             }
-            None => { result = Vec::new() }
+            None => result = Vec::new(),
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -109,5 +107,4 @@ mod tests {
         let result = Solution::distance_k(root, target, k);
         assert_eq!(result, vec![2]);
     }
-
 }

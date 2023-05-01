@@ -5,7 +5,6 @@ pub struct Stack<T> {
 }
 
 impl<T> Stack<T> {
-
     pub fn new() -> Self {
         Stack { items: vec![] }
     }
@@ -19,8 +18,11 @@ impl<T> Stack<T> {
     }
 
     pub fn peek(&self) -> Option<&T> {
-        if self.is_empty() { None }
-        else { self.items.get(self.len() - 1) }
+        if self.is_empty() {
+            None
+        } else {
+            self.items.get(self.len() - 1)
+        }
     }
 
     pub fn pop(&mut self) -> Option<T> {
@@ -38,23 +40,18 @@ impl<T> Stack<T> {
         }
         self.items = new_items;
     }
-
 }
 
 impl Stack<&str> {
-
     pub fn join(&self, sep: &str) -> String {
         self.items.join(sep)
     }
-
 }
 
 impl Stack<char> {
-
     pub fn to_string(&self) -> String {
         String::from_iter(self.items.iter())
     }
-
 }
 
 #[cfg(test)]
@@ -121,5 +118,4 @@ mod tests {
         assert!(value.is_some());
         assert_eq!(value.unwrap(), "goodbye");
     }
-
 }

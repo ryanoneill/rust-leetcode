@@ -1,5 +1,5 @@
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -9,7 +9,6 @@ pub struct TreeNode {
 }
 
 impl TreeNode {
-
     #[inline]
     pub fn new(val: i32) -> Self {
         TreeNode {
@@ -18,5 +17,4 @@ impl TreeNode {
             right: None,
         }
     }
-
 }

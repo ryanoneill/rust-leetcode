@@ -1,7 +1,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn reverse_only_letters(s: String) -> String {
         let mut items: Vec<char> = s.chars().collect();
         let mut start = 0;
@@ -23,7 +22,6 @@ impl Solution {
         }
         items.iter().collect::<String>()
     }
-
 }
 #[cfg(test)]
 mod tests {
@@ -49,5 +47,4 @@ mod tests {
         let result = Solution::reverse_only_letters(s);
         assert_eq!(result, "Qedo1ct-eeLg=ntse-T!");
     }
-
 }

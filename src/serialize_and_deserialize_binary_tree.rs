@@ -21,14 +21,14 @@ use std::rc::Rc;
 pub struct Codec;
 
 impl Codec {
-
     pub fn new() -> Self {
-        Codec { }
+        Codec {}
     }
 
     pub fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {
-        if root.is_none() { "[]".to_string() }
-        else {
+        if root.is_none() {
+            "[]".to_string()
+        } else {
             let mut queue = VecDeque::new();
             let mut items = Vec::new();
 
@@ -58,30 +58,29 @@ impl Codec {
 
             result
         }
-
     }
 
     pub fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {
-        if data == "[]" { None }
-        else {
-            let items = data.strip_prefix("[")
+        if data == "[]" {
+            None
+        } else {
+            let items = data
+                .strip_prefix("[")
                 .and_then(|d| d.strip_suffix("]"))
                 .map(|d| d.split(',').collect())
                 .unwrap_or(vec![]);
-            let items: Vec<Option<i32>> = items.iter()
-                .map(|&v| v.parse().ok())
-                .collect();
-            let items: Vec<Option<Rc<RefCell<TreeNode>>>> = items.iter()
-                .map(|v| {
-                    match v.as_ref() {
-                        Some(value) => TreeNodeAdditions::new(*value),
-                        None => None
-                    }
+            let items: Vec<Option<i32>> = items.iter().map(|&v| v.parse().ok()).collect();
+            let items: Vec<Option<Rc<RefCell<TreeNode>>>> = items
+                .iter()
+                .map(|v| match v.as_ref() {
+                    Some(value) => TreeNodeAdditions::new(*value),
+                    None => None,
                 })
                 .collect();
 
-            if items.is_empty() { None }
-            else {
+            if items.is_empty() {
+                None
+            } else {
                 let mut queue = VecDeque::new();
                 let mut is_left = true;
                 let mut current: Option<Rc<RefCell<TreeNode>>> = None;
@@ -110,15 +109,13 @@ impl Codec {
                 result
             }
         }
-
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::tree_node_additions::TreeNodeAdditions;
     use super::Codec;
+    use crate::tree_node_additions::TreeNodeAdditions;
 
     #[test]
     fn serialize_none() {
@@ -324,7 +321,4 @@ mod tests {
         let round_trip = codec.serialize(result);
         assert_eq!(round_trip, data);
     }
-
-
 }
-

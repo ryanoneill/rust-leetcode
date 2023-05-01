@@ -6,7 +6,6 @@ use crate::list_node_additions::ListNodeAdditions;
 pub struct Solution;
 
 impl Solution {
-
     pub fn remove_nth_node_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
         let n = n as usize;
         let mut head = head;
@@ -21,14 +20,13 @@ impl Solution {
             head
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -53,5 +51,4 @@ mod tests {
         let result = Solution::remove_nth_node_from_end(nodes, 1);
         assert_eq!(result.to_vec(), vec![1]);
     }
-
 }

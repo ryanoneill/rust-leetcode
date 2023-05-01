@@ -5,7 +5,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn length_of_last_word(s: String) -> i32 {
         s.split_whitespace()
             .rev()
@@ -14,13 +13,11 @@ impl Solution {
             .map(|x| x.len())
             .unwrap_or_default() as i32
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
@@ -42,5 +39,4 @@ mod tests {
         let result = Solution::length_of_last_word(s);
         assert_eq!(result, 6);
     }
-
 }

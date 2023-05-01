@@ -15,15 +15,19 @@ struct NumArray {
 }
 
 impl NumArray {
-
     fn prefix_sum(nums: Vec<i32>) -> Vec<i32> {
         let mut sum = 0;
-        nums.iter().map(|x| { sum += x; sum }).collect()
+        nums.iter()
+            .map(|x| {
+                sum += x;
+                sum
+            })
+            .collect()
     }
 
     fn new(nums: Vec<i32>) -> Self {
         Self {
-            sums: Self::prefix_sum(nums)
+            sums: Self::prefix_sum(nums),
         }
     }
 
@@ -31,10 +35,9 @@ impl NumArray {
         if left == 0 {
             self.sums[right as usize]
         } else {
-            self.sums[right as usize] - self.sums[(left-1) as usize]
+            self.sums[right as usize] - self.sums[(left - 1) as usize]
         }
     }
-
 }
 
 #[cfg(test)]
@@ -43,7 +46,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let num_array = NumArray::new(vec![-2,0,3,-5,2,-1]);
+        let num_array = NumArray::new(vec![-2, 0, 3, -5, 2, -1]);
         let result1 = num_array.sum_range(0, 2);
         assert_eq!(result1, 1);
         let result2 = num_array.sum_range(2, 5);
@@ -51,5 +54,4 @@ mod tests {
         let result3 = num_array.sum_range(0, 5);
         assert_eq!(result3, -3);
     }
-
 }

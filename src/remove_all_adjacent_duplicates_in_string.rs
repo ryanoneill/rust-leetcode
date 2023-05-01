@@ -11,18 +11,20 @@ use crate::stack::Stack;
 struct Solution;
 
 impl Solution {
-
     pub fn remove_duplicates(s: String) -> String {
         let mut stack = String::from("");
         for c in s.chars() {
             match stack.chars().last() {
-                Some(v) if c == v => { stack.pop(); }
-                _ => { stack.push(c); }
+                Some(v) if c == v => {
+                    stack.pop();
+                }
+                _ => {
+                    stack.push(c);
+                }
             }
         }
         stack
     }
-
 }
 
 #[cfg(test)]
@@ -49,5 +51,4 @@ mod tests {
         let result = Solution::remove_duplicates(s);
         assert_eq!(result, "");
     }
-
 }

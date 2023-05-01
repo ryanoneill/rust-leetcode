@@ -7,7 +7,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn fizz_buzz(n: i32) -> Vec<String> {
         let mut result = Vec::new();
 
@@ -31,7 +30,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-
     #[test]
     fn example_1() {
         let result = Solution::fizz_buzz(3);
@@ -47,8 +45,12 @@ mod tests {
     #[test]
     fn example_3() {
         let result = Solution::fizz_buzz(15);
-        assert_eq!(result, vec!["1", "2", "Fizz", "4", "Buzz", "Fizz", "7",
-            "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]);
+        assert_eq!(
+            result,
+            vec![
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
+                "13", "14", "FizzBuzz"
+            ]
+        );
     }
-
 }

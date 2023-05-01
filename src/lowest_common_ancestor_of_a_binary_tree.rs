@@ -1,7 +1,7 @@
 use crate::tree_node::TreeNode;
 use crate::tree_node_additions::TreeNodeAdditions;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 /// Given a binary tree, find the lowest common ancestor (LCA) of two given
 /// nodes in the tree.
@@ -14,25 +14,23 @@ use std::cell::RefCell;
 struct Solution;
 
 impl Solution {
-
     // TODO: Implement
     pub fn lowest_common_ancestor(
         _root: Option<Rc<RefCell<TreeNode>>>,
         _p: Option<Rc<RefCell<TreeNode>>>,
-        _q: Option<Rc<RefCell<TreeNode>>>
+        _q: Option<Rc<RefCell<TreeNode>>>,
     ) -> Option<Rc<RefCell<TreeNode>>> {
         None
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
     use std::cell::RefCell;
     use std::rc::Rc;
-    use super::Solution;
 
     #[ignore]
     #[test]
@@ -58,5 +56,4 @@ mod tests {
     }
 
     // TODO: More tests
-
 }

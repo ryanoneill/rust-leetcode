@@ -7,11 +7,15 @@ use crate::list_node_additions::ListNodeAdditions;
 struct Solution;
 
 impl Solution {
-
-    pub fn reverse_between(head: Option<Box<ListNode>>, left: i32, right: i32) -> Option<Box<ListNode>> {
+    pub fn reverse_between(
+        head: Option<Box<ListNode>>,
+        left: i32,
+        right: i32,
+    ) -> Option<Box<ListNode>> {
         let mut head = head;
-        if left >= right { head }
-        else if left == 1 {
+        if left >= right {
+            head
+        } else if left == 1 {
             let right_node = head.advance(right as usize - 1);
             let rest = right_node.take_next();
             let mut result = head.reverse();
@@ -33,9 +37,9 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -76,5 +80,4 @@ mod tests {
         let result = Solution::reverse_between(nodes, 4, 9);
         assert_eq!(result.to_vec(), vec![10, 9, 8, 2, 3, 4, 5, 6, 7, 1]);
     }
-
 }

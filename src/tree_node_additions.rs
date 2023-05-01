@@ -8,7 +8,6 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 pub trait TreeNodeAdditions {
-
     fn new(val: i32) -> Self;
     fn with_children(val: i32, left: Self, right: Self) -> Self;
 
@@ -31,11 +30,9 @@ pub trait TreeNodeAdditions {
     fn min_depth(&self) -> usize;
     fn set_left(&mut self, value: Self);
     fn set_right(&mut self, value: Self);
-
 }
 
 impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
-
     fn new(val: i32) -> Self {
         Some(Rc::new(RefCell::new(TreeNode::new(val))))
     }
@@ -72,7 +69,7 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                             .insert(left_val);
                         node.left.find_children_worker(children);
                     }
-                    None => { }
+                    None => {}
                 }
                 let right_value = node.right.get_value();
                 match right_value {
@@ -83,10 +80,10 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                             .insert(right_val);
                         node.right.find_children_worker(children);
                     }
-                    None => { }
+                    None => {}
                 }
             }
-            None => { }
+            None => {}
         }
     }
 
@@ -107,7 +104,7 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                         parents.insert(left_val, val);
                         node.left.find_parents_worker(parents);
                     }
-                    None => { }
+                    None => {}
                 }
                 let right_value = node.right.get_value();
                 match right_value {
@@ -115,10 +112,10 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                         parents.insert(right_val, val);
                         node.right.find_parents_worker(parents);
                     }
-                    None => { }
+                    None => {}
                 }
             }
-            None => { }
+            None => {}
         }
     }
 
@@ -156,10 +153,12 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
     }
 
     fn is_leaf(&self) -> bool {
-        self.as_ref().map(|rc| {
-            let node = rc.borrow();
-            node.left.is_none() && node.right.is_none()
-        }).unwrap_or(false)
+        self.as_ref()
+            .map(|rc| {
+                let node = rc.borrow();
+                node.left.is_none() && node.right.is_none()
+            })
+            .unwrap_or(false)
     }
 
     fn max_depth(&self) -> usize {
@@ -176,9 +175,11 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
     }
 
     fn min_depth(&self) -> usize {
-        if self.is_none() { 0 }
-        else if self.is_leaf() { 1 }
-        else {
+        if self.is_none() {
+            0
+        } else if self.is_leaf() {
+            1
+        } else {
             let rc = self.as_ref().unwrap();
             let node = rc.borrow();
             if node.left.is_some() && node.right.is_some() {
@@ -214,5 +215,4 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
             }
         }
     }
-
 }

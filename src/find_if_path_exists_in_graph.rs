@@ -18,7 +18,6 @@ use std::collections::VecDeque;
 struct Solution;
 
 impl Solution {
-
     pub fn valid_path(n: i32, edges: Vec<Vec<i32>>, source: i32, destination: i32) -> bool {
         let mut paths = HashMap::new();
         let needle = destination as usize;
@@ -30,16 +29,21 @@ impl Solution {
         for edge in edges {
             let a = edge[0] as usize;
             let b = edge[1] as usize;
-            paths.entry(a).and_modify(|p| { p.insert(b); });
-            paths.entry(b).and_modify(|p| { p.insert(a); });
+            paths.entry(a).and_modify(|p| {
+                p.insert(b);
+            });
+            paths.entry(b).and_modify(|p| {
+                p.insert(a);
+            });
         }
 
         let mut result = false;
         let mut seen = HashSet::new();
         let mut queue = VecDeque::new();
 
-        if source == destination { result = true }
-        else {
+        if source == destination {
+            result = true
+        } else {
             queue.push_back(source as usize);
             while !queue.is_empty() {
                 let item = queue.pop_front().unwrap();
@@ -50,7 +54,9 @@ impl Solution {
                         if *o == needle {
                             result = true;
                             break;
-                        } else { queue.push_back(*o); }
+                        } else {
+                            queue.push_back(*o);
+                        }
                     }
                 }
             }
@@ -58,7 +64,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -68,7 +73,7 @@ mod tests {
     #[test]
     fn example_1() {
         let n = 3;
-        let edges = vec![vec![0,1], vec![1,2], vec![2,0]];
+        let edges = vec![vec![0, 1], vec![1, 2], vec![2, 0]];
         let source = 0;
         let destination = 2;
         let result = Solution::valid_path(n, edges, source, destination);
@@ -78,7 +83,7 @@ mod tests {
     #[test]
     fn example_2() {
         let n = 6;
-        let edges = vec![vec![0,1], vec![0,2], vec![3,5], vec![5,4], vec![4,3]];
+        let edges = vec![vec![0, 1], vec![0, 2], vec![3, 5], vec![5, 4], vec![4, 3]];
         let source = 0;
         let destination = 5;
         let result = Solution::valid_path(n, edges, source, destination);
@@ -94,5 +99,4 @@ mod tests {
         let result = Solution::valid_path(n, edges, source, destination);
         assert!(result);
     }
-
 }

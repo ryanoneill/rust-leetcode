@@ -13,7 +13,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
         let mut i = 0;
         for j in 0..nums.len() {
@@ -28,7 +27,6 @@ impl Solution {
 
         i as i32
     }
-
 }
 
 #[cfg(test)]
@@ -37,22 +35,21 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mut nums = vec![3,2,2,3];
+        let mut nums = vec![3, 2, 2, 3];
         let val = 3;
         let result = Solution::remove_element(&mut nums, val);
         assert_eq!(result, 2);
         let _ = nums.split_off(2);
-        assert_eq!(nums, vec![2,2]);
+        assert_eq!(nums, vec![2, 2]);
     }
 
     #[test]
     fn example_2() {
-        let mut nums = vec![0,1,2,2,3,0,4,2];
+        let mut nums = vec![0, 1, 2, 2, 3, 0, 4, 2];
         let val = 2;
         let result = Solution::remove_element(&mut nums, val);
         assert_eq!(result, 5);
         let _ = nums.split_off(5);
-        assert_eq!(nums, vec![0,1,3,0,4]);
+        assert_eq!(nums, vec![0, 1, 3, 0, 4]);
     }
-
 }

@@ -7,7 +7,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {
         accounts
             .iter()
@@ -15,33 +14,30 @@ impl Solution {
             .max()
             .unwrap_or_default()
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
 
-
     #[test]
     fn example_1() {
-        let accounts = vec![vec![1,2,3], vec![3,2,1]];
+        let accounts = vec![vec![1, 2, 3], vec![3, 2, 1]];
         let result = Solution::maximum_wealth(accounts);
         assert_eq!(result, 6);
     }
 
     #[test]
     fn example_2() {
-        let accounts = vec![vec![1,5], vec![7,3], vec![3,5]];
+        let accounts = vec![vec![1, 5], vec![7, 3], vec![3, 5]];
         let result = Solution::maximum_wealth(accounts);
         assert_eq!(result, 10);
     }
 
     #[test]
     fn example_3() {
-        let accounts = vec![vec![2,8,7], vec![7,1,3], vec![1,9,5]];
+        let accounts = vec![vec![2, 8, 7], vec![7, 1, 3], vec![1, 9, 5]];
         let result = Solution::maximum_wealth(accounts);
         assert_eq!(result, 17);
     }
-
 }

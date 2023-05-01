@@ -19,7 +19,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     fn is_connected(a: &str, b: &str) -> bool {
         let a = a.as_bytes();
         let b = b.as_bytes();
@@ -54,8 +53,8 @@ impl Solution {
             }
         }
 
-        for i in 0..strs.len()-1 {
-            for j in (i+1)..strs.len() {
+        for i in 0..strs.len() - 1 {
+            for j in (i + 1)..strs.len() {
                 let word_i = &strs[i];
                 let word_j = &strs[j];
                 let group_i = groups[word_i];
@@ -74,7 +73,6 @@ impl Solution {
 
         words.len() as i32
     }
-
 }
 
 #[cfg(test)]
@@ -107,7 +105,7 @@ mod tests {
 
     #[test]
     fn same() {
-        let orig = vec!["abc","abc","def","abc","def"];
+        let orig = vec!["abc", "abc", "def", "abc", "def"];
         let strs = orig.iter().map(|s| s.to_string()).collect();
         let result = Solution::num_similar_groups(strs);
         assert_eq!(result, 2);
@@ -115,10 +113,20 @@ mod tests {
 
     #[test]
     fn real_world() {
-        let orig = vec!["zkhnmefhyr","ykznfhehmr","mkhnyefrzh","zkhnyefrmh","zkmnhefhyr","ykznhfehmr","zkynhfehmr","mkhnhefrzy","zkhnmefryh","zkmnhfehyr"];
+        let orig = vec![
+            "zkhnmefhyr",
+            "ykznfhehmr",
+            "mkhnyefrzh",
+            "zkhnyefrmh",
+            "zkmnhefhyr",
+            "ykznhfehmr",
+            "zkynhfehmr",
+            "mkhnhefrzy",
+            "zkhnmefryh",
+            "zkmnhfehyr",
+        ];
         let strs = orig.iter().map(|s| s.to_string()).collect();
         let result = Solution::num_similar_groups(strs);
         assert_eq!(result, 1);
     }
-
 }

@@ -22,18 +22,21 @@
 ///
 struct StockSpanner {
     prices: Vec<(usize, i32)>,
-    day: usize
+    day: usize,
 }
 
 impl StockSpanner {
-
     fn new() -> Self {
-        StockSpanner { prices: vec![], day: 0 }
+        StockSpanner {
+            prices: vec![],
+            day: 0,
+        }
     }
 
     fn has_non_greater_price(&mut self, price: i32) -> bool {
-        if self.prices.is_empty() { false }
-        else {
+        if self.prices.is_empty() {
+            false
+        } else {
             let last_index = self.prices.len() - 1;
             let last_value = self.prices[last_index];
             last_value.1 <= price
@@ -64,7 +67,6 @@ impl StockSpanner {
             (self.day - last_day) as i32
         }
     }
-
 }
 
 #[cfg(test)]
@@ -132,5 +134,4 @@ mod tests {
         let result5 = stock_spanner.next(60);
         assert_eq!(result5, 5);
     }
-
 }

@@ -8,7 +8,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn is_subsequence(s: String, t: String) -> bool {
         let mut s_chars = s.chars();
         let mut t_chars = t.chars();
@@ -34,12 +33,10 @@ impl Solution {
                     break;
                 }
             }
-
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -61,5 +58,4 @@ mod tests {
         let result = Solution::is_subsequence(s, t);
         assert!(!result);
     }
-
 }

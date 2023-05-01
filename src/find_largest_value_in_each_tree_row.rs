@@ -9,10 +9,10 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn largest_values(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
-        if root.is_none() { vec![] }
-        else {
+        if root.is_none() {
+            vec![]
+        } else {
             let mut result = Vec::new();
             let mut queue = VecDeque::new();
 
@@ -47,14 +47,12 @@ impl Solution {
             result
         }
     }
-
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -62,7 +60,7 @@ mod tests {
         let codec = Codec::new();
         let root = codec.deserialize(data);
         let result = Solution::largest_values(root);
-        assert_eq!(result, vec![1,3,9]);
+        assert_eq!(result, vec![1, 3, 9]);
     }
 
     #[test]
@@ -71,7 +69,6 @@ mod tests {
         let codec = Codec::new();
         let root = codec.deserialize(data);
         let result = Solution::largest_values(root);
-        assert_eq!(result, vec![1,3]);
+        assert_eq!(result, vec![1, 3]);
     }
-
 }

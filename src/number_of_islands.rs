@@ -9,14 +9,16 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
     fn row_len(grid: &Vec<Vec<char>>) -> usize {
         grid.len()
     }
 
     fn col_len(grid: &Vec<Vec<char>>) -> usize {
-        if Self::row_len(grid) > 0 { grid[0].len() }
-        else { 0 }
+        if Self::row_len(grid) > 0 {
+            grid[0].len()
+        } else {
+            0
+        }
     }
 
     pub fn num_islands(grid: Vec<Vec<char>>) -> i32 {
@@ -49,11 +51,19 @@ impl Solution {
             let mut neighbor_col: i32 = col as i32;
 
             match dir {
-                'N' => { neighbor_row -= 1; }
-                'S' => { neighbor_row += 1; }
-                'E' => { neighbor_col += 1; }
-                'W' => { neighbor_col -= 1; }
-                _   => { }
+                'N' => {
+                    neighbor_row -= 1;
+                }
+                'S' => {
+                    neighbor_row += 1;
+                }
+                'E' => {
+                    neighbor_col += 1;
+                }
+                'W' => {
+                    neighbor_col -= 1;
+                }
+                _ => {}
             }
             let valid_row = neighbor_row >= 0 && neighbor_row < Self::row_len(&grid) as i32;
             let valid_col = neighbor_col >= 0 && neighbor_col < Self::col_len(&grid) as i32;
@@ -67,23 +77,20 @@ impl Solution {
                 }
             }
         }
-
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
 
-
     #[test]
     fn example_1() {
         let grid = vec![
-            vec!['1','1','1','1','0'],
-            vec!['1','1','0','1','0'],
-            vec!['1','1','0','0','0'],
-            vec!['0','0','0','0','0']
+            vec!['1', '1', '1', '1', '0'],
+            vec!['1', '1', '0', '1', '0'],
+            vec!['1', '1', '0', '0', '0'],
+            vec!['0', '0', '0', '0', '0'],
         ];
         let result = Solution::num_islands(grid);
         assert_eq!(result, 1);
@@ -92,13 +99,12 @@ mod tests {
     #[test]
     fn example_2() {
         let grid = vec![
-            vec!['1','1','0','0','0'],
-            vec!['1','1','0','0','0'],
-            vec!['0','0','1','0','0'],
-            vec!['0','0','0','1','1']
+            vec!['1', '1', '0', '0', '0'],
+            vec!['1', '1', '0', '0', '0'],
+            vec!['0', '0', '1', '0', '0'],
+            vec!['0', '0', '0', '1', '1'],
         ];
         let result = Solution::num_islands(grid);
         assert_eq!(result, 3);
     }
-
 }

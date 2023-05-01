@@ -13,12 +13,13 @@ use crate::list_node_additions::ListNodeAdditions;
 pub struct Solution;
 
 impl Solution {
-
     pub fn delete_middle(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut head = head;
-        if head.is_empty() { None }
-        else if !head.has_next() { None }
-        else {
+        if head.is_empty() {
+            None
+        } else if !head.has_next() {
+            None
+        } else {
             let count = head.len();
             let to_find = count / 2 - 1;
             let before_middle = head.advance(to_find);
@@ -29,14 +30,13 @@ impl Solution {
             head
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -69,5 +69,4 @@ mod tests {
         let result = Solution::delete_middle(nodes);
         assert_eq!(result.to_vec(), vec![]);
     }
-
 }

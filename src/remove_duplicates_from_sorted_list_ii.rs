@@ -7,19 +7,17 @@ use crate::list_node_additions::ListNodeAdditions;
 pub struct Solution;
 
 impl Solution {
-
     // TODO: Implement
     pub fn delete_duplicates(_head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         None
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[ignore]
     #[test]
@@ -38,5 +36,4 @@ mod tests {
         let result = Solution::delete_duplicates(nodes);
         assert_eq!(result.to_vec(), vec![2, 3]);
     }
-
 }

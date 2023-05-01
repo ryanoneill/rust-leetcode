@@ -11,19 +11,17 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         root.max_depth() as i32
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -42,5 +40,4 @@ mod tests {
         let result = Solution::max_depth(root);
         assert_eq!(result, 2);
     }
-
 }

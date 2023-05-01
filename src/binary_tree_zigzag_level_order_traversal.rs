@@ -9,10 +9,10 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn zigzag_level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
-        if root.is_none() { vec![] }
-        else {
+        if root.is_none() {
+            vec![]
+        } else {
             let mut result: Vec<Vec<i32>> = Vec::new();
             let mut queue = VecDeque::new();
             let mut forward = true;
@@ -51,7 +51,6 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
@@ -60,14 +59,13 @@ mod tests {
 
     use super::Solution;
 
-
     #[test]
     fn example_1() {
         let data = "[3,9,20,null,null,15,7]".to_string();
         let codec = Codec::new();
         let root = codec.deserialize(data);
         let result = Solution::zigzag_level_order(root);
-        assert_eq!(result, vec![vec![3], vec![20,9], vec![15,7]]);
+        assert_eq!(result, vec![vec![3], vec![20, 9], vec![15, 7]]);
     }
 
     #[test]
@@ -87,5 +85,4 @@ mod tests {
         let result = Solution::zigzag_level_order(root);
         assert_eq!(result, Vec::<Vec<i32>>::new());
     }
-
 }

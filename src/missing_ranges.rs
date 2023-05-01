@@ -10,7 +10,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn find_missing_ranges(nums: Vec<i32>, lower: i32, upper: i32) -> Vec<Vec<i32>> {
         let mut result = Vec::new();
         let mut last_num = None;
@@ -22,12 +21,12 @@ impl Solution {
                 match last_num {
                     None => {
                         if num > lower {
-                            result.push(vec![lower, num-1]);
+                            result.push(vec![lower, num - 1]);
                         }
                     }
                     Some(ln) => {
                         if ln != num - 1 {
-                            result.push(vec![ln+1, num-1]);
+                            result.push(vec![ln + 1, num - 1]);
                         }
                     }
                 }
@@ -36,16 +35,15 @@ impl Solution {
             match last_num {
                 Some(ln) => {
                     if ln < upper {
-                        result.push(vec![ln+1, upper]);
+                        result.push(vec![ln + 1, upper]);
                     }
                 }
-                None => { }
+                None => {}
             }
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -54,11 +52,14 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![0,1,3,50,75];
+        let nums = vec![0, 1, 3, 50, 75];
         let lower = 0;
         let upper = 99;
         let result = Solution::find_missing_ranges(nums, lower, upper);
-        assert_eq!(result, vec![vec![2,2], vec![4,49],vec![51,74],vec![76,99]]);
+        assert_eq!(
+            result,
+            vec![vec![2, 2], vec![4, 49], vec![51, 74], vec![76, 99]]
+        );
     }
 
     #[test]
@@ -76,7 +77,7 @@ mod tests {
         let lower = 10;
         let upper = 90;
         let result = Solution::find_missing_ranges(nums, lower, upper);
-        assert_eq!(result, vec![vec![10,90]]);
+        assert_eq!(result, vec![vec![10, 90]]);
     }
 
     #[test]
@@ -85,8 +86,9 @@ mod tests {
         let lower = -30;
         let upper = -2;
         let result = Solution::find_missing_ranges(nums, lower, upper);
-        assert_eq!(result, vec![vec![-30,-24], vec![-22,-16], vec![-14,-11], vec![-9,-2]]);
+        assert_eq!(
+            result,
+            vec![vec![-30, -24], vec![-22, -16], vec![-14, -11], vec![-9, -2]]
+        );
     }
-
 }
-

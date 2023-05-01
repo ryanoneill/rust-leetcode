@@ -6,27 +6,33 @@
 struct Solution;
 
 impl Solution {
-
     fn search_range(nums: &Vec<i32>, target: i32, start: usize, end: usize) -> i32 {
         let mid = start + (end - start) / 2;
         let value = nums[mid];
-        if value == target { mid as i32 }
-        else if value > target {
-            if mid == start { -1 }
-            else { Self::search_range(nums, target, start, mid - 1) }
-        }
-        else {
-            if mid == end { -1 }
-            else { Self::search_range(nums, target, mid + 1, end) }
+        if value == target {
+            mid as i32
+        } else if value > target {
+            if mid == start {
+                -1
+            } else {
+                Self::search_range(nums, target, start, mid - 1)
+            }
+        } else {
+            if mid == end {
+                -1
+            } else {
+                Self::search_range(nums, target, mid + 1, end)
+            }
         }
     }
 
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {
         if nums.len() > 0 {
             Self::search_range(&nums, target, 0, nums.len() - 1)
-        } else { -1 }
+        } else {
+            -1
+        }
     }
-
 }
 
 #[cfg(test)]
@@ -80,5 +86,4 @@ mod tests {
         let result = Solution::search(nums, target);
         assert_eq!(result, -1);
     }
-
 }

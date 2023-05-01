@@ -9,10 +9,8 @@
 struct Solution;
 
 impl Solution {
-
     // TODO: Implement
     pub fn max_profit(_prices: Vec<i32>) -> i32 {
         0
     }
-
 }

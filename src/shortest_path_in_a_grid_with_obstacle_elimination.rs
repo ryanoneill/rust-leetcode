@@ -16,9 +16,13 @@ struct State {
 }
 
 impl State {
-
     fn new(row: usize, col: usize, remaining: i32, steps: i32) -> Self {
-        Self { row, col, remaining, steps }
+        Self {
+            row,
+            col,
+            remaining,
+            steps,
+        }
     }
 
     fn key(&self) -> (usize, usize, i32) {
@@ -38,15 +42,13 @@ impl State {
     }
 
     fn is_end(&self, m: usize, n: usize) -> bool {
-        self.row == m-1 && self.col == n-1
+        self.row == m - 1 && self.col == n - 1
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     pub fn shortest_path(grid: Vec<Vec<i32>>, k: i32) -> i32 {
         let directions = vec!['N', 'S', 'E', 'W'];
         let m = grid.len();
@@ -57,7 +59,12 @@ impl Solution {
         let mut queue = VecDeque::new();
         let mut seen = HashSet::new();
 
-        let start_state = State { row: 0, col: 0, remaining: k, steps: 0 };
+        let start_state = State {
+            row: 0,
+            col: 0,
+            remaining: k,
+            steps: 0,
+        };
         seen.insert(start_state.key());
         queue.push_back(start_state);
         while !queue.is_empty() {
@@ -72,11 +79,19 @@ impl Solution {
                 let mut row = state.row as i32;
                 let mut col = state.col as i32;
                 match dir {
-                    'N' => { row -= 1; }
-                    'S' => { row += 1; }
-                    'E' => { col += 1; }
-                    'W' => { col -= 1; }
-                    _   => { }
+                    'N' => {
+                        row -= 1;
+                    }
+                    'S' => {
+                        row += 1;
+                    }
+                    'E' => {
+                        col += 1;
+                    }
+                    'W' => {
+                        col -= 1;
+                    }
+                    _ => {}
                 }
                 let valid_row = row >= 0 && row < m as i32;
                 let valid_col = col >= 0 && col < n as i32;
@@ -102,9 +117,12 @@ impl Solution {
             }
         }
 
-        if found_end { result } else { -1 }
+        if found_end {
+            result
+        } else {
+            -1
+        }
     }
-
 }
 
 #[cfg(test)]
@@ -113,7 +131,13 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let grid = vec![vec![0,0,0], vec![1,1,0], vec![0,0,0], vec![0,1,1], vec![0,0,0]];
+        let grid = vec![
+            vec![0, 0, 0],
+            vec![1, 1, 0],
+            vec![0, 0, 0],
+            vec![0, 1, 1],
+            vec![0, 0, 0],
+        ];
         let k = 1;
         let result = Solution::shortest_path(grid, k);
         assert_eq!(result, 6);
@@ -121,10 +145,9 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let grid = vec![vec![0,1,1], vec![1,1,1], vec![1,0,0]];
+        let grid = vec![vec![0, 1, 1], vec![1, 1, 1], vec![1, 0, 0]];
         let k = 1;
         let result = Solution::shortest_path(grid, k);
         assert_eq!(result, -1);
     }
-
 }

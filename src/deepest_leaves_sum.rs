@@ -8,10 +8,10 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn deepest_leaves_sum(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        if root.is_none() { 0 }
-        else {
+        if root.is_none() {
+            0
+        } else {
             let mut values = Vec::new();
             let mut queue = VecDeque::new();
 
@@ -38,20 +38,18 @@ impl Solution {
                             // do nothing
                         }
                     }
-
                 }
             }
 
             values.iter().sum()
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -70,5 +68,4 @@ mod tests {
         let result = Solution::deepest_leaves_sum(root);
         assert_eq!(result, 19);
     }
-
 }

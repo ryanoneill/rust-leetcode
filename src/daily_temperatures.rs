@@ -6,14 +6,10 @@
 struct Solution;
 
 impl Solution {
-
-    fn has_lower_temp(
-        temperatures: &Vec<i32>,
-        stack: &Vec<usize>,
-        temp: i32
-    ) -> bool {
-        if stack.is_empty() { false }
-        else {
+    fn has_lower_temp(temperatures: &Vec<i32>, stack: &Vec<usize>, temp: i32) -> bool {
+        if stack.is_empty() {
+            false
+        } else {
             let last_index = stack.iter().last().unwrap();
             let last_temp = temperatures[*last_index];
             last_temp < temp
@@ -34,7 +30,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -45,21 +40,20 @@ mod tests {
     fn example_1() {
         let temperatures = vec![73, 74, 75, 71, 69, 72, 76, 73];
         let result = Solution::daily_temperatures(temperatures);
-        assert_eq!(result, vec![1,1,4,2,1,1,0,0]);
+        assert_eq!(result, vec![1, 1, 4, 2, 1, 1, 0, 0]);
     }
 
     #[test]
     fn example_2() {
         let temperatures = vec![30, 40, 50, 60];
         let result = Solution::daily_temperatures(temperatures);
-        assert_eq!(result, vec![1,1,1,0]);
+        assert_eq!(result, vec![1, 1, 1, 0]);
     }
 
     #[test]
     fn example_3() {
         let temperatures = vec![30, 60, 90];
         let result = Solution::daily_temperatures(temperatures);
-        assert_eq!(result, vec![1,1,0]);
+        assert_eq!(result, vec![1, 1, 0]);
     }
-
 }

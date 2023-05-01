@@ -10,14 +10,15 @@ use crate::list_node_additions::ListNodeAdditions;
 pub struct Solution;
 
 impl Solution {
-
     pub fn merge_two_lists(
         list1: Option<Box<ListNode>>,
-        list2: Option<Box<ListNode>>
+        list2: Option<Box<ListNode>>,
     ) -> Option<Box<ListNode>> {
-        if list1.is_empty() { list2 }
-        else if list2.is_empty() { list1 }
-        else {
+        if list1.is_empty() {
+            list2
+        } else if list2.is_empty() {
+            list1
+        } else {
             let mut list1 = list1;
             let mut list2 = list2;
             let mut result = None;
@@ -65,14 +66,13 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -81,7 +81,7 @@ mod tests {
         let items2 = vec![1, 3, 4];
         let list2 = ListNodeAdditions::from_vec(items2);
         let result = Solution::merge_two_lists(list1, list2);
-        assert_eq!(result.to_vec(), vec![1,1,2,3,4,4]);
+        assert_eq!(result.to_vec(), vec![1, 1, 2, 3, 4, 4]);
     }
 
     #[test]
@@ -103,5 +103,4 @@ mod tests {
         let result = Solution::merge_two_lists(list1, list2);
         assert_eq!(result.to_vec(), vec![0]);
     }
-
 }

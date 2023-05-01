@@ -9,7 +9,6 @@ use std::collections::VecDeque;
 struct Solution;
 
 impl Solution {
-
     pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
         let k = k as usize;
         let mut result = Vec::with_capacity(nums.len() - k + 1);
@@ -28,12 +27,10 @@ impl Solution {
             if i >= k - 1 {
                 result.push(nums[*maxes.front().unwrap()]);
             }
-
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -55,5 +52,4 @@ mod tests {
         let result = Solution::max_sliding_window(nums, k);
         assert_eq!(result, vec![1]);
     }
-
 }

@@ -9,7 +9,6 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
     pub fn can_construct(ransom_note: String, magazine: String) -> bool {
         let needed: HashSet<char> = HashSet::from_iter(ransom_note.chars());
         let mut letter_counts: HashMap<char, usize> = HashMap::new();
@@ -41,7 +40,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -71,5 +69,4 @@ mod tests {
         let result = Solution::can_construct(ransom_note, magazine);
         assert!(result);
     }
-
 }

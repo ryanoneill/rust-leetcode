@@ -16,8 +16,11 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
-    fn make_adjacency_map(n: i32, edges: Vec<Vec<i32>>, restricted: Vec<i32>) -> HashMap<i32, HashSet<i32>> {
+    fn make_adjacency_map(
+        n: i32,
+        edges: Vec<Vec<i32>>,
+        restricted: Vec<i32>,
+    ) -> HashMap<i32, HashSet<i32>> {
         let mut adj = HashMap::new();
         let banned: HashSet<i32> = HashSet::from_iter(restricted);
 
@@ -30,8 +33,12 @@ impl Solution {
 
             // If it's restricted, pretend like the edges to it just don't exist
             if !banned.contains(&a) && !banned.contains(&b) {
-                adj.entry(a).and_modify(|c| { c.insert(b); });
-                adj.entry(b).and_modify(|c| { c.insert(a); });
+                adj.entry(a).and_modify(|c| {
+                    c.insert(b);
+                });
+                adj.entry(b).and_modify(|c| {
+                    c.insert(a);
+                });
             }
         }
 
@@ -62,7 +69,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -72,8 +78,15 @@ mod tests {
     #[test]
     fn example_1() {
         let n = 7;
-        let edges = vec![vec![0,1], vec![1,2], vec![3,1], vec![4,0], vec![0,5], vec![5,6]];
-        let restricted = vec![4,5];
+        let edges = vec![
+            vec![0, 1],
+            vec![1, 2],
+            vec![3, 1],
+            vec![4, 0],
+            vec![0, 5],
+            vec![5, 6],
+        ];
+        let restricted = vec![4, 5];
         let result = Solution::reachable_nodes(n, edges, restricted);
         assert_eq!(result, 4);
     }
@@ -81,10 +94,16 @@ mod tests {
     #[test]
     fn example_2() {
         let n = 7;
-        let edges = vec![vec![0,1], vec![0,2], vec![0,5], vec![0,4], vec![3,2], vec![6,5]];
-        let restricted = vec![4,2,1];
+        let edges = vec![
+            vec![0, 1],
+            vec![0, 2],
+            vec![0, 5],
+            vec![0, 4],
+            vec![3, 2],
+            vec![6, 5],
+        ];
+        let restricted = vec![4, 2, 1];
         let result = Solution::reachable_nodes(n, edges, restricted);
         assert_eq!(result, 3);
     }
-
 }

@@ -10,10 +10,10 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
-        if root.is_none() { vec![] }
-        else {
+        if root.is_none() {
+            vec![]
+        } else {
             let mut result = Vec::new();
             let mut queue = VecDeque::new();
 
@@ -45,19 +45,17 @@ impl Solution {
                         }
                     }
                 }
-
             }
 
             result
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -65,7 +63,7 @@ mod tests {
         let codec = Codec::new();
         let root = codec.deserialize(data);
         let result = Solution::right_side_view(root);
-        assert_eq!(result, vec![1,3,4]);
+        assert_eq!(result, vec![1, 3, 4]);
     }
 
     #[test]
@@ -92,7 +90,6 @@ mod tests {
         let codec = Codec::new();
         let root = codec.deserialize(data);
         let result = Solution::right_side_view(root);
-        assert_eq!(result, vec![1,2]);
+        assert_eq!(result, vec![1, 2]);
     }
-
 }

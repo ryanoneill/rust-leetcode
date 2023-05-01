@@ -1,5 +1,5 @@
-use std::collections::VecDeque;
 use std::collections::HashSet;
+use std::collections::VecDeque;
 
 /// Given an `n x n` binary matrix `grid`, return the length of the shortest
 /// clear path in the matrix. If there is no clear path, return `-1`.
@@ -15,11 +15,10 @@ use std::collections::HashSet;
 struct State {
     row: usize,
     col: usize,
-    steps: i32
+    steps: i32,
 }
 
 impl State {
-
     pub fn new(row: usize, col: usize, steps: i32) -> Self {
         Self { row, col, steps }
     }
@@ -31,13 +30,11 @@ impl State {
     pub fn is_end(&self, n: usize) -> bool {
         self.row == n - 1 && self.col == n - 1
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     pub fn shortest_path_binary_matrix(grid: Vec<Vec<i32>>) -> i32 {
         let n = grid.len();
         let mut result = 0;
@@ -65,10 +62,18 @@ impl Solution {
                         let mut neighbor_col = col;
 
                         match *dir {
-                            "N" => { neighbor_row -= 1; }
-                            "S" => { neighbor_row += 1; }
-                            "E" => { neighbor_col += 1; }
-                            "W" => { neighbor_col -= 1; }
+                            "N" => {
+                                neighbor_row -= 1;
+                            }
+                            "S" => {
+                                neighbor_row += 1;
+                            }
+                            "E" => {
+                                neighbor_col += 1;
+                            }
+                            "W" => {
+                                neighbor_col -= 1;
+                            }
                             "NW" => {
                                 neighbor_row -= 1;
                                 neighbor_col -= 1;
@@ -85,7 +90,7 @@ impl Solution {
                                 neighbor_row += 1;
                                 neighbor_col += 1;
                             }
-                            _ => { }
+                            _ => {}
                         }
 
                         let valid_row = neighbor_row >= 0 && neighbor_row < (n as i32);
@@ -95,7 +100,7 @@ impl Solution {
                             let new_state = State::new(
                                 neighbor_row as usize,
                                 neighbor_col as usize,
-                                state.steps + 1
+                                state.steps + 1,
                             );
                             queue.push_back(new_state);
                         }
@@ -104,9 +109,12 @@ impl Solution {
             }
         }
 
-        if reached { result } else { -1 }
+        if reached {
+            result
+        } else {
+            -1
+        }
     }
-
 }
 
 #[cfg(test)]
@@ -115,23 +123,22 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let grid = vec![vec![0,1], vec![1,0]];
+        let grid = vec![vec![0, 1], vec![1, 0]];
         let result = Solution::shortest_path_binary_matrix(grid);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_2() {
-        let grid = vec![vec![0,0,0], vec![1,1,0], vec![1,1,0]];
+        let grid = vec![vec![0, 0, 0], vec![1, 1, 0], vec![1, 1, 0]];
         let result = Solution::shortest_path_binary_matrix(grid);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_3() {
-        let grid = vec![vec![1,0,0], vec![1,1,0], vec![1,1,0]];
+        let grid = vec![vec![1, 0, 0], vec![1, 1, 0], vec![1, 1, 0]];
         let result = Solution::shortest_path_binary_matrix(grid);
         assert_eq!(result, -1);
     }
-
 }

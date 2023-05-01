@@ -19,13 +19,14 @@ use crate::stack::Stack;
 pub struct Solution;
 
 impl Solution {
-
     fn is_opposite_case(first: char, second: char) -> bool {
         if first.is_ascii_lowercase() && second.is_ascii_uppercase() {
             first == second.to_ascii_lowercase()
         } else if first.is_ascii_uppercase() && second.is_ascii_lowercase() {
             first == second.to_ascii_uppercase()
-        } else { false }
+        } else {
+            false
+        }
     }
 
     pub fn make_good(s: String) -> String {
@@ -43,7 +44,6 @@ impl Solution {
         }
         stack.to_string()
     }
-
 }
 
 #[cfg(test)]
@@ -77,5 +77,4 @@ mod tests {
         let result = Solution::make_good(s);
         assert_eq!(result, "C");
     }
-
 }

@@ -1,7 +1,6 @@
 use crate::list_node::ListNode;
 
 pub trait ListNodeAdditions {
-
     fn new(val: i32) -> Self;
     fn with_next(val: i32, next: Self) -> Self;
 
@@ -23,11 +22,9 @@ pub trait ListNodeAdditions {
     fn set_next(&mut self, value: Self);
     fn take_next(&mut self) -> Self;
     fn to_vec(&self) -> Vec<i32>;
-
 }
 
 impl ListNodeAdditions for Option<Box<ListNode>> {
-
     fn new(val: i32) -> Self {
         Some(Box::new(ListNode::new(val)))
     }
@@ -37,8 +34,9 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
     }
 
     fn from_vec(items: Vec<i32>) -> Self {
-        if items.len() == 0 { None }
-        else {
+        if items.len() == 0 {
+            None
+        } else {
             let mut result = Self::new(items[0]);
             let mut current = &mut result;
 
@@ -46,7 +44,6 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
                 let node = Self::new(items[i]);
                 current.set_next(node);
                 current = current.refer_next();
-
             }
 
             result
@@ -103,7 +100,6 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
         }
 
         result
-
     }
 
     fn refer_next(&mut self) -> &mut Self {
@@ -153,13 +149,12 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
 
         result
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::list_node::ListNode;
     use super::ListNodeAdditions;
+    use crate::list_node::ListNode;
 
     #[test]
     fn empty_list() {
@@ -193,11 +188,10 @@ mod tests {
 
     #[test]
     fn vec_to_nodes_to_vec() {
-        let items = vec![1,3,5,7,9,2,4,6,8,10];
+        let items = vec![1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
         let nodes: Option<Box<ListNode>> = ListNodeAdditions::from_vec(items);
         let result = nodes.to_vec();
 
-        assert_eq!(result, vec![1,3,5,7,9,2,4,6,8,10]);
+        assert_eq!(result, vec![1, 3, 5, 7, 9, 2, 4, 6, 8, 10]);
     }
-
 }

@@ -1,9 +1,9 @@
 use crate::diameter_of_binary_tree;
 use crate::tree_node::TreeNode;
 use crate::tree_node_additions::TreeNodeAdditions;
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::cmp::max;
+use std::rc::Rc;
 
 /// Given the `root` of a binary tree, return the length of the diameter of the
 /// tree.
@@ -16,7 +16,6 @@ use std::cmp::max;
 struct Solution;
 
 impl Solution {
-
     fn diameter_of_binary_tree_ref(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match root {
             Some(rc) => {
@@ -31,20 +30,19 @@ impl Solution {
 
                 max(edges_between, max(left_diameter, right_diameter))
             }
-            None => { 0 }
+            None => 0,
         }
     }
 
     pub fn diameter_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         Self::diameter_of_binary_tree_ref(&root)
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -63,6 +61,4 @@ mod tests {
         let result = Solution::diameter_of_binary_tree(root);
         assert_eq!(result, 1);
     }
-
 }
-

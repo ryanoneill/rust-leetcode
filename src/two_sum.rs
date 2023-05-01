@@ -68,5 +68,4 @@ mod tests {
         let result3 = Solution::two_sum(vec![3, 3], 6);
         assert_eq!(result3, vec![0, 1]);
     }
-
 }

@@ -18,7 +18,6 @@ use std::collections::BinaryHeap;
 struct Solution;
 
 impl Solution {
-
     pub fn last_stone_weight(stones: Vec<i32>) -> i32 {
         let mut heap: BinaryHeap<i32> = stones.into();
 
@@ -33,7 +32,6 @@ impl Solution {
 
         heap.pop().unwrap_or_default()
     }
-
 }
 
 #[cfg(test)]
@@ -67,5 +65,4 @@ mod tests {
         let result = Solution::last_stone_weight(stones);
         assert_eq!(result, 3);
     }
-
 }

@@ -13,7 +13,6 @@ use std::{collections::HashMap, hash::Hash};
 struct Solution;
 
 impl Solution {
-
     pub fn maximum_population(logs: Vec<Vec<i32>>) -> i32 {
         let mut first_birth: Option<i32> = None;
         let mut last_death: Option<i32> = None;
@@ -24,14 +23,34 @@ impl Solution {
             let birth = log[0];
             let death = log[1];
 
-            if first_birth.is_none() { first_birth = Some(birth); }
-            else { first_birth.map(|fb| if birth < fb { first_birth = Some(birth) }); }
+            if first_birth.is_none() {
+                first_birth = Some(birth);
+            } else {
+                first_birth.map(|fb| {
+                    if birth < fb {
+                        first_birth = Some(birth)
+                    }
+                });
+            }
 
-            if last_death.is_none() { last_death = Some(death); }
-            else { last_death.map(|ld| if death > ld { last_death = Some(death) }); }
+            if last_death.is_none() {
+                last_death = Some(death);
+            } else {
+                last_death.map(|ld| {
+                    if death > ld {
+                        last_death = Some(death)
+                    }
+                });
+            }
 
-            births.entry(birth).and_modify(|count| *count += 1).or_insert(1);
-            deaths.entry(death).and_modify(|count| *count += 1).or_insert(1);
+            births
+                .entry(birth)
+                .and_modify(|count| *count += 1)
+                .or_insert(1);
+            deaths
+                .entry(death)
+                .and_modify(|count| *count += 1)
+                .or_insert(1);
         }
 
         let first = first_birth.unwrap();
@@ -60,9 +79,7 @@ impl Solution {
         }
 
         result
-
     }
-
 }
 
 #[cfg(test)]
@@ -82,5 +99,4 @@ mod tests {
         let result = Solution::maximum_population(logs);
         assert_eq!(result, 1960);
     }
-
 }

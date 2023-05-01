@@ -5,7 +5,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn number_of_steps(num: i32) -> i32 {
         let mut steps: i32 = 0;
         let mut current: i32 = num;
@@ -21,7 +20,6 @@ impl Solution {
 
         steps
     }
-
 }
 
 #[cfg(test)]
@@ -48,5 +46,4 @@ mod tests {
         let result = Solution::number_of_steps(num);
         assert_eq!(result, 12);
     }
-
 }

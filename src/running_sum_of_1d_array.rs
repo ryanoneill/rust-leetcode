@@ -5,12 +5,15 @@
 struct Solution;
 
 impl Solution {
-
     pub fn running_sum(nums: Vec<i32>) -> Vec<i32> {
         let mut sum: i32 = 0;
-        nums.iter().map(|x| { sum += x; sum }).collect()
+        nums.iter()
+            .map(|x| {
+                sum += x;
+                sum
+            })
+            .collect()
     }
-
 }
 
 #[cfg(test)]
@@ -19,23 +22,22 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![1,2,3,4];
+        let nums = vec![1, 2, 3, 4];
         let result = Solution::running_sum(nums);
-        assert_eq!(result, vec![1,3,6,10]);
+        assert_eq!(result, vec![1, 3, 6, 10]);
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![1,1,1,1,1];
+        let nums = vec![1, 1, 1, 1, 1];
         let result = Solution::running_sum(nums);
-        assert_eq!(result, vec![1,2,3,4,5]);
+        assert_eq!(result, vec![1, 2, 3, 4, 5]);
     }
 
     #[test]
     fn example_3() {
-        let nums = vec![3,1,2,10,1];
+        let nums = vec![3, 1, 2, 10, 1];
         let result = Solution::running_sum(nums);
-        assert_eq!(result, vec![3,4,6,16,17]);
+        assert_eq!(result, vec![3, 4, 6, 16, 17]);
     }
-
 }

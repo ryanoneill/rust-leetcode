@@ -11,11 +11,12 @@
 struct Solution;
 
 impl Solution {
-
     pub fn fib(n: i32) -> i32 {
-        if n == 0 { 0 }
-        else if n == 1 { 1 }
-        else {
+        if n == 0 {
+            0
+        } else if n == 1 {
+            1
+        } else {
             let mut minus_two = 0;
             let mut minus_one = 1;
             let mut result = 0;
@@ -29,7 +30,6 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
@@ -77,5 +77,4 @@ mod tests {
         let result = Solution::fib(n);
         assert_eq!(result, 832040);
     }
-
 }

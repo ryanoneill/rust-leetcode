@@ -7,11 +7,11 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn majority_element(nums: Vec<i32>) -> i32 {
         let mut counts = HashMap::new();
         for num in nums {
-            counts.entry(num)
+            counts
+                .entry(num)
                 .and_modify(|count| *count += 1)
                 .or_insert(1);
         }
@@ -21,7 +21,6 @@ impl Solution {
             .map(|item| item.0)
             .unwrap_or_default()
     }
-
 }
 
 #[cfg(test)]
@@ -30,16 +29,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![3,2,3];
+        let nums = vec![3, 2, 3];
         let result = Solution::majority_element(nums);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![2,2,1,1,1,2,2];
+        let nums = vec![2, 2, 1, 1, 1, 2, 2];
         let result = Solution::majority_element(nums);
         assert_eq!(result, 2);
     }
-
 }

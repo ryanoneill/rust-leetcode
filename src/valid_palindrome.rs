@@ -8,7 +8,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn is_palindrome(s: String) -> bool {
         let mut result = true;
         let chars: Vec<char> = s.chars().collect();
@@ -39,7 +38,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -73,5 +71,4 @@ mod tests {
         let result = Solution::is_palindrome(s);
         assert!(!result);
     }
-
 }

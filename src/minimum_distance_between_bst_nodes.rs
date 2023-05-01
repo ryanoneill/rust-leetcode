@@ -8,7 +8,6 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     fn worker(root: &Option<Rc<RefCell<TreeNode>>>, previous: &mut Option<i32>) -> i32 {
         match root {
             Some(rc) => {
@@ -27,24 +26,20 @@ impl Solution {
                 }
                 result
             }
-            None => {
-                i32::max_value()
-            }
+            None => i32::max_value(),
         }
-
     }
 
     pub fn min_diff_in_bst(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let mut previous = None;
         Self::worker(&root, &mut previous)
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -63,5 +58,4 @@ mod tests {
         let result = Solution::min_diff_in_bst(root);
         assert_eq!(result, 1);
     }
-
 }

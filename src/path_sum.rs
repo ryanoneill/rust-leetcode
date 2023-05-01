@@ -11,7 +11,6 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     fn has_path_sum_within(node: &Option<Rc<RefCell<TreeNode>>>, target_sum: i32) -> bool {
         match node {
             Some(rc) => {
@@ -27,22 +26,21 @@ impl Solution {
                     has_on_left || has_on_right
                 }
             }
-            None => { false }
+            None => false,
         }
     }
 
     pub fn has_path_sum(root: Option<Rc<RefCell<TreeNode>>>, target_sum: i32) -> bool {
         Self::has_path_sum_within(&root, target_sum)
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -88,5 +86,4 @@ mod tests {
         let result = Solution::has_path_sum(root, -1);
         assert!(result);
     }
-
 }

@@ -8,19 +8,19 @@ pub mod tree_node;
 pub mod tree_node_additions;
 pub mod vec_additions;
 
-pub mod two_sum; // 1
 pub mod add_two_numbers; // 2
 pub mod length_of_longest_substring; // 3
+pub mod longest_palindromic_substring;
 pub mod median_of_two_sorted_arrays; // 4
-pub mod longest_palindromic_substring; // 5
+pub mod two_sum; // 1 // 5
 
 pub mod palindrome_number; // 9
 
 pub mod longest_common_prefix; // 14
 
+pub mod merge_two_sorted_lists;
 pub mod remove_nth_node_from_end_of_list; // 19
-pub mod valid_parentheses; // 20
-pub mod merge_two_sorted_lists; // 21
+pub mod valid_parentheses; // 20 // 21
 
 pub mod swap_nodes_in_pairs; // 24
 
@@ -37,8 +37,8 @@ pub mod simplify_path; // 71
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
-pub mod remove_duplicates_from_sorted_list_ii; // 82
-pub mod remove_duplicates_from_sorted_list; // 83
+pub mod remove_duplicates_from_sorted_list;
+pub mod remove_duplicates_from_sorted_list_ii; // 82 // 83
 
 pub mod reverse_linked_list_ii; // 92
 
@@ -95,8 +95,8 @@ pub mod find_largest_value_in_each_tree_row; // 515
 
 pub mod minimum_absolute_difference_in_bst; // 530
 
-pub mod zero_one_matrix; // 542
-pub mod diameter_of_binary_tree; // 543
+pub mod diameter_of_binary_tree;
+pub mod zero_one_matrix; // 542 // 543
 
 pub mod number_of_provinces; // 547
 

@@ -8,7 +8,6 @@ use std::collections::VecDeque;
 struct Solution;
 
 impl Solution {
-
     pub fn count_components(n: i32, edges: Vec<Vec<i32>>) -> i32 {
         let n = n as usize;
         let mut connected: Vec<Vec<usize>> = vec![vec![]; n];
@@ -41,18 +40,16 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
 
-
     #[test]
     fn example_1() {
         let n = 5;
-        let edges = vec![vec![0,1], vec![1,2], vec![3,4]];
+        let edges = vec![vec![0, 1], vec![1, 2], vec![3, 4]];
         let result = Solution::count_components(n, edges);
         assert_eq!(result, 2);
     }
@@ -60,9 +57,8 @@ mod tests {
     #[test]
     fn example_2() {
         let n = 5;
-        let edges = vec![vec![0,1], vec![1,2], vec![2,3], vec![3,4]];
+        let edges = vec![vec![0, 1], vec![1, 2], vec![2, 3], vec![3, 4]];
         let result = Solution::count_components(n, edges);
         assert_eq!(result, 1);
     }
-
 }

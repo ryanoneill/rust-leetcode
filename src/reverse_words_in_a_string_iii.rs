@@ -3,20 +3,17 @@
 struct Solution;
 
 impl Solution {
-
     pub fn reverse_words(s: String) -> String {
         s.split_whitespace()
             .map(|s| s.chars().rev().collect::<String>())
             .collect::<Vec<String>>()
             .join(" ")
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
@@ -31,5 +28,4 @@ mod tests {
         let result = Solution::reverse_words(s);
         assert_eq!(result, "doG gniD");
     }
-
 }

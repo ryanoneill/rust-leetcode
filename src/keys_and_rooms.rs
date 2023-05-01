@@ -15,7 +15,6 @@ use std::collections::VecDeque;
 struct Solution;
 
 impl Solution {
-
     pub fn can_visit_all_rooms(rooms: Vec<Vec<i32>>) -> bool {
         let n = rooms.len();
         let mut queue = VecDeque::new();
@@ -37,13 +36,11 @@ impl Solution {
 
         seen.len() == n
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
@@ -54,9 +51,8 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let rooms = vec![vec![1,3], vec![3,0,1], vec![2], vec![0]];
+        let rooms = vec![vec![1, 3], vec![3, 0, 1], vec![2], vec![0]];
         let result = Solution::can_visit_all_rooms(rooms);
         assert!(!result);
     }
-
 }

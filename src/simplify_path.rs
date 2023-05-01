@@ -22,21 +22,23 @@ use crate::stack::Stack;
 struct Solution;
 
 impl Solution {
-
     pub fn simplify_path(path: String) -> String {
         let mut stack = Stack::new();
         for part in path.split('/') {
             match part {
-                "" | "." => { } // ignore empty or same directory
-                ".." => { stack.pop(); }
-                _ => { stack.push(part); }
+                "" | "." => {} // ignore empty or same directory
+                ".." => {
+                    stack.pop();
+                }
+                _ => {
+                    stack.push(part);
+                }
             }
         }
         let mut result = String::from("/");
         result.push_str(&stack.join("/"));
         result
     }
-
 }
 
 #[cfg(test)]
@@ -70,5 +72,4 @@ mod tests {
         let result = Solution::simplify_path(path);
         assert_eq!(result, "/usr/local/bin");
     }
-
 }

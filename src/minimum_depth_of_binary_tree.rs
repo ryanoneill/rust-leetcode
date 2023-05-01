@@ -1,7 +1,7 @@
 use crate::tree_node::TreeNode;
 use crate::tree_node_additions::TreeNodeAdditions;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 /// Given a binary tree, find its minimum depth.
 ///
@@ -12,21 +12,19 @@ use std::cell::RefCell;
 struct Solution;
 
 impl Solution {
-
     pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         root.min_depth() as i32
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
     use std::cell::RefCell;
     use std::rc::Rc;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -52,5 +50,4 @@ mod tests {
         let result = Solution::min_depth(root);
         assert_eq!(result, 1);
     }
-
 }

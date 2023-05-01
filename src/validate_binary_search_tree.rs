@@ -14,7 +14,6 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     fn worker(root: &Option<Rc<RefCell<TreeNode>>>, previous: &mut Option<i32>) -> bool {
         match root {
             Some(rc) => {
@@ -34,9 +33,7 @@ impl Solution {
 
                 result
             }
-            None => {
-                false
-            }
+            None => false,
         }
     }
 
@@ -44,13 +41,12 @@ impl Solution {
         let mut previous = None;
         Self::worker(&root, &mut previous)
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -69,5 +65,4 @@ mod tests {
         let result = Solution::is_valid_bst(root);
         assert_eq!(result, false);
     }
-
 }

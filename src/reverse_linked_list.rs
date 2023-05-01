@@ -5,18 +5,16 @@ use crate::list_node_additions::ListNodeAdditions;
 struct Solution;
 
 impl Solution {
-
     pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         head.reverse()
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -41,5 +39,4 @@ mod tests {
         let result = Solution::reverse_list(nodes);
         assert_eq!(result.to_vec(), vec![]);
     }
-
 }

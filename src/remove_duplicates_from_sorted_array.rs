@@ -13,11 +13,11 @@
 struct Solution;
 
 impl Solution {
-
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         let n = nums.len();
-        if n == 0 { 0 }
-        else {
+        if n == 0 {
+            0
+        } else {
             let mut last = nums[0];
             let mut i = 1;
 
@@ -33,7 +33,6 @@ impl Solution {
             i as i32
         }
     }
-
 }
 
 #[cfg(test)]
@@ -42,20 +41,19 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mut nums = vec![1,1,2];
+        let mut nums = vec![1, 1, 2];
         let result = Solution::remove_duplicates(&mut nums);
         assert_eq!(result, 2);
         let _ = nums.split_off(2);
-        assert_eq!(nums, vec![1,2]);
+        assert_eq!(nums, vec![1, 2]);
     }
 
     #[test]
     fn example_2() {
-        let mut nums = vec![0,0,1,1,1,2,2,3,3,4];
+        let mut nums = vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
         let result = Solution::remove_duplicates(&mut nums);
         assert_eq!(result, 5);
         let _ = nums.split_off(5);
-        assert_eq!(nums, vec![0,1,2,3,4]);
+        assert_eq!(nums, vec![0, 1, 2, 3, 4]);
     }
-
 }

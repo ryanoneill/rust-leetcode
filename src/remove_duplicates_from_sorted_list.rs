@@ -6,7 +6,6 @@ use crate::list_node_additions::ListNodeAdditions;
 struct Solution;
 
 impl Solution {
-
     pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut head = head;
 
@@ -25,19 +24,17 @@ impl Solution {
                     current = current.take_next();
                 }
             }
-
         }
 
         head
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -66,5 +63,4 @@ mod tests {
         let result = Solution::delete_duplicates(head);
         assert_eq!(result.to_vec(), vec![1, 2, 1, 2]);
     }
-
 }

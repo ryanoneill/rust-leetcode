@@ -8,7 +8,6 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn range_sum_bst(root: Option<Rc<RefCell<TreeNode>>>, low: i32, high: i32) -> i32 {
         match root {
             Some(rc) => {
@@ -29,16 +28,15 @@ impl Solution {
 
                 result
             }
-            None => { 0 }
+            None => 0,
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -57,5 +55,4 @@ mod tests {
         let result = Solution::range_sum_bst(root, 6, 10);
         assert_eq!(result, 23);
     }
-
 }

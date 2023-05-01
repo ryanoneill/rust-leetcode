@@ -10,7 +10,6 @@ use crate::stack::Stack;
 struct Solution;
 
 impl Solution {
-
     pub fn is_valid(s: String) -> bool {
         let mut stack = Stack::new();
         let mut result = true;
@@ -22,9 +21,9 @@ impl Solution {
                 }
                 ')' | ']' | '}' => {
                     match stack.pop() {
-                        Some('(') if c == ')' => { } // all good
-                        Some('[') if c == ']' => { } // all good
-                        Some('{') if c == '}' => { } // all good
+                        Some('(') if c == ')' => {} // all good
+                        Some('[') if c == ']' => {} // all good
+                        Some('{') if c == '}' => {} // all good
                         _ => {
                             // No character, or not the right match
                             result = false;
@@ -35,14 +34,13 @@ impl Solution {
                 _ => {
                     // Unexpected character
                     result = false;
-                    break
+                    break;
                 }
             }
         }
         // If still good, verify that the stack is empty
         result && stack.is_empty()
     }
-
 }
 
 #[cfg(test)]
@@ -97,5 +95,4 @@ mod tests {
         let result = Solution::is_valid(s);
         assert!(!result);
     }
-
 }

@@ -5,7 +5,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn move_zeroes(nums: &mut Vec<i32>) {
         let n = nums.len();
         let mut index = 0;
@@ -19,9 +18,7 @@ impl Solution {
                 index += 1;
             }
         }
-
     }
-
 }
 
 #[cfg(test)]
@@ -30,9 +27,9 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mut nums = vec![0,1,0,3,12];
+        let mut nums = vec![0, 1, 0, 3, 12];
         Solution::move_zeroes(&mut nums);
-        assert_eq!(nums, vec![1,3,12,0,0]);
+        assert_eq!(nums, vec![1, 3, 12, 0, 0]);
     }
 
     #[test]
@@ -41,5 +38,4 @@ mod tests {
         Solution::move_zeroes(&mut nums);
         assert_eq!(nums, vec![0]);
     }
-
 }

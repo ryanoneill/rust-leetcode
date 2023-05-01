@@ -14,19 +14,20 @@ use std::collections::VecDeque;
 /// It is guaranteed that every call to `ping` uses a strictly larger value of `t`
 /// than the previous call.
 struct RecentCounter {
-    pings: VecDeque<i32>
+    pings: VecDeque<i32>,
 }
 
 impl RecentCounter {
-
     fn new() -> Self {
-        RecentCounter { pings: VecDeque::new() }
+        RecentCounter {
+            pings: VecDeque::new(),
+        }
     }
 
     fn is_front_old(&self, t: i32) -> bool {
         match self.pings.front() {
             None => false,
-            Some(p) => t - p > 3000
+            Some(p) => t - p > 3000,
         }
     }
 
@@ -41,7 +42,6 @@ impl RecentCounter {
         self.expire_old(t);
         self.pings.len() as i32
     }
-
 }
 
 #[cfg(test)]
@@ -60,5 +60,4 @@ mod tests {
         let result4 = recent_counter.ping(3002);
         assert_eq!(result4, 3);
     }
-
 }

@@ -13,15 +13,14 @@ use std::collections::HashSet;
 ///   infinite set, if it is not already in the infinite set.
 struct SmallestInfiniteSet {
     items: HashSet<i32>,
-    heap: BinaryHeap<Reverse<i32>>
+    heap: BinaryHeap<Reverse<i32>>,
 }
 
 impl SmallestInfiniteSet {
-
     fn new() -> Self {
         let mut result = SmallestInfiniteSet {
             items: HashSet::with_capacity(1000),
-            heap: BinaryHeap::with_capacity(1000)
+            heap: BinaryHeap::with_capacity(1000),
         };
         for i in 1..=1000 {
             result.add_back(i as i32);
@@ -42,7 +41,6 @@ impl SmallestInfiniteSet {
             self.items.insert(num);
         }
     }
-
 }
 
 #[cfg(test)]
@@ -67,5 +65,4 @@ mod tests {
         let result6 = smallest_infinite_set.pop_smallest();
         assert_eq!(result6, 5);
     }
-
 }

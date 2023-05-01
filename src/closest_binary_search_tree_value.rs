@@ -8,12 +8,7 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
-    fn worker(
-        root: &Option<Rc<RefCell<TreeNode>>>,
-        closest: &mut Option<i32>,
-        target: f64
-    ) {
+    fn worker(root: &Option<Rc<RefCell<TreeNode>>>, closest: &mut Option<i32>, target: f64) {
         match root {
             Some(rc) => {
                 let node = rc.borrow();
@@ -54,13 +49,12 @@ impl Solution {
         Self::worker(&root, &mut closest, target);
         closest.unwrap_or_default()
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
+    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
@@ -88,5 +82,4 @@ mod tests {
         let result = Solution::closest_value(root, 3.5);
         assert_eq!(result, 3);
     }
-
 }

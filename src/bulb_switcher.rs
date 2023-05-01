@@ -9,11 +9,9 @@
 struct Solution;
 
 impl Solution {
-
     pub fn bulb_switch(n: i32) -> i32 {
         (n as f64).sqrt().floor() as i32
     }
-
 }
 
 #[cfg(test)]
@@ -68,5 +66,4 @@ mod tests {
         let result = Solution::bulb_switch(n);
         assert_eq!(result, 9999);
     }
-
 }

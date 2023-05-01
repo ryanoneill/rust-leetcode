@@ -10,10 +10,9 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     fn count_good_nodes(root: &Option<Rc<RefCell<TreeNode>>>, max_seen: i32) -> usize {
         match root {
-            None => { 0 }
+            None => 0,
             Some(rc) => {
                 let node = rc.borrow();
                 let mut result = 0;
@@ -35,15 +34,14 @@ impl Solution {
     pub fn good_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         Self::count_good_nodes(&root, i32::min_value()) as i32
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -71,5 +69,4 @@ mod tests {
         let result = Solution::good_nodes(root);
         assert_eq!(result, 1);
     }
-
 }

@@ -10,7 +10,6 @@
 struct Solution;
 
 impl Solution {
-
     // TODO: Improve O(n log n) running time
     pub fn rearrange_array(nums: Vec<i32>) -> Vec<i32> {
         let n = nums.len();
@@ -31,9 +30,9 @@ impl Solution {
 
     pub fn is_valid(nums: Vec<i32>) -> bool {
         let mut result = true;
-        for i in 1..nums.len()-1 {
+        for i in 1..nums.len() - 1 {
             let num = nums[i];
-            let avg = (nums[i-1] + nums[i+1]) / 2;
+            let avg = (nums[i - 1] + nums[i + 1]) / 2;
             if num == avg {
                 result = false;
                 break;
@@ -41,7 +40,6 @@ impl Solution {
         }
         result
     }
-
 }
 
 #[cfg(test)]
@@ -50,16 +48,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![1,2,3,4,5];
+        let nums = vec![1, 2, 3, 4, 5];
         let result = Solution::rearrange_array(nums);
         assert!(Solution::is_valid(result));
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![6,2,0,9,7];
+        let nums = vec![6, 2, 0, 9, 7];
         let result = Solution::rearrange_array(nums);
         assert!(Solution::is_valid(result));
     }
-
 }

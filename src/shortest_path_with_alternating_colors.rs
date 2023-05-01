@@ -26,12 +26,13 @@ enum Color {
 }
 
 impl Color {
-
     fn flip(&self) -> Self {
-        if *self == Color::Red { Color::Blue }
-        else { Color::Red }
+        if *self == Color::Red {
+            Color::Blue
+        } else {
+            Color::Red
+        }
     }
-
 }
 
 #[derive(Eq, Hash, PartialEq)]
@@ -42,7 +43,6 @@ struct State {
 }
 
 impl State {
-
     fn new(x: i32, color: Color, steps: i32) -> Self {
         Self { x, color, steps }
     }
@@ -62,17 +62,16 @@ impl State {
     fn key(&self) -> (i32, Color) {
         (self.x, self.color)
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     fn to_map(edges: Vec<Vec<i32>>) -> HashMap<i32, HashSet<i32>> {
         let mut result = HashMap::new();
         for edge in edges {
-            result.entry(edge[0])
+            result
+                .entry(edge[0])
                 .or_insert(HashSet::new())
                 .insert(edge[1]);
         }
@@ -82,7 +81,7 @@ impl Solution {
     fn get_edges(
         state: &State,
         reds: &HashMap<i32, HashSet<i32>>,
-        blues: &HashMap<i32, HashSet<i32>>
+        blues: &HashMap<i32, HashSet<i32>>,
     ) -> Vec<i32> {
         let mut result: Vec<i32> = vec![];
         if state.is_red() && blues.contains_key(&state.x) {
@@ -97,7 +96,7 @@ impl Solution {
     pub fn shortest_alternating_path(
         n: i32,
         red_edges: Vec<Vec<i32>>,
-        blue_edges: Vec<Vec<i32>>
+        blue_edges: Vec<Vec<i32>>,
     ) -> Vec<i32> {
         let reds = Self::to_map(red_edges);
         let blues = Self::to_map(blue_edges);
@@ -127,13 +126,11 @@ impl Solution {
                     seen.insert(state.key());
                     queue.push_back(state);
                 }
-
             }
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -143,31 +140,30 @@ mod tests {
     #[test]
     fn example_1() {
         let n = 3;
-        let red_edges = vec![vec![0,1], vec![1,2]];
+        let red_edges = vec![vec![0, 1], vec![1, 2]];
         let blue_edges = vec![];
         let result = Solution::shortest_alternating_path(n, red_edges, blue_edges);
-        assert_eq!(result, vec![0,1,-1]);
+        assert_eq!(result, vec![0, 1, -1]);
         // 0 -> RED! -> 1 ... X ... 2
     }
 
     #[test]
     fn example_2() {
         let n = 3;
-        let red_edges = vec![vec![0,1]];
-        let blue_edges = vec![vec![2,1]];
+        let red_edges = vec![vec![0, 1]];
+        let blue_edges = vec![vec![2, 1]];
         let result = Solution::shortest_alternating_path(n, red_edges, blue_edges);
-        assert_eq!(result, vec![0,1,-1]);
+        assert_eq!(result, vec![0, 1, -1]);
         // 0 -> RED! -> 1 ... X ... 2
     }
 
     #[test]
     fn own_test() {
         let n = 5;
-        let red_edges = vec![vec![0,1], vec![1,2], vec![3,4]];
-        let blue_edges = vec![vec![1,1], vec![2,3]];
+        let red_edges = vec![vec![0, 1], vec![1, 2], vec![3, 4]];
+        let blue_edges = vec![vec![1, 1], vec![2, 3]];
         let result = Solution::shortest_alternating_path(n, red_edges, blue_edges);
-        assert_eq!(result, vec![0,1,3,4,5]);
+        assert_eq!(result, vec![0, 1, 3, 4, 5]);
         // 0 -> RED! -> 1 -> BLUE! -> 1 -> RED! -> 2 -> BLUE! -> 3 -> RED! -> 4
     }
-
 }

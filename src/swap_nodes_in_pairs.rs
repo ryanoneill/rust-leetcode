@@ -6,14 +6,15 @@ use crate::{list_node::ListNode, list_node_additions::ListNodeAdditions};
 struct Solution;
 
 impl Solution {
-
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut current = head;
         let mut previous: &mut Option<Box<ListNode>> = &mut None;
 
-        if current.as_ref().is_none() { None }
-        else if current.as_ref().unwrap().next.is_none() { current }
-        else {
+        if current.as_ref().is_none() {
+            None
+        } else if current.as_ref().unwrap().next.is_none() {
+            current
+        } else {
             let mut result = None;
             let mut first = true;
 
@@ -43,16 +44,14 @@ impl Solution {
 
             result
         }
-
     }
-
 }
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -93,5 +92,4 @@ mod tests {
         let result = Solution::swap_pairs(nodes);
         assert_eq!(result.to_vec(), vec![2, 1, 4, 3, 5]);
     }
-
 }

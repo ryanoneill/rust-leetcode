@@ -10,7 +10,6 @@ use crate::list_node::ListNode;
 struct Solution;
 
 impl Solution {
-
     fn add_values(val1: i32, val2: i32, overflow: bool) -> (i32, bool) {
         let mut sum = val1 + val2;
         if overflow {
@@ -24,7 +23,10 @@ impl Solution {
         }
     }
 
-    pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn add_two_numbers(
+        l1: Option<Box<ListNode>>,
+        l2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
         let mut l1 = l1;
         let mut l2 = l2;
 
@@ -75,9 +77,9 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use super::Solution;
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
-    use super::Solution;
 
     #[test]
     fn example_1() {
@@ -97,10 +99,9 @@ mod tests {
 
     #[test]
     fn example_3() {
-        let l1 = ListNodeAdditions::from_vec(vec![9,9,9,9,9,9,9]);
-        let l2 = ListNodeAdditions::from_vec(vec![9,9,9,9]);
+        let l1 = ListNodeAdditions::from_vec(vec![9, 9, 9, 9, 9, 9, 9]);
+        let l2 = ListNodeAdditions::from_vec(vec![9, 9, 9, 9]);
         let result = Solution::add_two_numbers(l1, l2);
-        assert_eq!(result.to_vec(), vec![8,9,9,9,0,0,0,1]);
+        assert_eq!(result.to_vec(), vec![8, 9, 9, 9, 0, 0, 0, 1]);
     }
-
 }

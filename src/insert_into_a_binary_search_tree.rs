@@ -12,10 +12,9 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-
     pub fn insert_into_bst(
         root: Option<Rc<RefCell<TreeNode>>>,
-        val: i32
+        val: i32,
     ) -> Option<Rc<RefCell<TreeNode>>> {
         let result = root.clone();
         match root {
@@ -28,7 +27,8 @@ impl Solution {
                     } else {
                         Self::insert_into_bst(node.left.clone(), val);
                     }
-                } else { // greater*
+                } else {
+                    // greater*
                     // *It is guaranteed in the problem that the value is not in the BST.
                     if node.right.is_none() {
                         node.right = Some(Rc::new(RefCell::new(TreeNode::new(val))));
@@ -39,18 +39,17 @@ impl Solution {
 
                 result
             }
-            None => {
-                Some(Rc::new(RefCell::new(TreeNode::new(val))))
-            }
+            None => Some(Rc::new(RefCell::new(TreeNode::new(val)))),
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::{serialize_and_deserialize_binary_tree::Codec, tree_node_additions::TreeNodeAdditions};
     use super::Solution;
+    use crate::{
+        serialize_and_deserialize_binary_tree::Codec, tree_node_additions::TreeNodeAdditions,
+    };
 
     #[test]
     fn example_1() {
@@ -59,7 +58,7 @@ mod tests {
         let root = codec.deserialize(data);
         let result = Solution::insert_into_bst(root, 5);
         let values = result.in_order();
-        assert_eq!(values, vec![1,2,3,4,5,7]);
+        assert_eq!(values, vec![1, 2, 3, 4, 5, 7]);
     }
 
     #[test]
@@ -69,7 +68,7 @@ mod tests {
         let root = codec.deserialize(data);
         let result = Solution::insert_into_bst(root, 25);
         let values = result.in_order();
-        assert_eq!(values, vec![10,20,25,30,40,50,60,70]);
+        assert_eq!(values, vec![10, 20, 25, 30, 40, 50, 60, 70]);
     }
 
     #[test]
@@ -79,7 +78,6 @@ mod tests {
         let root = codec.deserialize(data);
         let result = Solution::insert_into_bst(root, 5);
         let values = result.in_order();
-        assert_eq!(values, vec![1,2,3,4,5,7]);
+        assert_eq!(values, vec![1, 2, 3, 4, 5, 7]);
     }
-
 }

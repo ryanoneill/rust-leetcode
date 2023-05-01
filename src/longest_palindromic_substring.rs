@@ -2,7 +2,6 @@
 pub struct Solution;
 
 impl Solution {
-
     // TODO: Implement
     pub fn longest_palindrome(_s: String) -> String {
         // let letters: Vec<char> = s.chars().collect();
@@ -28,5 +27,4 @@ mod tests {
         let result = Solution::longest_palindrome("cbbd".to_string());
         assert_eq!(result, "bb");
     }
-
 }

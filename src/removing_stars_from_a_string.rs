@@ -13,20 +13,22 @@
 struct Solution;
 
 impl Solution {
-
     pub fn remove_stars(s: String) -> String {
         let mut result: String = String::from("");
 
         for c in s.chars() {
             match c {
-                '*' => { if !result.is_empty() { result.pop(); } }
-                _ => { result.push(c) }
+                '*' => {
+                    if !result.is_empty() {
+                        result.pop();
+                    }
+                }
+                _ => result.push(c),
             }
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -46,5 +48,4 @@ mod tests {
         let result = Solution::remove_stars(s);
         assert_eq!(result, "");
     }
-
 }

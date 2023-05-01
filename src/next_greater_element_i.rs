@@ -16,10 +16,10 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     fn has_lesser(nums: &Vec<i32>, stack: &Vec<usize>, num: i32) -> bool {
-        if stack.is_empty() { false }
-        else {
+        if stack.is_empty() {
+            false
+        } else {
             let last_index = stack.iter().last().unwrap();
             let last_num = nums[*last_index];
             last_num < num
@@ -41,14 +41,17 @@ impl Solution {
 
         for num1 in nums1.iter() {
             match greater.get(num1) {
-                Some(&g) => { result.push(*g); }
-                None => { result.push(-1); }
+                Some(&g) => {
+                    result.push(*g);
+                }
+                None => {
+                    result.push(-1);
+                }
             }
         }
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -70,5 +73,4 @@ mod tests {
         let result = Solution::next_greater_element(nums1, nums2);
         assert_eq!(result, vec![3, -1]);
     }
-
 }

@@ -12,16 +12,15 @@ use std::collections::VecDeque;
 struct MovingAverage {
     items: VecDeque<i32>,
     window_size: usize,
-    sum: i64
+    sum: i64,
 }
 
 impl MovingAverage {
-
     fn new(size: i32) -> Self {
         MovingAverage {
             items: VecDeque::with_capacity(size as usize),
             window_size: size as usize,
-            sum: 0
+            sum: 0,
         }
     }
 
@@ -36,7 +35,6 @@ impl MovingAverage {
 
         self.sum as f64 / self.items.len() as f64
     }
-
 }
 
 #[cfg(test)]
@@ -55,5 +53,4 @@ mod tests {
         let result4 = moving_average.next(5);
         assert_eq!(result4, 6.0);
     }
-
 }

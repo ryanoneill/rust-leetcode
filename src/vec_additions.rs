@@ -1,27 +1,27 @@
 pub trait VecAdditions<T> {
-
     fn peek_last(&self) -> Option<&T>;
     fn pop_while<F: Fn(&T) -> bool>(&mut self, p: F);
-
 }
 
 impl<T> VecAdditions<T> for Vec<T> {
-
     fn peek_last(&self) -> Option<&T> {
-       let len = self.len();
-       let last_index = if len == 0 { 0 } else { len - 1 };
-       self.get(last_index)
+        let len = self.len();
+        let last_index = if len == 0 { 0 } else { len - 1 };
+        self.get(last_index)
     }
 
     fn pop_while<F>(&mut self, p: F)
     where
         F: Fn(&T) -> bool,
     {
-
         loop {
             match self.peek_last() {
-                Some(value) if p(value) => { self.pop(); }
-                _ => { break; }
+                Some(value) if p(value) => {
+                    self.pop();
+                }
+                _ => {
+                    break;
+                }
             }
         }
     }
@@ -79,5 +79,4 @@ mod tests {
         items.pop_while(|&x| x.is_none());
         assert_eq!(items, vec![Some(1), None, Some(2), Some(3), Some(4)]);
     }
-
 }
