@@ -113,6 +113,8 @@ pub mod binary_search; // 704
 
 pub mod daily_temperatures; // 739
 
+pub mod min_cost_climbing_stairs; // 746
+
 pub mod minimum_distance_between_bst_nodes; // 783
 
 pub mod similar_string_groups; // 839
