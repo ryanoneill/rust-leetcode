@@ -95,6 +95,7 @@ pub mod find_largest_value_in_each_tree_row; // 515
 
 pub mod minimum_absolute_difference_in_bst; // 530
 
+pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
 pub mod number_of_provinces; // 547
