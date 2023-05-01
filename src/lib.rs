@@ -75,6 +75,8 @@ pub mod move_zeroes; // 283
 
 pub mod serialize_and_deserialize_binary_tree; // 297
 
+pub mod shortest_distance_from_all_buildings; // 317
+
 pub mod bulb_switcher; // 319
 
 pub mod number_of_connected_components_in_an_undirected_graph; // 323
