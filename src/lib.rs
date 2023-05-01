@@ -135,6 +135,8 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod shortest_path_in_binary_matrix; // 1091
 
+pub mod shortest_path_with_alternating_colors; // 1129
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod deepest_leaves_sum; // 1302
