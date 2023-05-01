@@ -58,6 +58,7 @@ pub mod missing_ranges; // 163
 
 pub mod majority_element; // 169
 
+pub mod house_robber; // 198
 pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
 
