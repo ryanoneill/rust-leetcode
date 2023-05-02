@@ -172,6 +172,8 @@ pub mod find_if_path_exists_in_graph; // 1971
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
 
+pub mod solving_questions_with_brainpower; // 2140
+
 pub mod smallest_number_in_infinite_set; // 2336
 
 pub mod reachable_nodes_with_restrictions; // 2368
