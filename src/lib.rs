@@ -33,6 +33,7 @@ pub mod search_insert_position; // 35
 
 pub mod length_of_last_word; // 58
 
+pub mod climbing_stairs; // 70
 pub mod simplify_path; // 71
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
@@ -82,6 +83,7 @@ pub mod shortest_distance_from_all_buildings; // 317
 
 pub mod bulb_switcher; // 319
 
+pub mod coin_change; // 322
 pub mod number_of_connected_components_in_an_undirected_graph; // 323
 
 pub mod moving_average_from_data_stream; // 346
@@ -143,6 +145,8 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 pub mod shortest_path_in_binary_matrix; // 1091
 
 pub mod shortest_path_with_alternating_colors; // 1129
+
+pub mod longest_common_subsequence; // 1143
 
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
