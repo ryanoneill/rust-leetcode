@@ -75,6 +75,8 @@ pub mod closest_binary_search_tree_value; // 270
 
 pub mod move_zeroes; // 283
 
+pub mod find_median_from_data_stream; // 295
+
 pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod longest_increasing_subsequence; // 300
