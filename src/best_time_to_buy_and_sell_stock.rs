@@ -1,3 +1,6 @@
+use std::cmp::max;
+use std::cmp::min;
+
 /// You are given an array `prices` where `prices[i]` is the price of a given
 /// stock on the `ith` day.
 ///
@@ -10,9 +13,17 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn max_profit(_prices: Vec<i32>) -> i32 {
-        0
+    pub fn max_profit(prices: Vec<i32>) -> i32 {
+        let n = prices.len();
+        let mut profit = 0;
+        let mut buy = prices[0];
+
+        for i in 1..n {
+            profit = max(profit, prices[i] - buy);
+            buy = min(buy, prices[i]);
+        }
+
+        profit
     }
 
 }
@@ -21,7 +32,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let prices = vec![7,1,5,3,6,4];
@@ -29,7 +39,6 @@ mod tests {
         assert_eq!(result, 5);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let prices = vec![7,6,4,3,1];
