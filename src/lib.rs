@@ -154,6 +154,8 @@ pub mod count_good_nodes_in_binary_tree; // 1448
 
 pub mod running_sum_of_1d_array; // 1480
 
+pub mod average_salary_excluding_the_minimum_and_maximum_salary;
+
 pub mod make_the_string_great; // 1544
 
 pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
