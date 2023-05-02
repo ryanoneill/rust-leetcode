@@ -9,8 +9,32 @@
 struct Solution;
 
 impl Solution {
+
     // TODO: Implement
     pub fn max_profit(_prices: Vec<i32>) -> i32 {
         0
     }
+
+}
+
+#[cfg(test)]
+mod tests {
+    use super::Solution;
+
+    #[ignore]
+    #[test]
+    fn example_1() {
+        let prices = vec![7,1,5,3,6,4];
+        let result = Solution::max_profit(prices);
+        assert_eq!(result, 5);
+    }
+
+    #[ignore]
+    #[test]
+    fn example_2() {
+        let prices = vec![7,6,4,3,1];
+        let result = Solution::max_profit(prices);
+        assert_eq!(result, 0);
+    }
+
 }
