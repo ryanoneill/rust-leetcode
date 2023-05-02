@@ -76,6 +76,8 @@ pub mod move_zeroes; // 283
 
 pub mod serialize_and_deserialize_binary_tree; // 297
 
+pub mod longest_increasing_subsequence; // 300
+
 pub mod shortest_distance_from_all_buildings; // 317
 
 pub mod bulb_switcher; // 319
