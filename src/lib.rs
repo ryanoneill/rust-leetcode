@@ -102,6 +102,8 @@ pub mod number_of_connected_components_in_an_undirected_graph; // 323
 pub mod moving_average_from_data_stream; // 346
 pub mod top_k_frequent_elements; // 347
 
+pub mod intersection_of_two_arrays_ii; // 350
+
 pub mod ransom_note; // 383
 
 pub mod is_subsequence; // 392
