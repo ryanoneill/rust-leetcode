@@ -60,6 +60,8 @@ pub mod best_time_to_buy_and_sell_stock; // 121
 
 pub mod valid_palindrome; // 125
 
+pub mod single_number; // 136
+
 pub mod missing_ranges; // 163
 
 pub mod majority_element; // 169
