@@ -34,6 +34,8 @@ pub mod range_sum_query_immutable; // 30
 
 pub mod search_insert_position; // 35
 
+pub mod rotate_image; // 48
+
 pub mod length_of_last_word; // 58
 
 pub mod climbing_stairs; // 70
