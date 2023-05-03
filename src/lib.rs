@@ -151,6 +151,8 @@ pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod longest_common_subsequence; // 1143
 
+pub mod minimum_cost_to_connect_sticks; // 1167
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod deepest_leaves_sum; // 1302
