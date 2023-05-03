@@ -72,6 +72,8 @@ pub mod number_of_islands; // 200
 
 pub mod reverse_linked_list; // 206
 
+pub mod contains_duplicate; // 217
+
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod sliding_window_maximum; // 239
