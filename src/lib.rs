@@ -192,6 +192,8 @@ pub mod find_if_path_exists_in_graph; // 1971
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095
 
+pub mod destroying_asteroids; // 2126
+
 pub mod solving_questions_with_brainpower; // 2140
 
 pub mod minimum_operations_to_halve_array_sum; // 2208
