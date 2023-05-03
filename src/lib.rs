@@ -114,6 +114,8 @@ pub mod reverse_words_in_a_string_iii; // 557
 
 pub mod find_k_closest_elements; // 658
 
+pub mod top_k_frequent_words; // 692
+
 pub mod max_area_of_island; // 695
 
 pub mod insert_into_a_binary_search_tree; // 701
