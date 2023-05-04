@@ -67,6 +67,8 @@ pub mod valid_palindrome; // 125
 
 pub mod single_number; // 136
 
+pub mod min_stack; // 155
+
 pub mod missing_ranges; // 163
 
 pub mod majority_element; // 169
