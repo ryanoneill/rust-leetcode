@@ -84,6 +84,8 @@ pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 pub mod sliding_window_maximum; // 239
 pub mod valid_anagram; // 240
 
+pub mod meeting_rooms; // 252
+
 pub mod add_digits; // 258
 
 pub mod closest_binary_search_tree_value; // 270
@@ -109,6 +111,8 @@ pub mod moving_average_from_data_stream; // 346
 pub mod top_k_frequent_elements; // 347
 
 pub mod intersection_of_two_arrays_ii; // 350
+
+pub mod kth_smallest_element_in_a_sorted_matrix; // 378
 
 pub mod ransom_note; // 383
 
