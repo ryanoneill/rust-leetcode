@@ -38,6 +38,8 @@ pub mod rotate_image; // 48
 
 pub mod length_of_last_word; // 58
 
+pub mod plus_one; // 66
+
 pub mod climbing_stairs; // 70
 pub mod simplify_path; // 71
 
