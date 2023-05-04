@@ -1,11 +1,12 @@
-struct UnionFind {
+use std::{collections::HashSet, hash::Hash};
+
+pub struct UnionFind {
     root: Vec<i32>,
     rank: Vec<i32>,
 }
 
 impl UnionFind {
 
-    /// O(n)
     pub fn new(n: usize) -> Self {
         let mut root = vec![0; n];
         let rank = vec![1; n];
@@ -15,16 +16,14 @@ impl UnionFind {
         Self { root, rank }
     }
 
-    /// O(log n)
-    pub fn find(&self, x: i32) -> i32 {
-        let mut x = x;
-        while x != self.root[x as usize] {
-            x = self.root[x as usize];
+    pub fn find(&mut self, x: i32) -> i32 {
+        if x == self.root[x as usize] { x }
+        else {
+            self.root[x as usize] = self.find(self.root[x as usize]);
+            self.root[x as usize]
         }
-        x
     }
 
-    /// O(log n)
     pub fn union(&mut self, x: i32, y: i32) {
         let root_x = self.find(x);
         let root_y = self.find(y);
@@ -40,9 +39,16 @@ impl UnionFind {
         }
     }
 
-    /// O(log n)
-    pub fn connected(&self, x: i32, y: i32) -> bool {
+    pub fn connected(&mut self, x: i32, y: i32) -> bool {
         self.find(x) == self.find(y)
+    }
+
+    pub fn roots(&mut self) -> HashSet<i32> {
+        let mut result = HashSet::new();
+        for i in 0..self.root.len() {
+            result.insert(self.find(i as i32));
+        }
+        result
     }
 
 }

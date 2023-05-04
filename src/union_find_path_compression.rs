@@ -1,6 +1,5 @@
 struct UnionFind {
-    root: Vec<i32>,
-    rank: Vec<i32>,
+    root: Vec<i32>
 }
 
 impl UnionFind {
@@ -8,20 +7,19 @@ impl UnionFind {
     /// O(n)
     pub fn new(n: usize) -> Self {
         let mut root = vec![0; n];
-        let rank = vec![1; n];
         for i in 0..n {
             root[i] = i as i32;
         }
-        Self { root, rank }
+        Self { root }
     }
 
     /// O(log n)
-    pub fn find(&self, x: i32) -> i32 {
-        let mut x = x;
-        while x != self.root[x as usize] {
-            x = self.root[x as usize];
+    pub fn find(&mut self, x: i32) -> i32 {
+        if x == self.root[x as usize] { x }
+        else {
+            self.root[x as usize] = self.find(self.root[x as usize]);
+            self.root[x as usize]
         }
-        x
     }
 
     /// O(log n)
@@ -29,19 +27,12 @@ impl UnionFind {
         let root_x = self.find(x);
         let root_y = self.find(y);
         if root_x != root_y {
-            if self.rank[root_x as usize] > self.rank[root_y as usize] {
-                self.root[root_y as usize] = root_x;
-            } else if self.rank[root_x as usize] < self.rank[root_y as usize] {
-                self.root[root_x as usize] = root_y;
-            } else {
-                self.root[root_y as usize] = root_x;
-                self.rank[root_x as usize] += 1;
-            }
+            self.root[root_y as usize] = root_x;
         }
     }
 
     /// O(log n)
-    pub fn connected(&self, x: i32, y: i32) -> bool {
+    pub fn connected(&mut self, x: i32, y: i32) -> bool {
         self.find(x) == self.find(y)
     }
 

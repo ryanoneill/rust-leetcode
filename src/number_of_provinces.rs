@@ -1,6 +1,5 @@
-use std::collections::HashMap;
+use crate::union_find::UnionFind;
 use std::collections::HashSet;
-use std::hash::Hash;
 
 /// There are `n` cities. Some of them are connected, while some are not. If
 /// city `a` is connected directly with city `b`, and city `b` is connected
@@ -19,51 +18,18 @@ struct Solution;
 
 impl Solution {
     pub fn find_circle_num(is_connected: Vec<Vec<i32>>) -> i32 {
-        let mut graph: HashMap<usize, HashSet<usize>> = HashMap::new();
-
         let n = is_connected.len();
-        for i in 0..n {
-            let set = HashSet::new();
-            graph.insert(i, set);
-        }
+        let mut uf = UnionFind::new(n);
 
         for i in 0..n {
-            for j in i + 1..n {
+            for j in i..n {
                 if is_connected[i][j] == 1 {
-                    graph.entry(i).and_modify(|e| {
-                        e.insert(j);
-                    });
-                    graph.entry(j).and_modify(|e| {
-                        e.insert(i);
-                    });
+                    uf.union(i as i32, j as i32);
                 }
             }
         }
 
-        let mut seen: HashSet<usize> = HashSet::new();
-        let mut stack = Vec::new();
-        let mut result = 0;
-
-        for i in 0..n {
-            if !seen.contains(&i) {
-                seen.insert(i);
-                result += 1;
-                stack.push(i);
-
-                while !stack.is_empty() {
-                    let j = stack.pop().unwrap();
-                    let neighbors = &graph[&j];
-                    for n in neighbors {
-                        if !seen.contains(&n) {
-                            seen.insert(*n);
-                            stack.push(*n);
-                        }
-                    }
-                }
-            }
-        }
-
-        result
+        uf.roots().len() as i32
     }
 }
 
@@ -84,4 +50,34 @@ mod tests {
         let result = Solution::find_circle_num(is_connected);
         assert_eq!(result, 3);
     }
+
+    #[test]
+    fn example_3() {
+        let is_connected = vec![vec![1,0,0,1], vec![0,1,1,0], vec![0,1,1,1], vec![1,0,1,1]];
+        let result = Solution::find_circle_num(is_connected);
+        assert_eq!(result, 1);
+    }
+
+    #[test]
+    fn example_4() {
+        let is_connected = vec![
+            vec![1,1,0,0,0,0,0,1,0,0,0,0,0,0,0],
+            vec![1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            vec![0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],
+            vec![0,0,0,1,0,1,1,0,0,0,0,0,0,0,0],
+            vec![0,0,0,0,1,0,0,0,0,1,1,0,0,0,0],
+            vec![0,0,0,1,0,1,0,0,0,0,1,0,0,0,0],
+            vec![0,0,0,1,0,0,1,0,1,0,0,0,0,1,0],
+            vec![1,0,0,0,0,0,0,1,1,0,0,0,0,0,0],
+            vec![0,0,0,0,0,0,1,1,1,0,0,0,0,1,0],
+            vec![0,0,0,0,1,0,0,0,0,1,0,1,0,0,1],
+            vec![0,0,0,0,1,1,0,0,0,0,1,1,0,0,0],
+            vec![0,0,0,0,0,0,0,0,0,1,1,1,0,0,0],
+            vec![0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+            vec![0,0,0,0,0,0,1,0,1,0,0,0,0,1,0],
+            vec![0,0,0,0,0,0,0,0,0,1,0,0,0,0,1]];
+        let result = Solution::find_circle_num(is_connected);
+        assert_eq!(result, 3);
+    }
+
 }

@@ -6,6 +6,8 @@ pub mod list_node_additions;
 pub mod quick_find;
 pub mod quick_union;
 pub mod union_by_rank;
+pub mod union_find_path_compression;
+pub mod union_find; // Optimized
 pub mod stack;
 pub mod tree_node;
 pub mod tree_node_additions;
