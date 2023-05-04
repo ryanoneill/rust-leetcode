@@ -17,7 +17,6 @@
 struct Solution;
 
 impl Solution {
-
     fn prefix_diff(n: usize, heights: &Vec<i32>) -> Vec<i32> {
         let mut result = Vec::new();
         let mut previous = heights[0];
@@ -40,7 +39,9 @@ impl Solution {
             if bricks >= *height {
                 bricks -= height;
                 result += 1;
-            } else { break; }
+            } else {
+                break;
+            }
         }
 
         result
@@ -77,7 +78,6 @@ impl Solution {
 
         result - 1
     }
-
 }
 
 #[cfg(test)]
@@ -86,7 +86,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let heights = vec![4,2,7,6,9,14,12];
+        let heights = vec![4, 2, 7, 6, 9, 14, 12];
         let bricks = 5;
         let ladders = 1;
         let result = Solution::furthest_building(heights, bricks, ladders);
@@ -95,7 +95,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let heights = vec![4,12,2,7,3,18,20,3,19];
+        let heights = vec![4, 12, 2, 7, 3, 18, 20, 3, 19];
         let bricks = 10;
         let ladders = 2;
         let result = Solution::furthest_building(heights, bricks, ladders);
@@ -104,11 +104,10 @@ mod tests {
 
     #[test]
     fn example_3() {
-        let heights = vec![14,3,19,3];
+        let heights = vec![14, 3, 19, 3];
         let bricks = 17;
         let ladders = 0;
         let result = Solution::furthest_building(heights, bricks, ladders);
         assert_eq!(result, 3);
     }
-
 }

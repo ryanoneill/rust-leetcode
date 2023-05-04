@@ -4,7 +4,6 @@ use std::collections::BinaryHeap;
 struct Solution;
 
 impl Solution {
-
     pub fn connect_sticks(sticks: Vec<i32>) -> i32 {
         let mut result = 0;
 
@@ -25,13 +24,11 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
@@ -42,7 +39,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let sticks = vec![1,8,3,5];
+        let sticks = vec![1, 8, 3, 5];
         let result = Solution::connect_sticks(sticks);
         assert_eq!(result, 30);
     }
@@ -53,5 +50,4 @@ mod tests {
         let result = Solution::connect_sticks(sticks);
         assert_eq!(result, 0);
     }
-
 }

@@ -9,12 +9,14 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     fn add_letters(s: String) -> HashMap<char, i32> {
         let mut letters = HashMap::new();
         for c in s.chars() {
-            letters.entry(c)
-                .and_modify(|c| { *c += 1; })
+            letters
+                .entry(c)
+                .and_modify(|c| {
+                    *c += 1;
+                })
                 .or_insert(1);
         }
         letters
@@ -52,7 +54,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -74,5 +75,4 @@ mod tests {
         let result = Solution::is_anagram(s, t);
         assert!(!result);
     }
-
 }

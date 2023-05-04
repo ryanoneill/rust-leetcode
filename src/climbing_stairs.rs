@@ -7,7 +7,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn climb_stairs(n: i32) -> i32 {
         let mut ways = HashMap::new();
         Self::worker(n, &mut ways)
@@ -22,15 +21,13 @@ impl Solution {
                 if ways.contains_key(&n) {
                     ways[&n]
                 } else {
-                    let result = Self::worker(n-1, ways) + Self::worker(n-2, ways);
+                    let result = Self::worker(n - 1, ways) + Self::worker(n - 2, ways);
                     ways.insert(n, result);
                     result
                 }
             }
-
         }
     }
-
 }
 
 #[cfg(test)]
@@ -50,5 +47,4 @@ mod tests {
         let result = Solution::climb_stairs(n);
         assert_eq!(result, 3);
     }
-
 }

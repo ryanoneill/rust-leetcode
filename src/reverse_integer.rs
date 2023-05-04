@@ -7,7 +7,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn reverse(x: i32) -> i32 {
         let is_negative = x < 0;
         let x = x.to_string();
@@ -24,7 +23,7 @@ impl Solution {
                 '8' => stack.push(8),
                 '9' => stack.push(9),
                 '0' => stack.push(0),
-                _   => { }, // ignore '-' also
+                _ => {} // ignore '-' also
             }
         }
 
@@ -54,7 +53,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -102,5 +100,4 @@ mod tests {
         let result = Solution::reverse(x);
         assert_eq!(result, 0);
     }
-
 }

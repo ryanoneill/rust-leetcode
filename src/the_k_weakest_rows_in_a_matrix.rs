@@ -8,11 +8,9 @@ struct State {
 }
 
 impl State {
-
     fn new(count: usize, row: usize) -> Self {
         Self { count, row }
     }
-
 }
 
 /// You are given an `m x n` matrix `mat` of `1`'s (representing soldiers) and
@@ -32,7 +30,6 @@ impl State {
 struct Solution;
 
 impl Solution {
-
     pub fn k_weakest_rows(mat: Vec<Vec<i32>>, k: i32) -> Vec<i32> {
         let mut min_heap = BinaryHeap::new();
         for (i, row) in mat.iter().enumerate() {
@@ -50,7 +47,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -59,18 +55,28 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mat = vec![vec![1,1,0,0,0], vec![1,1,1,1,0], vec![1,0,0,0,0], vec![1,1,0,0,0], vec![1,1,1,1,1]];
+        let mat = vec![
+            vec![1, 1, 0, 0, 0],
+            vec![1, 1, 1, 1, 0],
+            vec![1, 0, 0, 0, 0],
+            vec![1, 1, 0, 0, 0],
+            vec![1, 1, 1, 1, 1],
+        ];
         let k = 3;
         let result = Solution::k_weakest_rows(mat, k);
-        assert_eq!(result, vec![2,0,3]);
+        assert_eq!(result, vec![2, 0, 3]);
     }
 
     #[test]
     fn example_2() {
-        let mat = vec![vec![1,0,0,0], vec![1,1,1,1], vec![1,0,0,0], vec![1,0,0,0]];
+        let mat = vec![
+            vec![1, 0, 0, 0],
+            vec![1, 1, 1, 1],
+            vec![1, 0, 0, 0],
+            vec![1, 0, 0, 0],
+        ];
         let k = 2;
         let result = Solution::k_weakest_rows(mat, k);
         assert_eq!(result, vec![0, 2]);
     }
-
 }

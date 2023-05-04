@@ -13,7 +13,6 @@ use std::cmp::max;
 struct Solution;
 
 impl Solution {
-
     pub fn max_area(height: Vec<i32>) -> i32 {
         let n = height.len();
         let mut max_area = 0;
@@ -37,7 +36,6 @@ impl Solution {
 
         max_area
     }
-
 }
 
 #[cfg(test)]
@@ -46,16 +44,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let height = vec![1,8,6,2,5,4,8,3,7];
+        let height = vec![1, 8, 6, 2, 5, 4, 8, 3, 7];
         let result = Solution::max_area(height);
         assert_eq!(result, 49);
     }
 
     #[test]
     fn example_2() {
-        let height = vec![1,1];
+        let height = vec![1, 1];
         let result = Solution::max_area(height);
         assert_eq!(result, 1);
     }
-
 }

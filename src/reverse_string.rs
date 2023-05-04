@@ -6,16 +6,14 @@
 struct Solution;
 
 impl Solution {
-
     pub fn reverse_string(s: &mut Vec<char>) {
         let n = s.len();
         let end = n - 1;
 
-        for i in 0..n/2 {
+        for i in 0..n / 2 {
             s.swap(i, end - i);
         }
     }
-
 }
 
 #[cfg(test)]
@@ -24,16 +22,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mut s = vec!['h','e','l','l','o'];
+        let mut s = vec!['h', 'e', 'l', 'l', 'o'];
         Solution::reverse_string(&mut s);
-        assert_eq!(s, vec!['o','l','l','e','h']);
+        assert_eq!(s, vec!['o', 'l', 'l', 'e', 'h']);
     }
 
     #[test]
     fn example_2() {
-        let mut s = vec!['H','a','n','n','a','h'];
+        let mut s = vec!['H', 'a', 'n', 'n', 'a', 'h'];
         Solution::reverse_string(&mut s);
-        assert_eq!(s, vec!['h','a','n','n','a','H']);
+        assert_eq!(s, vec!['h', 'a', 'n', 'n', 'a', 'H']);
     }
-
 }

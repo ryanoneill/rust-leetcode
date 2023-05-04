@@ -11,7 +11,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn asteroids_destroyed(mass: i32, asteroids: Vec<i32>) -> bool {
         let mut mass = mass as i64;
         let mut by_smallest = asteroids;
@@ -30,7 +29,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -40,7 +38,7 @@ mod tests {
     #[test]
     fn example_1() {
         let mass = 10;
-        let asteroids = vec![3,9,19,5,21];
+        let asteroids = vec![3, 9, 19, 5, 21];
         let result = Solution::asteroids_destroyed(mass, asteroids);
         assert!(result);
     }
@@ -48,9 +46,8 @@ mod tests {
     #[test]
     fn example_2() {
         let mass = 5;
-        let asteroids = vec![4,9,23,4];
+        let asteroids = vec![4, 9, 23, 4];
         let result = Solution::asteroids_destroyed(mass, asteroids);
         assert!(!result);
     }
-
 }

@@ -9,11 +9,9 @@ struct Meeting {
 }
 
 impl Meeting {
-
     fn new(start: i32, end: i32) -> Self {
         Self { start, end }
     }
-
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -22,31 +20,31 @@ struct ByEnd {
 }
 
 impl ByEnd {
-
     fn new(meeting: Meeting) -> Self {
         Self { meeting }
     }
-
 }
 
 impl Ord for ByEnd {
-
     fn cmp(&self, other: &Self) -> Ordering {
-        if self.meeting.end < other.meeting.end { Ordering::Less }
-        else if self.meeting.end > other.meeting.end { Ordering::Greater }
-        else if self.meeting.start < other.meeting.start { Ordering::Less }
-        else if self.meeting.start > other.meeting.start { Ordering::Greater }
-        else { Ordering::Equal }
+        if self.meeting.end < other.meeting.end {
+            Ordering::Less
+        } else if self.meeting.end > other.meeting.end {
+            Ordering::Greater
+        } else if self.meeting.start < other.meeting.start {
+            Ordering::Less
+        } else if self.meeting.start > other.meeting.start {
+            Ordering::Greater
+        } else {
+            Ordering::Equal
+        }
     }
-
 }
 
 impl PartialOrd for ByEnd {
-
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         Some(self.cmp(other))
     }
-
 }
 
 /// Given an array of meeting time intervals `intervals` where
@@ -55,7 +53,6 @@ impl PartialOrd for ByEnd {
 struct Solution;
 
 impl Solution {
-
     fn order_meetings_by_start(intervals: Vec<Vec<i32>>) -> BinaryHeap<Reverse<Meeting>> {
         let mut min_heap = BinaryHeap::new();
         for interval in intervals {
@@ -71,8 +68,12 @@ impl Solution {
                 let next_to_finish = attending.peek().unwrap().0.meeting;
                 if next_to_finish.end <= time {
                     attending.pop();
-                } else { break; }
-            } else { break; }
+                } else {
+                    break;
+                }
+            } else {
+                break;
+            }
         }
     }
 
@@ -90,7 +91,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -99,16 +99,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let intervals = vec![vec![0,30], vec![5,10], vec![15,20]];
+        let intervals = vec![vec![0, 30], vec![5, 10], vec![15, 20]];
         let result = Solution::min_meeting_rooms(intervals);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_2() {
-        let intervals = vec![vec![7,10], vec![2,4]];
+        let intervals = vec![vec![7, 10], vec![2, 4]];
         let result = Solution::min_meeting_rooms(intervals);
         assert_eq!(result, 1);
     }
-
 }

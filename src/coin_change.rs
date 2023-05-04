@@ -12,24 +12,29 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
         let mut mins = HashMap::new();
         Self::worker(&coins, amount, &mut mins)
     }
 
     fn worker(coins: &Vec<i32>, amount: i32, mins: &mut HashMap<i32, i32>) -> i32 {
-        if amount < 0 { -1 }
-        else if amount == 0 { 0 }
-        else if mins.contains_key(&amount) { mins[&amount] }
-        else {
+        if amount < 0 {
+            -1
+        } else if amount == 0 {
+            0
+        } else if mins.contains_key(&amount) {
+            mins[&amount]
+        } else {
             let mut result = -1;
             for coin in coins {
                 let sub = Self::worker(coins, amount - coin, mins);
                 if sub != -1 {
                     let current = sub + 1;
-                    if result == -1 { result = current; }
-                    else { result = min(result, current); }
+                    if result == -1 {
+                        result = current;
+                    } else {
+                        result = min(result, current);
+                    }
                 }
             }
 
@@ -37,7 +42,6 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
@@ -46,7 +50,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let coins = vec![1,2,5];
+        let coins = vec![1, 2, 5];
         let amount = 11;
         let result = Solution::coin_change(coins, amount);
         assert_eq!(result, 3);
@@ -67,5 +71,4 @@ mod tests {
         let result = Solution::coin_change(coins, amount);
         assert_eq!(result, 0);
     }
-
 }

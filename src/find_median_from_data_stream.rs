@@ -1,4 +1,4 @@
-use std::{collections::BinaryHeap, cmp::Reverse};
+use std::{cmp::Reverse, collections::BinaryHeap};
 
 /// The median is the middle value in an ordered integer list. If the size of
 /// the list is even, there is no middle value, and the median is the mean of
@@ -19,15 +19,14 @@ use std::{collections::BinaryHeap, cmp::Reverse};
 ///   within `10^-5` of the actual answer will be accepted.
 struct MedianFinder {
     min_heap: BinaryHeap<Reverse<i32>>,
-    max_heap: BinaryHeap<i32>
+    max_heap: BinaryHeap<i32>,
 }
 
 impl MedianFinder {
-
     fn new() -> Self {
         Self {
             min_heap: BinaryHeap::new(),
-            max_heap: BinaryHeap::new()
+            max_heap: BinaryHeap::new(),
         }
     }
 
@@ -49,7 +48,9 @@ impl MedianFinder {
         let value = self.min_heap.peek();
         if value.is_some() {
             value.unwrap().0
-        } else { 0 }
+        } else {
+            0
+        }
     }
 
     fn find_median(&self) -> f64 {
@@ -61,8 +62,6 @@ impl MedianFinder {
         }
         result
     }
-
-
 }
 
 #[cfg(test)]
@@ -80,5 +79,4 @@ mod tests {
         let result2 = median_finder.find_median();
         assert_eq!(result2, 2.0);
     }
-
 }

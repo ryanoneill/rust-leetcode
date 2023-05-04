@@ -2,13 +2,13 @@
 enum State {
     Whitespace,
     Sign,
-    Digits
+    Digits,
 }
 
 #[derive(Copy, Clone, PartialEq, PartialOrd, Eq, Hash, Ord)]
 enum Sign {
     Positive,
-    Negative
+    Negative,
 }
 
 /// Implement the `myAtoi(string s)` function, which converts a string to a
@@ -45,7 +45,6 @@ enum Sign {
 struct Solution;
 
 impl Solution {
-
     pub fn my_atoi(s: String) -> i32 {
         let mut chars = s.chars();
         let mut state = State::Whitespace;
@@ -56,8 +55,9 @@ impl Solution {
 
         loop {
             let current = chars.next();
-            if current.is_none() { break; }
-            else {
+            if current.is_none() {
+                break;
+            } else {
                 let current = current.unwrap();
                 if state == State::Whitespace {
                     if current != ' ' {
@@ -89,7 +89,7 @@ impl Solution {
                         '8' => digits.push(8),
                         '9' => digits.push(9),
                         '0' => digits.push(0),
-                        _   => break,
+                        _ => break,
                     }
                 }
             }
@@ -101,7 +101,9 @@ impl Solution {
             if digit != 0 {
                 let power = ten.checked_pow(i as u32);
                 let piece = power.map(|p| p * digit);
-                working = piece.and_then(|p| working.checked_add(p)).unwrap_or(i64::MAX);
+                working = piece
+                    .and_then(|p| working.checked_add(p))
+                    .unwrap_or(i64::MAX);
             }
         }
         if sign == Sign::Negative {
@@ -117,7 +119,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -186,6 +187,4 @@ mod tests {
         let result = Solution::my_atoi(s);
         assert_eq!(result, -1);
     }
-
-
 }

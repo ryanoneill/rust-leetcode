@@ -8,7 +8,6 @@
 struct Solution;
 
 impl Solution {
-
     pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
         let n = digits.len();
         let mut result = Vec::new();
@@ -16,7 +15,7 @@ impl Solution {
         let mut digit;
 
         for i in 0..n {
-            digit = digits[n-i-1];
+            digit = digits[n - i - 1];
             if i == 0 || carry {
                 digit += 1;
                 carry = false;
@@ -32,7 +31,6 @@ impl Solution {
         }
         result.into_iter().rev().collect()
     }
-
 }
 
 #[cfg(test)]
@@ -41,30 +39,29 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let digits = vec![1,2,3];
+        let digits = vec![1, 2, 3];
         let result = Solution::plus_one(digits);
-        assert_eq!(result, vec![1,2,4]);
+        assert_eq!(result, vec![1, 2, 4]);
     }
 
     #[test]
     fn example_2() {
-        let digits = vec![4,3,2,1];
+        let digits = vec![4, 3, 2, 1];
         let result = Solution::plus_one(digits);
-        assert_eq!(result, vec![4,3,2,2]);
+        assert_eq!(result, vec![4, 3, 2, 2]);
     }
 
     #[test]
     fn example_3() {
         let digits = vec![9];
         let result = Solution::plus_one(digits);
-        assert_eq!(result, vec![1,0]);
+        assert_eq!(result, vec![1, 0]);
     }
 
     #[test]
     fn real_world() {
-        let digits = vec![8,9,9,9];
+        let digits = vec![8, 9, 9, 9];
         let result = Solution::plus_one(digits);
-        assert_eq!(result, vec![9,0,0,0]);
+        assert_eq!(result, vec![9, 0, 0, 0]);
     }
-
 }

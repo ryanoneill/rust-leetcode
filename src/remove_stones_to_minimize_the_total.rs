@@ -16,7 +16,6 @@ use std::collections::BinaryHeap;
 struct Solution;
 
 impl Solution {
-
     // Sum should be under 2 billion
     pub fn min_stone_sum(piles: Vec<i32>, k: i32) -> i32 {
         let mut sum = 0;
@@ -34,7 +33,6 @@ impl Solution {
         }
         sum
     }
-
 }
 
 #[cfg(test)]
@@ -43,7 +41,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let piles = vec![5,4,9];
+        let piles = vec![5, 4, 9];
         let k = 2;
         let result = Solution::min_stone_sum(piles, k);
         assert_eq!(result, 12);
@@ -51,10 +49,9 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let piles = vec![4,3,6,7];
+        let piles = vec![4, 3, 6, 7];
         let k = 3;
         let result = Solution::min_stone_sum(piles, k);
         assert_eq!(result, 12);
     }
-
 }

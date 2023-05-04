@@ -6,7 +6,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn length_of_lis(nums: Vec<i32>) -> i32 {
         let mut lengths = HashMap::new();
         let mut result = 0;
@@ -32,7 +31,6 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
@@ -48,16 +46,15 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let nums = vec![0,1,0,3,2,3];
+        let nums = vec![0, 1, 0, 3, 2, 3];
         let result = Solution::length_of_lis(nums);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_3() {
-        let nums = vec![7,7,7,7,7,7,7];
+        let nums = vec![7, 7, 7, 7, 7, 7, 7];
         let result = Solution::length_of_lis(nums);
         assert_eq!(result, 1);
     }
-
 }

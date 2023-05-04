@@ -28,11 +28,9 @@ struct Position {
 }
 
 impl Position {
-
     fn new(row: usize, col: usize) -> Self {
         Self { row, col }
     }
-
 }
 
 #[derive(Clone, Copy, Debug, Eq, Hash, PartialEq)]
@@ -42,25 +40,25 @@ struct State {
 }
 
 impl State {
-
     fn new(pos: Position) -> Self {
         Self { pos, steps: 0 }
     }
 
     fn from_old(pos: Position, state: &State) -> Self {
-        Self { pos, steps: state.steps + 1 }
+        Self {
+            pos,
+            steps: state.steps + 1,
+        }
     }
 
     fn key(&self) -> Position {
         self.pos
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     fn is_building(num_type: i32) -> bool {
         num_type == 1
     }
@@ -90,11 +88,7 @@ impl Solution {
         result
     }
 
-    fn calculate_distance(
-        grid: &Vec<Vec<i32>>,
-        start: Position,
-        end: Position
-    ) -> i32 {
+    fn calculate_distance(grid: &Vec<Vec<i32>>, start: Position, end: Position) -> i32 {
         let m = grid.len();
         let n = grid[0].len();
 
@@ -117,11 +111,19 @@ impl Solution {
                     let mut col = state.pos.col as i32;
 
                     match dir {
-                        'N' => { row -= 1; }
-                        'S' => { row += 1; }
-                        'E' => { col += 1; }
-                        'W' => { col -= 1; }
-                        _   => { }
+                        'N' => {
+                            row -= 1;
+                        }
+                        'S' => {
+                            row += 1;
+                        }
+                        'E' => {
+                            col += 1;
+                        }
+                        'W' => {
+                            col -= 1;
+                        }
+                        _ => {}
                     }
                     let valid_row = row >= 0 && row < m as i32;
                     let valid_col = col >= 0 && col < n as i32;
@@ -175,7 +177,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -184,14 +185,18 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let grid = vec![vec![1,0,2,0,1], vec![0,0,0,0,0], vec![0,0,1,0,0]];
+        let grid = vec![
+            vec![1, 0, 2, 0, 1],
+            vec![0, 0, 0, 0, 0],
+            vec![0, 0, 1, 0, 0],
+        ];
         let result = Solution::shortest_distance(grid);
         assert_eq!(result, 7);
     }
 
     #[test]
     fn example_2() {
-        let grid = vec![vec![1,0]];
+        let grid = vec![vec![1, 0]];
         let result = Solution::shortest_distance(grid);
         assert_eq!(result, 1);
     }
@@ -205,7 +210,15 @@ mod tests {
 
     #[test]
     fn real_world_1() {
-        let grid = vec![vec![1,1,1,1,1,0], vec![0,0,0,0,0,1], vec![0,1,1,0,0,1], vec![1,0,0,1,0,1], vec![1,0,1,0,0,1], vec![1,0,0,0,0,1], vec![0,1,1,1,1,0]];
+        let grid = vec![
+            vec![1, 1, 1, 1, 1, 0],
+            vec![0, 0, 0, 0, 0, 1],
+            vec![0, 1, 1, 0, 0, 1],
+            vec![1, 0, 0, 1, 0, 1],
+            vec![1, 0, 1, 0, 0, 1],
+            vec![1, 0, 0, 0, 0, 1],
+            vec![0, 1, 1, 1, 1, 0],
+        ];
         let result = Solution::shortest_distance(grid);
         assert_eq!(result, 88);
     }
@@ -216,5 +229,4 @@ mod tests {
     //     let result = Solution::shortest_distance(grid);
     //     assert_eq!(result, 6321);
     // }
-
 }

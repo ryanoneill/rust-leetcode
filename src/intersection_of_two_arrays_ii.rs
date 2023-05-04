@@ -7,12 +7,14 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
     fn to_counts(nums: Vec<i32>) -> HashMap<i32, i32> {
         let mut result = HashMap::new();
         for num in nums {
-            result.entry(num)
-                .and_modify(|c| { *c += 1; })
+            result
+                .entry(num)
+                .and_modify(|c| {
+                    *c += 1;
+                })
                 .or_insert(1);
         }
         result
@@ -36,7 +38,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -45,20 +46,19 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums1 = vec![1,2,2,1];
-        let nums2 = vec![2,2];
+        let nums1 = vec![1, 2, 2, 1];
+        let nums2 = vec![2, 2];
         let mut result = Solution::intersect(nums1, nums2);
         result.sort();
-        assert_eq!(result, vec![2,2]);
+        assert_eq!(result, vec![2, 2]);
     }
 
     #[test]
     fn example_2() {
-        let nums1 = vec![4,9,5];
-        let nums2 = vec![9,4,9,8,4];
+        let nums1 = vec![4, 9, 5];
+        let nums2 = vec![9, 4, 9, 8, 4];
         let mut result = Solution::intersect(nums1, nums2);
         result.sort();
-        assert_eq!(result, vec![4,9]);
+        assert_eq!(result, vec![4, 9]);
     }
-
 }

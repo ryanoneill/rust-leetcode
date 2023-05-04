@@ -12,7 +12,6 @@ use std::cmp::min;
 struct Solution;
 
 impl Solution {
-
     pub fn max_profit(prices: Vec<i32>) -> i32 {
         let n = prices.len();
         let mut profit = 0;
@@ -25,7 +24,6 @@ impl Solution {
 
         profit
     }
-
 }
 
 #[cfg(test)]
@@ -34,16 +32,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let prices = vec![7,1,5,3,6,4];
+        let prices = vec![7, 1, 5, 3, 6, 4];
         let result = Solution::max_profit(prices);
         assert_eq!(result, 5);
     }
 
     #[test]
     fn example_2() {
-        let prices = vec![7,6,4,3,1];
+        let prices = vec![7, 6, 4, 3, 1];
         let result = Solution::max_profit(prices);
         assert_eq!(result, 0);
     }
-
 }

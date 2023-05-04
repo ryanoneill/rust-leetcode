@@ -23,7 +23,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn most_points(questions: Vec<Vec<i32>>) -> i64 {
         let mut points = HashMap::new();
         Self::worker(&questions, &mut points)
@@ -53,7 +52,6 @@ impl Solution {
             }
         }
     }
-
 }
 
 #[cfg(test)]
@@ -62,16 +60,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let questions = vec![vec![3,2], vec![4,3], vec![4,4], vec![2,5]];
+        let questions = vec![vec![3, 2], vec![4, 3], vec![4, 4], vec![2, 5]];
         let result = Solution::most_points(questions);
         assert_eq!(result, 5);
     }
 
     #[test]
     fn example_2() {
-        let questions = vec![vec![1,1], vec![2,2], vec![3,3], vec![4,4], vec![5,5]];
+        let questions = vec![vec![1, 1], vec![2, 2], vec![3, 3], vec![4, 4], vec![5, 5]];
         let result = Solution::most_points(questions);
         assert_eq!(result, 7);
     }
-
 }

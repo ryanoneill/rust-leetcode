@@ -8,7 +8,6 @@ struct Meeting {
 }
 
 impl Meeting {
-
     fn new(start: i32, end: i32) -> Self {
         Self { start, end }
     }
@@ -20,7 +19,6 @@ impl Meeting {
 struct Solution;
 
 impl Solution {
-
     pub fn can_attend_meetings(intervals: Vec<Vec<i32>>) -> bool {
         let mut min_heap = BinaryHeap::new();
         for interval in intervals {
@@ -48,7 +46,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -57,16 +54,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let intervals = vec![vec![0,30], vec![5,10], vec![15,20]];
+        let intervals = vec![vec![0, 30], vec![5, 10], vec![15, 20]];
         let result = Solution::can_attend_meetings(intervals);
         assert!(!result);
     }
 
     #[test]
     fn example_2() {
-        let intervals = vec![vec![7,10], vec![2,4]];
+        let intervals = vec![vec![7, 10], vec![2, 4]];
         let result = Solution::can_attend_meetings(intervals);
         assert!(result);
     }
-
 }

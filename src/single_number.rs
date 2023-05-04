@@ -8,7 +8,6 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
     pub fn single_number(nums: Vec<i32>) -> i32 {
         let mut result = 0;
         for num in nums {
@@ -16,7 +15,6 @@ impl Solution {
         }
         result
     }
-
 }
 
 #[cfg(test)]
@@ -25,14 +23,14 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![2,2,1];
+        let nums = vec![2, 2, 1];
         let result = Solution::single_number(nums);
         assert_eq!(result, 1);
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![4,1,2,1,2];
+        let nums = vec![4, 1, 2, 1, 2];
         let result = Solution::single_number(nums);
         assert_eq!(result, 4);
     }
@@ -43,5 +41,4 @@ mod tests {
         let result = Solution::single_number(nums);
         assert_eq!(result, 1);
     }
-
 }

@@ -2,13 +2,15 @@ use std::collections::BinaryHeap;
 
 struct KthSmallestHeap {
     k: usize,
-    heap: BinaryHeap<i32>
+    heap: BinaryHeap<i32>,
 }
 
 impl KthSmallestHeap {
-
     fn new(k: usize) -> Self {
-        Self { k, heap: BinaryHeap::new() }
+        Self {
+            k,
+            heap: BinaryHeap::new(),
+        }
     }
 
     fn is_full(&self) -> bool {
@@ -35,7 +37,6 @@ impl KthSmallestHeap {
         self.heap.pop();
         self.heap.push(num);
     }
-
 }
 
 /// Given an `n x n` `matrix` where each of the rows and columns is sorted in
@@ -48,7 +49,6 @@ impl KthSmallestHeap {
 struct Solution;
 
 impl Solution {
-
     pub fn kth_smallest(matrix: Vec<Vec<i32>>, k: i32) -> i32 {
         let k = k as usize;
         let n = matrix.len();
@@ -65,7 +65,6 @@ impl Solution {
 
         heap.peek()
     }
-
 }
 
 #[cfg(test)]
@@ -74,7 +73,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let matrix = vec![vec![1,5,9], vec![10,11,13], vec![12,13,15]];
+        let matrix = vec![vec![1, 5, 9], vec![10, 11, 13], vec![12, 13, 15]];
         let k = 8;
         let result = Solution::kth_smallest(matrix, k);
         assert_eq!(result, 13);
@@ -87,5 +86,4 @@ mod tests {
         let result = Solution::kth_smallest(matrix, k);
         assert_eq!(result, -5);
     }
-
 }

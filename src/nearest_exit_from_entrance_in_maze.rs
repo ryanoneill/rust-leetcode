@@ -21,7 +21,6 @@ struct State {
 }
 
 impl State {
-
     fn new(row: usize, col: usize) -> Self {
         State { row, col, steps: 0 }
     }
@@ -31,7 +30,11 @@ impl State {
     }
 
     fn from_old(row: usize, col: usize, state: &State) -> Self {
-        State { row, col, steps: state.steps + 1 }
+        State {
+            row,
+            col,
+            steps: state.steps + 1,
+        }
     }
 
     fn key(&self) -> (usize, usize) {
@@ -53,13 +56,11 @@ impl State {
     fn is_exit_row(&self, m: usize) -> bool {
         self.row == 0 || self.row == m - 1
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     pub fn nearest_exit(maze: Vec<Vec<char>>, entrance: Vec<i32>) -> i32 {
         let mut result = -1;
         let mut queue = VecDeque::new();
@@ -77,16 +78,25 @@ impl Solution {
             if state.is_exit(&entrance, m, n) {
                 result = state.steps;
                 break;
-            } else { // let's move
+            } else {
+                // let's move
                 for dir in &directions {
                     let mut row = state.row as i32;
                     let mut col = state.col as i32;
                     match dir {
-                        'N' => { row -= 1; }
-                        'S' => { row += 1; }
-                        'E' => { col += 1; }
-                        'W' => { col -= 1; }
-                        _   => { }
+                        'N' => {
+                            row -= 1;
+                        }
+                        'S' => {
+                            row += 1;
+                        }
+                        'E' => {
+                            col += 1;
+                        }
+                        'W' => {
+                            col -= 1;
+                        }
+                        _ => {}
                     }
                     let valid_row = row >= 0 && row < m as i32;
                     let valid_col = col >= 0 && col < n as i32;
@@ -107,36 +117,41 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
 
-
     #[test]
     fn example_1() {
-        let maze = vec![vec!['+','+','.','+'], vec!['.','.','.','+'], vec!['+','+','+','.']];
-        let entrance = vec![1,2];
+        let maze = vec![
+            vec!['+', '+', '.', '+'],
+            vec!['.', '.', '.', '+'],
+            vec!['+', '+', '+', '.'],
+        ];
+        let entrance = vec![1, 2];
         let result = Solution::nearest_exit(maze, entrance);
         assert_eq!(result, 1);
     }
 
     #[test]
     fn example_2() {
-        let maze = vec![vec!['+','+','+'], vec!['.','.','.'], vec!['+','+','+']];
-        let entrance = vec![1,0];
+        let maze = vec![
+            vec!['+', '+', '+'],
+            vec!['.', '.', '.'],
+            vec!['+', '+', '+'],
+        ];
+        let entrance = vec![1, 0];
         let result = Solution::nearest_exit(maze, entrance);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_3() {
-        let maze = vec![vec!['.','+']];
-        let entrance = vec![0,0];
+        let maze = vec![vec!['.', '+']];
+        let entrance = vec![0, 0];
         let result = Solution::nearest_exit(maze, entrance);
         assert_eq!(result, -1);
     }
-
 }

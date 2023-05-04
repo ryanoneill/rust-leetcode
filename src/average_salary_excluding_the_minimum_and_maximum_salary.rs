@@ -9,7 +9,6 @@ use std::cmp::min;
 struct Solution;
 
 impl Solution {
-
     pub fn average(salary: Vec<i32>) -> f64 {
         let n = salary.len();
         let mut min_salary = i32::max_value();
@@ -26,7 +25,6 @@ impl Solution {
         sum -= max_salary;
         sum as f64 / (n - 2) as f64
     }
-
 }
 
 #[cfg(test)]
@@ -46,5 +44,4 @@ mod tests {
         let result = Solution::average(salary);
         assert_eq!(result, 2000.00000);
     }
-
 }

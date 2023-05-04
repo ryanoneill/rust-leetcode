@@ -6,7 +6,6 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
-
     pub fn contains_duplicate(nums: Vec<i32>) -> bool {
         let mut seen = HashSet::new();
         let mut result = false;
@@ -20,7 +19,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -29,23 +27,22 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![1,2,3,1];
+        let nums = vec![1, 2, 3, 1];
         let result = Solution::contains_duplicate(nums);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![1,2,3,4];
+        let nums = vec![1, 2, 3, 4];
         let result = Solution::contains_duplicate(nums);
         assert!(!result);
     }
 
     #[test]
     fn example_3() {
-        let nums = vec![1,1,1,3,3,4,3,2,4,2];
+        let nums = vec![1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
         let result = Solution::contains_duplicate(nums);
         assert!(result);
     }
-
 }

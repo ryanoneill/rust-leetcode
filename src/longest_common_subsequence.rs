@@ -15,7 +15,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
         let mut maxes = HashMap::new();
         let chars1 = text1.chars().collect();
@@ -28,11 +27,13 @@ impl Solution {
         chars1: &Vec<char>,
         chars2: &Vec<char>,
         i: usize,
-        j: usize
+        j: usize,
     ) -> i32 {
-        if i == chars1.len() { 0 }
-        else if j == chars2.len() { 0 }
-        else if maxes.contains_key(&(i, j)) {
+        if i == chars1.len() {
+            0
+        } else if j == chars2.len() {
+            0
+        } else if maxes.contains_key(&(i, j)) {
             maxes[&(i, j)]
         } else {
             let result;
@@ -49,13 +50,11 @@ impl Solution {
             result
         }
     }
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
@@ -80,5 +79,4 @@ mod tests {
         let result = Solution::longest_common_subsequence(text1, text2);
         assert_eq!(result, 0);
     }
-
 }

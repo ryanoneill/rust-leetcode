@@ -9,23 +9,20 @@ use std::collections::BinaryHeap;
 #[derive(Copy, Clone, PartialEq, PartialOrd)]
 struct Wrapped(f64);
 
-impl Eq for Wrapped { }
+impl Eq for Wrapped {}
 
 impl Ord for Wrapped {
-
     // Based on the constraints of the problem, e.g. the numbers being given
     // as i32s, and the one place where we divide by 2.0, no values should be
     // encountered that cause this Ord definition to be problematic.
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         self.0.partial_cmp(&other.0).unwrap()
     }
-
 }
 
 struct Solution;
 
 impl Solution {
-
     pub fn halve_array(nums: Vec<i32>) -> i32 {
         let mut result = 0;
         let mut sum: f64 = 0.0;
@@ -49,7 +46,6 @@ impl Solution {
 
         result
     }
-
 }
 
 #[cfg(test)]
@@ -69,5 +65,4 @@ mod tests {
         let result = Solution::halve_array(nums);
         assert_eq!(result, 3);
     }
-
 }

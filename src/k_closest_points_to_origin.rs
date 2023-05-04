@@ -10,7 +10,6 @@ struct State {
 }
 
 impl State {
-
     fn new(x: i32, y: i32) -> Self {
         let distance = Self::from_origin(x, y);
         State { distance, x, y }
@@ -26,7 +25,6 @@ impl State {
     fn to_points(&self) -> Vec<i32> {
         vec![self.x, self.y]
     }
-
 }
 
 impl PartialOrd for State {
@@ -37,17 +35,25 @@ impl PartialOrd for State {
 
 impl Ord for State {
     fn cmp(&self, other: &Self) -> Ordering {
-        if self.distance < other.distance { Ordering::Less }
-        else if self.distance > other.distance { Ordering::Greater }
-        else if self.x < other.x { Ordering::Less }
-        else if self.x > other.x { Ordering::Greater }
-        else if self.y < other.y { Ordering::Less }
-        else if self.y > other.y { Ordering::Greater }
-        else { Ordering::Equal }
+        if self.distance < other.distance {
+            Ordering::Less
+        } else if self.distance > other.distance {
+            Ordering::Greater
+        } else if self.x < other.x {
+            Ordering::Less
+        } else if self.x > other.x {
+            Ordering::Greater
+        } else if self.y < other.y {
+            Ordering::Less
+        } else if self.y > other.y {
+            Ordering::Greater
+        } else {
+            Ordering::Equal
+        }
     }
 }
 
-impl Eq for State { }
+impl Eq for State {}
 
 /// Given an array of `points` where `points[i] = [xi, yi]` represents a point
 /// on the X-Y plane and an integer `k`, return the `k` closest points to the
@@ -61,7 +67,6 @@ impl Eq for State { }
 struct Solution;
 
 impl Solution {
-
     pub fn k_closest(points: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
         let mut min_heap = BinaryHeap::new();
         for point in points {
@@ -75,7 +80,6 @@ impl Solution {
         }
         result
     }
-
 }
 
 #[cfg(test)]
@@ -84,18 +88,17 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let points = vec![vec![1,3], vec![-2,2]];
+        let points = vec![vec![1, 3], vec![-2, 2]];
         let k = 1;
         let result = Solution::k_closest(points, k);
-        assert_eq!(result, vec![vec![-2,2]]);
+        assert_eq!(result, vec![vec![-2, 2]]);
     }
 
     #[test]
     fn example_2() {
-        let points = vec![vec![3,3], vec![5,-1], vec![-2,4]];
+        let points = vec![vec![3, 3], vec![5, -1], vec![-2, 4]];
         let k = 2;
         let result = Solution::k_closest(points, k);
-        assert_eq!(result, vec![vec![3,3], vec![-2,4]]);
+        assert_eq!(result, vec![vec![3, 3], vec![-2, 4]]);
     }
-
 }

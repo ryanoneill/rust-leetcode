@@ -13,7 +13,6 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-
     pub fn rob(nums: Vec<i32>) -> i32 {
         let mut by_length = HashMap::new();
         Self::worker(&nums, &mut by_length)
@@ -38,7 +37,6 @@ impl Solution {
             }
         }
     }
-
 }
 
 #[cfg(test)]
@@ -47,16 +45,15 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let nums = vec![1,2,3,1];
+        let nums = vec![1, 2, 3, 1];
         let result = Solution::rob(nums);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_2() {
-        let nums = vec![2,7,9,3,1];
+        let nums = vec![2, 7, 9, 3, 1];
         let result = Solution::rob(nums);
         assert_eq!(result, 12);
     }
-
 }

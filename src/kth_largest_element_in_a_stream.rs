@@ -13,13 +13,15 @@ use std::collections::BinaryHeap;
 ///   the element representing the `kth` largest element in the stream.
 struct KthLargest {
     k: i32,
-    min_heap: BinaryHeap<Reverse<i32>>
+    min_heap: BinaryHeap<Reverse<i32>>,
 }
 
 impl KthLargest {
-
     fn new(k: i32, nums: Vec<i32>) -> Self {
-        let mut result = Self { k, min_heap: BinaryHeap::new() };
+        let mut result = Self {
+            k,
+            min_heap: BinaryHeap::new(),
+        };
         for num in nums {
             let _ = result.add(num);
         }
@@ -29,7 +31,9 @@ impl KthLargest {
     fn peek(&self) -> i32 {
         if self.min_heap.peek().is_some() {
             self.min_heap.peek().unwrap().0
-        } else { 0 }
+        } else {
+            0
+        }
     }
 
     fn add(&mut self, val: i32) -> i32 {
@@ -41,7 +45,6 @@ impl KthLargest {
         }
         self.peek()
     }
-
 }
 
 #[cfg(test)]
@@ -50,7 +53,7 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let mut kth_largest = KthLargest::new(3, vec![4,5,8,2]);
+        let mut kth_largest = KthLargest::new(3, vec![4, 5, 8, 2]);
         let mut result = kth_largest.add(3);
         assert_eq!(result, 4);
         result = kth_largest.add(5);
@@ -62,5 +65,4 @@ mod tests {
         result = kth_largest.add(4);
         assert_eq!(result, 8);
     }
-
 }
