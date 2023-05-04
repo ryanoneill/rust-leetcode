@@ -30,6 +30,7 @@ pub mod swap_nodes_in_pairs; // 24
 
 pub mod remove_duplicates_from_sorted_array; // 26
 pub mod remove_element; // 27
+pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
 
 pub mod range_sum_query_immutable; // 30
 
@@ -117,6 +118,8 @@ pub mod intersection_of_two_arrays_ii; // 350
 pub mod kth_smallest_element_in_a_sorted_matrix; // 378
 
 pub mod ransom_note; // 383
+
+pub mod first_unique_character_in_a_string;
 
 pub mod is_subsequence; // 392
 
