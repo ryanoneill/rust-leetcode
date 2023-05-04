@@ -85,6 +85,7 @@ pub mod sliding_window_maximum; // 239
 pub mod valid_anagram; // 240
 
 pub mod meeting_rooms; // 252
+pub mod meeting_rooms_ii; // 253
 
 pub mod add_digits; // 258
 
