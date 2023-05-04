@@ -33,6 +33,7 @@ pub mod remove_element; // 27
 pub mod range_sum_query_immutable; // 30
 
 pub mod search_insert_position; // 35
+pub mod valid_sudoku; // 36
 
 pub mod rotate_image; // 48
 
