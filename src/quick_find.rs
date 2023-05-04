@@ -1,0 +1,67 @@
+pub struct UnionFind {
+    root: Vec<i32>,
+}
+
+impl UnionFind {
+
+    /// O(n)
+    pub fn new(n: usize) -> Self {
+        let mut root = vec![0; n];
+        for i in 0..n {
+            root[i] = i as i32;
+        }
+        Self { root }
+    }
+
+    /// O(1)
+    pub fn find(&self, x: i32) -> i32 {
+        self.root[x as usize]
+    }
+
+    /// O(n)
+    fn change(&mut self, from: i32, to: i32) {
+        let n = self.root.len();
+        for i in 0..n {
+            if self.root[i] == from {
+                self.root[i] = to;
+            }
+        }
+    }
+
+    /// O(n)
+    pub fn union(&mut self, x: i32, y: i32) {
+        let root_x = self.find(x);
+        let root_y = self.find(y);
+        if root_x != root_y {
+            self.change(x, y);
+        }
+    }
+
+    /// O(1)
+    pub fn connected(&self, x: i32, y: i32) -> bool {
+        self.find(x) == self.find(y)
+    }
+
+}
+
+#[cfg(test)]
+mod tests {
+    use super::UnionFind;
+
+    #[test]
+    fn run_through() {
+        let mut uf = UnionFind::new(10);
+        uf.union(1, 2);
+        uf.union(2, 5);
+        uf.union(5, 6);
+        uf.union(6, 7);
+        uf.union(3, 8);
+        uf.union(8, 9);
+        assert!(uf.connected(1, 5));
+        assert!(uf.connected(5, 7));
+        assert!(!uf.connected(4, 9));
+        uf.union(9, 4);
+        assert!(uf.connected(4, 9));
+    }
+
+}

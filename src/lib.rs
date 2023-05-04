@@ -3,6 +3,7 @@
 
 pub mod list_node;
 pub mod list_node_additions;
+pub mod quick_find;
 pub mod stack;
 pub mod tree_node;
 pub mod tree_node_additions;
