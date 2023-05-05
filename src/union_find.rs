@@ -1,8 +1,7 @@
-use std::collections::HashSet;
-
 pub struct UnionFind {
     root: Vec<i32>,
     rank: Vec<i32>,
+    count: usize,
 }
 
 impl UnionFind {
@@ -13,7 +12,7 @@ impl UnionFind {
         for i in 0..n {
             root[i] = i as i32;
         }
-        Self { root, rank }
+        Self { root, rank, count: n }
     }
 
     pub fn find(&mut self, x: i32) -> i32 {
@@ -36,6 +35,7 @@ impl UnionFind {
                 self.root[root_y as usize] = root_x;
                 self.rank[root_x as usize] += 1;
             }
+            self.count -= 1;
         }
     }
 
@@ -43,12 +43,8 @@ impl UnionFind {
         self.find(x) == self.find(y)
     }
 
-    pub fn roots(&mut self) -> HashSet<i32> {
-        let mut result = HashSet::new();
-        for i in 0..self.root.len() {
-            result.insert(self.find(i as i32));
-        }
-        result
+    pub fn count(&self) -> usize {
+        self.count
     }
 
 }

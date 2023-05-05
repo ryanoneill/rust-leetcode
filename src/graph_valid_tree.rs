@@ -24,7 +24,7 @@ impl Solution {
                 uf.union(x, y);
             }
         }
-        result && uf.roots().len() == 1
+        result && uf.count() == 1
     }
 
 }

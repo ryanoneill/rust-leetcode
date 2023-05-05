@@ -17,7 +17,7 @@ impl Solution {
             uf.union(x, y);
         }
 
-        uf.roots().len() as i32
+        uf.count() as i32
     }
 }
 
