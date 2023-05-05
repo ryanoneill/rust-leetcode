@@ -51,6 +51,8 @@ pub mod plus_one; // 66
 pub mod climbing_stairs; // 70
 pub mod simplify_path; // 71
 
+pub mod sort_colors; // 75
+
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82
@@ -188,6 +190,8 @@ pub mod maximum_difference_between_node_and_ancestor; // 1026
 
 pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
+
+pub mod height_checker; // 1051
 
 pub mod shortest_path_in_binary_matrix; // 1091
 
