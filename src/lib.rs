@@ -191,6 +191,8 @@ pub mod maximum_difference_between_node_and_ancestor; // 1026
 pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
+pub mod height_checker; // 1051
+
 pub mod shortest_path_in_binary_matrix; // 1091
 
 pub mod shortest_path_with_alternating_colors; // 1129
