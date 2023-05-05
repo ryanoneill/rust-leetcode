@@ -51,6 +51,8 @@ pub mod plus_one; // 66
 pub mod climbing_stairs; // 70
 pub mod simplify_path; // 71
 
+pub mod sort_colors; // 75
+
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82
