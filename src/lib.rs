@@ -191,11 +191,15 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod shortest_path_in_binary_matrix; // 1091
 
+pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
+
 pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod longest_common_subsequence; // 1143
 
 pub mod minimum_cost_to_connect_sticks; // 1167
+
+pub mod smallest_string_with_swaps; // 1202
 
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
