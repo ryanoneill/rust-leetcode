@@ -1,4 +1,4 @@
-use std::collections::VecDeque;
+use crate::union_find::UnionFind;
 
 /// You have a graph of `n` nodes. You are given an integer `n` and an array
 /// `edges` where `edges[i] = [ai, bi]` indicates that there is an edge between
@@ -10,35 +10,14 @@ struct Solution;
 impl Solution {
     pub fn count_components(n: i32, edges: Vec<Vec<i32>>) -> i32 {
         let n = n as usize;
-        let mut connected: Vec<Vec<usize>> = vec![vec![]; n];
-        let mut result = 0;
+        let mut uf = UnionFind::new(n);
         for edge in edges {
-            let from = edge[0] as usize;
-            let to = edge[1] as usize;
-            connected[from].push(to);
-            connected[to].push(from);
+            let x = edge[0];
+            let y = edge[1];
+            uf.union(x, y);
         }
 
-        let mut seen = vec![false; n];
-        let mut queue = VecDeque::new();
-        for i in 0..n {
-            if !seen[i] {
-                result += 1;
-                queue.push_back(i);
-                while !queue.is_empty() {
-                    let item = queue.pop_front().unwrap();
-                    if !seen[item] {
-                        seen[item] = true;
-                        let outs = &connected[item];
-                        for out in outs {
-                            queue.push_back(*out);
-                        }
-                    }
-                }
-            }
-        }
-
-        result
+        uf.roots().len() as i32
     }
 }
 
