@@ -90,6 +90,8 @@ pub mod reverse_linked_list; // 206
 
 pub mod contains_duplicate; // 217
 
+pub mod contains_duplicate_ii; // 219
+
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod sliding_window_maximum; // 239
@@ -165,6 +167,8 @@ pub mod binary_search; // 704
 pub mod daily_temperatures; // 739
 
 pub mod min_cost_climbing_stairs; // 746
+
+pub mod jewels_and_stones; // 771
 
 pub mod minimum_distance_between_bst_nodes; // 783
 
