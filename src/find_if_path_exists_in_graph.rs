@@ -1,6 +1,4 @@
-use std::collections::HashMap;
-use std::collections::HashSet;
-use std::collections::VecDeque;
+use crate::union_find::UnionFind;
 
 /// There is a bi-directional graph with `n` vertices, where each vertex is
 /// labeled from `0` to `n-1` (inclusive). The edges in the graph are
@@ -18,52 +16,21 @@ use std::collections::VecDeque;
 struct Solution;
 
 impl Solution {
+
+    /// Switched from DFS/BFS to UnionFind because the graph is undirected and
+    /// the question doesn't ask what the path is between source and
+    /// destination, but only whether one exists.
     pub fn valid_path(n: i32, edges: Vec<Vec<i32>>, source: i32, destination: i32) -> bool {
-        let mut paths = HashMap::new();
-        let needle = destination as usize;
         let n = n as usize;
-        for i in 0..n {
-            paths.insert(i, HashSet::new());
-        }
-
+        let mut uf = UnionFind::new(n);
         for edge in edges {
-            let a = edge[0] as usize;
-            let b = edge[1] as usize;
-            paths.entry(a).and_modify(|p| {
-                p.insert(b);
-            });
-            paths.entry(b).and_modify(|p| {
-                p.insert(a);
-            });
+            let x = edge[0];
+            let y = edge[1];
+            uf.union(x, y);
         }
-
-        let mut result = false;
-        let mut seen = HashSet::new();
-        let mut queue = VecDeque::new();
-
-        if source == destination {
-            result = true
-        } else {
-            queue.push_back(source as usize);
-            while !queue.is_empty() {
-                let item = queue.pop_front().unwrap();
-                if !seen.contains(&item) {
-                    seen.insert(item);
-                    let outs = &paths[&item];
-                    for o in outs.iter() {
-                        if *o == needle {
-                            result = true;
-                            break;
-                        } else {
-                            queue.push_back(*o);
-                        }
-                    }
-                }
-            }
-        }
-
-        result
+        uf.connected(source, destination)
     }
+
 }
 
 #[cfg(test)]
