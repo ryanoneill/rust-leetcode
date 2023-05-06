@@ -172,6 +172,8 @@ pub mod jewels_and_stones; // 771
 
 pub mod minimum_distance_between_bst_nodes; // 783
 
+pub mod all_paths_from_source_to_target; // 797
+
 pub mod similar_string_groups; // 839
 
 pub mod keys_and_rooms; // 841
