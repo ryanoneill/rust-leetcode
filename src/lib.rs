@@ -59,6 +59,8 @@ pub mod remove_duplicates_from_sorted_array_ii; // 80
 pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
+pub mod merge_sorted_array; // 88
+
 pub mod reverse_linked_list_ii; // 92
 
 pub mod validate_binary_search_tree; // 98
@@ -125,6 +127,8 @@ pub mod bulb_switcher; // 319
 
 pub mod coin_change; // 322
 pub mod number_of_connected_components_in_an_undirected_graph; // 323
+
+pub mod reconstruct_itinerary; // 332
 
 pub mod reverse_string; // 344
 
