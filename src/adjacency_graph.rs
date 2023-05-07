@@ -3,21 +3,22 @@ use std::collections::HashSet;
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct AdjacencyGraph {
+    n: usize,
     neighbors: HashMap<i32, HashSet<i32>>,
 }
 
 impl AdjacencyGraph {
 
-    pub fn new() -> Self {
-        Self { neighbors: HashMap::new() }
+    pub fn new(n: usize) -> Self {
+        Self { n, neighbors: HashMap::new() }
     }
 
-    pub fn from_neighbors(neighbors: &HashMap<i32, HashSet<i32>>) -> Self {
-        Self { neighbors: neighbors.clone() }
+    pub fn from_neighbors(n: usize, neighbors: &HashMap<i32, HashSet<i32>>) -> Self {
+        Self { n, neighbors: neighbors.clone() }
     }
 
-    pub fn from_vec(edges: &Vec<Vec<i32>>) -> Self {
-        let mut result = Self::new();
+    pub fn from_vec(n: usize, edges: &Vec<Vec<i32>>) -> Self {
+        let mut result = Self::new(n);
         for edge in edges {
             result.add_edge(edge[0], edge[1]);
         }
@@ -69,7 +70,9 @@ impl AdjacencyGraph {
     }
 
     pub fn find_centroids(&self) -> Vec<i32> {
-        if self.neighbors.len() <= 2 {
+        if self.neighbors.len() == 0 {
+            (0..self.n).into_iter().map(|i| i as i32).collect()
+        } else if self.neighbors.len() <= 2 {
             self.neighbors.keys().copied().collect()
         } else {
             let mut cloned = self.clone();
@@ -91,6 +94,21 @@ impl AdjacencyGraph {
 
             leaves
         }
+    }
+
+    pub fn vertices_len(&self) -> usize {
+        self.n
+    }
+
+    pub fn edges_len(&self) -> usize {
+        self.neighbors.len()
+    }
+
+    pub fn adj(&self, x: i32) -> HashSet<i32> {
+        self.neighbors
+            .get(&x)
+            .cloned()
+            .unwrap_or(HashSet::new())
     }
 
 }

@@ -24,8 +24,9 @@ struct Solution;
 
 impl Solution {
 
-    pub fn find_min_height_tree(_n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {
-        let graph = AdjacencyGraph::from_vec(&edges);
+    pub fn find_min_height_tree(n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {
+        let n = n as usize;
+        let graph = AdjacencyGraph::from_vec(n, &edges);
         graph.find_centroids()
     }
 
@@ -50,6 +51,14 @@ mod tests {
         let mut result = Solution::find_min_height_tree(n, edges);
         result.sort();
         assert_eq!(result, vec![3,4]);
+    }
+
+    #[test]
+    fn no_edges() {
+        let n = 1;
+        let edges = vec![];
+        let result = Solution::find_min_height_tree(n, edges);
+        assert_eq!(result, vec![0]);
     }
 
 }

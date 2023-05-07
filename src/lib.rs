@@ -92,6 +92,7 @@ pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
 
 pub mod reverse_linked_list; // 206
+pub mod course_schedule; // 207
 
 pub mod contains_duplicate; // 217
 
