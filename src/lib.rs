@@ -12,6 +12,7 @@ pub mod stack;
 pub mod tree_node;
 pub mod tree_node_additions;
 pub mod vec_additions;
+pub mod adjacency_graph;
 
 pub mod two_sum; // 1
 pub mod add_two_numbers; // 2
@@ -115,6 +116,8 @@ pub mod find_median_from_data_stream; // 295
 pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod longest_increasing_subsequence; // 300
+
+pub mod minimum_height_trees; // 310
 
 pub mod shortest_distance_from_all_buildings; // 317
 
