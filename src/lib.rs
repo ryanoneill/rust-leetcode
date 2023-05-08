@@ -149,6 +149,8 @@ pub mod intersection_of_two_arrays_ii; // 350
 
 pub mod kth_smallest_element_in_a_sorted_matrix; // 378
 
+pub mod insert_delete_getrandom_o1; // 380 ✓
+
 pub mod ransom_note; // 383
 
 pub mod first_unique_character_in_a_string;
