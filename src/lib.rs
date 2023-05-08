@@ -72,6 +72,7 @@ pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 
 pub mod best_time_to_buy_and_sell_stock; // 121
+pub mod best_time_to_buy_and_sell_stock_ii; // 122
 
 pub mod valid_palindrome; // 125
 
@@ -179,6 +180,8 @@ pub mod kth_largest_element_in_a_stream; // 703
 pub mod binary_search; // 704
 
 pub mod daily_temperatures; // 739
+
+pub mod network_delay_time; // 743
 
 pub mod min_cost_climbing_stairs; // 746
 
