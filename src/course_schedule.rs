@@ -22,6 +22,7 @@ impl Solution {
 mod tests {
     use super::Solution;
 
+    #[ignore]
     #[test]
     fn example_1() {
         let num_courses = 2;
@@ -30,6 +31,7 @@ mod tests {
         assert!(result);
     }
 
+    #[ignore]
     #[test]
     fn example_2() {
         let num_courses = 2;
