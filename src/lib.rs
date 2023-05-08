@@ -28,7 +28,7 @@ pub mod container_with_most_water; // 11 ✓
 
 pub mod longest_common_prefix; // 14
 
-pub mod remove_nth_node_from_end_of_list; // 19
+pub mod remove_nth_node_from_end_of_list; // 19 ✓
 pub mod valid_parentheses; // 20
 pub mod merge_two_sorted_lists; // 21
 
