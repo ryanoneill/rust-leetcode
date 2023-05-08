@@ -230,6 +230,8 @@ pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod height_checker; // 1051
 
+pub mod greatest_common_divisor_of_strings; // 1071 ✓
+
 pub mod shortest_path_in_binary_matrix; // 1091
 
 pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
