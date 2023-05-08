@@ -266,6 +266,8 @@ pub mod furthest_building_you_can_reach; // 1642
 
 pub mod richest_customer_wealth; // 1672
 
+pub mod merge_strings_alternately; // 1768 ✓
+
 pub mod maximum_population_year; // 1854
 
 pub mod nearest_exit_from_entrance_in_maze; // 1926
