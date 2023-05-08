@@ -119,6 +119,8 @@ pub mod graph_valid_tree; // 261
 
 pub mod closest_binary_search_tree_value; // 270
 
+pub mod h_index; // 274 ✓
+
 pub mod move_zeroes; // 283
 
 pub mod find_median_from_data_stream; // 295
