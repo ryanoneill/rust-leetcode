@@ -13,9 +13,38 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn convert(_s: String, _num_rows: i32) -> String {
-        "".to_string()
+    pub fn convert(s: String, num_rows: i32) -> String {
+        if num_rows <= 1 { s }
+        else {
+            let n = num_rows as usize;
+            let mut down = true;
+            let mut row = 0;
+            let mut holding = vec![vec![]; n];
+
+            for c in s.chars() {
+                holding[row].push(c);
+                if down {
+                    if row == n-1 {
+                        down = false;
+                        row = n-2;
+                    } else {
+                        row += 1;
+                    }
+                } else {
+                    if row == 0 {
+                        down = true;
+                        row = 1;
+                    } else {
+                        row -= 1;
+                    }
+                }
+            }
+
+            holding
+                .iter()
+                .map(|row| row.iter().collect::<String>())
+                .collect()
+        }
     }
 
 }
@@ -24,7 +53,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let s = "PAYPALISHIRING".to_string();
@@ -33,7 +61,6 @@ mod tests {
         assert_eq!(result, "PAHNAPLSIIGYIR");
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let s = "PAYPALISHIRING".to_string();
@@ -42,13 +69,20 @@ mod tests {
         assert_eq!(result, "PINALSIGYAHRPI");
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let s = "A".to_string();
         let num_rows = 1;
         let result = Solution::convert(s, num_rows);
         assert_eq!(result, "A");
+    }
+
+    #[test]
+    fn two_rows() {
+        let s = "ABCDEFGHIJKLMNOP".to_string();
+        let num_rows = 2;
+        let result = Solution::convert(s, num_rows);
+        assert_eq!(result, "ACEGIKMOBDFHJLNP");
     }
 
 }
