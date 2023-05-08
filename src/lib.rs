@@ -105,6 +105,8 @@ pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
 
+pub mod palindrome_linked_list; // 234 ✓
+
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod sliding_window_maximum; // 239
