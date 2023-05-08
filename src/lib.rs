@@ -101,6 +101,8 @@ pub mod happy_number; // 202
 pub mod reverse_linked_list; // 206
 pub mod course_schedule; // 207 ✓
 
+pub mod course_schedule_ii; // 210 ✓
+
 pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
