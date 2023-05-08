@@ -19,7 +19,7 @@ pub mod add_two_numbers; // 2
 pub mod length_of_longest_substring; // 3 ✓
 pub mod median_of_two_sorted_arrays; // 4
 pub mod longest_palindromic_substring; // 5
-pub mod zigzag_conversion; // 6
+pub mod zigzag_conversion; // 6 ✓
 pub mod reverse_integer; // 7 ✓
 pub mod string_to_integer; // 8 ✓
 pub mod palindrome_number; // 9 ✓
@@ -41,9 +41,11 @@ pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
 pub mod range_sum_query_immutable; // 30
 
 pub mod search_insert_position; // 35
-pub mod valid_sudoku; // 36
+pub mod valid_sudoku; // 36 ✓
 
 pub mod rotate_image; // 48
+
+pub mod jump_game; // 55 ✓
 
 pub mod length_of_last_word; // 58
 
