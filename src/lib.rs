@@ -181,6 +181,8 @@ pub mod number_of_provinces; // 547
 
 pub mod reverse_words_in_a_string_iii; // 557
 
+pub mod can_place_flowers; // 605 ✓
+
 pub mod average_of_levels_in_binary_tree; // 637
 
 pub mod find_k_closest_elements; // 658
