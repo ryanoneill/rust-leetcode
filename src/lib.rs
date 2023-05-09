@@ -225,7 +225,7 @@ pub mod range_sum_of_bst; // 938
 pub mod k_closest_points_to_origin; // 973
 
 pub mod rotting_oranges; // 994
-                         //
+
 pub mod maximum_difference_between_node_and_ancestor; // 1026
 
 pub mod last_stone_weight; // 1046
@@ -240,6 +240,8 @@ pub mod shortest_path_in_binary_matrix; // 1091
 pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
 
 pub mod shortest_path_with_alternating_colors; // 1129
+
+pub mod parallel_courses; // 1136 ✓
 
 pub mod longest_common_subsequence; // 1143
 
