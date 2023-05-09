@@ -257,6 +257,8 @@ pub mod the_k_weakest_rows_in_a_matrix; // 1337
 
 pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
 
+pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
+
 pub mod count_good_nodes_in_binary_tree; // 1448
 
 pub mod running_sum_of_1d_array; // 1480
