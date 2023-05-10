@@ -242,6 +242,8 @@ pub mod shortest_path_in_binary_matrix; // 1091
 
 pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
 
+pub mod remove_vowels_from_a_string; // 1119 ✓
+
 pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod parallel_courses; // 1136 ✓
