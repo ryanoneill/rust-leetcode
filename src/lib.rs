@@ -148,6 +148,8 @@ pub mod number_of_connected_components_in_an_undirected_graph; // 323
 
 pub mod reconstruct_itinerary; // 332
 
+pub mod increasing_triplet_subsequence; // 334 ✓
+
 pub mod reverse_string; // 344
 
 pub mod reverse_vowels_of_a_string; // 345 ✓
