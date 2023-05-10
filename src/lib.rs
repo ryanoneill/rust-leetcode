@@ -277,7 +277,9 @@ pub mod maximum_number_of_vowels_in_a_substring_of_given_length; // 1456 ✓
 
 pub mod running_sum_of_1d_array; // 1480
 
-pub mod average_salary_excluding_the_minimum_and_maximum_salary;
+pub mod average_salary_excluding_the_minimum_and_maximum_salary; // 1491
+
+pub mod longest_subarray_of_ones_after_deleting_one_element; // 1493 ✓
 
 pub mod make_the_string_great; // 1544
 
