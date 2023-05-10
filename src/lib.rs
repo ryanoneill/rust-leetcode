@@ -147,6 +147,7 @@ pub mod reconstruct_itinerary; // 332
 
 pub mod reverse_string; // 344
 
+pub mod reverse_vowels_of_a_string; // 345 ✓
 pub mod moving_average_from_data_stream; // 346
 pub mod top_k_frequent_elements; // 347
 
