@@ -273,6 +273,8 @@ pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
 
 pub mod count_good_nodes_in_binary_tree; // 1448
 
+pub mod maximum_number_of_vowels_in_a_substring_of_given_length; // 1456 ✓
+
 pub mod running_sum_of_1d_array; // 1480
 
 pub mod average_salary_excluding_the_minimum_and_maximum_salary;
