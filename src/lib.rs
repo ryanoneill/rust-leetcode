@@ -287,6 +287,8 @@ pub mod furthest_building_you_can_reach; // 1642
 
 pub mod richest_customer_wealth; // 1672
 
+pub mod max_number_of_k_sum_pairs; // 1679 ✓
+
 pub mod merge_strings_alternately; // 1768 ✓
 
 pub mod maximum_population_year; // 1854
