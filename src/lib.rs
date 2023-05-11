@@ -168,6 +168,8 @@ pub mod first_unique_character_in_a_string; // 387 ✓
 
 pub mod is_subsequence; // 392
 
+pub mod decode_string; // 394 ✓
+
 pub mod fizz_buzz; // 412
 
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
