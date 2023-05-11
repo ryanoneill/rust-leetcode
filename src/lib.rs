@@ -206,6 +206,8 @@ pub mod binary_search; // 704
 
 pub mod find_pivot_index; // 724 ✓
 
+pub mod asteroid_collision; // 735 ✓
+
 pub mod daily_temperatures; // 739
 
 pub mod network_delay_time; // 743
@@ -293,6 +295,8 @@ pub mod min_cost_to_connect_all_points; // 1584
 
 pub mod furthest_building_you_can_reach; // 1642
 
+pub mod determine_if_two_strings_are_close; // 1657 ✓
+
 pub mod richest_customer_wealth; // 1672
 
 pub mod max_number_of_k_sum_pairs; // 1679 ✓
@@ -323,6 +327,8 @@ pub mod find_the_difference_of_two_arrays; // 2215 ✓
 
 pub mod smallest_number_in_infinite_set; // 2336
 
+pub mod equal_row_and_column_pairs; // 2352 ✓
+
 pub mod reachable_nodes_with_restrictions; // 2368
 
-pub mod removing_stars_from_a_string; // 2390
+pub mod removing_stars_from_a_string; // 2390 ✓
