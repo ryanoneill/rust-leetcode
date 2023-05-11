@@ -204,6 +204,8 @@ pub mod insert_into_a_binary_search_tree; // 701
 pub mod kth_largest_element_in_a_stream; // 703
 pub mod binary_search; // 704
 
+pub mod find_pivot_index; // 724 ✓
+
 pub mod daily_temperatures; // 739
 
 pub mod network_delay_time; // 743
