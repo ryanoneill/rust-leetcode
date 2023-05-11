@@ -263,6 +263,8 @@ pub mod minimum_cost_to_connect_sticks; // 1167
 
 pub mod smallest_string_with_swaps; // 1202
 
+pub mod unique_number_of_occurrences; // 1207 ✓
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod deepest_leaves_sum; // 1302
