@@ -323,6 +323,8 @@ pub mod find_the_difference_of_two_arrays; // 2215 ✓
 
 pub mod smallest_number_in_infinite_set; // 2336
 
+pub mod equal_row_and_column_pairs; // 2352 ✓
+
 pub mod reachable_nodes_with_restrictions; // 2368
 
 pub mod removing_stars_from_a_string; // 2390
