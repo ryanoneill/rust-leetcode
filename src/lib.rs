@@ -164,7 +164,7 @@ pub mod insert_delete_getrandom_o1; // 380 ✓
 
 pub mod ransom_note; // 383
 
-pub mod first_unique_character_in_a_string;
+pub mod first_unique_character_in_a_string; // 387 ✓
 
 pub mod is_subsequence; // 392
 
