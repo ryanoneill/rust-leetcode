@@ -146,6 +146,8 @@ pub mod bulb_switcher; // 319
 pub mod coin_change; // 322
 pub mod number_of_connected_components_in_an_undirected_graph; // 323
 
+pub mod odd_even_linked_list; // 328 ✓
+
 pub mod reconstruct_itinerary; // 332
 
 pub mod increasing_triplet_subsequence; // 334 ✓
@@ -319,7 +321,7 @@ pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
 
 pub mod find_if_path_exists_in_graph; // 1971
 
-pub mod delete_the_middle_node_of_a_linked_list; // 2095
+pub mod delete_the_middle_node_of_a_linked_list; // 2095 ✓
 
 pub mod destroying_asteroids; // 2126
 
