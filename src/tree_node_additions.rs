@@ -1,4 +1,5 @@
 use crate::tree_node::TreeNode;
+use std::cell::Ref;
 use std::cell::RefCell;
 use std::cmp::max;
 use std::cmp::min;
@@ -24,7 +25,8 @@ pub trait TreeNodeAdditions {
 
     fn get_value(&self) -> Option<i32>;
     fn in_order(&self) -> Vec<i32>;
-    fn in_order_worker<F: FnMut(i32)>(&self, f: &mut F);
+    fn in_order_worker<F: FnMut(&Ref<TreeNode>)>(&self, f: &mut F);
+    fn leaf_value_sequence(&self) -> Vec<i32>;
     fn is_leaf(&self) -> bool;
     fn max_depth(&self) -> usize;
     fn min_depth(&self) -> usize;
@@ -126,14 +128,14 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
         })
     }
 
-    fn in_order_worker<F: FnMut(i32)>(&self, f: &mut F) {
+    fn in_order_worker<F: FnMut(&Ref<TreeNode>)>(&self, f: &mut F) {
         match self {
             Some(rc) => {
                 let node = rc.borrow();
                 if node.left.is_some() {
                     node.left.in_order_worker(f);
                 }
-                f(node.val);
+                f(&node);
                 if node.right.is_some() {
                     node.right.in_order_worker(f);
                 }
@@ -146,8 +148,8 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
 
     fn in_order(&self) -> Vec<i32> {
         let mut result = Vec::new();
-        self.in_order_worker(&mut |val| {
-            result.push(val);
+        self.in_order_worker(&mut |node| {
+            result.push(node.val);
         });
         result
     }
@@ -159,6 +161,16 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                 node.left.is_none() && node.right.is_none()
             })
             .unwrap_or(false)
+    }
+
+    fn leaf_value_sequence(&self) -> Vec<i32> {
+        let mut result = Vec::new();
+        self.in_order_worker(&mut |node| {
+            if node.left.is_none() && node.right.is_none() {
+                result.push(node.val);
+            }
+        });
+        result
     }
 
     fn max_depth(&self) -> usize {
