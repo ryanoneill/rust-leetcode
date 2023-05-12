@@ -70,7 +70,7 @@ pub mod reverse_linked_list_ii; // 92
 pub mod validate_binary_search_tree; // 98
 
 pub mod binary_tree_zigzag_level_order_traversal; // 103
-pub mod maximum_depth_of_binary_tree; // 104
+pub mod maximum_depth_of_binary_tree; // 104 ✓
 
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
