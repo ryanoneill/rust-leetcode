@@ -285,7 +285,7 @@ pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
 
-pub mod count_good_nodes_in_binary_tree; // 1448
+pub mod count_good_nodes_in_binary_tree; // 1448 ✓
 
 pub mod maximum_number_of_vowels_in_a_substring_of_given_length; // 1456 ✓
 
