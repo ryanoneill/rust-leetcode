@@ -19,6 +19,7 @@ pub trait ListNodeAdditions {
     fn refer_next_next(&mut self) -> &mut Self;
     fn remove_next(&mut self);
     fn reverse(self) -> Self;
+    fn split_at(&mut self, mid: usize) -> Self;
     fn set_next(&mut self, value: Self);
     fn take_next(&mut self) -> Self;
     fn to_vec(&self) -> Vec<i32>;
@@ -132,6 +133,26 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
 
     fn set_next(&mut self, value: Self) {
         self.as_mut().unwrap().next = value
+    }
+
+    fn split_at(&mut self, mid: usize) -> Self {
+        let mut current = self;
+        let mut count = 0;
+        let mut result = None;
+
+        if mid == 0 {
+            result = current.take();
+        } else {
+            while current.is_some() && count != mid - 1 {
+                current = current.refer_next();
+                count += 1;
+            }
+            if current.is_some() {
+                result = current.take_next();
+            }
+        }
+
+        result
     }
 
     fn take_next(&mut self) -> Self {

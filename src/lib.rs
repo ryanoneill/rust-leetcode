@@ -100,7 +100,7 @@ pub mod number_of_islands; // 200
 
 pub mod happy_number; // 202
 
-pub mod reverse_linked_list; // 206
+pub mod reverse_linked_list; // 206 ✓
 pub mod course_schedule; // 207 ✓
 
 pub mod course_schedule_ii; // 210 ✓
@@ -324,6 +324,8 @@ pub mod find_if_path_exists_in_graph; // 1971
 pub mod delete_the_middle_node_of_a_linked_list; // 2095 ✓
 
 pub mod destroying_asteroids; // 2126
+
+pub mod maximum_twin_sum_of_a_linked_list; // 2130 ✓
 
 pub mod solving_questions_with_brainpower; // 2140
 
