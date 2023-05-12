@@ -195,6 +195,8 @@ pub mod can_place_flowers; // 605 ✓
 
 pub mod average_of_levels_in_binary_tree; // 637
 
+pub mod dota2_senate; // 649 ✓
+
 pub mod find_k_closest_elements; // 658
 
 pub mod top_k_frequent_words; // 692
