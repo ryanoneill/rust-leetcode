@@ -74,6 +74,7 @@ pub mod maximum_depth_of_binary_tree; // 104 ✓
 
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
+pub mod path_sum_ii; // 113 ✓
 
 pub mod best_time_to_buy_and_sell_stock; // 121
 pub mod best_time_to_buy_and_sell_stock_ii; // 122
