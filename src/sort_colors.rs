@@ -11,28 +11,29 @@ struct Solution;
 impl Solution {
 
     pub fn sort_colors(nums: &mut Vec<i32>) {
-        let n = nums.len();
-        let mut white_begin = 0; // p0
-        let mut blue_begin = n - 1; // p2
-        let mut i = 0;
+        let mut red_count = 0;
+        let mut white_count = 0;
 
-        while i <= blue_begin {
-            let color = nums[i];
-            if color == 0 {
-                nums.swap(i, white_begin);
-                i += 1;
-                white_begin += 1;
-            } else if color == 2 {
-                nums.swap(i, blue_begin);
-                if blue_begin != 0 {
-                    blue_begin -= 1;
-                } else if i == 0 {
-                    i += 1;
-                }
+        let n = nums.len();
+        for i in 0..n {
+            let num = nums[i];
+            if num == 0 {
+                red_count += 1;
+            } else if num == 1 {
+                white_count += 1;
+            } 
+        }
+
+        for i in 0..n {
+            if i < red_count {
+                nums[i] = 0;
+            } else if i < white_count + red_count {
+                nums[i] = 1;
             } else {
-                i += 1;
+                nums[i] = 2;
             }
         }
+
     }
 
 }
