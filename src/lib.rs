@@ -244,6 +244,8 @@ pub mod middle_of_the_linked_list; // 876
 
 pub mod online_stock_span; // 901
 
+pub mod sort_an_array; // 912 ✓
+
 pub mod reverse_only_letters; // 917
 
 pub mod number_of_recent_calls; // 933 ✓
