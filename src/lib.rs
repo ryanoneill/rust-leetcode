@@ -109,7 +109,7 @@ pub mod course_schedule; // 207 ✓
 
 pub mod course_schedule_ii; // 210 ✓
 
-pub mod kth_largest_element_in_an_array; // 215 
+pub mod kth_largest_element_in_an_array; // 215 ✓
 
 pub mod contains_duplicate; // 217
 
@@ -280,6 +280,8 @@ pub mod parallel_courses; // 1136 ✓
 pub mod longest_common_subsequence; // 1143
 
 pub mod minimum_cost_to_connect_sticks; // 1167
+
+pub mod minimum_absolute_difference; // 1200 ✓
 
 pub mod smallest_string_with_swaps; // 1202
 
