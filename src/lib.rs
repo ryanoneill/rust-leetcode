@@ -122,7 +122,8 @@ pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod product_of_array_except_self; // 238
 pub mod sliding_window_maximum; // 239
-pub mod valid_anagram; // 240
+
+pub mod valid_anagram; // 242
 
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
