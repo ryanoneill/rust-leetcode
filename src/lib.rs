@@ -27,7 +27,7 @@ pub mod palindrome_number; // 9 ✓
 pub mod regular_expression_matching; // 10
 pub mod container_with_most_water; // 11 ✓
 
-pub mod roman_to_integer; // 13
+pub mod roman_to_integer; // 13 ✓
 pub mod longest_common_prefix; // 14
 
 pub mod remove_nth_node_from_end_of_list; // 19 ✓
@@ -72,6 +72,8 @@ pub mod reverse_linked_list_ii; // 92
 
 pub mod validate_binary_search_tree; // 98
 
+pub mod same_tree; // 100 ✓
+
 pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104 ✓
 
@@ -93,6 +95,8 @@ pub mod insertion_sort_list; // 147 ✓
 pub mod reverse_words_in_a_string; // 151 ✓
 
 pub mod min_stack; // 155
+
+pub mod read_n_characters_given_read4; // 157 ✓
 
 pub mod missing_ranges; // 163
 pub mod maximum_gap; // 164
