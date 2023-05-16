@@ -27,6 +27,7 @@ pub mod palindrome_number; // 9 ✓
 pub mod regular_expression_matching; // 10
 pub mod container_with_most_water; // 11 ✓
 
+pub mod roman_to_integer; // 13
 pub mod longest_common_prefix; // 14
 
 pub mod remove_nth_node_from_end_of_list; // 19 ✓
