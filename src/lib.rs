@@ -93,6 +93,7 @@ pub mod reverse_words_in_a_string; // 151 ✓
 pub mod min_stack; // 155
 
 pub mod missing_ranges; // 163
+pub mod maximum_gap; // 164
 
 pub mod majority_element; // 169
 
