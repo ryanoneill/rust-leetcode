@@ -288,6 +288,8 @@ pub mod parallel_courses; // 1136 ✓
 
 pub mod longest_common_subsequence; // 1143
 
+pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
+
 pub mod minimum_cost_to_connect_sticks; // 1167
 
 pub mod minimum_absolute_difference; // 1200 ✓
