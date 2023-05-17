@@ -122,6 +122,7 @@ pub mod lowest_common_ancestor_of_a_binary_tree; // 236
 
 pub mod product_of_array_except_self; // 238
 pub mod sliding_window_maximum; // 239
+pub mod search_a_2d_matrix_ii; // 240 ✓
 
 pub mod valid_anagram; // 242
 
