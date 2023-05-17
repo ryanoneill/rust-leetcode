@@ -5,31 +5,46 @@ struct Solution;
 
 impl Solution {
 
-    // Range is -10000 through 10000
-    pub fn find_kth_largest(nums: Vec<i32>, k: i32) -> i32 {
-        let mut counts = vec![0; 20001];
-        for num in nums {
-            let index = num as usize + 10000;
-            counts[index] += 1;
-        }
+    fn partition(nums: &mut Vec<i32>, left: usize, right: usize, pivot_index: usize) -> usize {
+        let pivot = nums[pivot_index];
+        nums.swap(pivot_index, right);
+        let mut store_index = left;
 
-        let mut result = -10000;
-        let mut left = k;
-
-        let mut i = 20000;
-        while left > 0 {
-            let count = counts[i];
-            left -= count;
-            if left <= 0 {
-                result = i as i32 - 10000;
-            } else if i == 0 {
-                break;
-            } else {
-                i -= 1;
+        for i in left..right {
+            let value = nums[i];
+            if value < pivot {
+                nums.swap(store_index, i);
+                store_index += 1;
             }
         }
+        nums.swap(right, store_index);
+        store_index
+    }
 
-        result
+    fn select(nums: &mut Vec<i32>, left: usize, right: usize, k: usize) -> i32 {
+        if left == right { 
+            nums[left]
+        } else {
+            // This should be random but ...
+            let mut pivot_index = left + (right - left) / 2;
+            pivot_index = Self::partition(nums, left, right, pivot_index);
+            if pivot_index == k {
+                nums[pivot_index]
+            } else if k < pivot_index {
+                Self::select(nums, left, pivot_index - 1, k)
+            } else {
+                Self::select(nums, pivot_index + 1, right, k)
+            }
+        }
+    }
+
+    // Modified to use quickselect. Last implementation used counting sort
+    // which according to the benchmarks was faster.
+    pub fn find_kth_largest(nums: Vec<i32>, k: i32) -> i32 {
+        let mut nums = nums;
+        let n = nums.len();
+        let k = k as usize;
+        Self::select(&mut nums, 0, n-1, n - k)
     }
 
 }
@@ -37,7 +52,6 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-
 
     #[test]
     fn example_1() {
