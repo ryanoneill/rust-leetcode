@@ -101,6 +101,7 @@ pub mod read_n_characters_given_read4; // 157 ✓
 pub mod missing_ranges; // 163
 pub mod maximum_gap; // 164
 
+pub mod excel_sheet_column_title; // 168 ✓
 pub mod majority_element; // 169
 
 pub mod rotate_array; // 189
