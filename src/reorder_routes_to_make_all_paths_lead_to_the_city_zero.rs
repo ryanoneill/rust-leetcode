@@ -18,7 +18,7 @@ struct Solution;
 impl Solution {
 
     // TODO: Implement
-    pub fn min_reorder(n: i32, connections: Vec<Vec<i32>>) -> i32 {
+    pub fn min_reorder(_n: i32, _connections: Vec<Vec<i32>>) -> i32 {
         0
     }
 
