@@ -209,7 +209,7 @@ pub mod minimum_absolute_difference_in_bst; // 530
 pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
-pub mod number_of_provinces; // 547
+pub mod number_of_provinces; // 547 ✓
 
 pub mod reverse_words_in_a_string_iii; // 557
 
@@ -249,7 +249,7 @@ pub mod all_paths_from_source_to_target; // 797
 
 pub mod similar_string_groups; // 839
 
-pub mod keys_and_rooms; // 841
+pub mod keys_and_rooms; // 841 ✓
 
 pub mod all_nodes_distance_k_in_binary_tree; // 863
 
