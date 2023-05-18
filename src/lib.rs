@@ -192,9 +192,11 @@ pub mod fizz_buzz; // 412
 
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
 
-pub mod path_sum_iii; // 437
+pub mod path_sum_iii; // 437 ✓
 
 pub mod string_compression; // 443 ✓
+
+pub mod delete_node_in_a_bst; // 450 ✓
 
 pub mod next_greater_element_i; // 496
 
@@ -223,6 +225,7 @@ pub mod top_k_frequent_words; // 692
 
 pub mod max_area_of_island; // 695
 
+pub mod search_in_a_binary_search_tree; // 700 ✓
 pub mod insert_into_a_binary_search_tree; // 701
 
 pub mod kth_largest_element_in_a_stream; // 703
@@ -306,6 +309,8 @@ pub mod deepest_leaves_sum; // 1302
 pub mod the_k_weakest_rows_in_a_matrix; // 1337
 
 pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
+
+pub mod longest_zigzag_path_in_a_binary_tree; // 1372 ✓
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
 

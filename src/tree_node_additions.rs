@@ -9,6 +9,7 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 pub trait TreeNodeAdditions {
+
     fn new(val: i32) -> Self;
     fn with_children(val: i32, left: Self, right: Self) -> Self;
 
@@ -24,14 +25,25 @@ pub trait TreeNodeAdditions {
     fn find_parents_worker(&self, parents: &mut HashMap<i32, i32>);
 
     fn get_value(&self) -> Option<i32>;
+    fn set_value(&mut self, value: i32);
+
     fn in_order(&self) -> Vec<i32>;
     fn in_order_worker<F: FnMut(&Ref<TreeNode>)>(&self, f: &mut F);
     fn leaf_value_sequence(&self) -> Vec<i32>;
     fn is_leaf(&self) -> bool;
+
     fn max_depth(&self) -> usize;
     fn min_depth(&self) -> usize;
+
+    fn has_left(&self) -> bool;
+    fn has_right(&self) -> bool;
+
     fn set_left(&mut self, value: Self);
     fn set_right(&mut self, value: Self);
+
+    fn take_left(&mut self) -> Self;
+    fn take_right(&mut self) -> Self;
+
 }
 
 impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
@@ -128,6 +140,12 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
         })
     }
 
+    fn set_value(&mut self, value: i32) {
+        self.as_ref().map(|rc| {
+            rc.borrow_mut().val = value;
+        });
+    }
+
     fn in_order_worker<F: FnMut(&Ref<TreeNode>)>(&self, f: &mut F) {
         match self {
             Some(rc) => {
@@ -204,6 +222,18 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
         }
     }
 
+    fn has_left(&self) -> bool {
+        self.as_ref().map(|rc| {
+            rc.borrow().left.is_some()
+        }).unwrap_or_default()
+    }
+
+    fn has_right(&self) -> bool {
+        self.as_ref().map(|rc| {
+            rc.borrow().right.is_some()
+        }).unwrap_or_default()
+    }
+
     fn set_left(&mut self, value: Self) {
         match self {
             Some(rc) => {
@@ -227,4 +257,33 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
             }
         }
     }
+
+    fn take_left(&mut self) -> Self {
+        let mut result = None;
+        match self {
+            Some(rc) => {
+                let mut node = rc.borrow_mut();
+                result = node.left.take();
+            }
+            None => {
+                // do nothing
+            }
+        }
+        result
+    }
+
+    fn take_right(&mut self) -> Self {
+        let mut result = None;
+        match self {
+            Some(rc) => {
+                let mut node = rc.borrow_mut();
+                result = node.right.take();
+            }
+            None => {
+                // do nothing
+            }
+        }
+        result
+    }
+
 }
