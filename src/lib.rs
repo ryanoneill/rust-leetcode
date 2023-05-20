@@ -105,6 +105,7 @@ pub mod excel_sheet_column_title; // 168 ✓
 pub mod majority_element; // 169
 
 pub mod rotate_array; // 189
+pub mod reverse_bits; // 190
 
 pub mod house_robber; // 198
 pub mod binary_tree_right_side_view; // 199
