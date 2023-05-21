@@ -142,6 +142,7 @@ pub mod sliding_window_maximum; // 239
 pub mod search_a_2d_matrix_ii; // 240 ✓
 
 pub mod valid_anagram; // 242
+pub mod shortest_word_distance; // 243 ✓
 
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
