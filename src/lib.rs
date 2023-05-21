@@ -127,6 +127,8 @@ pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
 
+pub mod invert_binary_tree; // 226 ✓
+
 pub mod summary_ranges; // 228 ✓
 
 pub mod palindrome_linked_list; // 234 ✓
