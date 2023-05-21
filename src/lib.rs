@@ -104,6 +104,8 @@ pub mod maximum_gap; // 164
 pub mod excel_sheet_column_title; // 168 ✓
 pub mod majority_element; // 169
 
+pub mod excel_sheet_column_number; // 171 ✓
+
 pub mod rotate_array; // 189
 pub mod reverse_bits; // 190
 
