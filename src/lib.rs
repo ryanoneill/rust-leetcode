@@ -131,6 +131,8 @@ pub mod invert_binary_tree; // 226 ✓
 
 pub mod summary_ranges; // 228 ✓
 
+pub mod power_of_two; // 231 
+
 pub mod palindrome_linked_list; // 234 ✓
 
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236 ✓
