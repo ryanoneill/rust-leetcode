@@ -14,6 +14,7 @@ pub mod tree_node_additions;
 pub mod vec_additions;
 pub mod adjacency_graph;
 pub mod heap_array;
+pub mod number_additions;
 
 pub mod two_sum; // 1 ✓
 pub mod add_two_numbers; // 2
@@ -288,6 +289,8 @@ pub mod last_stone_weight; // 1046
 pub mod remove_all_adjacent_duplicates_in_string; // 1047
 
 pub mod height_checker; // 1051
+
+pub mod confusing_number; // 1056 ✓
 
 pub mod greatest_common_divisor_of_strings; // 1071 ✓
 
