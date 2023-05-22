@@ -139,7 +139,7 @@ pub mod power_of_two; // 231 ✓
 pub mod palindrome_linked_list; // 234 ✓
 
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236 ✓
-
+// pub mod delete_node_in_a_linked_list; // 237 - This problem is unavailable in Rust
 pub mod product_of_array_except_self; // 238
 pub mod sliding_window_maximum; // 239
 pub mod search_a_2d_matrix_ii; // 240 ✓
