@@ -91,6 +91,8 @@ pub mod valid_palindrome; // 125
 
 pub mod single_number; // 136
 
+// pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
+
 pub mod insertion_sort_list; // 147 ✓
 
 pub mod reverse_words_in_a_string; // 151 ✓
