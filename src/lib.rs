@@ -50,6 +50,8 @@ pub mod jump_game_ii; // 45 ✓
 
 pub mod rotate_image; // 48
 
+pub mod maximum_subarray; // 53 ✓
+
 pub mod jump_game; // 55 ✓
 
 pub mod length_of_last_word; // 58
