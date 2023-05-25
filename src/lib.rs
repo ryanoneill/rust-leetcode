@@ -117,6 +117,9 @@ pub mod number_of_1_bits; // 191 ✓
 
 // pub mod valid_phone_numbers; // 193 - This problem is unavailable in Rust
 
+// pub mod tenth_line; // 195 - This problem is unavailable in Rust
+// pub mod delete_duplicate_entries; // 196 - This problem is unavailable in Rust
+// pub mod rising_temperature; // 197 - This problem is unavailable in Rust
 pub mod house_robber; // 198
 pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
@@ -150,6 +153,8 @@ pub mod search_a_2d_matrix_ii; // 240 ✓
 
 pub mod valid_anagram; // 242
 pub mod shortest_word_distance; // 243 ✓
+
+pub mod strobogrammatic_number; // 246
 
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
