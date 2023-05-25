@@ -115,6 +115,8 @@ pub mod rotate_array; // 189
 pub mod reverse_bits; // 190
 pub mod number_of_1_bits; // 191 ✓
 
+// pub mod valid_phone_numbers; // 193 - This problem is unavailable in Rust
+
 pub mod house_robber; // 198
 pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
