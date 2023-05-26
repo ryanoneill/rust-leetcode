@@ -159,6 +159,7 @@ pub mod strobogrammatic_number; // 246
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
 
+pub mod binary_tree_paths; // 257
 pub mod add_digits; // 258
 
 pub mod graph_valid_tree; // 261
