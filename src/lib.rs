@@ -207,6 +207,8 @@ pub mod top_k_frequent_elements; // 347
 
 pub mod intersection_of_two_arrays_ii; // 350
 
+pub mod guess_number_higher_or_lower; // 374
+
 pub mod kth_smallest_element_in_a_sorted_matrix; // 378
 
 pub mod insert_delete_getrandom_o1; // 380 ✓
