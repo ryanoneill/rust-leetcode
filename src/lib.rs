@@ -20,7 +20,7 @@ pub mod two_sum; // 1 ✓
 pub mod add_two_numbers; // 2
 pub mod length_of_longest_substring; // 3 ✓
 pub mod median_of_two_sorted_arrays; // 4
-pub mod longest_palindromic_substring; // 5
+pub mod longest_palindromic_substring; // 5 ✓
 pub mod zigzag_conversion; // 6 ✓
 pub mod reverse_integer; // 7 ✓
 pub mod string_to_integer; // 8 ✓
