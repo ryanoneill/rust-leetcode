@@ -128,6 +128,7 @@ pub mod happy_number; // 202
 
 pub mod reverse_linked_list; // 206 ✓
 pub mod course_schedule; // 207 ✓
+pub mod implement_trie; // 208 ✓
 
 pub mod course_schedule_ii; // 210 ✓
 
