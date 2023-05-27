@@ -167,6 +167,8 @@ pub mod graph_valid_tree; // 261
 
 pub mod ugly_number; // 263 ✓
 
+pub mod palindrome_permutation; // 266 ✓
+
 pub mod alien_dictionary; // 269 ✓
 pub mod closest_binary_search_tree_value; // 270
 
