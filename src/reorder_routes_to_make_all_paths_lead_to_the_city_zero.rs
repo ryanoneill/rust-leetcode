@@ -1,3 +1,21 @@
+use std::collections::HashMap;
+use std::collections::HashSet;
+use std::collections::VecDeque;
+
+#[derive(Copy, Clone, PartialEq, PartialOrd, Eq, Ord, Hash)]
+struct Connection {
+    from: usize,
+    to: usize,
+}
+
+impl Connection {
+
+    pub fn new(from: usize, to: usize) -> Self {
+        Connection { from, to }
+    }
+
+}
+
 /// There are `n` cities numbered from `0` to `n - 1` and `n - 1` roads such
 /// that there is only one way to travel between two cities (this network form
 /// a tree). Last year, the ministry of transport decided to orient the roads
@@ -17,9 +35,51 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn min_reorder(_n: i32, _connections: Vec<Vec<i32>>) -> i32 {
-        0
+    pub fn min_reorder(_n: i32, connections: Vec<Vec<i32>>) -> i32 {
+        let mut result = 0;
+        let mut seen = HashSet::new();
+
+        let mut adjacency = HashMap::new();
+        for item in connections {
+            let from = item[0] as usize;
+            let to = item[1] as usize;
+            let connection = Connection::new(from, to);
+            adjacency
+                .entry(from)
+                .or_insert(HashSet::new())
+                .insert(connection);
+            adjacency
+                .entry(to)
+                .or_insert(HashSet::new())
+                .insert(connection);
+        }
+
+        let mut queue = VecDeque::new();
+        queue.push_back(0);
+        seen.insert(0);
+        while !queue.is_empty() {
+            let value = queue.pop_front().unwrap();
+            if adjacency.contains_key(&value) {
+                let conns = &adjacency[&value];
+                for conn in conns {
+                    if conn.to == value {
+                        if !seen.contains(&conn.from) {
+                            seen.insert(conn.from);
+                            queue.push_back(conn.from);
+                        }
+                    } else {
+                        if !seen.contains(&conn.to) {
+                            seen.insert(conn.to);
+                            queue.push_back(conn.to);
+                            // Changed direction of this road
+                            result += 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        result
     }
 
 }
@@ -28,7 +88,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let n = 6;
@@ -37,7 +96,6 @@ mod tests {
         assert_eq!(result, 3);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let n = 5;
@@ -46,7 +104,6 @@ mod tests {
         assert_eq!(result, 2);
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let n = 3;

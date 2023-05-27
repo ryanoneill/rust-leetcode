@@ -352,7 +352,7 @@ pub mod count_good_nodes_in_binary_tree; // 1448 ✓
 
 pub mod maximum_number_of_vowels_in_a_substring_of_given_length; // 1456 ✓
 
-pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero; // 1466
+pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero; // 1466 ✓
 
 pub mod perform_string_shifts; // 1472 ✓
 
