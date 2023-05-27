@@ -176,6 +176,8 @@ pub mod h_index; // 274 ✓
 
 pub mod move_zeroes; // 283
 
+pub mod word_pattern; // 290 ✓
+
 pub mod find_median_from_data_stream; // 295
 
 pub mod serialize_and_deserialize_binary_tree; // 297
