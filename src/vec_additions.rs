@@ -1,3 +1,4 @@
+/// Useful functions that make working with Vecs as data structures easier.
 pub trait VecAdditions<T> {
     fn peek_last(&self) -> Option<&T>;
     fn pop_while<F: Fn(&T) -> bool>(&mut self, p: F);
