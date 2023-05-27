@@ -27,7 +27,7 @@ pub mod string_to_integer; // 8 ✓
 pub mod palindrome_number; // 9 ✓
 pub mod regular_expression_matching; // 10
 pub mod container_with_most_water; // 11 ✓
-
+pub mod integer_to_roman; // 12 ✓
 pub mod roman_to_integer; // 13 ✓
 pub mod longest_common_prefix; // 14
 
@@ -322,6 +322,7 @@ pub mod remove_vowels_from_a_string; // 1119 ✓
 pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod parallel_courses; // 1136 ✓
+pub mod nth_tribonacci_number; // 1137 ✓
 
 pub mod longest_common_subsequence; // 1143
 
