@@ -385,6 +385,8 @@ pub mod find_the_highest_altitude; // 1732 ✓
 
 pub mod merge_strings_alternately; // 1768 ✓
 
+pub mod maximum_score_from_performing_multiple_operations; // 1770 ✓
+
 pub mod maximum_population_year; // 1854
 
 pub mod nearest_exit_from_entrance_in_maze; // 1926
