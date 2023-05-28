@@ -1,6 +1,3 @@
-use std::cmp::max;
-use std::collections::HashMap;
-
 /// You are a professional robber planning to rob houses along a street. Each
 /// house has a certain amount of money stashed, the only constraint stopping
 /// you from robbing each of them is that adjacent houses have security systems
@@ -13,30 +10,26 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
+
+    // Switched to bottom-up iterative solution
     pub fn rob(nums: Vec<i32>) -> i32 {
-        let mut by_length = HashMap::new();
-        Self::worker(&nums, &mut by_length)
-    }
-
-    fn worker(nums: &[i32], by_length: &mut HashMap<usize, i32>) -> i32 {
         let n = nums.len();
-        match n {
-            0 => 0,
-            1 => nums[0],
-            _ => {
-                if by_length.contains_key(&n) {
-                    by_length[&n]
-                } else {
-                    let sum_with = nums[0] + Self::worker(&nums[2..], by_length);
-                    let sum_without = Self::worker(&nums[1..], by_length);
-                    let result = max(sum_with, sum_without);
-                    by_length.insert(n, result);
+        if n == 1 {
+            nums[0]
+        } else {
+            let mut most = vec![0; n];
+            most[0] = nums[0];
+            most[1] = nums[0].max(nums[1]);
 
-                    result
-                }
+            for i in 2..n {
+                let sum_with = nums[i] + most[i-2];
+                let sum_without = most[i-1];
+                most[i] = sum_with.max(sum_without);
             }
+            most[n-1]
         }
     }
+
 }
 
 #[cfg(test)]
