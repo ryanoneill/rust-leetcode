@@ -126,6 +126,8 @@ pub mod number_of_islands; // 200
 
 pub mod happy_number; // 202
 
+pub mod count_primes; // 204 ✓
+
 pub mod reverse_linked_list; // 206 ✓
 pub mod course_schedule; // 207 ✓
 pub mod implement_trie; // 208 ✓
