@@ -5,6 +5,7 @@ pub trait ListNodeAdditions {
     fn with_next(val: i32, next: Self) -> Self;
 
     fn from_vec(items: Vec<i32>) -> Self;
+    fn merge_lists(list1: Self, list2: Self) -> Self;
 
     fn add_to_end(&mut self, value: Self);
     fn advance(&mut self, n: usize) -> &mut Self;
@@ -45,6 +46,60 @@ impl ListNodeAdditions for Option<Box<ListNode>> {
                 let node = Self::new(items[i]);
                 current.set_next(node);
                 current = current.refer_next();
+            }
+
+            result
+        }
+    }
+
+    fn merge_lists(list1: Self, list2: Self) -> Self {
+        if list1.is_empty() {
+            list2
+        } else if list2.is_empty() {
+            list1
+        } else {
+            let mut list1 = list1;
+            let mut list2 = list2;
+            let mut result = None;
+            let mut current = &mut result;
+            let mut first = true;
+
+            while !list1.is_empty() || !list2.is_empty() {
+                if first {
+                    let list1_value = list1.get_value();
+                    let list2_value = list2.get_value();
+
+                    if list1_value <= list2_value {
+                        result = list1;
+                        current = &mut result;
+                        list1 = current.take_next();
+                    } else {
+                        result = list2;
+                        current = &mut result;
+                        list2 = current.take_next();
+                    }
+
+                    first = false;
+                } else if list1.is_empty() {
+                    current.set_next(list2);
+                    list2 = None;
+                } else if list2.is_empty() {
+                    current.set_next(list1);
+                    list1 = None;
+                } else {
+                    let list1_value = list1.get_value();
+                    let list2_value = list2.get_value();
+
+                    if list1_value <= list2_value {
+                        current.set_next(list1);
+                        current = current.refer_next();
+                        list1 = current.take_next();
+                    } else {
+                        current.set_next(list2);
+                        current = current.refer_next();
+                        list2 = current.take_next();
+                    }
+                }
             }
 
             result
