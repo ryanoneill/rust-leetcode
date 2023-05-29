@@ -195,11 +195,15 @@ pub mod bulb_switcher; // 319
 pub mod coin_change; // 322
 pub mod number_of_connected_components_in_an_undirected_graph; // 323
 
+pub mod power_of_three; // 326
+
 pub mod odd_even_linked_list; // 328 ✓
 
 pub mod reconstruct_itinerary; // 332
 
 pub mod increasing_triplet_subsequence; // 334 ✓
+
+pub mod counting_bits; // 338 ✓
 
 pub mod reverse_string; // 344
 
@@ -374,6 +378,8 @@ pub mod make_the_string_great; // 1544
 pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
 
 pub mod min_cost_to_connect_all_points; // 1584
+
+pub mod design_parking_system; // 1603 ✓
 
 pub mod furthest_building_you_can_reach; // 1642
 
