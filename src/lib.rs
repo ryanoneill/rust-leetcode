@@ -97,6 +97,7 @@ pub mod single_number; // 136
 // pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
 
 pub mod insertion_sort_list; // 147 ✓
+pub mod sort_list; // 148
 
 pub mod reverse_words_in_a_string; // 151 ✓
 
