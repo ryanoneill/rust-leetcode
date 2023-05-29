@@ -393,6 +393,8 @@ pub mod max_number_of_k_sum_pairs; // 1679 ✓
 
 pub mod find_the_highest_altitude; // 1732 ✓
 
+pub mod longest_nice_substring; // 1763
+
 pub mod merge_strings_alternately; // 1768 ✓
 
 pub mod maximum_score_from_performing_multiplication_operations; // 1770 ✓
