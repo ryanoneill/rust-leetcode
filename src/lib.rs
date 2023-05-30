@@ -404,6 +404,8 @@ pub mod maximum_score_from_performing_multiplication_operations; // 1770 ✓
 
 pub mod maximum_population_year; // 1854
 
+pub mod build_array_from_permutation; // 1920
+
 pub mod nearest_exit_from_entrance_in_maze; // 1926
 
 pub mod remove_stones_to_minimize_the_total; // 1962
