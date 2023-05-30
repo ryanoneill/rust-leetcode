@@ -159,6 +159,7 @@ pub mod search_a_2d_matrix_ii; // 240 ✓
 pub mod valid_anagram; // 242
 pub mod shortest_word_distance; // 243 ✓
 pub mod shortest_word_distance_ii; // 244 ✓
+pub mod shortest_word_distance_iii; // 245 ✓
 
 pub mod strobogrammatic_number; // 246
 
