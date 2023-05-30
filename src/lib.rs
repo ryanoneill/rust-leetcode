@@ -263,6 +263,8 @@ pub mod can_place_flowers; // 605 ✓
 
 pub mod average_of_levels_in_binary_tree; // 637
 
+pub mod maximum_average_subarray_i; // 643
+
 pub mod dota2_senate; // 649 ✓
 
 pub mod find_k_closest_elements; // 658
