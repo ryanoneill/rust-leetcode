@@ -259,6 +259,8 @@ pub mod number_of_provinces; // 547 ✓
 
 pub mod reverse_words_in_a_string_iii; // 557
 
+// pub mod classes_more_than_5_students; // 596 - This problem is unavailable in Rust
+
 pub mod can_place_flowers; // 605 ✓
 
 pub mod average_of_levels_in_binary_tree; // 637
