@@ -427,6 +427,8 @@ pub mod find_if_path_exists_in_graph; // 1971
 
 pub mod final_value_of_variable_after_performing_operations; // 2011
 
+pub mod k_radius_subarray_averages; // 2090
+
 pub mod delete_the_middle_node_of_a_linked_list; // 2095 ✓
 
 pub mod destroying_asteroids; // 2126
