@@ -431,6 +431,8 @@ pub mod k_radius_subarray_averages; // 2090
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095 ✓
 
+pub mod detonate_the_maximum_bombs; // 2101 ✓
+
 pub mod destroying_asteroids; // 2126
 
 pub mod maximum_twin_sum_of_a_linked_list; // 2130 ✓
