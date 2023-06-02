@@ -456,3 +456,5 @@ pub mod removing_stars_from_a_string; // 2390 ✓
 pub mod total_cost_to_hire_k_workers; // 2462 ✓
 
 pub mod maximum_subsequence_score; // 2542 ✓
+
+pub mod remove_trailing_zeros_from_a_string; // 2710 ✓
