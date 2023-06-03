@@ -371,6 +371,8 @@ pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
 
 pub mod longest_zigzag_path_in_a_binary_tree; // 1372 ✓
 
+pub mod time_needed_to_inform_all_employees; // 1376 ✓
+
 pub mod design_underground_system; // 1396
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
