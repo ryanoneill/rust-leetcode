@@ -293,6 +293,8 @@ pub mod network_delay_time; // 743
 
 pub mod min_cost_climbing_stairs; // 746
 
+pub mod find_anagram_mappings; // 760 ✓
+
 pub mod jewels_and_stones; // 771
 
 pub mod minimum_distance_between_bst_nodes; // 783
