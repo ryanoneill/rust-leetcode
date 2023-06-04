@@ -238,6 +238,8 @@ pub mod fizz_buzz; // 412
 
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
 
+pub mod minimum_genetic_mutation; // 433 ✓
+
 pub mod path_sum_iii; // 437 ✓
 
 pub mod string_compression; // 443 ✓
