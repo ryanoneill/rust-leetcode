@@ -468,6 +468,8 @@ pub mod minimum_operations_to_halve_array_sum; // 2208
 
 pub mod find_the_difference_of_two_arrays; // 2215 ✓
 
+pub mod successful_pairs_of_spells_and_potions; // 2300 ✓
+
 pub mod smallest_number_in_infinite_set; // 2336
 
 pub mod query_kth_smallest_trimmed_number; // 2343 ✓
