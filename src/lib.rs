@@ -295,6 +295,8 @@ pub mod network_delay_time; // 743
 
 pub mod min_cost_climbing_stairs; // 746
 
+pub mod open_the_lock; // 752 ✓
+
 pub mod find_anagram_mappings; // 760 ✓
 
 pub mod jewels_and_stones; // 771
