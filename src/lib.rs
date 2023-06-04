@@ -90,6 +90,8 @@ pub mod best_time_to_buy_and_sell_stock_ii; // 122
 
 pub mod valid_palindrome; // 125
 
+pub mod word_ladder; // 127 ✓
+
 // pub mod clone_graph; // 133 - This problem is unavailable in Rust
 
 pub mod single_number; // 136
