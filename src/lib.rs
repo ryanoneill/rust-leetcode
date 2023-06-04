@@ -431,6 +431,8 @@ pub mod merge_strings_alternately; // 1768 ✓
 
 pub mod maximum_score_from_performing_multiplication_operations; // 1770 ✓
 
+pub mod sign_of_the_product_of_an_array; // 1822 ✓
+
 pub mod maximum_population_year; // 1854
 
 pub mod build_array_from_permutation; // 1920 ✓
