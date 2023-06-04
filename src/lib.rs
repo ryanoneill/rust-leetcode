@@ -481,3 +481,4 @@ pub mod maximum_subsequence_score; // 2542 ✓
 
 pub mod remove_trailing_zeros_from_a_string; // 2710 ✓
 pub mod difference_of_number_of_distinct_values_on_diagonals; // 2711 ✓
+pub mod minimum_cost_to_make_all_characters_equal; // 2712
