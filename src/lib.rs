@@ -313,7 +313,7 @@ pub mod middle_of_the_linked_list; // 876
 
 pub mod online_stock_span; // 901
 
-pub mod snakes_and_ladders; // 909
+pub mod snakes_and_ladders; // 909 ✓
 
 pub mod sort_an_array; // 912 ✓
 
