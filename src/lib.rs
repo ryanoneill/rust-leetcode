@@ -375,6 +375,8 @@ pub mod deepest_leaves_sum; // 1302
 
 pub mod jump_game_iii; // 1306 ✓
 
+pub mod maximum_69_number; // 1323 ✓
+
 pub mod the_k_weakest_rows_in_a_matrix; // 1337
 
 pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
