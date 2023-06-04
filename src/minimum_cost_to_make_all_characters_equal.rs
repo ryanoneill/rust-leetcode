@@ -15,7 +15,7 @@ struct Solution;
 impl Solution {
 
     // TODO: Implement
-    pub fn minimum_cost(s: String) -> i64 {
+    pub fn minimum_cost(_s: String) -> i64 {
         0
     }
 
