@@ -421,7 +421,7 @@ pub mod richest_customer_wealth; // 1672
 
 pub mod max_number_of_k_sum_pairs; // 1679 ✓
 
-pub mod maximum_units_on_a_truck; // 1710
+pub mod maximum_units_on_a_truck; // 1710 ✓
 
 pub mod find_the_highest_altitude; // 1732 ✓
 
