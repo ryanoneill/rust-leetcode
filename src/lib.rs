@@ -315,6 +315,7 @@ pub mod all_nodes_distance_k_in_binary_tree; // 863
 
 pub mod leaf_similar_trees; // 872 ✓
 
+pub mod koko_eating_bananas; // 875 ✓
 pub mod middle_of_the_linked_list; // 876
 
 pub mod online_stock_span; // 901
