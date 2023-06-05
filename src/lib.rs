@@ -419,6 +419,8 @@ pub mod min_cost_to_connect_all_points; // 1584
 
 pub mod design_parking_system; // 1603 ✓
 
+pub mod path_with_minimum_effort; // 1631 ✓
+
 pub mod furthest_building_you_can_reach; // 1642
 
 pub mod determine_if_two_strings_are_close; // 1657 ✓
