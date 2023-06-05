@@ -373,6 +373,8 @@ pub mod unique_number_of_occurrences; // 1207 ✓
 
 pub mod toss_strange_coins; // 1230
 
+pub mod check_if_it_is_a_straight_line; // 1232 ✓
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod deepest_leaves_sum; // 1302
