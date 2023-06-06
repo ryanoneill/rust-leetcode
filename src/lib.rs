@@ -411,6 +411,8 @@ pub mod average_salary_excluding_the_minimum_and_maximum_salary; // 1491
 
 pub mod longest_subarray_of_ones_after_deleting_one_element; // 1493 ✓
 
+pub mod can_make_arithmetic_progression_from_sequence; // 1502
+
 pub mod make_the_string_great; // 1544
 
 pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
