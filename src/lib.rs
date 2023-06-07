@@ -445,6 +445,8 @@ pub mod sign_of_the_product_of_an_array; // 1822 ✓
 
 pub mod maximum_population_year; // 1854
 
+pub mod minimum_speed_to_arrive_on_time; // 1870 ✓
+
 pub mod build_array_from_permutation; // 1920 ✓
 
 pub mod nearest_exit_from_entrance_in_maze; // 1926
