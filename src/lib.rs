@@ -18,7 +18,7 @@ pub mod number_additions;
 
 pub mod two_sum; // 1 ✓
 pub mod add_two_numbers; // 2
-pub mod length_of_longest_substring; // 3 ✓ // TODO: Rename. Filename does not match problem name.
+pub mod longest_substring_without_repeating_characters; // 3 ✓
 pub mod median_of_two_sorted_arrays; // 4
 pub mod longest_palindromic_substring; // 5 ✓
 pub mod zigzag_conversion; // 6 ✓
