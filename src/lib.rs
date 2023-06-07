@@ -382,6 +382,8 @@ pub mod deepest_leaves_sum; // 1302
 
 pub mod jump_game_iii; // 1306 ✓
 
+pub mod minimum_flips_to_make_a_or_b_equal_to_c; // 1318 ✓
+
 pub mod maximum_69_number; // 1323 ✓
 
 pub mod the_k_weakest_rows_in_a_matrix; // 1337
