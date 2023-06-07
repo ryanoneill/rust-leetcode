@@ -376,6 +376,8 @@ pub mod toss_strange_coins; // 1230
 
 pub mod check_if_it_is_a_straight_line; // 1232 ✓
 
+pub mod find_the_smallest_divisor_given_a_threshold; // 1283
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod deepest_leaves_sum; // 1302
