@@ -104,6 +104,7 @@ pub mod insertion_sort_list; // 147 ✓
 pub mod sort_list; // 148
 
 pub mod reverse_words_in_a_string; // 151 ✓
+pub mod maximum_product_subarray; // 152
 
 pub mod min_stack; // 155
 
