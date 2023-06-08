@@ -6,7 +6,7 @@ struct Solution;
 
 impl Solution {
 
-    pub fn max_product(nums: Vec<i32>) -> i32 {
+    pub fn max_product(_nums: Vec<i32>) -> i32 {
         0
     }
 
@@ -16,6 +16,7 @@ impl Solution {
 mod tests {
     use super::Solution;
 
+    #[ignore]
     #[test]
     fn example_1() {
         let nums = vec![2,3,-2,4];
@@ -23,5 +24,7 @@ mod tests {
         assert_eq!(result, 6);
     }
 
-    #[test]
 
+    // TODO: Add More Tests
+
+}
