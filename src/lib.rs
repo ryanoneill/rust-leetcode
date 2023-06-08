@@ -394,6 +394,8 @@ pub mod reduce_array_size_to_the_half; // 1338 ✓
 
 pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
 
+pub mod count_negative_numbers_in_a_sorted_matrix; // 1351
+
 pub mod longest_zigzag_path_in_a_binary_tree; // 1372 ✓
 
 pub mod time_needed_to_inform_all_employees; // 1376 ✓
