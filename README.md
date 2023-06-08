@@ -66,7 +66,7 @@
 
 ### Matrix
 
-- [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+- [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) - [Solution](src/set_matrix_zeroes.rs)
 - [ ] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 - [x] [Rotate Image](https://leetcode.com/problems/rotate-image/) - [Solution](src/rotate_image.rs)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)
