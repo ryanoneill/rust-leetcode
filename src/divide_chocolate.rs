@@ -17,7 +17,7 @@ impl Solution {
 
     // TODO: Implement
     pub fn maximize_sweetness(_sweetness: Vec<i32>, _k: i32) -> i32 {
-
+        0
     }
 
 }
