@@ -30,6 +30,7 @@ pub mod container_with_most_water; // 11 ✓
 pub mod integer_to_roman; // 12 ✓
 pub mod roman_to_integer; // 13 ✓
 pub mod longest_common_prefix; // 14
+pub mod three_sum; // 15
 
 pub mod letter_combinations_of_a_phone_number; // 17 ✓
 
