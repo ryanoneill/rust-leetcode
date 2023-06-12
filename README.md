@@ -1,6 +1,6 @@
 # rust-leetcode
 
-## [NeetCode 150](https://neetcode.io/practice)
+## [NeetCode 150 Progress](https://neetcode.io/practice)
 
 ### Arrays & Hashing
 
