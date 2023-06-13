@@ -280,6 +280,8 @@ pub mod dota2_senate; // 649 ✓
 
 pub mod find_k_closest_elements; // 658
 
+pub mod baseball_game; // 682 ✓
+
 pub mod top_k_frequent_words; // 692
 
 pub mod max_area_of_island; // 695
