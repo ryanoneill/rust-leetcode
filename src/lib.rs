@@ -150,6 +150,7 @@ pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
 
+pub mod implement_stack_using_queues; // 225 ✓
 pub mod invert_binary_tree; // 226 ✓
 
 pub mod summary_ranges; // 228 ✓
