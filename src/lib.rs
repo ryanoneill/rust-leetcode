@@ -411,6 +411,8 @@ pub mod time_needed_to_inform_all_employees; // 1376 ✓
 
 pub mod design_underground_system; // 1396
 
+pub mod perform_string_shifts; // 1427 ✓
+
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
 
 pub mod count_good_nodes_in_binary_tree; // 1448 ✓
@@ -418,8 +420,6 @@ pub mod count_good_nodes_in_binary_tree; // 1448 ✓
 pub mod maximum_number_of_vowels_in_a_substring_of_given_length; // 1456 ✓
 
 pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero; // 1466 ✓
-
-pub mod perform_string_shifts; // 1472 ✓
 
 pub mod running_sum_of_1d_array; // 1480
 
