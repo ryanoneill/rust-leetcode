@@ -14,7 +14,6 @@ impl Solution {
 
         for i in 0..m {
             for j in 0..n / 2 {
-                println!("{} {}", i, j);
                 let back_i = n - i - 1;
                 let back_j = n - j - 1;
 
