@@ -16,9 +16,37 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn find_min(_nums: Vec<i32>) -> i32 {
-        0
+    pub fn find_min(nums: Vec<i32>) -> i32 {
+        let mut result = nums[0];
+        if nums.len() == 1 {
+            result = nums[0];
+        } else {
+            let mut start = 0;
+            let mut end = nums.len() - 1;
+            if nums[start] < nums[end] {
+                result = nums[start];
+            } else {
+                while start < end {
+                    let mid = start + (end - start) / 2;
+                    let mid_plus_one = mid + 1;
+                    let mid_minus_one = mid - 1;
+
+                    if nums[mid] > nums[mid_plus_one] {
+                        result = nums[mid_plus_one];
+                        break;
+                    } else if nums[mid] < nums[mid_minus_one] {
+                        result = nums[mid];
+                        break;
+                    } else if nums[mid] > nums[0] {
+                        start = mid + 1;
+                    } else {
+                        end = mid - 1;
+                    }
+                }
+            }
+        }
+
+        result
     }
 
 }
@@ -27,7 +55,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let nums = vec![3,4,5,1,2];
@@ -35,7 +62,6 @@ mod tests {
         assert_eq!(result, 1);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let nums = vec![4,5,6,7,0,1,2];
@@ -43,12 +69,18 @@ mod tests {
         assert_eq!(result, 0);
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let nums = vec![11,13,15,17];
         let result = Solution::find_min(nums);
         assert_eq!(result, 11);
+    }
+
+    #[test]
+    fn example_4() {
+        let nums = vec![3,1,2];
+        let result = Solution::find_min(nums);
+        assert_eq!(result, 1);
     }
 
 }
