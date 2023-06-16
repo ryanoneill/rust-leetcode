@@ -187,6 +187,7 @@ pub mod palindrome_permutation; // 266 ✓
 
 pub mod alien_dictionary; // 269 ✓
 pub mod closest_binary_search_tree_value; // 270
+pub mod encode_and_decode_strings; // 271 ✓
 
 pub mod h_index; // 274 ✓
 

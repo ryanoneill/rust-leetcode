@@ -11,7 +11,7 @@
 - [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](src/top_k_frequent_elements.rs)
 - [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - [Solution](src/product_of_array_except_self.rs)
 - [x] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) - [Solution](src/valid_sudoku.rs)
-- [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+- [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) - [Solution](src/encode_and_decode_strings.rs)
 - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 ### Two Pointers
@@ -287,7 +287,7 @@
 - [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - [Solution](src/valid_palindrome.rs)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
 - [ ] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
-- [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+- [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) - [Solution](src/encode_and_decode_strings.rs)
 
 ### Tree
 
