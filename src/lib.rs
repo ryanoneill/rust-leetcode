@@ -50,6 +50,8 @@ pub mod range_sum_query_immutable; // 30
 pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 
+pub mod trapping_rain_water; // 42 ✓
+
 pub mod jump_game_ii; // 45 ✓
 
 pub mod rotate_image; // 48

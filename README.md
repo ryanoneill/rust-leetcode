@@ -2,7 +2,7 @@
 
 ## [NeetCode 150 Progress](https://neetcode.io/practice)
 
-### Arrays & Hashing
+### Arrays & Hashing ✓
 
 - [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) - [Solution](src/contains_duplicate.rs)
 - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [Solution](src/valid_anagram.rs)
@@ -14,13 +14,13 @@
 - [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) - [Solution](src/encode_and_decode_strings.rs)
 - [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) - [Solution](src/longest_consecutive_sequence.rs)
 
-### Two Pointers
+### Two Pointers ✓
 
 - [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - [Solution](src/valid_palindrome.rs)
 - [x] [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) - [Solution](src/two_sum_ii.rs)
 - [x] [Three Sum](https://leetcode.com/problems/3sum/) - [Solution](src/three_sum.rs)
 - [x] [Container with Most Water](https://leetcode.com/problems/container-with-most-water/) - [Solution](src/container_with_most_water.rs)
-- [ ] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) - [Solution](src/trapping_rain_water.rs)
 
 ### Sliding Window
 
@@ -306,7 +306,7 @@
 - [ ] [Design Add and Search Word Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
 - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
-### Heap
+### Heap ✓
 
 - [x] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](src/merge_k_sorted_lists.rs)
 - [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](src/top_k_frequent_elements.rs)
