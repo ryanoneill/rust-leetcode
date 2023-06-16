@@ -12,7 +12,7 @@
 - [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - [Solution](src/product_of_array_except_self.rs)
 - [x] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) - [Solution](src/valid_sudoku.rs)
 - [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) - [Solution](src/encode_and_decode_strings.rs)
-- [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) - [Solution](src/longest_consecutive_sequence.rs)
 
 ### Two Pointers
 
@@ -247,7 +247,7 @@
 - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/course_schedule.rs)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/number_of_islands.rs)
-- [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) - [Solution](src/longest_consecutive_sequence.rs)
 - [x] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) - [Solution](src/alien_dictionary.rs)
 - [x] [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) - [Solution](src/graph_valid_tree.rs)
 - [x] [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) - [Solution](src/number_of_connected_components_in_an_undirected_graph.rs)
