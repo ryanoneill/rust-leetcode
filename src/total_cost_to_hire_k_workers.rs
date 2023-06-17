@@ -56,20 +56,17 @@ impl Solution {
         let mut heap = BinaryHeap::new();
 
         if all_in_consideration {
-            for i in 0..n {
-                let cost = costs[i] as i64;
-                let pair = IndexedCost::new(cost, i);
+            for (i, cost) in costs.iter().enumerate() {
+                let pair = IndexedCost::new(*cost as i64, i);
                 heap.push(Reverse(pair));
             }
         } else {
-            for i in 0..=front_ok {
-                let cost = costs[i] as i64;
-                let pair = IndexedCost::new(cost, i);
+            for (i, cost) in costs.iter().enumerate().take(front_ok + 1) {
+                let pair = IndexedCost::new(*cost as i64, i);
                 heap.push(Reverse(pair));
             }
-            for j in back_ok..n {
-                let cost = costs[j] as i64;
-                let pair = IndexedCost::new(cost, j);
+            for (j, cost) in costs.iter().enumerate().take(n).skip(back_ok) {
+                let pair = IndexedCost::new(*cost as i64, j);
                 heap.push(Reverse(pair));
             }
         }
