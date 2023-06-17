@@ -28,7 +28,7 @@ impl DiagonalValues {
     }
 
     pub fn shift_right(&mut self) -> bool {
-        let result = self.right_side.len() > 0;
+        let result = !self.right_side.is_empty();
         if result {
             self.left_side.push(self.current);
             self.current = self.right_side.pop_front().unwrap();
@@ -62,7 +62,7 @@ struct Solution;
 
 impl Solution {
 
-    fn fill_in_diagonal(grid: &Vec<Vec<i32>>, result: &mut Vec<Vec<i32>>, start: (usize, usize)) {
+    fn fill_in_diagonal(grid: &Vec<Vec<i32>>, result: &mut [Vec<i32>], start: (usize, usize)) {
         let m = grid.len();
         let n = grid[0].len();
 
