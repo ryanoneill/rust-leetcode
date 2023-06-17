@@ -70,6 +70,7 @@ pub mod simplify_path; // 71
 pub mod set_matrix_zeroes; // 73 ✓
 pub mod search_a_2d_matrix; // 74 ✓
 pub mod sort_colors; // 75
+pub mod minimum_window_substring; // 76 ✓
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 

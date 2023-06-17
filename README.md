@@ -28,7 +28,7 @@
 - [x] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [Solution](src/longest_substring_without_repeating_characters.rs)
 - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/longest_repeating_character_replacement.rs)
 - [x] [Permutation in String](https://leetcode.com/problems/permutation-in-string/) - [Solution](src/permutation_in_string.rs)
-- [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+- [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - [Solution](src/minimum_window_substring.rs)
 - [ ] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
 ### Stack
@@ -280,7 +280,7 @@
 
 - [x] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [Solution](src/longest_substring_without_repeating_characters.rs)
 - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/longest_repeating_character_replacement.rs)
-- [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+- [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - [Solution](src/minimum_window_substring.rs)
 - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [Solution](src/valid_anagram.rs)
 - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
