@@ -249,6 +249,8 @@ pub mod evaluate_division; // 399 ✓
 
 pub mod fizz_buzz; // 412
 
+pub mod longest_repeating_character_replacement; // 424 ✓
+
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
 
 pub mod minimum_genetic_mutation; // 433 ✓
@@ -273,6 +275,8 @@ pub mod diameter_of_binary_tree; // 543
 pub mod number_of_provinces; // 547 ✓
 
 pub mod reverse_words_in_a_string_iii; // 557
+
+pub mod permutation_in_string; // 567 ✓
 
 // pub mod classes_more_than_5_students; // 596 - This problem is unavailable in Rust
 
