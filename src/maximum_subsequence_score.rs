@@ -55,18 +55,16 @@ impl Solution {
 
         let mut heap = BinaryHeap::new();
         let mut sum: i64 = 0;
-        for i in 0..k {
-            let pair = &pairs[i];
+        for pair in pairs.iter().take(k) {
             sum += pair.value;
             heap.push(Reverse(pair.value));
         }
 
         let mut result = sum * pairs[k-1].multiplier;
-        for i in k..n {
+        for pair in pairs.iter().take(n).skip(k) {
             let smallest = heap.pop().unwrap().0;
             sum -= smallest;
 
-            let pair = &pairs[i];
             sum += pair.value;
             heap.push(Reverse(pair.value));
 
