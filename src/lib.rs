@@ -53,6 +53,7 @@ pub mod valid_sudoku; // 36 ✓
 pub mod trapping_rain_water; // 42 ✓
 
 pub mod jump_game_ii; // 45 ✓
+pub mod permutations; // 46 ✓
 
 pub mod rotate_image; // 48
 
@@ -71,6 +72,8 @@ pub mod set_matrix_zeroes; // 73 ✓
 pub mod search_a_2d_matrix; // 74 ✓
 pub mod sort_colors; // 75
 pub mod minimum_window_substring; // 76 ✓
+pub mod combinations; // 77 ✓
+pub mod subsets; // 78 ✓
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 

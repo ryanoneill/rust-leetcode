@@ -101,9 +101,9 @@
 
 ### Backtracking
 
-- [ ] [Subsets](https://leetcode.com/problems/subsets/)
+- [x] [Subsets](https://leetcode.com/problems/subsets/) - [Solution](src/subsets.rs)
 - [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [ ] [Permutations](https://leetcode.com/problems/permutations/)
+- [x] [Permutations](https://leetcode.com/problems/permutations/) - [Solution](src/permutations.rs)
 - [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
 - [ ] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)
