@@ -7,13 +7,13 @@ impl Solution {
     fn backtrack(results: &mut Vec<Vec<i32>>, n: usize, k: usize, current: Vec<i32>, i: usize) {
         if current.len() == k {
             results.push(current);
-        } else if i < n {
-            let num = (i + 1) as i32;
-            let mut current = current;
-            let cloned = current.clone();
-            Self::backtrack(results, n, k, cloned, i + 1);
-            current.push(num);
-            Self::backtrack(results, n, k, current, i + 1);
+        } else {
+            for j in i..n {
+                let num = (j + 1) as i32;
+                let mut cloned = current.clone();
+                cloned.push(num);
+                Self::backtrack(results, n, k, cloned, j + 1);
+            }
         }
     }
 
