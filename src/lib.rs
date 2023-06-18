@@ -51,6 +51,7 @@ pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 
 pub mod combination_sum; // 39 ✓
+pub mod combination_sum_ii; // 40 ✓
 
 pub mod trapping_rain_water; // 42 ✓
 

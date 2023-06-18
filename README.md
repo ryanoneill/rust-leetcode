@@ -105,7 +105,7 @@
 - [x] [Combination Sum](https://leetcode.com/problems/combination-sum/) - [Solution](src/combination_sum.rs)
 - [x] [Permutations](https://leetcode.com/problems/permutations/) - [Solution](src/permutations.rs)
 - [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
-- [ ] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+- [x] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) - [Solution](src/combination_sum_ii.rs)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)
 - [ ] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - [Solution](src/letter_combinations_of_a_phone_number.rs)
