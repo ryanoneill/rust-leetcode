@@ -37,7 +37,7 @@ pub mod letter_combinations_of_a_phone_number; // 17 ✓
 pub mod remove_nth_node_from_end_of_list; // 19 ✓
 pub mod valid_parentheses; // 20
 pub mod merge_two_sorted_lists; // 21
-
+pub mod generate_parentheses; // 22 ✓
 pub mod merge_k_sorted_lists; // 23 ✓
 pub mod swap_nodes_in_pairs; // 24
 

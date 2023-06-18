@@ -36,7 +36,7 @@
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
 - [x] [Min Stack](https://leetcode.com/problems/min-stack/) - [Solution](src/min_stack.rs)
 - [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) - [Solution](src/evaluate_reverse_polish_notation.rs)
-- [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - [Solution](src/generate_parentheses.rs)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) - [Solution](src/daily_temperatures.rs)
 - [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
 - [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
