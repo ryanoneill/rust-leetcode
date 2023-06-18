@@ -85,6 +85,8 @@ pub mod remove_duplicates_from_sorted_list; // 83
 
 pub mod merge_sorted_array; // 88
 
+pub mod subsets_ii; // 90 ✓
+
 pub mod reverse_linked_list_ii; // 92
 
 pub mod validate_binary_search_tree; // 98
