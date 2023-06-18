@@ -356,6 +356,8 @@ pub mod number_of_recent_calls; // 933 ✓
 
 pub mod range_sum_of_bst; // 938
 
+pub mod numbers_with_same_consecutive_differences; // 967 ✓
+
 pub mod k_closest_points_to_origin; // 973
 
 pub mod squares_of_a_sorted_array; // 977
