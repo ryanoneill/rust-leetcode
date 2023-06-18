@@ -54,7 +54,7 @@ mod tests {
     #[test]
     fn two() {
         let n = 2;
-        let result = Solution::generate_parentheses(n);
+        let result = Solution::generate_parenthesis(n);
         assert_eq!(result, vec!["(())", "()()"]);
     }
 
