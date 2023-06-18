@@ -157,7 +157,7 @@ pub mod implement_trie; // 208 ✓
 pub mod course_schedule_ii; // 210 ✓
 
 pub mod kth_largest_element_in_an_array; // 215 ✓
-
+pub mod combination_sum_iii; // 216 ✓
 pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
