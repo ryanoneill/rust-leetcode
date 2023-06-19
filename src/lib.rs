@@ -398,6 +398,8 @@ pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
 
 pub mod minimum_cost_to_connect_sticks; // 1167
 
+pub mod maximum_number_of_balloons; // 1189 ✓
+
 pub mod how_many_apples_can_you_put_into_the_basket; // 1196 ✓
 
 pub mod minimum_absolute_difference; // 1200 ✓
