@@ -389,6 +389,8 @@ pub mod remove_vowels_from_a_string; // 1119 ✓
 
 pub mod shortest_path_with_alternating_colors; // 1129
 
+pub mod largest_unique_number; // 1133 ✓
+
 pub mod parallel_courses; // 1136 ✓
 pub mod nth_tribonacci_number; // 1137 ✓
 
