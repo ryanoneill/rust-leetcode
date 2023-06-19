@@ -263,6 +263,8 @@ pub mod string_compression; // 443 ✓
 
 pub mod delete_node_in_a_bst; // 450 ✓
 
+pub mod max_consecutive_ones; // 485 ✓
+
 pub mod next_greater_element_i; // 496
 
 pub mod fibonacci_number; // 509
