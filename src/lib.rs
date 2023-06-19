@@ -59,6 +59,7 @@ pub mod jump_game_ii; // 45 ✓
 pub mod permutations; // 46 ✓
 
 pub mod rotate_image; // 48
+pub mod group_anagrams; // 49 ✓
 
 pub mod maximum_subarray; // 53 ✓
 

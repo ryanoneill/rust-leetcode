@@ -282,7 +282,7 @@
 - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/longest_repeating_character_replacement.rs)
 - [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - [Solution](src/minimum_window_substring.rs)
 - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [Solution](src/valid_anagram.rs)
-- [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+- [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/) - [Solution](src/group_anagrams.rs)
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
 - [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - [Solution](src/valid_palindrome.rs)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
