@@ -36,7 +36,7 @@
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
 - [x] [Min Stack](https://leetcode.com/problems/min-stack/) - [Solution](src/min_stack.rs)
 - [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) - [Solution](src/evaluate_reverse_polish_notation.rs)
-- [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - [Solution](src/generate_parentheses.rs)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) - [Solution](src/daily_temperatures.rs)
 - [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
 - [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
@@ -101,11 +101,11 @@
 
 ### Backtracking
 
-- [ ] [Subsets](https://leetcode.com/problems/subsets/)
-- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [ ] [Permutations](https://leetcode.com/problems/permutations/)
-- [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
-- [ ] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+- [x] [Subsets](https://leetcode.com/problems/subsets/) - [Solution](src/subsets.rs)
+- [x] [Combination Sum](https://leetcode.com/problems/combination-sum/) - [Solution](src/combination_sum.rs)
+- [x] [Permutations](https://leetcode.com/problems/permutations/) - [Solution](src/permutations.rs)
+- [x] [Subsets II](https://leetcode.com/problems/subsets-ii/) - [Solution](src/subsets_ii.rs)
+- [x] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) - [Solution](src/combination_sum_ii.rs)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)
 - [ ] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - [Solution](src/letter_combinations_of_a_phone_number.rs)

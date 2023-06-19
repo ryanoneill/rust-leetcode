@@ -37,7 +37,7 @@ pub mod letter_combinations_of_a_phone_number; // 17 ✓
 pub mod remove_nth_node_from_end_of_list; // 19 ✓
 pub mod valid_parentheses; // 20
 pub mod merge_two_sorted_lists; // 21
-
+pub mod generate_parentheses; // 22 ✓
 pub mod merge_k_sorted_lists; // 23 ✓
 pub mod swap_nodes_in_pairs; // 24
 
@@ -50,9 +50,13 @@ pub mod range_sum_query_immutable; // 30
 pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 
+pub mod combination_sum; // 39 ✓
+pub mod combination_sum_ii; // 40 ✓
+
 pub mod trapping_rain_water; // 42 ✓
 
 pub mod jump_game_ii; // 45 ✓
+pub mod permutations; // 46 ✓
 
 pub mod rotate_image; // 48
 
@@ -71,6 +75,8 @@ pub mod set_matrix_zeroes; // 73 ✓
 pub mod search_a_2d_matrix; // 74 ✓
 pub mod sort_colors; // 75
 pub mod minimum_window_substring; // 76 ✓
+pub mod combinations; // 77 ✓
+pub mod subsets; // 78 ✓
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
@@ -78,6 +84,8 @@ pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
 
 pub mod merge_sorted_array; // 88
+
+pub mod subsets_ii; // 90 ✓
 
 pub mod reverse_linked_list_ii; // 92
 
@@ -151,7 +159,7 @@ pub mod implement_trie; // 208 ✓
 pub mod course_schedule_ii; // 210 ✓
 
 pub mod kth_largest_element_in_an_array; // 215 ✓
-
+pub mod combination_sum_iii; // 216 ✓
 pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
@@ -352,6 +360,8 @@ pub mod reverse_only_letters; // 917
 pub mod number_of_recent_calls; // 933 ✓
 
 pub mod range_sum_of_bst; // 938
+
+pub mod numbers_with_same_consecutive_differences; // 967 ✓
 
 pub mod k_closest_points_to_origin; // 973
 
