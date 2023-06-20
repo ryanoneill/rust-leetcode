@@ -128,7 +128,7 @@ pub mod min_stack; // 155
 pub mod read_n_characters_given_read4; // 157 ✓
 
 pub mod missing_ranges; // 163
-pub mod maximum_gap; // 164
+pub mod maximum_gap; // 164 ✓
 
 pub mod two_sum_ii; // 167 ✓
 pub mod excel_sheet_column_title; // 168 ✓
@@ -271,6 +271,7 @@ pub mod path_sum_iii; // 437 ✓
 pub mod string_compression; // 443 ✓
 
 pub mod delete_node_in_a_bst; // 450 ✓
+pub mod sort_characters_by_frequency; // 451 ✓
 
 pub mod max_consecutive_ones; // 485 ✓
 
