@@ -70,7 +70,7 @@
 - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) - [Solution](src/invert_binary_tree.rs)
 - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](src/maximum_depth_of_binary_tree.rs)
 - [x] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) - [Solution](src/diameter_of_binary_tree.rs)
-- [ ] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+- [x] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) - [Solution](src/balanced_binary_tree.rs)
 - [x] [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](src/same_tree.rs)
 - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 - [ ] [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -201,9 +201,9 @@
 - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) - [Solution](src/number_of_1_bits.rs)
 - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/) - [Solution](src/counting_bits.rs)
 - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/) - [Solution](src/reverse_bits.rs)
-- [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
+- [x] [Missing Number](https://leetcode.com/problems/missing-number/) - [Solution](src/missing_number.rs)
 - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
-- [ ] [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/reverse_integer.rs)
+- [x] [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/reverse_integer.rs)
 
 ## [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) Progress
 
