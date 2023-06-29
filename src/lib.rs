@@ -180,7 +180,7 @@ pub mod kth_smallest_element_in_a_bst; // 230 ✓
 pub mod power_of_two; // 231 ✓
 
 pub mod palindrome_linked_list; // 234 ✓
-
+pub mod lowest_common_ancestor_of_a_binary_search_tree; // 235 ✓
 pub mod lowest_common_ancestor_of_a_binary_tree; // 236 ✓
 // pub mod delete_node_in_a_linked_list; // 237 - This problem is unavailable in Rust
 pub mod product_of_array_except_self; // 238
