@@ -59,6 +59,7 @@ pub mod jump_game_ii; // 45 ✓
 pub mod permutations; // 46 ✓
 
 pub mod rotate_image; // 48
+pub mod group_anagrams; // 49 ✓
 
 pub mod maximum_subarray; // 53 ✓
 
@@ -73,7 +74,7 @@ pub mod simplify_path; // 71
 
 pub mod set_matrix_zeroes; // 73 ✓
 pub mod search_a_2d_matrix; // 74 ✓
-pub mod sort_colors; // 75
+pub mod sort_colors; // 75 ✓
 pub mod minimum_window_substring; // 76 ✓
 pub mod combinations; // 77 ✓
 pub mod subsets; // 78 ✓
@@ -96,6 +97,7 @@ pub mod same_tree; // 100 ✓
 pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104 ✓
 
+pub mod balanced_binary_tree; // 110 ✓
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 pub mod path_sum_ii; // 113 ✓
@@ -127,7 +129,7 @@ pub mod min_stack; // 155
 pub mod read_n_characters_given_read4; // 157 ✓
 
 pub mod missing_ranges; // 163
-pub mod maximum_gap; // 164
+pub mod maximum_gap; // 164 ✓
 
 pub mod two_sum_ii; // 167 ✓
 pub mod excel_sheet_column_title; // 168 ✓
@@ -198,6 +200,7 @@ pub mod ugly_number; // 263 ✓
 
 pub mod palindrome_permutation; // 266 ✓
 
+pub mod missing_number; // 268
 pub mod alien_dictionary; // 269 ✓
 pub mod closest_binary_search_tree_value; // 270
 pub mod encode_and_decode_strings; // 271 ✓
@@ -272,6 +275,11 @@ pub mod path_sum_iii; // 437 ✓
 pub mod string_compression; // 443 ✓
 
 pub mod delete_node_in_a_bst; // 450 ✓
+pub mod sort_characters_by_frequency; // 451 ✓
+
+pub mod hamming_distance; // 461 ✓
+
+pub mod max_consecutive_ones; // 485 ✓
 
 pub mod next_greater_element_i; // 496
 
@@ -388,6 +396,8 @@ pub mod remove_vowels_from_a_string; // 1119 ✓
 
 pub mod shortest_path_with_alternating_colors; // 1129
 
+pub mod largest_unique_number; // 1133 ✓
+
 pub mod parallel_courses; // 1136 ✓
 pub mod nth_tribonacci_number; // 1137 ✓
 
@@ -396,6 +406,8 @@ pub mod longest_common_subsequence; // 1143
 pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
 
 pub mod minimum_cost_to_connect_sticks; // 1167
+
+pub mod maximum_number_of_balloons; // 1189 ✓
 
 pub mod how_many_apples_can_you_put_into_the_basket; // 1196 ✓
 
@@ -521,6 +533,8 @@ pub mod minimum_operations_to_halve_array_sum; // 2208
 
 pub mod find_the_difference_of_two_arrays; // 2215 ✓
 
+pub mod find_players_with_zero_or_one_losses; // 2225 ✓
+
 pub mod successful_pairs_of_spells_and_potions; // 2300 ✓
 
 pub mod smallest_number_in_infinite_set; // 2336
@@ -541,3 +555,7 @@ pub mod maximum_subsequence_score; // 2542 ✓
 pub mod remove_trailing_zeros_from_a_string; // 2710 ✓
 pub mod difference_of_number_of_distinct_values_on_diagonals; // 2711 ✓
 pub mod minimum_cost_to_make_all_characters_equal; // 2712
+
+pub mod neither_minimum_nor_maximum; // 2733
+
+pub mod total_distance_traveled; // 2739 ✓
