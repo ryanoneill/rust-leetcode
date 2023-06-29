@@ -98,6 +98,7 @@ pub mod same_tree; // 100 ✓
 
 pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104 ✓
+pub mod construct_binary_tree_from_preorder_and_inorder_traversal; // 105
 
 pub mod balanced_binary_tree; // 110 ✓
 pub mod minimum_depth_of_binary_tree; // 111
