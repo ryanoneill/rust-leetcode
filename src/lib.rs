@@ -96,6 +96,8 @@ pub mod validate_binary_search_tree; // 98
 
 pub mod same_tree; // 100 ✓
 
+pub mod binary_tree_level_order_traversal; // 102 
+
 pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104 ✓
 pub mod construct_binary_tree_from_preorder_and_inorder_traversal; // 105
