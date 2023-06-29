@@ -204,6 +204,8 @@ pub mod encode_and_decode_strings; // 271 ✓
 
 pub mod h_index; // 274 ✓
 
+pub mod first_bad_version; // 278 ✓
+
 pub mod move_zeroes; // 283
 
 pub mod word_pattern; // 290 ✓
