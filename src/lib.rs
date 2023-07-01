@@ -15,6 +15,7 @@ pub mod vec_additions;
 pub mod adjacency_graph;
 pub mod heap_array;
 pub mod number_additions;
+pub mod linked_list;
 
 pub mod two_sum; // 1 ✓
 pub mod add_two_numbers; // 2
@@ -121,6 +122,7 @@ pub mod single_number; // 136
 
 // pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
 
+pub mod lru_cache; // 146 
 pub mod insertion_sort_list; // 147 ✓
 pub mod sort_list; // 148
 
