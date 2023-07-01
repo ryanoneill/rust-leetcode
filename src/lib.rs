@@ -330,7 +330,7 @@ pub mod insert_into_a_binary_search_tree; // 701
 pub mod kth_largest_element_in_a_stream; // 703
 pub mod binary_search; // 704
 pub mod design_hashset; // 705 ✓
-
+pub mod design_hashmap; // 706 ✓
 pub mod design_linked_list; // 707 ✓
 
 pub mod find_pivot_index; // 724 ✓
