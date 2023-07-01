@@ -61,7 +61,7 @@
 - [x] [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) - [Solution](src/add_two_numbers.rs)
 - [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 - [ ] [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [x] [LRU Cache](https://leetcode.com/problems/lru-cache/) - [Solution](src/lru_cache.rs)
 - [x] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](src/merge_k_sorted_lists.rs)
 - [ ] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 
