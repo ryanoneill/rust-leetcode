@@ -69,6 +69,7 @@ pub mod jump_game; // 55 ✓
 pub mod length_of_last_word; // 58
 
 pub mod unique_paths; // 62 ✓
+pub mod unique_paths_ii; // 63
 
 pub mod plus_one; // 66
 
@@ -376,6 +377,7 @@ pub mod snakes_and_ladders; // 909 ✓
 pub mod sort_an_array; // 912 ✓
 
 pub mod reverse_only_letters; // 917
+pub mod maximum_sum_circular_subarray; // 918 ✓
 
 pub mod number_of_recent_calls; // 933 ✓
 
