@@ -453,6 +453,7 @@ pub mod the_k_weakest_rows_in_a_matrix; // 1337
 pub mod reduce_array_size_to_the_half; // 1338 ✓
 
 pub mod number_of_steps_to_reduce_a_number_to_zero; // 1342
+pub mod number_of_subarrays_of_size_k_and_average_greater_than_or_equal_to_threshold; // 1343 ✓
 
 pub mod count_negative_numbers_in_a_sorted_matrix; // 1351 ✓
 
