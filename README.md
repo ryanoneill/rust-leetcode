@@ -153,7 +153,7 @@
 
 ### 2-D Dynamic Programming
 
-- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
+- [x] [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](src/unique_paths.rs)
 - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) - [Solution](src/longest_common_subsequence.rs)
 - [ ] [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 - [ ] [Coin Change II](https://leetcode.com/problems/coin-change-ii/)
@@ -238,7 +238,7 @@
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
 - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
 - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
-- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
+- [x] [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](src/unique_paths.rs)
 - [x] [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](src/jump_game.rs)
 
 ### Graph
