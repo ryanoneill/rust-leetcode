@@ -219,6 +219,8 @@ pub mod first_bad_version; // 278 ✓
 
 pub mod move_zeroes; // 283
 
+pub mod find_the_duplicate_number; // 287 ✓
+
 pub mod word_pattern; // 290 ✓
 
 pub mod find_median_from_data_stream; // 295
