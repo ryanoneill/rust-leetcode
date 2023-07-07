@@ -167,7 +167,7 @@ pub mod count_primes; // 204 ✓
 pub mod reverse_linked_list; // 206 ✓
 pub mod course_schedule; // 207 ✓
 pub mod implement_trie; // 208 ✓
-
+pub mod minimum_size_subarray_sum; // 209 ✓
 pub mod course_schedule_ii; // 210 ✓
 
 pub mod kth_largest_element_in_an_array; // 215 ✓
