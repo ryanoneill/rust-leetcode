@@ -46,8 +46,6 @@ pub mod remove_duplicates_from_sorted_array; // 26
 pub mod remove_element; // 27
 pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
 
-pub mod range_sum_query_immutable; // 30
-
 pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 
@@ -231,6 +229,8 @@ pub mod find_median_from_data_stream; // 295
 pub mod serialize_and_deserialize_binary_tree; // 297
 
 pub mod longest_increasing_subsequence; // 300
+
+pub mod range_sum_query_immutable; // 303
 
 pub mod minimum_height_trees; // 310
 
