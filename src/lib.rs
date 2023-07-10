@@ -231,6 +231,7 @@ pub mod serialize_and_deserialize_binary_tree; // 297
 pub mod longest_increasing_subsequence; // 300
 
 pub mod range_sum_query_immutable; // 303
+pub mod range_sum_query_2d_immutable; // 304
 
 pub mod minimum_height_trees; // 310
 
