@@ -122,6 +122,7 @@ pub mod longest_consecutive_sequence; // 128 ✓
 pub mod single_number; // 136
 
 // pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
+// pub mod linked_list_cycle_ii; // 142 - This problem is unavailable in Rust
 
 pub mod lru_cache; // 146 ✓
 pub mod insertion_sort_list; // 147 ✓
