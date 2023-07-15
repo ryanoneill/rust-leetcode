@@ -146,6 +146,8 @@ pub mod majority_element; // 169
 
 pub mod excel_sheet_column_number; // 171 ✓
 
+pub mod binary_search_tree_iterator; // 173 ✓
+
 pub mod rotate_array; // 189
 pub mod reverse_bits; // 190
 pub mod number_of_1_bits; // 191 ✓
