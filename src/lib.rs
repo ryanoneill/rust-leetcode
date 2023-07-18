@@ -355,7 +355,7 @@ pub mod asteroid_collision; // 735 ✓
 pub mod daily_temperatures; // 739
 pub mod delete_and_earn; // 740 ✓
 
-pub mod network_delay_time; // 743
+pub mod network_delay_time; // 743 ✓
 
 pub mod min_cost_climbing_stairs; // 746
 
