@@ -131,7 +131,7 @@
 
 - [ ] [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
 - [x] [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) - [Solution](src/min_cost_to_connect_all_points.rs)
-- [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+- [x] [Network Delay Time](https://leetcode.com/problems/network-delay-time/) - [Solution](src/network_delay_time.rs)
 - [ ] [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 - [x] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) - [Solution](src/alien_dictionary.rs)
 - [ ] [Cheapest Flights with K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) 
