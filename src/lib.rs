@@ -493,6 +493,8 @@ pub mod longest_subarray_of_ones_after_deleting_one_element; // 1493 ✓
 
 pub mod can_make_arithmetic_progression_from_sequence; // 1502
 
+pub mod path_with_maximum_probability; // 1514 ✓
+
 pub mod make_the_string_great; // 1544
 
 pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
