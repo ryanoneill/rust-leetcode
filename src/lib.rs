@@ -306,6 +306,8 @@ pub mod sliding_window_median; // 480
 
 pub mod max_consecutive_ones; // 485 ✓
 
+pub mod target_sum; // 494 ✓
+
 pub mod next_greater_element_i; // 496
 
 pub mod fibonacci_number; // 509
