@@ -304,6 +304,8 @@ pub mod sort_characters_by_frequency; // 451 ✓
 
 pub mod hamming_distance; // 461 ✓
 
+pub mod ones_and_zeroes; // 474
+
 pub mod sliding_window_median; // 480 
 
 pub mod max_consecutive_ones; // 485 ✓
