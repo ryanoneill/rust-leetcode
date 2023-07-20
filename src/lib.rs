@@ -291,6 +291,8 @@ pub mod longest_repeating_character_replacement; // 424 ✓
 
 pub mod minimum_genetic_mutation; // 433 ✓
 
+pub mod non_overlapping_intervals; // 435
+
 pub mod path_sum_iii; // 437 ✓
 
 pub mod string_compression; // 443 ✓
