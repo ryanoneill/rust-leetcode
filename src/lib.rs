@@ -319,6 +319,8 @@ pub mod fibonacci_number; // 509
 
 pub mod find_largest_value_in_each_tree_row; // 515
 
+pub mod coin_change_ii; // 518 ✓
+
 pub mod minimum_absolute_difference_in_bst; // 530
 
 pub mod zero_one_matrix; // 542
