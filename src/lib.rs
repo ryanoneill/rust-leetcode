@@ -59,6 +59,7 @@ pub mod permutations; // 46 ✓
 
 pub mod rotate_image; // 48
 pub mod group_anagrams; // 49 ✓
+pub mod pow_x_n; // 50
 
 pub mod maximum_subarray; // 53 ✓
 
