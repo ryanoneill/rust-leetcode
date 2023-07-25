@@ -149,15 +149,15 @@
 - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [ ] [Word Break](https://leetcode.com/problems/word-break/)
 - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/longest_increasing_subsequence.rs)
-- [ ] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+- [x] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) - [Solution](src/partition_equal_subset_sum.rs)
 
 ### 2-D Dynamic Programming
 
 - [x] [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](src/unique_paths.rs)
 - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) - [Solution](src/longest_common_subsequence.rs)
 - [ ] [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
-- [ ] [Coin Change II](https://leetcode.com/problems/coin-change-ii/)
-- [ ] [Target Sum](https://leetcode.com/problems/target-sum/)
+- [x] [Coin Change II](https://leetcode.com/problems/coin-change-ii/) - [Solution](src/coin_change_ii.rs)
+- [x] [Target Sum](https://leetcode.com/problems/target-sum/) - [Solution](src/target_sum.rs)
 - [ ] [Interleaving String](https://leetcode.com/problems/interleaving-string/)
 - [ ] [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 - [ ] [Direct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
@@ -191,7 +191,7 @@
 - [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) - [Solution](src/set_matrix_zeroes.rs)
 - [x] [Happy Number](https://leetcode.com/problems/happy-number/) - [Solution](src/happy_number.rs)
 - [x] [Plus One](https://leetcode.com/problems/plus-one/) - [Solution](src/plus_one.rs)
-- [ ] [Pow(x,n)](https://leetcode.com/problems/powx-n/)
+- [x] [Pow(x,n)](https://leetcode.com/problems/powx-n/) - [Solution](src/pow_x_n.rs)
 - [ ] [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
 - [ ] [Detect Squares](https://leetcode.com/problems/detect-squares/)
 
