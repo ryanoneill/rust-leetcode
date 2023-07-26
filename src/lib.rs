@@ -271,6 +271,8 @@ pub mod top_k_frequent_elements; // 347
 
 pub mod intersection_of_two_arrays_ii; // 350
 
+pub mod sum_of_two_integers; // 371 ✓
+
 pub mod guess_number_higher_or_lower; // 374
 
 pub mod kth_smallest_element_in_a_sorted_matrix; // 378

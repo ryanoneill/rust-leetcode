@@ -195,14 +195,14 @@
 - [ ] [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
 - [ ] [Detect Squares](https://leetcode.com/problems/detect-squares/)
 
-### Bit Manipulation
+### Bit Manipulation ✓
 
 - [x] [Single Number](https://leetcode.com/problems/single-number/) - [Solution](src/single_number.rs)
 - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) - [Solution](src/number_of_1_bits.rs)
 - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/) - [Solution](src/counting_bits.rs)
 - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/) - [Solution](src/reverse_bits.rs)
 - [x] [Missing Number](https://leetcode.com/problems/missing-number/) - [Solution](src/missing_number.rs)
-- [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
+- [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) - [Solution](src/sum_of_two_integers.rs)
 - [x] [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/reverse_integer.rs)
 
 ## [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) Progress
@@ -220,12 +220,12 @@
 - [x] [3 Sum](https://leetcode.com/problems/3sum/) - [Solution](src/three_sum.rs)
 - [x] [Container with Most Water](https://leetcode.com/problems/container-with-most-water/) - [Solution](src/container_with_most_water.rs)
 
-### Binary
+### Binary ✓
 
-- [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
+- [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) - [Solution](src/sum_of_two_integers.rs)
 - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) - [Solution](src/number_of_1_bits.rs)
 - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/) - [Solution](src/counting_bits.rs)
-- [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
+- [x] [Missing Number](https://leetcode.com/problems/missing-number/) - [Solution](src/missing_number.rs)
 - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/) - [Solution](src/reverse_bits.rs)
 
 ### Dynamic Programming
