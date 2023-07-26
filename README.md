@@ -143,7 +143,7 @@
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
 - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
-- [ ] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+- [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/palindromic_substrings.rs)
 - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
 - [x] [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/coin_change.rs)
 - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
@@ -276,7 +276,7 @@
 - [x] [Rotate Image](https://leetcode.com/problems/rotate-image/) - [Solution](src/rotate_image.rs)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)
 
-### String
+### String ✓
 
 - [x] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) - [Solution](src/longest_substring_without_repeating_characters.rs)
 - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/longest_repeating_character_replacement.rs)
@@ -286,7 +286,7 @@
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
 - [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - [Solution](src/valid_palindrome.rs)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
-- [ ] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+- [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/palindromic_substrings.rs)
 - [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) - [Solution](src/encode_and_decode_strings.rs)
 
 ### Tree
