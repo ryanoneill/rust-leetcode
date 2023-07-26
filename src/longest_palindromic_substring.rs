@@ -3,33 +3,24 @@ pub struct Solution;
 
 impl Solution {
 
-    fn expand_out_from(letters: &Vec<char>, left: usize, right: usize) -> usize {
+    fn worker(letters: &Vec<char>, left: usize, right: usize) -> usize {
         let n = letters.len();
-        let mut result = 0;
 
+        let mut result = 0;
         let mut left = left;
         let mut right = right;
 
-        loop {
-            let left_letter = letters[left];
-            let right_letter = letters[right];
-            if left_letter == right_letter {
-                if left == right { 
-                    result += 1; 
-                } else {
-                    result += 2;
-                }
-
-                if left == 0 {
-                    break;
-                } else if right == n - 1 {
-                    break;
-                } else {
-                    left -= 1;
-                    right += 1;
-                }
-            } else {
+        let mut left_letter = letters[left];
+        let mut right_letter = letters[right];
+        while left_letter == right_letter {
+            result = right - left + 1;
+            if left == 0 || right == n-1 {
                 break;
+            } else {
+                left -= 1;
+                right += 1;
+                left_letter = letters[left];
+                right_letter = letters[right];
             }
         }
 
@@ -50,17 +41,18 @@ impl Solution {
         let n = letters.len();
 
         for i in 0..n {
-            let centered = Self::expand_out_from(&letters, i, i);
-            if centered >= result_len {
+            let centered = Self::worker(&letters, i, i);
+            if centered > result_len {
                 result = Self::get_palindrome(&letters, i, centered);
                 result_len = result.len();
             }
-            if i < n-1 {
-                let between = Self::expand_out_from(&letters, i, i+1);
-                if between >= result_len {
-                    result = Self::get_palindrome(&letters, i, between);
-                    result_len = result.len();
-                }
+        }
+
+        for i in 0..n-1 {
+            let between = Self::worker(&letters, i, i+1);
+            if between > result_len {
+                result = Self::get_palindrome(&letters, i, between);
+                result_len = result.len();
             }
         }
 
