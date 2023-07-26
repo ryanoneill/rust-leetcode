@@ -319,6 +319,7 @@ pub mod next_greater_element_i; // 496
 pub mod fibonacci_number; // 509
 
 pub mod find_largest_value_in_each_tree_row; // 515
+pub mod longest_palindromic_subsequence; // 516 ✓
 
 pub mod coin_change_ii; // 518 ✓
 
