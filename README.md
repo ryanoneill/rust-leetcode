@@ -38,7 +38,7 @@
 - [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) - [Solution](src/evaluate_reverse_polish_notation.rs)
 - [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - [Solution](src/generate_parentheses.rs)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) - [Solution](src/daily_temperatures.rs)
-- [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
+- [x] [Car Fleet](https://leetcode.com/problems/car-fleet/) - [Solution](src/car_fleet.rs)
 - [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 ### Binary Search
