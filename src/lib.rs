@@ -46,6 +46,8 @@ pub mod remove_duplicates_from_sorted_array; // 26
 pub mod remove_element; // 27
 pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
 
+pub mod search_in_rotated_sorted_array; // 33 ✓
+
 pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 

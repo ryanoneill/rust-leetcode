@@ -47,7 +47,7 @@
 - [x] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) - [Solution](src/search_a_2d_matrix.rs)
 - [x] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) - [Solution](src/koko_eating_bananas.rs)
 - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/find_minimum_in_rotated_sorted_array.rs)
-- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](src/search_in_rotated_sorted_array.rs)
 - [ ] [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
 - [ ] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
@@ -216,7 +216,7 @@
 - [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](src/maximum_subarray.rs)
 - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/find_minimum_in_rotated_sorted_array.rs)
-- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](src/search_in_rotated_sorted_array.rs)
 - [x] [3 Sum](https://leetcode.com/problems/3sum/) - [Solution](src/three_sum.rs)
 - [x] [Container with Most Water](https://leetcode.com/problems/container-with-most-water/) - [Solution](src/container_with_most_water.rs)
 
