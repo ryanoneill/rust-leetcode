@@ -169,7 +169,7 @@
 - [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](src/maximum_subarray.rs)
 - [x] [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](src/jump_game.rs)
 - [x] [Jump Game II](https://leetcode.com/problems/jump-game-ii/) - [Solution](src/jump_game_ii.rs)
-- [ ] [Gas Station](https://leetcode.com/problems/gas-station/)
+- [x] [Gas Station](https://leetcode.com/problems/gas-station/) - [Solution](src/gas_station.rs)
 - [ ] [Hand of Straights](https://leetcode.com/problems/hand-of-straights/)
 - [ ] [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/)
 - [ ] [Partition Labels](https://leetcode.com/problems/partition-labels/)
