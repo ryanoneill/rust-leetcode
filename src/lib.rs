@@ -41,7 +41,7 @@ pub mod merge_two_sorted_lists; // 21
 pub mod generate_parentheses; // 22 ✓
 pub mod merge_k_sorted_lists; // 23 ✓
 pub mod swap_nodes_in_pairs; // 24
-
+pub mod reverse_nodes_in_k_groups; // 25
 pub mod remove_duplicates_from_sorted_array; // 26
 pub mod remove_element; // 27
 pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
