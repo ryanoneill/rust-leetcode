@@ -88,6 +88,7 @@ pub mod remove_duplicates_from_sorted_array_ii; // 80
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
+pub mod largest_rectangle_in_histogram; // 84 ✓
 
 pub mod merge_sorted_array; // 88
 
