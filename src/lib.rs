@@ -20,7 +20,7 @@ pub mod linked_list;
 pub mod two_sum; // 1 ✓
 pub mod add_two_numbers; // 2
 pub mod longest_substring_without_repeating_characters; // 3 ✓
-pub mod median_of_two_sorted_arrays; // 4
+pub mod median_of_two_sorted_arrays; // 4 ✓
 pub mod longest_palindromic_substring; // 5 ✓
 pub mod zigzag_conversion; // 6 ✓
 pub mod reverse_integer; // 7 ✓
@@ -41,7 +41,7 @@ pub mod merge_two_sorted_lists; // 21
 pub mod generate_parentheses; // 22 ✓
 pub mod merge_k_sorted_lists; // 23 ✓
 pub mod swap_nodes_in_pairs; // 24
-
+pub mod reverse_nodes_in_k_groups; // 25 ✓
 pub mod remove_duplicates_from_sorted_array; // 26
 pub mod remove_element; // 27
 pub mod find_the_index_of_the_first_occurrence_in_a_string; // 28
@@ -88,6 +88,7 @@ pub mod remove_duplicates_from_sorted_array_ii; // 80
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82
 pub mod remove_duplicates_from_sorted_list; // 83
+pub mod largest_rectangle_in_histogram; // 84 ✓
 
 pub mod merge_sorted_array; // 88
 
@@ -116,6 +117,7 @@ pub mod path_sum_ii; // 113 ✓
 pub mod best_time_to_buy_and_sell_stock; // 121
 pub mod best_time_to_buy_and_sell_stock_ii; // 122
 
+pub mod binary_tree_maximum_path_sum; // 124 ✓
 pub mod valid_palindrome; // 125
 
 pub mod word_ladder; // 127 ✓
@@ -128,6 +130,7 @@ pub mod single_number; // 136
 
 // pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
 // pub mod linked_list_cycle_ii; // 142 - This problem is unavailable in Rust
+pub mod reorder_list; // 143 ✓
 
 pub mod binary_tree_preorder_traversal; // 144 ✓
 pub mod binary_tree_postorder_traversal; // 145 ✓
@@ -186,6 +189,8 @@ pub mod contains_duplicate; // 217
 
 pub mod contains_duplicate_ii; // 219
 
+pub mod count_complete_tree_nodes; // 222 ✓
+
 pub mod implement_stack_using_queues; // 225 ✓
 pub mod invert_binary_tree; // 226 ✓
 
@@ -235,6 +240,8 @@ pub mod move_zeroes; // 283
 pub mod find_the_duplicate_number; // 287 ✓
 
 pub mod word_pattern; // 290 ✓
+
+pub mod nim_game; // 292 ✓
 
 pub mod find_median_from_data_stream; // 295
 
@@ -342,6 +349,8 @@ pub mod reverse_words_in_a_string_iii; // 557
 pub mod subarray_sum_equals_k; // 560 ✓
 
 pub mod permutation_in_string; // 567 ✓
+
+pub mod subtree_of_another_tree; // 572 ✓
 
 // pub mod classes_more_than_5_students; // 596 - This problem is unavailable in Rust
 
