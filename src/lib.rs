@@ -238,6 +238,8 @@ pub mod find_the_duplicate_number; // 287 ✓
 
 pub mod word_pattern; // 290 ✓
 
+pub mod nim_game; // 292 ✓
+
 pub mod find_median_from_data_stream; // 295
 
 pub mod serialize_and_deserialize_binary_tree; // 297
