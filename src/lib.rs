@@ -117,6 +117,7 @@ pub mod path_sum_ii; // 113 ✓
 pub mod best_time_to_buy_and_sell_stock; // 121
 pub mod best_time_to_buy_and_sell_stock_ii; // 122
 
+pub mod binary_tree_maximum_path_sum; // 124 ✓
 pub mod valid_palindrome; // 125
 
 pub mod word_ladder; // 127 ✓
