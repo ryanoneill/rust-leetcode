@@ -345,6 +345,8 @@ pub mod reverse_words_in_a_string_iii; // 557
 
 pub mod permutation_in_string; // 567 ✓
 
+pub mod subtree_of_another_tree; // 572 ✓
+
 // pub mod classes_more_than_5_students; // 596 - This problem is unavailable in Rust
 
 pub mod can_place_flowers; // 605 ✓
