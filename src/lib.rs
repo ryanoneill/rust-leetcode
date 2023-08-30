@@ -316,6 +316,8 @@ pub mod string_compression; // 443 ✓
 pub mod delete_node_in_a_bst; // 450 ✓
 pub mod sort_characters_by_frequency; // 451 ✓
 
+pub mod repeated_substring_pattern; // 459 ✓
+
 pub mod hamming_distance; // 461 ✓
 
 pub mod ones_and_zeroes; // 474
@@ -343,6 +345,8 @@ pub mod diameter_of_binary_tree; // 543
 pub mod number_of_provinces; // 547 ✓
 
 pub mod reverse_words_in_a_string_iii; // 557
+
+pub mod subarray_sum_equals_k; // 560 ✓
 
 pub mod permutation_in_string; // 567 ✓
 
