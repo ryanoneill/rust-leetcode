@@ -609,6 +609,8 @@ pub mod query_kth_smallest_trimmed_number; // 2343 ✓
 
 pub mod equal_row_and_column_pairs; // 2352 ✓
 
+pub mod minimum_replacements_to_sort_the_array; // 2366 ✓
+
 pub mod reachable_nodes_with_restrictions; // 2368
 
 pub mod longest_subsequence_with_limited_sum; // 2389 ✓
