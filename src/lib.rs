@@ -298,6 +298,8 @@ pub mod decode_string; // 394 ✓
 
 pub mod evaluate_division; // 399 ✓
 
+pub mod split_array_largest_sum; // 410 ✓
+
 pub mod fizz_buzz; // 412
 
 pub mod partition_equal_subset_sum; // 416 ✓
@@ -484,7 +486,7 @@ pub mod smallest_string_with_swaps; // 1202
 pub mod unique_number_of_occurrences; // 1207 ✓
 
 pub mod toss_strange_coins; // 1230
-pub mod divide_chocolate; // 1231
+pub mod divide_chocolate; // 1231 ✓
 pub mod check_if_it_is_a_straight_line; // 1232 ✓
 
 pub mod find_the_smallest_divisor_given_a_threshold; // 1283
