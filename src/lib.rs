@@ -484,7 +484,6 @@ pub mod smallest_string_with_swaps; // 1202
 pub mod unique_number_of_occurrences; // 1207 ✓
 
 pub mod toss_strange_coins; // 1230
-
 pub mod divide_chocolate; // 1231
 pub mod check_if_it_is_a_straight_line; // 1232 ✓
 

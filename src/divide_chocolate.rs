@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 /// You have one chocolate bar that consists of some chunks. Each chunk has its own sweetness given
 /// by the array `sweetness`. 
 ///
@@ -15,9 +13,50 @@ struct Solution;
 
 impl Solution {
 
-    // TODO: Implement
-    pub fn maximize_sweetness(_sweetness: Vec<i32>, _k: i32) -> i32 {
-        0
+    fn minimum(sweetness: &Vec<i32>) -> i32 {
+        let mut result = i32::MAX;
+        for value in sweetness {
+            result = result.min(*value);
+        }
+        result
+    }
+
+    fn maximum(sweetness: &Vec<i32>, k: i32) -> i32 {
+        let mut result = 0;
+        for value in sweetness {
+            result += *value;
+        }
+        result / (k + 1)
+    }
+
+    fn is_valid_cut(sweetness: &Vec<i32>, k: i32, minimum: i32) -> bool {
+        let mut current = 0;
+        let mut groups = 0;
+
+        for value in sweetness {
+            current += *value;
+            if current >= minimum {
+                groups += 1;
+                current = 0;
+            }
+        }
+
+        groups >= k + 1
+    }
+
+    pub fn maximize_sweetness(sweetness: Vec<i32>, k: i32) -> i32 {
+        let mut left = Self::minimum(&sweetness);
+        let mut right = Self::maximum(&sweetness, k);
+
+        while left <= right {
+            let mid = left + (right - left) / 2;
+            if Self::is_valid_cut(&sweetness, k, mid) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        left - 1
     }
 
 }
@@ -26,7 +65,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let sweetness = vec![1,2,3,4,5,6,7,8,9];
@@ -35,7 +73,6 @@ mod tests {
         assert_eq!(result, 6);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let sweetness = vec![5,6,7,8,9,1,2,3,4];
@@ -44,7 +81,6 @@ mod tests {
         assert_eq!(result, 1);
     }
 
-    #[ignore]
     #[test]
     fn example_3() {
         let sweetness = vec![1,2,2,1,2,2,1,2,2];
