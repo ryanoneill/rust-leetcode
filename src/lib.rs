@@ -575,6 +575,8 @@ pub mod maximum_population_year; // 1854
 
 pub mod minimum_speed_to_arrive_on_time; // 1870 ✓
 
+pub mod redistribute_characters_to_make_all_strings_equal; // 1897
+
 pub mod build_array_from_permutation; // 1920 ✓
 
 pub mod nearest_exit_from_entrance_in_maze; // 1926
