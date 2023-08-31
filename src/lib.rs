@@ -550,6 +550,7 @@ pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
 pub mod min_cost_to_connect_all_points; // 1584
 
 pub mod design_parking_system; // 1603 ✓
+pub mod alert_using_same_key_card; // 1604 ✓
 
 pub mod path_with_minimum_effort; // 1631 ✓
 
