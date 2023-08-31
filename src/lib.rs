@@ -397,6 +397,8 @@ pub mod min_cost_climbing_stairs; // 746
 
 pub mod open_the_lock; // 752 ✓
 
+pub mod bold_words_in_string; // 758 ✓
+
 pub mod find_anagram_mappings; // 760 ✓
 
 pub mod jewels_and_stones; // 771
