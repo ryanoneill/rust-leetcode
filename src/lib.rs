@@ -298,6 +298,8 @@ pub mod decode_string; // 394 ✓
 
 pub mod evaluate_division; // 399 ✓
 
+pub mod remove_k_digits; // 402 ✓
+
 pub mod split_array_largest_sum; // 410 ✓
 
 pub mod fizz_buzz; // 412
@@ -332,6 +334,8 @@ pub mod max_consecutive_ones; // 485 ✓
 pub mod target_sum; // 494 ✓
 
 pub mod next_greater_element_i; // 496
+
+pub mod next_greater_element_ii; // 503 ✓
 
 pub mod fibonacci_number; // 509
 
@@ -450,6 +454,8 @@ pub mod minimum_cost_for_tickets; // 983 ✓
 
 pub mod rotting_oranges; // 994
 
+pub mod next_greater_node_in_linked_list; // 1019 ✓
+
 pub mod maximum_difference_between_node_and_ancestor; // 1026
 
 pub mod last_stone_weight; // 1046
@@ -476,6 +482,8 @@ pub mod parallel_courses; // 1136 ✓
 pub mod nth_tribonacci_number; // 1137 ✓
 
 pub mod longest_common_subsequence; // 1143
+
+pub mod check_if_a_number_is_majority_element; // 1150 ✓
 
 pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
 
@@ -537,6 +545,8 @@ pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero; // 1466 ✓
 
 pub mod design_browser_history; // 1472 ✓
 
+pub mod final_prices_with_a_special_discount; // 1475 ✓
+
 pub mod running_sum_of_1d_array; // 1480
 
 pub mod average_salary_excluding_the_minimum_and_maximum_salary; // 1491
@@ -581,6 +591,7 @@ pub mod maximum_score_from_performing_multiplication_operations; // 1770 ✓
 pub mod sign_of_the_product_of_an_array; // 1822 ✓
 
 pub mod maximum_population_year; // 1854
+pub mod maximum_distance_between_a_pair_of_values; // 1855 ✓
 
 pub mod maximum_subarray_min_product; // 1856 ✓
 
