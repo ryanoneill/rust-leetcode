@@ -572,6 +572,7 @@ pub mod maximum_score_from_performing_multiplication_operations; // 1770 ✓
 pub mod sign_of_the_product_of_an_array; // 1822 ✓
 
 pub mod maximum_population_year; // 1854
+pub mod maximum_distance_between_a_pair_of_values; // 1855 ✓
 
 pub mod minimum_speed_to_arrive_on_time; // 1870 ✓
 
