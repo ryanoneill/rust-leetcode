@@ -543,6 +543,8 @@ pub mod reorder_routes_to_make_all_paths_lead_to_the_city_zero; // 1466 ✓
 
 pub mod design_browser_history; // 1472 ✓
 
+pub mod final_prices_with_a_special_discount; // 1475 ✓
+
 pub mod running_sum_of_1d_array; // 1480
 
 pub mod average_salary_excluding_the_minimum_and_maximum_salary; // 1491
