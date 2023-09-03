@@ -86,7 +86,7 @@ pub mod subsets; // 78 ✓
 
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
-pub mod remove_duplicates_from_sorted_list_ii; // 82
+pub mod remove_duplicates_from_sorted_list_ii; // 82 ✓
 pub mod remove_duplicates_from_sorted_list; // 83
 pub mod largest_rectangle_in_histogram; // 84 ✓
 
@@ -342,6 +342,8 @@ pub mod coin_change_ii; // 518 ✓
 
 pub mod minimum_absolute_difference_in_bst; // 530
 
+pub mod complex_number_multiplication; // 537 ✓
+
 pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
@@ -397,6 +399,8 @@ pub mod min_cost_climbing_stairs; // 746
 
 pub mod open_the_lock; // 752 ✓
 
+pub mod bold_words_in_string; // 758 ✓
+
 pub mod find_anagram_mappings; // 760 ✓
 
 pub mod jewels_and_stones; // 771
@@ -404,6 +408,8 @@ pub mod jewels_and_stones; // 771
 pub mod minimum_distance_between_bst_nodes; // 783
 
 pub mod all_paths_from_source_to_target; // 797
+
+pub mod linked_list_components; // 817
 
 pub mod similar_string_groups; // 839
 
@@ -546,6 +552,7 @@ pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
 pub mod min_cost_to_connect_all_points; // 1584
 
 pub mod design_parking_system; // 1603 ✓
+pub mod alert_using_same_key_card; // 1604 ✓
 
 pub mod path_with_minimum_effort; // 1631 ✓
 
@@ -574,7 +581,11 @@ pub mod sign_of_the_product_of_an_array; // 1822 ✓
 pub mod maximum_population_year; // 1854
 pub mod maximum_distance_between_a_pair_of_values; // 1855 ✓
 
+pub mod maximum_subarray_min_product; // 1856 ✓
+
 pub mod minimum_speed_to_arrive_on_time; // 1870 ✓
+
+pub mod redistribute_characters_to_make_all_strings_equal; // 1897
 
 pub mod build_array_from_permutation; // 1920 ✓
 
@@ -589,6 +600,8 @@ pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
 pub mod find_if_path_exists_in_graph; // 1971
 
 pub mod final_value_of_variable_after_performing_operations; // 2011
+
+pub mod sort_linked_list_already_sorted_using_absolute_values; // 2046 ✓
 
 pub mod k_radius_subarray_averages; // 2090
 

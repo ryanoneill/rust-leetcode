@@ -7,10 +7,37 @@ use crate::list_node_additions::ListNodeAdditions;
 pub struct Solution;
 
 impl Solution {
-    // TODO: Implement
-    pub fn delete_duplicates(_head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        None
+
+    pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        let mut last = -101;
+        let mut result = None;
+        let mut current = &mut result;
+        let mut is_set = false;
+
+        let mut working = head;
+        while working.is_some() {
+            let next = working.take_next();
+            let value = working.get_value();
+            if value != last {
+                last = value;
+
+                if next.is_none() || next.get_value() != value {
+                    if !is_set {
+                        result = working;
+                        current = &mut result;
+                        is_set = true;
+                    } else {
+                        current.set_next(working);
+                        current = current.refer_next();
+                    }
+                }
+            }
+            working = next;
+        }
+
+        result
     }
+
 }
 
 #[cfg(test)]
@@ -19,7 +46,6 @@ mod tests {
     use crate::list_node::ListNode;
     use crate::list_node_additions::ListNodeAdditions;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let items = vec![1, 2, 3, 3, 4, 4, 5];
@@ -28,7 +54,6 @@ mod tests {
         assert_eq!(result.to_vec(), vec![1, 2, 5]);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let items = vec![1, 1, 1, 2, 3];
