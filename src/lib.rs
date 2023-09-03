@@ -452,6 +452,8 @@ pub mod minimum_cost_for_tickets; // 983 ✓
 
 pub mod rotting_oranges; // 994
 
+pub mod next_greater_node_in_linked_list; // 1019 ✓
+
 pub mod maximum_difference_between_node_and_ancestor; // 1026
 
 pub mod last_stone_weight; // 1046
