@@ -481,6 +481,8 @@ pub mod nth_tribonacci_number; // 1137 ✓
 
 pub mod longest_common_subsequence; // 1143
 
+pub mod check_if_a_number_is_majority_element; // 1150 ✓
+
 pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
 
 pub mod minimum_cost_to_connect_sticks; // 1167
