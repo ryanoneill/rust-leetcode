@@ -573,6 +573,7 @@ pub mod furthest_building_you_can_reach; // 1642
 pub mod determine_if_two_strings_are_close; // 1657 ✓
 
 pub mod richest_customer_wealth; // 1672
+pub mod find_the_most_competitive_subsequence; // 1673 ✓
 
 pub mod max_number_of_k_sum_pairs; // 1679 ✓
 
