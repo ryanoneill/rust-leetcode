@@ -1,6 +1,3 @@
-use std::cmp::min;
-use std::collections::HashMap;
-
 /// You are given an integer array `coins` representing coins of different
 /// denominations and an integer `amount` representing a total amount of money.
 ///
@@ -12,36 +9,32 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-    pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
-        let mut mins = HashMap::new();
-        Self::worker(&coins, amount, &mut mins)
-    }
 
-    fn worker(coins: &Vec<i32>, amount: i32, mins: &mut HashMap<i32, i32>) -> i32 {
-        if amount < 0 {
-            -1
-        } else if amount == 0 {
-            0
-        } else if mins.contains_key(&amount) {
-            mins[&amount]
-        } else {
-            let mut result = -1;
-            for coin in coins {
-                let sub = Self::worker(coins, amount - coin, mins);
-                if sub != -1 {
-                    let current = sub + 1;
-                    if result == -1 {
-                        result = current;
-                    } else {
-                        result = min(result, current);
+    pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
+        let n = amount as usize;
+        let mut dp = vec![i32::MAX; n+1];
+        dp[0] = 0;
+
+        for i in 0..=n {
+            if dp[i] < i32::MAX {
+                let count = dp[i] + 1;
+
+                for coin in &coins {
+                    let current = i + (*coin as usize);
+                    if current <= n {
+                        dp[current] = dp[current].min(count);
                     }
                 }
             }
-
-            mins.insert(amount, result);
-            result
         }
+
+        let mut result = dp[n];
+        if result == i32::MAX {
+            result = -1;
+        }
+        result
     }
+
 }
 
 #[cfg(test)]
