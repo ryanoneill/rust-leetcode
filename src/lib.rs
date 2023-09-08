@@ -516,6 +516,8 @@ pub mod minimum_flips_to_make_a_or_b_equal_to_c; // 1318 ✓
 
 pub mod maximum_69_number; // 1323 ✓
 
+pub mod minimum_difficulty_of_a_job_schedule; // 1335
+
 pub mod the_k_weakest_rows_in_a_matrix; // 1337
 pub mod reduce_array_size_to_the_half; // 1338 ✓
 
