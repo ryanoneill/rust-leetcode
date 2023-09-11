@@ -128,6 +128,8 @@ pub mod gas_station; // 134 ✓
 
 pub mod single_number; // 136
 
+pub mod word_break; // 139 ✓
+
 // pub mod linked_list_cycle; // 141 - This problem is unavailable in Rust
 // pub mod linked_list_cycle_ii; // 142 - This problem is unavailable in Rust
 pub mod reorder_list; // 143 ✓
