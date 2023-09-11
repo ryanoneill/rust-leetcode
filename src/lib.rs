@@ -504,6 +504,7 @@ pub mod toss_strange_coins; // 1230
 pub mod divide_chocolate; // 1231 ✓
 pub mod check_if_it_is_a_straight_line; // 1232 ✓
 
+pub mod group_the_people_given_the_group_size_they_belong_to; // 1282 ✓
 pub mod find_the_smallest_divisor_given_a_threshold; // 1283
 
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
