@@ -10,41 +10,31 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
+
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut values: HashMap<i32, Vec<usize>> = HashMap::with_capacity(nums.len());
-        for (i, value) in nums.iter().enumerate() {
-            match values.get_mut(value) {
-                Some(indices) => {
-                    indices.push(i);
-                }
-                None => {
-                    values.insert(*value, vec![i]);
-                }
-            }
-        }
-        let mut result = Vec::with_capacity(2);
-        for num in nums {
+        let mut results = vec![0, 0];
+        let mut indices: HashMap<i32, Vec<usize>> = HashMap::new();
+        let n = nums.len();
+
+        for i in 0..n {
+            let num = nums[i];
             let diff = target - num;
-            match (values.get(&num), values.get(&diff)) {
-                (Some(is), Some(_)) if num == diff => {
-                    if is.len() >= 2 {
-                        result.push(is[0] as i32);
-                        result.push(is[1] as i32);
-                        return result;
-                    }
-                }
-                (Some(is), Some(js)) => {
-                    result.push(is[0] as i32);
-                    result.push(js[0] as i32);
-                    return result;
-                }
-                (_, _) => {
-                    // do nothing, keep going
-                }
+
+            if indices.contains_key(&diff) {
+                results[0] = indices[&diff][0] as i32;
+                results[1] = i as i32;
+                break;
             }
+
+            indices
+                .entry(num)
+                .or_insert(Vec::new())
+                .push(i);
         }
-        result
+
+        results
     }
+
 }
 
 #[cfg(test)]
