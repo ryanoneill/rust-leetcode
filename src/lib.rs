@@ -321,6 +321,7 @@ pub mod minimum_genetic_mutation; // 433 ✓
 pub mod non_overlapping_intervals; // 435 ✓
 
 pub mod path_sum_iii; // 437 ✓
+pub mod find_all_anagrams_in_a_string; // 438 ✓
 
 pub mod string_compression; // 443 ✓
 
