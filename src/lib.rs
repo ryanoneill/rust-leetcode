@@ -448,7 +448,7 @@ pub mod number_of_recent_calls; // 933 ✓
 
 pub mod range_sum_of_bst; // 938
 
-pub mod verifying_an_alien_dictionary; // 953
+pub mod verifying_an_alien_dictionary; // 953 ✓
 
 pub mod numbers_with_same_consecutive_differences; // 967 ✓
 
