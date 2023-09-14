@@ -152,6 +152,8 @@ pub mod min_stack; // 155
 
 pub mod read_n_characters_given_read4; // 157 ✓
 
+pub mod one_edit_distance; // 161 ✓
+
 pub mod missing_ranges; // 163
 pub mod maximum_gap; // 164 ✓
 
