@@ -7,52 +7,44 @@
 struct Solution;
 
 impl Solution {
-    pub fn reverse(x: i32) -> i32 {
-        let is_negative = x < 0;
-        let x = x.to_string();
-        let mut stack = Vec::new();
-        for c in x.chars() {
-            match c {
-                '1' => stack.push(1),
-                '2' => stack.push(2),
-                '3' => stack.push(3),
-                '4' => stack.push(4),
-                '5' => stack.push(5),
-                '6' => stack.push(6),
-                '7' => stack.push(7),
-                '8' => stack.push(8),
-                '9' => stack.push(9),
-                '0' => stack.push(0),
-                _ => {} // ignore '-' also
-            }
-        }
 
-        let ten: i32 = 10;
-        let mut result: i32 = 0;
-        let mut place = stack.len() as u32;
-        while !stack.is_empty() {
-            place -= 1;
-            let digit = stack.pop().unwrap();
-            if digit != 0 {
-                let power = ten.checked_pow(place);
-                let piece = power.and_then(|p| p.checked_mul(digit));
-                let check = piece.and_then(|p| result.checked_add(p));
-                if check.is_some() {
-                    result = check.unwrap();
-                } else {
+    pub fn reverse(x: i32) -> i32 {
+        let mut result = 0;
+
+        if x != i32::MIN {
+            let is_negative = x < 0;
+
+            let mut value = x;
+            if is_negative {
+                value *= -1;
+            }
+
+            while value > 0 {
+                let digit = value % 10;
+                value /= 10;
+
+                if result > i32::MAX / 10 {
                     result = 0;
                     break;
+                } else {
+                    result *= 10;
+                }
+                if result > i32::MAX - digit {
+                    result = 0;
+                    break;
+                } else {
+                    result += digit;
                 }
             }
-        }
-        // Not possible to reverse and get i32::MAX or i32::MIN
-        // so this one digit difference in i32::MAX and i32::MIN is irrelevant here.
-        if is_negative {
-            result *= -1;
+
+            if is_negative {
+                result *= -1;
+            }
         }
 
         result
     }
+
 }
 
 #[cfg(test)]
