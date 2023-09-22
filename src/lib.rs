@@ -490,6 +490,8 @@ pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
 
 pub mod remove_vowels_from_a_string; // 1119 ✓
 
+pub mod lowest_common_ancestor_of_deepest_leaves; // 1123 ✓
+
 pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod largest_unique_number; // 1133 ✓
