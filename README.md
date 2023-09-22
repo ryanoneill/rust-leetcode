@@ -177,7 +177,7 @@
 
 ### Intervals
 
-- [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+- [x] [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](src/insert_interval.rs)
 - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 - [x] [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) - [Solution](src/meeting_rooms.rs)
@@ -254,7 +254,7 @@
 
 ### Interval
 
-- [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+- [x] [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](src/insert_interval.rs)
 - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 - [x] [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) - [Solution](src/meeting_rooms.rs)
