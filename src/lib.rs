@@ -69,6 +69,7 @@ pub mod maximum_subarray; // 53 ✓
 
 pub mod jump_game; // 55 ✓
 
+pub mod insert_interval; // 57 ✓
 pub mod length_of_last_word; // 58
 
 pub mod unique_paths; // 62 ✓
