@@ -145,7 +145,7 @@ pub mod sort_list; // 148
 
 pub mod evaluate_reverse_polish_notation; // 150 ✓
 pub mod reverse_words_in_a_string; // 151 ✓
-pub mod maximum_product_subarray; // 152
+pub mod maximum_product_subarray; // 152 ✓
 pub mod find_minimum_in_rotated_sorted_array; // 153 ✓
 
 pub mod min_stack; // 155
