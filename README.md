@@ -31,7 +31,7 @@
 - [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - [Solution](src/minimum_window_substring.rs)
 - [x] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) - [Solution](src/sliding_window_maximum.rs)
 
-### Stack
+### Stack ✓
 
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](src/valid_parentheses.rs)
 - [x] [Min Stack](https://leetcode.com/problems/min-stack/) - [Solution](src/min_stack.rs)
@@ -39,9 +39,9 @@
 - [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - [Solution](src/generate_parentheses.rs)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) - [Solution](src/daily_temperatures.rs)
 - [x] [Car Fleet](https://leetcode.com/problems/car-fleet/) - [Solution](src/car_fleet.rs)
-- [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- [x] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) - [Solution](src/largest_rectangle_in_histogram.rs)
 
-### Binary Search
+### Binary Search ✓
 
 - [x] [Binary Search](https://leetcode.com/problems/binary-search/) - [Solution](src/binary_search.rs)
 - [x] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) - [Solution](src/search_a_2d_matrix.rs)
@@ -49,30 +49,30 @@
 - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/find_minimum_in_rotated_sorted_array.rs)
 - [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](src/search_in_rotated_sorted_array.rs)
 - [x] [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) - [Solution](src/time_based_key_value_store.rs)
-- [ ] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- [x] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) - [Solution](src/median_of_two_sorted_arrays.rs)
 
 ### Linked List
 
 - [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) - [Solution](src/reverse_linked_list.rs)
 - [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) - [Solution](src/merge_two_sorted_lists.rs)
-- [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
+- [x] [Reorder List](https://leetcode.com/problems/reorder-list/) - [Solution](src/reorder_list.rs)
 - [x] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - [Solution](src/remove_nth_node_from_end_of_list.rs)
-- [ ] [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+- [ ] [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) - *Unavailable in Rust*
 - [x] [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) - [Solution](src/add_two_numbers.rs)
-- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) - *Unavailable in Rust*
 - [x] [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) - [Solution](src/find_the_duplicate_number.rs)
 - [x] [LRU Cache](https://leetcode.com/problems/lru-cache/) - [Solution](src/lru_cache.rs)
 - [x] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](src/merge_k_sorted_lists.rs)
-- [ ] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- [x] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) - [Solution](src/reverse_nodes_in_k_groups.rs)
 
-### Trees
+### Trees ✓
 
 - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) - [Solution](src/invert_binary_tree.rs)
 - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](src/maximum_depth_of_binary_tree.rs)
 - [x] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) - [Solution](src/diameter_of_binary_tree.rs)
 - [x] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) - [Solution](src/balanced_binary_tree.rs)
 - [x] [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](src/same_tree.rs)
-- [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+- [x] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) - [Solution](src/subtree_of_another_tree.rs)
 - [x] [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) - [Solution](src/lowest_common_ancestor_of_a_binary_search_tree.rs)
 - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](src/binary_tree_level_order_traversal.rs)
 - [x] [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) - [Solution](src/binary_tree_right_side_view.rs)
@@ -80,7 +80,7 @@
 - [x] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) - [Solution](src/validate_binary_search_tree.rs)
 - [x] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) - [Solutoin](src/kth_smallest_element_in_a_bst.rs)
 - [x] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) - [Solution](src/construct_binary_tree_from_preorder_and_inorder_traversal.rs)
-- [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) - [Solution](src/binary_tree_maximum_path_sum.rs)
 - [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/serialize_and_deserialize_binary_tree.rs)
 
 ### Tries
@@ -95,7 +95,7 @@
 - [x] [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) - [Solution](src/last_stone_weight.rs)
 - [x] [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) - [Solution](src/k_closest_points_to_origin.rs)
 - [x] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) - [Solution](src/kth_largest_element_in_an_array.rs)
-- [ ] [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+- [x] [Task Scheduler](https://leetcode.com/problems/task-scheduler/) - [Solution](src/task_scheduler.rs)
 - [ ] [Design Twitter](https://leetcode.com/problems/design-twitter/)
 - [x] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) - [Solution](src/find_median_from_data_stream.rs)
 
@@ -146,7 +146,7 @@
 - [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/palindromic_substrings.rs)
 - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
 - [x] [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/coin_change.rs)
-- [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [x] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) - [Solution](src/maximum_product_subarray.rs)
 - [ ] [Word Break](https://leetcode.com/problems/word-break/)
 - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/longest_increasing_subsequence.rs)
 - [x] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) - [Solution](src/partition_equal_subset_sum.rs)
@@ -207,14 +207,14 @@
 
 ## [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) Progress
 
-### Array
+### Array ✓
 
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/) - [Solution](src/two_sum.rs)
 - [x] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) - [Solution](src/best_time_to_buy_and_sell_stock.rs)
 - [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) - [Solution](src/contains_duplicate.rs)
 - [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - [Solution](src/product_of_array_except_self.rs)
 - [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](src/maximum_subarray.rs)
-- [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [x] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) - [Solution](src/maximum_product_subarray.rs)
 - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/find_minimum_in_rotated_sorted_array.rs)
 - [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](src/search_in_rotated_sorted_array.rs)
 - [x] [3 Sum](https://leetcode.com/problems/3sum/) - [Solution](src/three_sum.rs)
