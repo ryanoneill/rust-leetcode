@@ -435,6 +435,8 @@ pub mod car_fleet; // 853 ✓
 
 pub mod all_nodes_distance_k_in_binary_tree; // 863
 
+pub mod smallest_subtree_with_all_the_deepest_nodes; // 865 ✓
+
 pub mod leaf_similar_trees; // 872 ✓
 
 pub mod koko_eating_bananas; // 875 ✓
