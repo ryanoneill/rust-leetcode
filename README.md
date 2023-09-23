@@ -178,8 +178,8 @@
 ### Intervals
 
 - [x] [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](src/insert_interval.rs)
-- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [x] [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - [Solution](src/merge_intervals.rs)
+- [x] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) - [Solution](src/non_overlapping_intervals.rs)
 - [x] [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) - [Solution](src/meeting_rooms.rs)
 - [x] [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) - [Solution](src/meeting_rooms_ii.rs)
 - [ ] [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
@@ -192,7 +192,7 @@
 - [x] [Happy Number](https://leetcode.com/problems/happy-number/) - [Solution](src/happy_number.rs)
 - [x] [Plus One](https://leetcode.com/problems/plus-one/) - [Solution](src/plus_one.rs)
 - [x] [Pow(x,n)](https://leetcode.com/problems/powx-n/) - [Solution](src/pow_x_n.rs)
-- [ ] [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+- [x] [Multiply Strings](https://leetcode.com/problems/multiply-strings/) - [Solution](src/multiply_strings.rs)
 - [ ] [Detect Squares](https://leetcode.com/problems/detect-squares/)
 
 ### Bit Manipulation ✓
@@ -252,11 +252,11 @@
 - [x] [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) - [Solution](src/graph_valid_tree.rs)
 - [x] [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) - [Solution](src/number_of_connected_components_in_an_undirected_graph.rs)
 
-### Interval
+### Interval ✓
 
 - [x] [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](src/insert_interval.rs)
-- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [x] [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - [Solution](src/merge_intervals.rs)
+- [x] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) - [Solution](src/non_overlapping_intervals.rs)
 - [x] [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) - [Solution](src/meeting_rooms.rs)
 - [x] [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) - [Solution](src/meeting_rooms_ii.rs)
 

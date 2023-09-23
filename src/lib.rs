@@ -57,6 +57,7 @@ pub mod combination_sum; // 39 ✓
 pub mod combination_sum_ii; // 40 ✓
 
 pub mod trapping_rain_water; // 42 ✓
+pub mod multiply_strings; // 43 ✓
 
 pub mod jump_game_ii; // 45 ✓
 pub mod permutations; // 46 ✓
@@ -68,7 +69,7 @@ pub mod pow_x_n; // 50
 pub mod maximum_subarray; // 53 ✓
 
 pub mod jump_game; // 55 ✓
-
+pub mod merge_intervals; // 56 ✓
 pub mod insert_interval; // 57 ✓
 pub mod length_of_last_word; // 58
 
