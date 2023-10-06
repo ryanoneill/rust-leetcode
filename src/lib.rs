@@ -318,6 +318,7 @@ pub mod split_array_largest_sum; // 410 ✓
 
 pub mod fizz_buzz; // 412
 
+pub mod add_strings; // 415 ✓
 pub mod partition_equal_subset_sum; // 416 ✓
 
 pub mod longest_repeating_character_replacement; // 424 ✓
