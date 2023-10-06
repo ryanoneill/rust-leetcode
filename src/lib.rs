@@ -242,6 +242,7 @@ pub mod alien_dictionary; // 269 ✓
 pub mod closest_binary_search_tree_value; // 270
 pub mod encode_and_decode_strings; // 271 ✓
 
+pub mod integer_to_english_words; // 273 ✓
 pub mod h_index; // 274 ✓
 
 pub mod first_bad_version; // 278 ✓
