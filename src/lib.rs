@@ -410,6 +410,8 @@ pub mod design_hashset; // 705 ✓
 pub mod design_hashmap; // 706 ✓
 pub mod design_linked_list; // 707 ✓
 
+pub mod accounts_merge; // 721 ✓
+
 pub mod find_pivot_index; // 724 ✓
 
 pub mod asteroid_collision; // 735 ✓
