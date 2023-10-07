@@ -118,6 +118,7 @@ pub mod balanced_binary_tree; // 110 ✓
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
 pub mod path_sum_ii; // 113 ✓
+pub mod flatten_binary_tree_to_linked_list; // 114
 
 pub mod best_time_to_buy_and_sell_stock; // 121
 pub mod best_time_to_buy_and_sell_stock_ii; // 122
@@ -267,7 +268,7 @@ pub mod range_sum_query_2d_immutable; // 304
 
 pub mod minimum_height_trees; // 310
 
-pub mod shortest_distance_from_all_buildings; // 317
+pub mod shortest_distance_from_all_buildings; // 317 ✓
 
 pub mod bulb_switcher; // 319
 
