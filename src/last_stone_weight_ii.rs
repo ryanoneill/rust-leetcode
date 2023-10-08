@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::HashSet;
 
 /// You are given an array of integers `stones` where `stones[i]` is the weight of the `ith` stone.
 ///
@@ -16,68 +16,43 @@ use std::collections::HashMap;
 /// Return the smallest possible weight of the left stone. If there are no stones left, return `0`.
 struct Solution;
 
-#[derive(Copy, Clone, Debug, PartialOrd, Ord, PartialEq, Eq, Hash)]
-struct State {
-    index: usize,
-    total: i32,
-}
-
-impl State {
-
-    pub fn new() -> Self {
-        Self { index: 0, total: 0 }
-    }
-
-    pub fn with(&self, stone: i32) -> Self {
-        Self {
-            index: self.index + 1,
-            total: self.total + stone,
-        }
-    }
-
-    pub fn without(&self) -> Self {
-        Self {
-            index: self.index + 1,
-            total: self.total,
-        }
-    }
-
-}
-
 impl Solution {
 
-    fn worker(results: &mut HashMap<State, i32>, stones: &Vec<i32>, state: State, sum: i32, target: i32) -> i32 {
-        let result;
+    // Hint 1 says: Think of the final answer as a sum of weights with + or - sign
+    // symbols in front of each weight.
+    //
+    // The solution to this problem is based on the difference between stones in 
+    // pile A and stones in pile B. A stone can either be included in pile A 
+    // (plus sign) or included in pile B (minus sign). 
+    //
+    // A high positive value indicates that many stones are in pile A.
+    // A low  negative value indicates that many stones are in pile B.
+    //
+    // We want the solution that is 0 or closest to it.
+    pub fn last_stone_weight_ii(stones: Vec<i32>) -> i32 {
         let n = stones.len();
+        let mut weights = HashSet::new();
 
-        if results.contains_key(&state) {
-            result = results[&state]
-        } else {
-            if state.total >= target || state.index >= n {
-                result = (state.total - (sum - state.total)).abs();
-            } else {
-                let stone = stones[state.index];
-                let with_state = state.with(stone);
-                let without_state = state.without();
+        let stone = stones[0];
+        weights.insert(stone);
+        weights.insert(-stone);
 
-                let with_result = Self::worker(results, stones, with_state, sum, target);
-                let without_result = Self::worker(results, stones, without_state, sum, target);
-                result = with_result.min(without_result);
+        for i in 1..n {
+            let stone = stones[i];
+            let mut next = HashSet::new();
+
+            for weight in weights {
+                next.insert(weight + stone);
+                next.insert(weight - stone);
             }
-            results.insert(state, result);
+            weights = next;
         }
 
-        result
-    }
+        let mut result = i32::MAX;
+        for weight in weights {
+            result = result.min(weight.abs());
+        }
 
-    pub fn last_stone_weight_ii(stones: Vec<i32>) -> i32 {
-        let sum = stones.iter().sum();
-        let target = (sum as f64 / 2.0).ceil() as i32;
-
-        let mut results = HashMap::new();
-        let initial_state = State::new();
-
-        let result = Self::worker(&mut results, &stones, initial_state, sum, target);
         result
     }
 
