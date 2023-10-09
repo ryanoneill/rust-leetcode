@@ -9,7 +9,7 @@ impl Solution {
         let letters: Vec<char> = s.chars().collect();
         let mut items: HashSet<char> = HashSet::new();
 
-        let mut max = 0;
+        let mut result = 0;
         let mut current = 0;
         let mut left: usize = 0;
 
@@ -24,13 +24,11 @@ impl Solution {
             } else {
                 items.insert(*letter);
                 current += 1;
-                if current > max {
-                    max = current;
-                }
+                result = result.max(current);
             }
         }
 
-        max
+        result
     }
 }
 
