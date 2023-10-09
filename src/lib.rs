@@ -88,7 +88,7 @@ pub mod sort_colors; // 75 ✓
 pub mod minimum_window_substring; // 76 ✓
 pub mod combinations; // 77 ✓
 pub mod subsets; // 78 ✓
-
+pub mod word_search; // 79 ✓
 pub mod remove_duplicates_from_sorted_array_ii; // 80
 
 pub mod remove_duplicates_from_sorted_list_ii; // 82 ✓
