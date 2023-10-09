@@ -397,6 +397,8 @@ pub mod find_k_closest_elements; // 658
 
 pub mod baseball_game; // 682 ✓
 
+pub mod redundant_connection; // 684 ✓
+
 pub mod top_k_frequent_words; // 692
 
 pub mod max_area_of_island; // 695
