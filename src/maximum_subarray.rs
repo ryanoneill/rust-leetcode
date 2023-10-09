@@ -11,7 +11,7 @@ impl Solution {
         let mut sum = 0;
 
         for i in 0..n {
-            if sum < 0 { sum = 0; }
+            sum = sum.max(0);
             let num = nums[i];
             sum += num;
             result = result.max(sum);
