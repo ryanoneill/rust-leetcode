@@ -120,6 +120,8 @@ pub mod path_sum; // 112
 pub mod path_sum_ii; // 113 ✓
 pub mod flatten_binary_tree_to_linked_list; // 114
 
+pub mod pascals_triangle; // 118 ✓
+
 pub mod best_time_to_buy_and_sell_stock; // 121
 pub mod best_time_to_buy_and_sell_stock_ii; // 122
 
