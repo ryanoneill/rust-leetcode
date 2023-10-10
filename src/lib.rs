@@ -465,6 +465,8 @@ pub mod sort_an_array; // 912 ✓
 pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
+pub mod unique_email_addresses; // 929
+
 pub mod number_of_recent_calls; // 933 ✓
 
 pub mod range_sum_of_bst; // 938
