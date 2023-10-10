@@ -187,7 +187,7 @@ pub mod number_of_islands; // 200
 pub mod happy_number; // 202
 
 pub mod count_primes; // 204 ✓
-
+pub mod isomorphic_strings; // 205 ✓
 pub mod reverse_linked_list; // 206 ✓
 pub mod course_schedule; // 207 ✓
 pub mod implement_trie; // 208 ✓
@@ -465,7 +465,7 @@ pub mod sort_an_array; // 912 ✓
 pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
-pub mod unique_email_addresses; // 929
+pub mod unique_email_addresses; // 929 ✓
 
 pub mod number_of_recent_calls; // 933 ✓
 
