@@ -55,7 +55,7 @@ pub mod valid_sudoku; // 36 ✓
 
 pub mod combination_sum; // 39 ✓
 pub mod combination_sum_ii; // 40 ✓
-
+pub mod first_missing_positive; // 41 ✓
 pub mod trapping_rain_water; // 42 ✓
 pub mod multiply_strings; // 43 ✓
 
@@ -374,6 +374,8 @@ pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
 pub mod number_of_provinces; // 547 ✓
+
+pub mod brick_wall; // 554
 
 pub mod reverse_words_in_a_string_iii; // 557
 
