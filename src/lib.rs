@@ -336,6 +336,8 @@ pub mod non_overlapping_intervals; // 435 ✓
 pub mod path_sum_iii; // 437 ✓
 pub mod find_all_anagrams_in_a_string; // 438 ✓
 
+pub mod arranging_coins; // 441 ✓
+
 pub mod string_compression; // 443 ✓
 
 pub mod find_all_numbers_disappeared_in_an_array; // 448 ✓
