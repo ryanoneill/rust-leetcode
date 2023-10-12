@@ -79,6 +79,7 @@ pub mod unique_paths_ii; // 63
 pub mod plus_one; // 66
 pub mod add_binary; // 67 ✓
 
+pub mod sqrt_x; // 69 ✓
 pub mod climbing_stairs; // 70
 pub mod simplify_path; // 71
 
