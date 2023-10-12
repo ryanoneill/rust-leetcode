@@ -86,7 +86,7 @@
 ### Tries
 
 - [x] [Implement Trie - Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/) - [Solution](src/implement_trie.rs)
-- [ ] [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [x] [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) - [Solution](src/design_add_and_search_words_data_structure.rs)
 - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 ### Heap / Priority Queue
