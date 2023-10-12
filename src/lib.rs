@@ -375,6 +375,8 @@ pub mod minimum_absolute_difference_in_bst; // 530
 
 pub mod complex_number_multiplication; // 537 ✓
 
+pub mod single_element_in_a_sorted_array; // 540 ✓
+
 pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
