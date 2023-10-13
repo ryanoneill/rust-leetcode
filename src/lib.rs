@@ -99,7 +99,7 @@ pub mod largest_rectangle_in_histogram; // 84 ✓
 pub mod merge_sorted_array; // 88
 
 pub mod subsets_ii; // 90 ✓
-
+pub mod decode_ways; // 91 ✓
 pub mod reverse_linked_list_ii; // 92
 
 pub mod binary_tree_inorder_traversal; // 94 ✓

@@ -144,10 +144,10 @@
 - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
 - [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/palindromic_substrings.rs)
-- [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
+- [x] [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](src/decode_ways.rs)
 - [x] [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/coin_change.rs)
 - [x] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) - [Solution](src/maximum_product_subarray.rs)
-- [ ] [Word Break](https://leetcode.com/problems/word-break/)
+- [x] [Word Break](https://leetcode.com/problems/word-break/) - [Solution](src/word_break.rs)
 - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/longest_increasing_subsequence.rs)
 - [x] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) - [Solution](src/partition_equal_subset_sum.rs)
 
@@ -237,7 +237,7 @@
 - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
 - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
-- [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
+- [x] [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](src/decode_ways.rs)
 - [x] [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](src/unique_paths.rs)
 - [x] [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](src/jump_game.rs)
 
