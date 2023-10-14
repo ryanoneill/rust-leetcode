@@ -349,6 +349,7 @@ pub mod find_all_numbers_disappeared_in_an_array; // 448 ✓
 
 pub mod delete_node_in_a_bst; // 450 ✓
 pub mod sort_characters_by_frequency; // 451 ✓
+pub mod minimum_number_of_arrows_to_burst_balloons; // 452 ✓
 
 pub mod repeated_substring_pattern; // 459 ✓
 
