@@ -251,6 +251,8 @@ pub mod h_index; // 274 ✓
 
 pub mod first_bad_version; // 278 ✓
 
+pub mod wiggle_sort; // 280
+
 pub mod move_zeroes; // 283
 
 pub mod find_the_duplicate_number; // 287 ✓
