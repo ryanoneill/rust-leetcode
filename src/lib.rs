@@ -626,6 +626,8 @@ pub mod make_the_string_great; // 1544
 
 pub mod minimum_number_of_vertices_to_reach_all_nodes; // 1557
 
+pub mod dot_product_of_two_sparse_vectors; // 1570 ✓
+
 pub mod min_cost_to_connect_all_points; // 1584
 
 pub mod design_parking_system; // 1603 ✓
