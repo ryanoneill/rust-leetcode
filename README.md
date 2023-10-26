@@ -109,7 +109,7 @@
 - [x] [Word Search](https://leetcode.com/problems/word-search/) - [Solution](src/word_search.rs)
 - [ ] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - [Solution](src/letter_combinations_of_a_phone_number.rs)
-- [ ] [N-Queens](https://leetcode.com/problems/n-queens/)
+- [x] [N-Queens](https://leetcode.com/problems/n-queens/) - [Solution](src/n_queens.rs)
 
 ### Graphs
 
