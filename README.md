@@ -122,7 +122,7 @@
 - [x] [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) - [Solution](src/walls_and_gates.rs)
 - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/course_schedule.rs)
 - [x] [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) - [Solution](src/course_schedule_ii.rs)
-- [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+- [x] [Redundant Connection](https://leetcode.com/problems/redundant-connection/) - [Solution](src/redundant_connection.rs)
 - [x] [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) - [Solution](src/number_of_connected_components_in_an_undirected_graph.rs)
 - [x] [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) - [Solution](src/graph_valid_tree.rs)
 - [x] [Word Ladder](https://leetcode.com/problems/word-ladder/) - [Solution](src/word_ladder.rs)
