@@ -1,24 +1,6 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
 
-#[derive(Clone, Debug, PartialOrd, Ord, PartialEq, Eq, Hash)]
-struct Ticket {
-    from: String,
-    to: String,
-}
-
-impl Ticket {
-
-    fn new(from: String, to: String) -> Self {
-        Self { from, to }
-    }
-
-    fn from_vec(ticket: &Vec<String>) -> Self {
-        Self { from: ticket[0].clone(), to: ticket[1].clone() }
-    }
-
-}
-
 /// You are given a list of airline `tickets` where `tickets[i] = [fromi, toi]`
 /// represent the departure and arrival airports of one flight. Reconstruct
 /// the itinerary in order and return it.
@@ -37,63 +19,98 @@ struct Solution;
 
 impl Solution {
 
-    fn to_map(tickets: &Vec<Vec<String>>) -> HashMap<String, HashSet<Ticket>> {
-        let mut result = HashMap::new();
-        for item in tickets {
-            let ticket = Ticket::from_vec(item);
-            let key = ticket.from.clone();
-            result
-                .entry(key)
+    fn to_adj_map(tickets: Vec<Vec<String>>) -> HashMap<String, HashSet<String>> {
+        let mut results = HashMap::new();
+
+        for ticket in tickets {
+            results
+                .entry(ticket[0].clone())
                 .or_insert(HashSet::new())
-                .insert(ticket);
+                .insert(ticket[1].clone());
         }
 
-        result
+        results
     }
 
+    fn remove(map: &mut HashMap<String, HashSet<String>>, key: &String, value: &String) {
+        if map.contains_key(key) {
+            let set = map.get_mut(key).unwrap();
+            if set.len() == 1 {
+                map.remove(key);
+            } else {
+                set.remove(value);
+            }
+        }
+    }
+
+    fn worker(
+        results: &mut Vec<String>,
+        map: HashMap<String, HashSet<String>>,
+        path: Vec<String>,
+        current: String
+    ) {
+        if map.len() == 0 {
+            if results.len() == 0 {
+                *results = path.clone();
+            } else if &path < &results{
+                *results = path.clone();
+            }
+        } else if map.contains_key(&current) {
+            for next in &map[&current] {
+                let mut next_path = path.clone();
+                next_path.push(next.clone());
+                let mut map = map.clone();
+                Self::remove(&mut map, &current, next);
+                Self::worker(results, map, next_path, next.clone());
+            }
+        }
+    }
+
+    // TODO: Improve
+    // Simple solution that I know if submitted will fail for time limit exceeded.
     pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
         let mut results = Vec::new();
 
-        let tickets = Self::to_map(&tickets);
-        let city = "JFK".to_string();
-        let path = vec![];
-        let seen = HashSet::new();
-        Self::worker(&tickets, city, path, seen, &mut results);
+        let map = Self::to_adj_map(tickets);
+        let initial = vec!["JFK".to_string()];
+        let current = "JFK".to_string();
 
-        // TODO: Take lexical order result
-        vec![]
+        Self::worker(&mut results, map, initial, current);
+
+        results
     }
 
-    // TODO: Finish Implementation
-    fn worker(
-        _tickets: &HashMap<String, HashSet<Ticket>>,
-        _city: String,
-        _path: Vec<String>,
-        _seen: HashSet<Ticket>,
-        _results: &mut Vec<Vec<String>>
-    ) {
+}
 
+#[cfg(test)]
+mod tests {
+    use super::Solution;
+
+    #[ignore]
+    #[test]
+    fn example_1() {
+        let tickets = vec![
+            vec!["MUC".to_string(), "LHR".to_string()],
+            vec!["JFK".to_string(), "MUC".to_string()],
+            vec!["SFO".to_string(), "SJC".to_string()],
+            vec!["LHR".to_string(), "SFO".to_string()],
+        ];
+        let result = Solution::find_itinerary(tickets);
+        assert_eq!(result, vec!["JFK", "MUC", "LHR", "SFO", "SJC"]);
     }
 
-    // pub fn all_paths_source_target(graph: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    //     let mut results = Vec::new();
-    //     Self::worker(&graph, 0, vec![], &mut results);
-    //     results
-    // }
-
-    // fn worker(graph: &Vec<Vec<i32>>, node: i32, path: Vec<i32>, results: &mut Vec<Vec<i32>>) {
-    //     let n = graph.len();
-    //     let i = node as usize;
-    //     let mut path = path;
-    //     path.push(node);
-    //     if i == n - 1 {
-    //         results.push(path);
-    //     } else {
-    //         for &next in &graph[i] {
-    //             let cloned_path = path.clone();
-    //             Self::worker(graph, next, cloned_path, results);
-    //         }
-    //     }
-    // }
+    #[ignore]
+    #[test]
+    fn example_2() {
+        let tickets = vec![
+            vec!["JFK".to_string(), "SFO".to_string()],
+            vec!["JFK".to_string(), "ATL".to_string()],
+            vec!["SFO".to_string(), "ATL".to_string()],
+            vec!["ATL".to_string(), "JFK".to_string()],
+            vec!["ATL".to_string(), "SFO".to_string()],
+        ];
+        let result = Solution::find_itinerary(tickets);
+        assert_eq!(result, vec!["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]);
+    }
 
 }
