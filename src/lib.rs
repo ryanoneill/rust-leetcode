@@ -521,6 +521,7 @@ pub mod last_stone_weight_ii; // 1049 ✓
 
 pub mod height_checker; // 1051
 
+pub mod shortest_way_to_form_string; // 1055 ✓
 pub mod confusing_number; // 1056 ✓
 
 pub mod greatest_common_divisor_of_strings; // 1071 ✓
