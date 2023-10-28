@@ -402,6 +402,8 @@ pub mod can_place_flowers; // 605 ✓
 
 pub mod task_scheduler; // 621 ✓
 
+pub mod maximum_distance_in_arrays; // 624 ✓
+
 pub mod average_of_levels_in_binary_tree; // 637
 
 pub mod maximum_average_subarray_i; // 643
