@@ -57,32 +57,32 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let word1 = "abc".to_string();
-        let word2 = "bca".to_string();
+        let word1 = str!("abc");
+        let word2 = str!("bca");
         let result = Solution::close_strings(word1, word2);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let word1 = "a".to_string();
-        let word2 = "aa".to_string();
+        let word1 = str!("a");
+        let word2 = str!("aa");
         let result = Solution::close_strings(word1, word2);
         assert!(!result);
     }
 
     #[test]
     fn example_3() {
-        let word1 = "cabbba".to_string();
-        let word2 = "abbccc".to_string();
+        let word1 = str!("cabbba");
+        let word2 = str!("abbccc");
         let result = Solution::close_strings(word1, word2);
         assert!(result);
     }
 
     #[test]
     fn real_world_1() {
-        let word1 = "uau".to_string();
-        let word2 = "ssx".to_string();
+        let word1 = str!("uau");
+        let word2 = str!("ssx");
         let result = Solution::close_strings(word1, word2);
         assert!(!result);
     }
