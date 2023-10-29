@@ -1,6 +1,11 @@
 #![allow(dead_code)]
 #![allow(unused_imports)]
 
+#[macro_export]
+macro_rules! str {
+    ($s:expr) => (String::from($s));
+}
+
 pub mod list_node;
 pub mod list_node_additions;
 pub mod quick_find;
