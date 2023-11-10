@@ -692,6 +692,8 @@ pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
 
 pub mod find_if_path_exists_in_graph; // 1971
 
+pub mod minimum_difference_between_highest_and_lowest_of_k_scores; // 1984
+
 pub mod final_value_of_variable_after_performing_operations; // 2011
 
 pub mod sort_linked_list_already_sorted_using_absolute_values; // 2046 ✓
