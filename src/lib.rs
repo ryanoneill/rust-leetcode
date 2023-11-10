@@ -121,6 +121,8 @@ pub mod binary_tree_zigzag_level_order_traversal; // 103
 pub mod maximum_depth_of_binary_tree; // 104 ✓
 pub mod construct_binary_tree_from_preorder_and_inorder_traversal; // 105
 
+pub mod convert_sorted_array_to_binary_search_tree; // 108 ✓
+
 pub mod balanced_binary_tree; // 110 ✓
 pub mod minimum_depth_of_binary_tree; // 111
 pub mod path_sum; // 112
@@ -164,6 +166,7 @@ pub mod min_stack; // 155
 
 pub mod read_n_characters_given_read4; // 157 ✓
 
+// pub mod intersection_of_two_lists; // 160 - This problem is unavailable in Rust
 pub mod one_edit_distance; // 161 ✓
 
 pub mod missing_ranges; // 163
