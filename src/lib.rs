@@ -192,7 +192,7 @@ pub mod binary_tree_right_side_view; // 199
 pub mod number_of_islands; // 200
 
 pub mod happy_number; // 202
-
+pub mod remove_linked_list_elements; // 203 ✓
 pub mod count_primes; // 204 ✓
 pub mod isomorphic_strings; // 205 ✓
 pub mod reverse_linked_list; // 206 ✓
