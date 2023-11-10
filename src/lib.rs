@@ -419,6 +419,8 @@ pub mod dota2_senate; // 649 ✓
 
 pub mod find_k_closest_elements; // 658
 
+pub mod valid_palindrome_ii; // 680
+
 pub mod baseball_game; // 682 ✓
 
 pub mod redundant_connection; // 684 ✓
