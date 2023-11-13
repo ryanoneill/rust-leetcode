@@ -57,14 +57,11 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[5,4,8,11,null,13,4,7,2,null,null,5,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,4,8,11,null,13,4,7,2,null,null,5,1]");
         let mut result = Solution::path_sum(root, 22);
         result.sort();
         assert_eq!(result, vec![vec![5,4,11,2], vec![5,8,4,5]]);
@@ -72,9 +69,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let data = "[1,2,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3]");
         let mut result = Solution::path_sum(root, 5);
         result.sort();
         let empty_result: Vec<Vec<i32>> = vec![];
@@ -83,9 +78,7 @@ mod tests {
 
     #[test]
     fn example_3() {
-        let data = "[1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2]");
         let mut result = Solution::path_sum(root, 0);
         result.sort();
         let empty_result: Vec<Vec<i32>> = vec![];

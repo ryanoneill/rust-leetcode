@@ -17,6 +17,16 @@ macro_rules! tree {
     };
 }
 
+#[macro_export]
+macro_rules! assert_tree {
+    ($s:expr, $t:expr) => {
+        {
+            let codec = crate::serialize_and_deserialize_binary_tree::Codec::new();
+            assert_eq!(codec.serialize($s), $t)
+        }
+    };
+}
+
 pub mod list_node;
 pub mod list_node_additions;
 pub mod quick_find;

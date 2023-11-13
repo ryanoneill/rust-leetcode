@@ -69,15 +69,12 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
 
     #[test]
     fn example_1() {
-        let data = "[3,5,1,6,2,0,8,null,null,7,4]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,5,1,6,2,0,8,null,null,7,4]");
         let target = root.clone_left();
         let k = 2;
         let mut result = Solution::distance_k(root, target, k);
@@ -87,9 +84,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let target = root.clone();
         let k = 3;
         let result = Solution::distance_k(root, target, k);
@@ -98,9 +93,7 @@ mod tests {
 
     #[test]
     fn real_world_1() {
-        let data = "[0,2,1,null,null,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[0,2,1,null,null,3]");
         let target = root.clone_right().clone_left();
         assert_eq!(target.get_value(), Some(3));
         let k = 3;
