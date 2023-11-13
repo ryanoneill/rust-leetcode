@@ -114,7 +114,7 @@ pub mod interleaving_string; // 97 ✓
 pub mod validate_binary_search_tree; // 98
 
 pub mod same_tree; // 100 ✓
-
+pub mod symmetric_tree; // 101 ✓
 pub mod binary_tree_level_order_traversal; // 102 
 
 pub mod binary_tree_zigzag_level_order_traversal; // 103
