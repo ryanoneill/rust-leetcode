@@ -407,6 +407,7 @@ pub mod subtree_of_another_tree; // 572 ✓
 // pub mod classes_more_than_5_students; // 596 - This problem is unavailable in Rust
 
 pub mod can_place_flowers; // 605 ✓
+pub mod construct_string_from_binary_tree; // 606 ✓
 
 pub mod merge_two_binary_trees; // 617 ✓
 
