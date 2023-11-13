@@ -38,51 +38,38 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
-    use crate::tree_node::TreeNode;
-    use crate::tree_node_additions::TreeNodeAdditions;
 
     #[test]
     fn example_1() {
-        let data = "[5,4,8,11,null,13,4,7,2,null,null,null,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,4,8,11,null,13,4,7,2,null,null,null,1]");
         let result = Solution::has_path_sum(root, 22);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,2,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3]");
         let result = Solution::has_path_sum(root, 5);
         assert!(!result);
     }
 
     #[test]
     fn example_3() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let result = Solution::has_path_sum(root, 0);
         assert!(!result);
     }
 
     #[test]
     fn must_be_leaf() {
-        let data = "[1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2]");
         let result = Solution::has_path_sum(root, 1);
         assert!(!result);
     }
 
     #[test]
     fn negative_target_sum() {
-        let data = "[1,-2,-3,1,3,-2,null,-1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,-2,-3,1,3,-2,null,-1]");
         let result = Solution::has_path_sum(root, -1);
         assert!(result);
     }
