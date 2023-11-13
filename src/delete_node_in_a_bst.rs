@@ -78,40 +78,30 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[5,3,6,2,4,null,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,3,6,2,4,null,7]");
         let key = 3;
         let result = Solution::delete_node(root, key);
-        let result_data = codec.serialize(result);
-        assert_eq!(result_data, "[5,4,6,2,null,null,7]");
+        assert_tree!(result, "[5,4,6,2,null,null,7]");
     }
 
     #[test]
     fn example_2() {
-        let data = "[5,3,6,2,4,null,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,3,6,2,4,null,7]");
         let key = 0;
         let result = Solution::delete_node(root, key);
-        let result_data = codec.serialize(result);
-        assert_eq!(result_data, "[5,3,6,2,4,null,7]");
+        assert_tree!(result, "[5,3,6,2,4,null,7]");
     }
 
     #[test]
     fn example_3() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let key = 0;
         let result = Solution::delete_node(root, key);
-        let result_data = codec.serialize(result);
-        assert_eq!(result_data, "[]");
+        assert_tree!(result, "[]");
     }
 
 }

@@ -20,34 +20,26 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
-    use crate::tree_node::TreeNode;
-    use crate::tree_node_additions::TreeNodeAdditions;
-    use std::cell::RefCell;
-    use std::rc::Rc;
 
     #[test]
     fn example_1() {
-        let data = "[3,9,20,null,null,15,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,9,20,null,null,15,7]");
         let result = Solution::min_depth(root);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_2() {
-        let data = "[2,null,3,null,4,null,5,null,6]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[2,null,3,null,4,null,5,null,6]");
         let result = Solution::min_depth(root);
         assert_eq!(result, 5);
     }
 
     #[test]
     fn root_only() {
-        let root = TreeNodeAdditions::new(10);
+        let root = tree!("[10]");
         let result = Solution::min_depth(root);
         assert_eq!(result, 1);
     }
+
 }

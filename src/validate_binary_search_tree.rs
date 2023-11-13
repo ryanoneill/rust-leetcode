@@ -41,28 +41,25 @@ impl Solution {
         let mut previous = None;
         Self::worker(&root, &mut previous)
     }
+
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[2,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[2,1,3]");
         let result = Solution::is_valid_bst(root);
-        assert_eq!(result, true);
+        assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let data = "[5,1,4,null,null,3,6]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,1,4,null,null,3,6]");
         let result = Solution::is_valid_bst(root);
-        assert_eq!(result, false);
+        assert!(!result);
     }
+
 }
