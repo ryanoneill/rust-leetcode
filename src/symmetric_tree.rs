@@ -54,18 +54,14 @@ mod tests {
 
     #[test]
     fn example_1() {
-        let data = str!("[1,2,2,3,4,4,3]");
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,2,3,4,4,3]");
         let result = Solution::is_symmetric(root);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let data = str!("[1,2,2,null,3,null,3]");
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,2,null,3,null,3]");
         let result = Solution::is_symmetric(root);
         assert!(!result);
     }
