@@ -49,7 +49,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]

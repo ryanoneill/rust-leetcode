@@ -1,8 +1,6 @@
 #![allow(dead_code)]
 #![allow(unused_imports)]
 
-use serialize_and_deserialize_binary_tree::Codec;
-
 #[macro_export]
 macro_rules! str {
     ($s:expr) => (String::from($s));
@@ -10,7 +8,13 @@ macro_rules! str {
 
 #[macro_export]
 macro_rules! tree {
-    ($s:expr) => ((Codec::new()).deserialize(String::from($s)));
+    ($s:expr) => {
+        {
+            let codec = crate::serialize_and_deserialize_binary_tree::Codec::new();
+            let data = String::from($s);
+            codec.deserialize(data)
+        }
+    };
 }
 
 pub mod list_node;
