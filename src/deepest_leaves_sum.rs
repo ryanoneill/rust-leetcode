@@ -49,23 +49,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[1,2,3,4,5,null,6,7,null,null,null,null,8]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3,4,5,null,6,7,null,null,null,null,8]");
         let result = Solution::deepest_leaves_sum(root);
         assert_eq!(result, 15);
     }
 
     #[test]
     fn example_2() {
-        let data = "[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]");
         let result = Solution::deepest_leaves_sum(root);
         assert_eq!(result, 19);
     }
+
 }

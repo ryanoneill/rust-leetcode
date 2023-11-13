@@ -57,31 +57,22 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let root1_data = str!("[1,3,2,5]");
-        let root2_data = str!("[2,1,3,null,4,null,7]");
-        let codec = Codec::new();
-        let root1 = codec.deserialize(root1_data);
-        let root2 = codec.deserialize(root2_data);
+        let root1 = tree!("[1,3,2,5]");
+        let root2 = tree!("[2,1,3,null,4,null,7]");
         let result = Solution::merge_trees(root1, root2);
-        let items = codec.serialize(result);
-        assert_eq!(items, "[3,4,5,5,4,null,7]");
+        assert_tree!(result, "[3,4,5,5,4,null,7]");
     }
 
     #[test]
     fn example_2() {
-        let root1_data = str!("[1]");
-        let root2_data = str!("[1,2]");
-        let codec = Codec::new();
-        let root1 = codec.deserialize(root1_data);
-        let root2 = codec.deserialize(root2_data);
+        let root1 = tree!("[1]");
+        let root2 = tree!("[1,2]");
         let result = Solution::merge_trees(root1, root2);
-        let items = codec.serialize(result);
-        assert_eq!(items, "[2,2]");
+        assert_tree!(result, "[2,2]");
     }
 
 }
