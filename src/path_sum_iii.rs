@@ -50,41 +50,32 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[10,5,-3,3,2,null,11,3,-2,null,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[10,5,-3,3,2,null,11,3,-2,null,1]");
         let result = Solution::path_sum(root, 8);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_2() {
-        let data = "[5,4,8,11,null,13,4,7,2,null,null,5,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[5,4,8,11,null,13,4,7,2,null,null,5,1]");
         let result = Solution::path_sum(root, 22);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn empty() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let result = Solution::path_sum(root, 0);
         assert_eq!(result, 0);
     }
 
     #[test]
     fn large_numbers() {
-        let data = "[1000000000,1000000000,null,294967296,null,1000000000,null,1000000000,null,1000000000]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1000000000,1000000000,null,294967296,null,1000000000,null,1000000000,null,1000000000]");
         let result = Solution::path_sum(root, 0);
         assert_eq!(result, 0);
     }

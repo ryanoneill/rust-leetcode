@@ -61,14 +61,11 @@ impl BSTIterator {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::BSTIterator;
 
     #[test]
     fn example_1() {
-        let data = "[7,3,15,null,null,9,20]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[7,3,15,null,null,9,20]");
         let mut bst_iterator = BSTIterator::new(root);
         let result = bst_iterator.next();
         assert_eq!(result, 3);

@@ -39,22 +39,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[4,2,6,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,6,1,3]");
         let result = Solution::min_diff_in_bst(root);
         assert_eq!(result, 1);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,0,48,null,null,12,49]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,0,48,null,null,12,49]");
         let result = Solution::min_diff_in_bst(root);
         assert_eq!(result, 1);
     }
