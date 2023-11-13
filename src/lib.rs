@@ -408,6 +408,8 @@ pub mod subtree_of_another_tree; // 572 ✓
 
 pub mod can_place_flowers; // 605 ✓
 
+pub mod merge_two_binary_trees; // 617 ✓
+
 pub mod task_scheduler; // 621 ✓
 
 pub mod maximum_distance_in_arrays; // 624 ✓
