@@ -37,7 +37,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
@@ -45,9 +44,7 @@ mod tests {
         let preorder = vec![3,9,20,15,7];
         let inorder = vec![9,3,15,20,7];
         let result = Solution::build_tree(preorder, inorder);
-        let codec = Codec::new();
-        let data = codec.serialize(result);
-        assert_eq!(data, "[3,9,20,null,null,15,7]");
+        assert_tree!(result, "[3,9,20,null,null,15,7]");
     }
 
     #[test]
@@ -55,9 +52,7 @@ mod tests {
         let preorder = vec![-1];
         let inorder = vec![-1];
         let result = Solution::build_tree(preorder, inorder);
-        let codec = Codec::new();
-        let data = codec.serialize(result);
-        assert_eq!(data, "[-1]");
+        assert_tree!(result, "[-1]");
     }
 
 }

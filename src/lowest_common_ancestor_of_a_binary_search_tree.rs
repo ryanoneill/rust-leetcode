@@ -77,15 +77,12 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node_additions::TreeNodeAdditions;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[6,2,8,0,4,7,9,null,null,3,5]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[6,2,8,0,4,7,9,null,null,3,5]");
         let p = root.clone_left();
         let q = root.clone_right();
         let result = Solution::lowest_common_ancestor(root, p, q);
@@ -94,9 +91,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let data = "[2,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[2,1]");
         let p = root.clone();
         let q = root.clone_left();
         let result = Solution::lowest_common_ancestor(root, p, q);

@@ -36,22 +36,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[10,5,15,3,7,null,18]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[10,5,15,3,7,null,18]");
         let result = Solution::range_sum_bst(root, 7, 15);
         assert_eq!(result, 32);
     }
 
     #[test]
     fn example_2() {
-        let data = "[10,5,15,3,7,13,18,1,null,6]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[10,5,15,3,7,13,18,1,null,6]");
         let result = Solution::range_sum_bst(root, 6, 10);
         assert_eq!(result, 23);
     }

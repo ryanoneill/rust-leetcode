@@ -56,32 +56,25 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[1,7,0,7,-8,null,null]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,7,0,7,-8,null,null]");
         let result = Solution::max_level_sum(root);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn example_2() {
-        let data = "[989,null,10250,98693,-89388,null,null,null,-32127]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[989,null,10250,98693,-89388,null,null,null,-32127]");
         let result = Solution::max_level_sum(root);
         assert_eq!(result, 2);
     }
 
     #[test]
     fn negative_sums() {
-        let data = "[-100,-200,-300,-20,-5,-10,null]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[-100,-200,-300,-20,-5,-10,null]");
         let result = Solution::max_level_sum(root);
         assert_eq!(result, 3);
     }

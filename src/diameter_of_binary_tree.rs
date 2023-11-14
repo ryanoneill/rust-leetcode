@@ -1,8 +1,6 @@
-use crate::diameter_of_binary_tree;
 use crate::tree_node::TreeNode;
 use crate::tree_node_additions::TreeNodeAdditions;
 use std::cell::RefCell;
-use std::cmp::max;
 use std::rc::Rc;
 
 /// Given the `root` of a binary tree, return the length of the diameter of the
@@ -16,7 +14,8 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-    fn diameter_of_binary_tree_ref(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
+
+    fn worker(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match root {
             Some(rc) => {
                 let node = rc.borrow();
@@ -25,40 +24,37 @@ impl Solution {
                 let right_depth = node.right.max_depth() as i32;
                 let edges_between = left_depth + right_depth;
 
-                let left_diameter = Self::diameter_of_binary_tree_ref(&node.left);
-                let right_diameter = Self::diameter_of_binary_tree_ref(&node.right);
+                let left_diameter = Self::worker(&node.left);
+                let right_diameter = Self::worker(&node.right);
 
-                max(edges_between, max(left_diameter, right_diameter))
+                edges_between.max(left_diameter).max(right_diameter)
             }
             None => 0,
         }
     }
 
     pub fn diameter_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        Self::diameter_of_binary_tree_ref(&root)
+        Self::worker(&root)
     }
+
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[1,2,3,4,5]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3,4,5]");
         let result = Solution::diameter_of_binary_tree(root);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2]");
         let result = Solution::diameter_of_binary_tree(root);
         assert_eq!(result, 1);
     }
+
 }

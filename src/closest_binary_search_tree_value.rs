@@ -54,31 +54,24 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[4,2,5,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,5,1,3]");
         let result = Solution::closest_value(root, 3.714286);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let result = Solution::closest_value(root, 4.428571);
         assert_eq!(result, 1);
     }
 
     #[test]
     fn equidistant() {
-        let data = "[4,2,5,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,5,1,3]");
         let result = Solution::closest_value(root, 3.5);
         assert_eq!(result, 3);
     }

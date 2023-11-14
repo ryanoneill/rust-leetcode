@@ -46,23 +46,18 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[3,9,20,null,null,15,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,9,20,null,null,15,7]");
         let result = Solution::average_of_levels(root);
         assert_eq!(result, vec![3.00000,14.50000,11.00000]);
     }
 
     #[test]
     fn example_2() {
-        let data = "[3,9,20,15,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,9,20,15,7]");
         let result = Solution::average_of_levels(root);
         assert_eq!(result, vec![3.00000,14.50000,11.00000]);
     }

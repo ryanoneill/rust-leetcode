@@ -9,6 +9,7 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
+
     pub fn largest_values(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         if root.is_none() {
             vec![]
@@ -47,28 +48,25 @@ impl Solution {
             result
         }
     }
+
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[1,3,2,5,3,null,9]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,3,2,5,3,null,9]");
         let result = Solution::largest_values(root);
         assert_eq!(result, vec![1, 3, 9]);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,2,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3]");
         let result = Solution::largest_values(root);
         assert_eq!(result, vec![1, 3]);
     }
+
 }

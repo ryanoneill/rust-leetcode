@@ -36,25 +36,20 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[3,1,4,null,2]".to_string();
+        let root = tree!("[3,1,4,null,2]");
         let k = 1;
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
         let result = Solution::kth_smallest(root, k);
         assert_eq!(result, 1);
     }
 
     #[test]
     fn example_2() {
-        let data = "[5,3,6,2,4,null,null,1]".to_string();
+        let root = tree!("[5,3,6,2,4,null,null,1]");
         let k = 3;
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
         let result = Solution::kth_smallest(root, k);
         assert_eq!(result, 3);
     }

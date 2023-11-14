@@ -61,27 +61,20 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let root_items = "[3,4,5,1,2]".to_string();
-        let sub_root_items = "[4,1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(root_items);
-        let sub_root = codec.deserialize(sub_root_items);
+        let root = tree!("[3,4,5,1,2]");
+        let sub_root = tree!("[4,1,2]");
         let result = Solution::is_subtree(root, sub_root);
         assert!(result);
     }
 
     #[test]
     fn example_2() {
-        let root_items = "[3,4,5,1,2,null,null,null,null,0]".to_string();
-        let sub_root_items = "[4,1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(root_items);
-        let sub_root = codec.deserialize(sub_root_items);
+        let root = tree!("[3,4,5,1,2,null,null,null,null,0]");
+        let sub_root = tree!("[4,1,2]");
         let result = Solution::is_subtree(root, sub_root);
         assert!(!result);
     }

@@ -75,41 +75,32 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]");
         let result = Solution::longest_zig_zag(root);
         assert_eq!(result, 3);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,1,1,null,1,null,null,1,1,null,1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,1,1,null,1,null,null,1,1,null,1]");
         let result = Solution::longest_zig_zag(root);
         assert_eq!(result, 4);
     }
 
     #[test]
     fn example_3() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let result = Solution::longest_zig_zag(root);
         assert_eq!(result, 0);
     }
 
     #[test]
     fn real_world_1() {
-        let data = "[1,null,2,3,4,null,null,null,5]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,null,2,3,4,null,null,null,5]");
         let result = Solution::longest_zig_zag(root);
         assert_eq!(result, 2);
     }

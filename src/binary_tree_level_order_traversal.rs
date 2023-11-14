@@ -40,32 +40,25 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[3,9,20,null,null,15,7]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,9,20,null,null,15,7]");
         let result = Solution::level_order(root);
         assert_eq!(result, vec![vec![3], vec![9,20], vec![15,7]]);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let result = Solution::level_order(root);
         assert_eq!(result, vec![vec![1]]);
     }
 
     #[test]
     fn example_3() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let result = Solution::level_order(root);
         let expected: Vec<Vec<i32>> = vec![];
         assert_eq!(result, expected);

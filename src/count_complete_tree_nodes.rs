@@ -59,36 +59,30 @@ impl Solution {
             }
         }
     }
+
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[1,2,3,4,5,6]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3,4,5,6]");
         let result = Solution::count_nodes(root);
         assert_eq!(result, 6);
     }
 
     #[test]
     fn example_2() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let result = Solution::count_nodes(root);
         assert_eq!(result, 0);
     }
 
     #[test]
     fn example_3() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let result = Solution::count_nodes(root);
         assert_eq!(result, 1);
     }

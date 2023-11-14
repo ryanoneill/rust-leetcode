@@ -94,37 +94,27 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[3,5,1,6,2,0,8,null,null,7,4]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,5,1,6,2,0,8,null,null,7,4]");
         let result = Solution::subtree_with_all_deepest(root);
-        let items = codec.serialize(result);
-        assert_eq!(items, "[2,7,4]");
+        assert_tree!(result, "[2,7,4]");
     }
 
     #[test]
     fn example_2() {
-        let data = "[1]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1]");
         let result = Solution::subtree_with_all_deepest(root);
-        let items = codec.serialize(result);
-        assert_eq!(items, "[1]");
+        assert_tree!(result, "[1]");
     }
 
     #[test]
     fn example_3() {
-        let data = "[0,1,3,null,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[0,1,3,null,2]");
         let result = Solution::subtree_with_all_deepest(root);
-        let items = codec.serialize(result);
-        assert_eq!(items, "[2]");
+        assert_tree!(result, "[2]");
     }
 
 }

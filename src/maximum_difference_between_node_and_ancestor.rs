@@ -13,6 +13,7 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
+
     fn max_ancestor_diff_high_low(
         root: Option<Rc<RefCell<TreeNode>>>,
         highest: i32,
@@ -44,27 +45,23 @@ impl Solution {
             Self::max_ancestor_diff_high_low(root, i32::min_value(), i32::max_value())
         }
     }
+
 }
 
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[8,3,10,1,6,null,14,null,null,4,7,13]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[8,3,10,1,6,null,14,null,null,4,7,13]");
         let result = Solution::max_ancestor_diff(root);
         assert_eq!(result, 7);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,null,2,null,0,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,null,2,null,0,3]");
         let result = Solution::max_ancestor_diff(root);
         assert_eq!(result, 3);
     }

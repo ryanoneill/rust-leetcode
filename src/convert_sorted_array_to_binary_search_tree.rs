@@ -35,23 +35,20 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
         let nums = vec![-10, -3, 0, 5, 9];
         let result = Solution::sorted_array_to_bst(nums);
-        let codec = Codec::new();
-        assert_eq!(codec.serialize(result), "[0,-10,5,null,-3,null,9]");
+        assert_tree!(result, "[0,-10,5,null,-3,null,9]");
     }
 
     #[test]
     fn example_2() {
         let nums = vec![1,3];
         let result = Solution::sorted_array_to_bst(nums);
-        let codec = Codec::new();
-        assert_eq!(codec.serialize(result), "[1,null,3]");
+        assert_tree!(result, "[1,null,3]");
     }
 
 }
