@@ -1,4 +1,3 @@
-use std::cmp::max;
 use std::collections::HashMap;
 
 /// Given an integer array `nums`, return the length of the longest strictly
@@ -11,7 +10,7 @@ impl Solution {
         let mut result = 0;
 
         for i in 0..nums.len() {
-            result = max(result, Self::worker(i, &nums, &mut lengths));
+            result = result.max(Self::worker(i, &nums, &mut lengths));
         }
 
         result
@@ -24,7 +23,7 @@ impl Solution {
             let mut result = 1;
             for j in 0..i {
                 if nums[i] > nums[j] {
-                    result = max(result, Self::worker(j, nums, lengths) + 1);
+                    result = result.max(Self::worker(j, nums, lengths) + 1);
                 }
             }
             lengths.insert(i, result);

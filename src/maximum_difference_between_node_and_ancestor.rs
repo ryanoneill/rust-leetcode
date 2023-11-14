@@ -1,7 +1,5 @@
 use crate::tree_node::TreeNode;
 use std::cell::RefCell;
-use std::cmp::max;
-use std::cmp::min;
 use std::rc::Rc;
 
 /// Given the `root` of a binary tree, find the maximum value `v` for which
@@ -23,8 +21,8 @@ impl Solution {
             Some(rc) => {
                 let node = rc.borrow();
                 let value = node.val;
-                let new_highest = max(value, highest);
-                let new_lowest = min(value, lowest);
+                let new_highest = value.max(highest);
+                let new_lowest = value.min(lowest);
                 let diff = new_highest - new_lowest;
 
                 let left =
@@ -32,7 +30,7 @@ impl Solution {
                 let right =
                     Self::max_ancestor_diff_high_low(node.right.clone(), new_highest, new_lowest);
 
-                max(max(diff, left), right)
+                diff.max(left).max(right)
             }
             None => 0,
         }

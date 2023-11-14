@@ -1,7 +1,6 @@
 use crate::tree_node::TreeNode;
 use crate::tree_node_additions::TreeNodeAdditions;
 use std::cell::RefCell;
-use std::cmp::max;
 use std::rc::Rc;
 
 /// Given the `root` of a binary tree, return its maximum depth.

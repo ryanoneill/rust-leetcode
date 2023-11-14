@@ -1,5 +1,3 @@
-use std::cmp::max;
-
 /// You are given an integer array `height` of length `n`. There are `n`
 /// vertical lines drawn such that the two endpoints of the `ith` line are
 /// `(i, 0)` and `(i, height[i])`.
@@ -26,11 +24,11 @@ impl Solution {
             let width = (right - left) as i32;
             if left_height < right_height {
                 let area = width * left_height;
-                max_area = max(max_area, area);
+                max_area = max_area.max(area);
                 left += 1;
             } else {
                 let area = width * right_height;
-                max_area = max(max_area, area);
+                max_area = max_area.max(area);
                 right -= 1;
             }
         }

@@ -1,4 +1,3 @@
-use std::cmp::max;
 use std::collections::HashMap;
 
 /// Given two strings `text1` and `text2`, return the length of their longest
@@ -15,6 +14,7 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
+
     pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
         let mut maxes = HashMap::new();
         let chars1 = text1.chars().collect();
@@ -44,12 +44,13 @@ impl Solution {
             } else {
                 let plus_i = Self::worker(maxes, chars1, chars2, i + 1, j);
                 let plus_j = Self::worker(maxes, chars1, chars2, i, j + 1);
-                result = max(plus_i, plus_j);
+                result = plus_i.max(plus_j);
             }
             maxes.insert((i, j), result);
             result
         }
     }
+
 }
 
 #[cfg(test)]
@@ -79,4 +80,5 @@ mod tests {
         let result = Solution::longest_common_subsequence(text1, text2);
         assert_eq!(result, 0);
     }
+
 }

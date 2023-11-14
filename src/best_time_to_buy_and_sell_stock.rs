@@ -1,6 +1,3 @@
-use std::cmp::max;
-use std::cmp::min;
-
 /// You are given an array `prices` where `prices[i]` is the price of a given
 /// stock on the `ith` day.
 ///
@@ -18,8 +15,8 @@ impl Solution {
         let mut buy = prices[0];
 
         for i in 1..n {
-            profit = max(profit, prices[i] - buy);
-            buy = min(buy, prices[i]);
+            profit = profit.max(prices[i] - buy);
+            buy = buy.min(prices[i]);
         }
 
         profit

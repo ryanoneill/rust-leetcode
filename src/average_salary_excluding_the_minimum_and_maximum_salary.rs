@@ -1,6 +1,3 @@
-use std::cmp::max;
-use std::cmp::min;
-
 /// You are given an array of unique integers `salary` where `salary[i]` is the
 /// salary of the `ith` employee.
 ///
@@ -16,8 +13,8 @@ impl Solution {
         let mut sum = 0;
 
         for s in salary {
-            min_salary = min(min_salary, s);
-            max_salary = max(max_salary, s);
+            min_salary = min_salary.min(s);
+            max_salary = max_salary.max(s);
             sum += s;
         }
 

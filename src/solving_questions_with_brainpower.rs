@@ -1,5 +1,3 @@
-use std::cmp::max;
-use std::cmp::min;
 use std::collections::HashMap;
 
 /// You are given a 0-indexed 2D integer array `questions` where
@@ -23,6 +21,7 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
+
     pub fn most_points(questions: Vec<Vec<i32>>) -> i64 {
         let mut points = HashMap::new();
         Self::worker(&questions, &mut points)
@@ -40,11 +39,11 @@ impl Solution {
                     let question = &questions[0];
                     let value = question[0] as i64;
                     let power = question[1] as usize;
-                    let next = min(n, power + 1);
+                    let next = n.min(power + 1);
                     let with_question = value + Self::worker(&questions[next..], points);
 
                     let without_question = Self::worker(&questions[1..], points);
-                    let result = max(with_question, without_question);
+                    let result = with_question.max(without_question);
                     points.insert(n, result);
 
                     result
@@ -52,6 +51,7 @@ impl Solution {
             }
         }
     }
+
 }
 
 #[cfg(test)]

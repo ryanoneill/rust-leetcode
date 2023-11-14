@@ -1,6 +1,5 @@
 use crate::tree_node::TreeNode;
 use std::cell::RefCell;
-use std::cmp::max;
 use std::collections::VecDeque;
 use std::rc::Rc;
 
@@ -29,7 +28,7 @@ impl Solution {
                         Some(rc) => {
                             let node = rc.borrow();
                             let value = node.val;
-                            largest = max(value, largest);
+                            largest = value.max(largest);
                             if node.left.is_some() {
                                 queue.push_back(node.left.clone());
                             }

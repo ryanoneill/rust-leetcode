@@ -1,8 +1,6 @@
 use crate::tree_node::TreeNode;
 use std::cell::Ref;
 use std::cell::RefCell;
-use std::cmp::max;
-use std::cmp::min;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::collections::VecDeque;
@@ -199,7 +197,7 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
                 let left = node.left.max_depth();
                 let right = node.right.max_depth();
 
-                1 + max(left, right)
+                1 + left.max(right)
             }
         }
     }
@@ -213,7 +211,7 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
             let rc = self.as_ref().unwrap();
             let node = rc.borrow();
             if node.left.is_some() && node.right.is_some() {
-                1 + min(node.left.min_depth(), node.right.min_depth())
+                1 + node.left.min_depth().min(node.right.min_depth())
             } else if node.left.is_some() {
                 1 + node.left.min_depth()
             } else {

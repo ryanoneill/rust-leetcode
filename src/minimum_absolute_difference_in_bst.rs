@@ -1,6 +1,5 @@
 use crate::tree_node::TreeNode;
 use std::cell::RefCell;
-use std::cmp::min;
 use std::rc::Rc;
 
 /// Given the `root` of a Binary Search Tree (BST), return the minimum absolute
@@ -15,14 +14,14 @@ impl Solution {
                 let mut result = i32::max_value();
 
                 if node.left.is_some() {
-                    result = min(result, Self::worker(&node.left, previous));
+                    result = result.min(Self::worker(&node.left, previous));
                 }
                 previous.map(|p| {
-                    result = min(result, node.val - p);
+                    result = result.min(node.val - p);
                 });
                 *previous = Some(node.val);
                 if node.right.is_some() {
-                    result = min(result, Self::worker(&node.right, previous));
+                    result = result.min(Self::worker(&node.right, previous));
                 }
 
                 result
