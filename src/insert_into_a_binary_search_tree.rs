@@ -46,16 +46,12 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use crate::tree_node_additions::TreeNodeAdditions;
     use super::Solution;
-    use crate::{
-        serialize_and_deserialize_binary_tree::Codec, tree_node_additions::TreeNodeAdditions,
-    };
 
     #[test]
     fn example_1() {
-        let data = "[4,2,7,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,7,1,3]");
         let result = Solution::insert_into_bst(root, 5);
         let values = result.in_order();
         assert_eq!(values, vec![1, 2, 3, 4, 5, 7]);
@@ -63,9 +59,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let data = "[40,20,60,10,30,50,70]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[40,20,60,10,30,50,70]");
         let result = Solution::insert_into_bst(root, 25);
         let values = result.in_order();
         assert_eq!(values, vec![10, 20, 25, 30, 40, 50, 60, 70]);
@@ -73,9 +67,7 @@ mod tests {
 
     #[test]
     fn example_3() {
-        let data = "[4,2,7,1,3,null,null,null,null,null,null]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,7,1,3,null,null,null,null,null,null]");
         let result = Solution::insert_into_bst(root, 5);
         let values = result.in_order();
         assert_eq!(values, vec![1, 2, 3, 4, 5, 7]);

@@ -71,15 +71,12 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use crate::tree_node::TreeNode;
     use crate::tree_node_additions::TreeNodeAdditions;
 
     #[test]
     fn example_1() {
-        let data = "[3,5,1,6,2,0,8,null,null,7,4]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,5,1,6,2,0,8,null,null,7,4]");
         let p = root.clone_left();
         assert_eq!(p.get_value(), Some(5)); // Double check
         let q = root.clone_right();
@@ -90,9 +87,7 @@ mod tests {
 
     #[test]
     fn example_2() {
-        let data = "[3,5,1,6,2,0,8,null,null,7,4]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[3,5,1,6,2,0,8,null,null,7,4]");
         let p = root.clone_left();
         assert_eq!(p.get_value(), Some(5));
         let q = root.clone_left().clone_right().clone_right();
@@ -103,9 +98,7 @@ mod tests {
 
     #[test]
     fn example_3() {
-        let data = "[1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2]");
         let p = root.clone();
         assert_eq!(p.get_value(), Some(1));
         let q = root.clone_left();

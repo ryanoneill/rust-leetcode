@@ -55,41 +55,33 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::serialize_and_deserialize_binary_tree::Codec;
 
     #[test]
     fn example_1() {
-        let data = "[1,2,3,null,5,null,4]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2,3,null,5,null,4]");
         let result = Solution::right_side_view(root);
         assert_eq!(result, vec![1, 3, 4]);
     }
 
     #[test]
     fn example_2() {
-        let data = "[1,null,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,null,3]");
         let result = Solution::right_side_view(root);
         assert_eq!(result, vec![1, 3]);
     }
 
     #[test]
     fn example_3() {
-        let data = "[]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[]");
         let result = Solution::right_side_view(root);
         assert_eq!(result, vec![]);
     }
 
     #[test]
     fn example_4() {
-        let data = "[1,2]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[1,2]");
         let result = Solution::right_side_view(root);
         assert_eq!(result, vec![1, 2]);
     }
+
 }

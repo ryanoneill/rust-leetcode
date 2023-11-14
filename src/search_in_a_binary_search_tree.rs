@@ -41,29 +41,22 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::serialize_and_deserialize_binary_tree::Codec;
     use super::Solution;
 
     #[test]
     fn example_1() {
-        let data = "[4,2,7,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,7,1,3]");
         let val = 2;
         let result = Solution::search_bst(root, val);
-        let result_data = codec.serialize(result);
-        assert_eq!(result_data, "[2,1,3]");
+        assert_tree!(result, "[2,1,3]");
     }
 
     #[test]
     fn example_2() {
-        let data = "[4,2,7,1,3]".to_string();
-        let codec = Codec::new();
-        let root = codec.deserialize(data);
+        let root = tree!("[4,2,7,1,3]");
         let val = 5;
         let result = Solution::search_bst(root, val);
-        let result_data = codec.serialize(result);
-        assert_eq!(result_data, "[]");
+        assert_tree!(result, "[]");
     }
 
 }
