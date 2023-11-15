@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 /// Given an array `nums` of size `n`, return the majority element.
 ///
 /// The majority element is the element that appears more than `⌊n / 2⌋` times.
@@ -7,20 +5,28 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
+
+    // Implementation changed to use Boyer-Moore
+    // O(N) time
+    // O(1) space
     pub fn majority_element(nums: Vec<i32>) -> i32 {
-        let mut counts = HashMap::new();
+        let mut majority: i32 = i32::MIN;
+        let mut counter: i32 = 0;
+
         for num in nums {
-            counts
-                .entry(num)
-                .and_modify(|count| *count += 1)
-                .or_insert(1);
+            if counter == 0 {
+                majority = num;
+                counter = 1;
+            } else if num == majority {
+                counter += 1;
+            } else {
+                counter -= 1;
+            }
         }
-        counts
-            .into_iter()
-            .max_by_key(|item| item.1)
-            .map(|item| item.0)
-            .unwrap_or_default()
+
+        majority
     }
+
 }
 
 #[cfg(test)]
