@@ -240,7 +240,7 @@ pub mod implement_stack_using_queues; // 225 ✓
 pub mod invert_binary_tree; // 226 ✓
 
 pub mod summary_ranges; // 228 ✓
-
+pub mod majority_element_ii; // 229 ✓
 pub mod kth_smallest_element_in_a_bst; // 230 ✓
 pub mod power_of_two; // 231 ✓
 
