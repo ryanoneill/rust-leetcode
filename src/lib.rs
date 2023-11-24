@@ -322,6 +322,7 @@ pub mod increasing_triplet_subsequence; // 334 ✓
 pub mod counting_bits; // 338 ✓
 
 pub mod longest_substring_with_at_most_k_distinct_characters; // 340 ✓
+pub mod flatten_nested_list_iterator; // 341 ✓
 
 pub mod reverse_string; // 344
 
