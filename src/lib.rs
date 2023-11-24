@@ -395,6 +395,8 @@ pub mod target_sum; // 494 ✓
 
 pub mod next_greater_element_i; // 496
 
+pub mod diagonal_traverse; // 498 ✓
+
 pub mod next_greater_element_ii; // 503 ✓
 
 pub mod fibonacci_number; // 509
