@@ -159,7 +159,7 @@
 - [x] [Coin Change II](https://leetcode.com/problems/coin-change-ii/) - [Solution](src/coin_change_ii.rs)
 - [x] [Target Sum](https://leetcode.com/problems/target-sum/) - [Solution](src/target_sum.rs)
 - [x] [Interleaving String](https://leetcode.com/problems/interleaving-string/) - [Solution](src/interleaving_string.rs)
-- [ ] [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+- [x] [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) - [Solution](src/longest_increasing_path_in_a_matrix.rs)
 - [ ] [Direct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
 - [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
 - [ ] [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
