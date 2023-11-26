@@ -187,6 +187,7 @@ pub mod min_stack; // 155
 
 pub mod read_n_characters_given_read4; // 157 ✓
 
+pub mod longest_substring_with_at_most_two_distinct_characters; // 159 ✓
 // pub mod intersection_of_two_lists; // 160 - This problem is unavailable in Rust
 pub mod one_edit_distance; // 161 ✓
 
