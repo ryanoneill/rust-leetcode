@@ -476,6 +476,7 @@ pub mod accounts_merge; // 721 ✓
 
 pub mod find_pivot_index; // 724 ✓
 
+pub mod sentence_similarity; // 734 ✓
 pub mod asteroid_collision; // 735 ✓
 
 pub mod daily_temperatures; // 739
