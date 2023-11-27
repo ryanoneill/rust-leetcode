@@ -590,6 +590,8 @@ pub mod check_if_a_number_is_majority_element; // 1150 ✓
 
 pub mod maximum_level_sum_of_a_binary_tree; // 1161 ✓
 
+pub mod single_row_keyboard; // 1165 ✓
+
 pub mod minimum_cost_to_connect_sticks; // 1167
 
 pub mod maximum_number_of_balloons; // 1189 ✓
