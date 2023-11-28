@@ -600,6 +600,8 @@ pub mod maximum_number_of_balloons; // 1189 ✓
 
 pub mod how_many_apples_can_you_put_into_the_basket; // 1196 ✓
 
+pub mod find_smallest_common_element_in_all_rows; // 1198 ✓
+
 pub mod minimum_absolute_difference; // 1200 ✓
 
 pub mod smallest_string_with_swaps; // 1202
