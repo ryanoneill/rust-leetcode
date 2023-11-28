@@ -365,6 +365,8 @@ pub mod fizz_buzz; // 412
 pub mod add_strings; // 415 ✓
 pub mod partition_equal_subset_sum; // 416 ✓
 
+pub mod valid_word_square; // 422 ✓
+
 pub mod longest_repeating_character_replacement; // 424 ✓
 
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
