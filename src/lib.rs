@@ -413,6 +413,8 @@ pub mod longest_palindromic_subsequence; // 516 ✓
 
 pub mod coin_change_ii; // 518 ✓
 
+pub mod contiguous_array; // 525 ✓
+
 pub mod minimum_absolute_difference_in_bst; // 530
 pub mod lonely_pixel_i; // 531 ✓
 
