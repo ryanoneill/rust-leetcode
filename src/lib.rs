@@ -102,6 +102,7 @@ pub mod length_of_last_word; // 58
 
 pub mod unique_paths; // 62 ✓
 pub mod unique_paths_ii; // 63
+pub mod minimum_path_sum; // 64 ✓
 
 pub mod plus_one; // 66
 pub mod add_binary; // 67 ✓
@@ -534,6 +535,8 @@ pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
 pub mod unique_email_addresses; // 929 ✓
+
+pub mod minimum_falling_path_sum; // 931 ✓
 
 pub mod number_of_recent_calls; // 933 ✓
 
