@@ -581,6 +581,8 @@ pub mod greatest_common_divisor_of_strings; // 1071 ✓
 
 pub mod shortest_path_in_binary_matrix; // 1091
 
+pub mod car_pooling; // 1094 ✓
+
 pub mod find_k_length_substrings_with_no_repeated_characters; // 1100 ✓
 pub mod the_earliest_moment_when_everyone_becomes_friends; // 1101
 
