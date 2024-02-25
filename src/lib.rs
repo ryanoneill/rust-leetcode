@@ -353,6 +353,8 @@ pub mod shuffle_an_array; // 384 ✓
 
 pub mod first_unique_character_in_a_string; // 387 ✓
 
+pub mod find_the_difference; // 389
+
 pub mod is_subsequence; // 392
 
 pub mod decode_string; // 394 ✓
