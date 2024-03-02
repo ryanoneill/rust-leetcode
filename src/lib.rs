@@ -124,6 +124,8 @@ pub mod remove_duplicates_from_sorted_list_ii; // 82 ✓
 pub mod remove_duplicates_from_sorted_list; // 83
 pub mod largest_rectangle_in_histogram; // 84 ✓
 
+pub mod partition_list; // 86 ✓
+
 pub mod merge_sorted_array; // 88
 
 pub mod subsets_ii; // 90 ✓
