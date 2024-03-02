@@ -293,6 +293,7 @@ pub mod move_zeroes; // 283
 
 pub mod find_the_duplicate_number; // 287 ✓
 
+pub mod game_of_life; // 289
 pub mod word_pattern; // 290 ✓
 
 pub mod nim_game; // 292 ✓
