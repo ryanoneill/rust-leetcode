@@ -598,6 +598,7 @@ pub mod lowest_common_ancestor_of_deepest_leaves; // 1123 ✓
 pub mod shortest_path_with_alternating_colors; // 1129
 
 pub mod largest_unique_number; // 1133 ✓
+pub mod armstrong_number; // 1134 ✓
 
 pub mod parallel_courses; // 1136 ✓
 pub mod nth_tribonacci_number; // 1137 ✓
