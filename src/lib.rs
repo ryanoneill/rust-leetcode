@@ -339,6 +339,7 @@ pub mod reverse_vowels_of_a_string; // 345 ✓
 pub mod moving_average_from_data_stream; // 346
 pub mod top_k_frequent_elements; // 347
 
+pub mod intersection_of_two_arrays; // 349 ✓
 pub mod intersection_of_two_arrays_ii; // 350
 
 pub mod valid_perfect_square; // 367 ✓
