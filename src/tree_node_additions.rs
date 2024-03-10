@@ -23,6 +23,7 @@ pub trait TreeNodeAdditions {
     fn find_parents_worker(&self, parents: &mut HashMap<i32, i32>);
 
     fn get_value(&self) -> Option<i32>;
+    fn get_value_or_zero(&self) -> i32;
     fn set_value(&mut self, value: i32);
 
     fn in_order(&self) -> Vec<i32>;
@@ -136,6 +137,10 @@ impl TreeNodeAdditions for Option<Rc<RefCell<TreeNode>>> {
             let node = rc.borrow();
             node.val
         })
+    }
+
+    fn get_value_or_zero(&self) -> i32 {
+        self.get_value().unwrap_or_default()
     }
 
     fn set_value(&mut self, value: i32) {
