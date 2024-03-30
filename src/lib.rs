@@ -371,7 +371,7 @@ pub mod sum_of_left_leaves; // 404 ✓
 pub mod convert_a_number_to_hexadecimal; // 405
 
 pub mod valid_word_abbreviation; // 408 ✓
-
+pub mod longest_palindrome; // 409 ✓
 pub mod split_array_largest_sum; // 410 ✓
 
 pub mod fizz_buzz; // 412
