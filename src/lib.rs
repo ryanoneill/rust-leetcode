@@ -394,7 +394,7 @@ pub mod longest_repeating_character_replacement; // 424 ✓
 // pub mod n_ary_tree_level_order_traversal; // 429 - This problem is unavailable in Rust
 
 pub mod minimum_genetic_mutation; // 433 ✓
-
+pub mod number_of_segments_in_a_string; // 434 ✓
 pub mod non_overlapping_intervals; // 435 ✓
 
 pub mod path_sum_iii; // 437 ✓
