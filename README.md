@@ -228,13 +228,13 @@
 - [x] [Missing Number](https://leetcode.com/problems/missing-number/) - [Solution](src/missing_number.rs)
 - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/) - [Solution](src/reverse_bits.rs)
 
-### Dynamic Programming
+### Dynamic Programming ✓
 
 - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - [Solution](src/climbing_stairs.rs)
 - [x] [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/coin_change.rs)
 - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/longest_increasing_subsequence.rs)
 - [x] [Word Break](https://leetcode.com/problems/word-break/) - [Solution](src/word_break.rs)
-- [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
+- [x] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) - [Solution](src/combination_sum_iv.rs)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
 - [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/house_robber_ii.rs)
 - [x] [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](src/decode_ways.rs)

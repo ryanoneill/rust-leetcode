@@ -355,6 +355,7 @@ pub mod sum_of_two_integers; // 371 ✓
 
 pub mod guess_number_higher_or_lower; // 374
 
+pub mod combination_sum_iv; // 377 ✓
 pub mod kth_smallest_element_in_a_sorted_matrix; // 378
 
 pub mod insert_delete_getrandom_o1; // 380 ✓
