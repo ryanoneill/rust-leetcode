@@ -294,7 +294,7 @@
 - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](src/maximum_depth_of_binary_tree.rs)
 - [x] [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](src/same_tree.rs)
 - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) - [Solution](src/invert_binary_tree.rs)
-- [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) - [Solution](src/binary_tree_maximum_path_sum.rs)
 - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](src/binary_tree_level_order_traversal.rs)
 - [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/serialize_and_deserialize_binary_tree.rs)
 - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
