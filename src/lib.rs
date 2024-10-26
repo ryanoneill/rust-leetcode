@@ -167,6 +167,7 @@ pub mod word_ladder; // 127 ✓
 pub mod longest_consecutive_sequence; // 128 ✓
 
 pub mod palindrome_partitioning; // 131 ✓
+pub mod palindrome_partitioning_ii; // 132
 
 // pub mod clone_graph; // 133 - This problem is unavailable in Rust
 pub mod gas_station; // 134 ✓
