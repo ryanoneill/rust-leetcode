@@ -28,6 +28,7 @@ macro_rules! assert_tree {
 }
 
 pub mod kth_largest;
+pub mod lowercase_letter_counter;
 pub mod list_node;
 pub mod list_node_additions;
 pub mod quick_find;
