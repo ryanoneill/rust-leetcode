@@ -90,7 +90,7 @@ pub mod multiply_strings; // 43 ✓
 
 pub mod jump_game_ii; // 45 ✓
 pub mod permutations; // 46 ✓
-
+pub mod permutations_ii; // 47 ✓
 pub mod rotate_image; // 48
 pub mod group_anagrams; // 49 ✓
 pub mod pow_x_n; // 50
