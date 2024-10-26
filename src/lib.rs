@@ -81,6 +81,7 @@ pub mod search_in_rotated_sorted_array; // 33 ✓
 pub mod search_insert_position; // 35
 pub mod valid_sudoku; // 36 ✓
 
+pub mod count_and_say; // 38 ✓
 pub mod combination_sum; // 39 ✓
 pub mod combination_sum_ii; // 40 ✓
 pub mod first_missing_positive; // 41 ✓
