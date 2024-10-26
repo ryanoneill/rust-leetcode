@@ -114,7 +114,7 @@
 ### Graphs
 
 - [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/number_of_islands.rs)
-- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
+- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) - *Unavailable in Rust*
 - [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) - [Solution](src/max_area_of_island.rs)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [ ] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
@@ -233,7 +233,7 @@
 - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - [Solution](src/climbing_stairs.rs)
 - [x] [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/coin_change.rs)
 - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/longest_increasing_subsequence.rs)
-- [ ] [Word Break](https://leetcode.com/problems/word-break/)
+- [x] [Word Break](https://leetcode.com/problems/word-break/) - [Solution](src/word_break.rs)
 - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
 - [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/house_robber_ii.rs)
@@ -243,7 +243,7 @@
 
 ### Graph
 
-- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
+- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) - *Unavailable in Rust*
 - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/course_schedule.rs)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/number_of_islands.rs)
@@ -263,18 +263,18 @@
 ### Linked List
 
 - [x] [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/) - [Solution](src/reverse_linked_list.rs)
-- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) - *Unavailable in Rust*
 - [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) - [Solution](src/merge_two_sorted_lists.rs)
 - [x] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](src/merge_k_sorted_lists.rs)
 - [x] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - [Solution](src/remove_nth_node_from_end_of_list.rs)
-- [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
+- [x] [Reorder List](https://leetcode.com/problems/reorder-list/) - [Solution](src/reorder_list.rs)
 
 ### Matrix
 
 - [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) - [Solution](src/set_matrix_zeroes.rs)
 - [ ] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 - [x] [Rotate Image](https://leetcode.com/problems/rotate-image/) - [Solution](src/rotate_image.rs)
-- [ ] [Word Search](https://leetcode.com/problems/word-search/)
+- [x] [Word Search](https://leetcode.com/problems/word-search/) - [Solution](src/word_search.rs)
 
 ### String ✓
 
