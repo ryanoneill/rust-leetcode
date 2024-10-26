@@ -297,7 +297,7 @@
 - [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) - [Solution](src/binary_tree_maximum_path_sum.rs)
 - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](src/binary_tree_level_order_traversal.rs)
 - [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/serialize_and_deserialize_binary_tree.rs)
-- [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+- [x] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) - [Solution](src/subtree_of_another_tree.rs)
 - [x] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) - [Solution](src/construct_binary_tree_from_preorder_and_inorder_traversal.rs)
 - [x] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) - [Solution](src/validate_binary_search_tree.rs)
 - [x] [Kth Smallest Element in BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) - [Solution](src/kth_smallest_element_in_a_bst.rs)
