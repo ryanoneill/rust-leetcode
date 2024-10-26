@@ -99,7 +99,7 @@
 - [ ] [Design Twitter](https://leetcode.com/problems/design-twitter/)
 - [x] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) - [Solution](src/find_median_from_data_stream.rs)
 
-### Backtracking
+### Backtracking ✓
 
 - [x] [Subsets](https://leetcode.com/problems/subsets/) - [Solution](src/subsets.rs)
 - [x] [Combination Sum](https://leetcode.com/problems/combination-sum/) - [Solution](src/combination_sum.rs)
@@ -107,7 +107,7 @@
 - [x] [Subsets II](https://leetcode.com/problems/subsets-ii/) - [Solution](src/subsets_ii.rs)
 - [x] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) - [Solution](src/combination_sum_ii.rs)
 - [x] [Word Search](https://leetcode.com/problems/word-search/) - [Solution](src/word_search.rs)
-- [ ] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+- [x] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) - [Solution](src/palindrome_partitioning.rs)
 - [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - [Solution](src/letter_combinations_of_a_phone_number.rs)
 - [x] [N-Queens](https://leetcode.com/problems/n-queens/) - [Solution](src/n_queens.rs)
 

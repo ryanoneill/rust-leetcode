@@ -166,7 +166,7 @@ pub mod valid_palindrome; // 125
 pub mod word_ladder; // 127 ✓
 pub mod longest_consecutive_sequence; // 128 ✓
 
-pub mod palindrome_partitioning; // 131
+pub mod palindrome_partitioning; // 131 ✓
 
 // pub mod clone_graph; // 133 - This problem is unavailable in Rust
 pub mod gas_station; // 134 ✓
@@ -529,7 +529,7 @@ pub mod similar_string_groups; // 839
 
 pub mod keys_and_rooms; // 841 ✓
 
-pub mod backspace_string_compare; // 844
+pub mod backspace_string_compare; // 844 ✓
 
 pub mod peak_index_in_a_mountain_array; // 852 ✓
 pub mod car_fleet; // 853 ✓
@@ -549,7 +549,7 @@ pub mod snakes_and_ladders; // 909 ✓
 
 pub mod sort_an_array; // 912 ✓
 
-pub mod word_subsets; // 916
+pub mod word_subsets; // 916 ✓
 pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
