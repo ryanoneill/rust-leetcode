@@ -445,7 +445,7 @@ pub mod lonely_pixel_i; // 531 ✓
 pub mod complex_number_multiplication; // 537 ✓
 
 pub mod single_element_in_a_sorted_array; // 540 ✓
-
+pub mod reverse_string_ii; // 541 ✓
 pub mod zero_one_matrix; // 542
 pub mod diameter_of_binary_tree; // 543
 
