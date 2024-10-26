@@ -720,6 +720,8 @@ pub mod dot_product_of_two_sparse_vectors; // 1570 ✓
 
 pub mod min_cost_to_connect_all_points; // 1584
 
+pub mod max_number_of_unique_substrings; // 1593 ✓
+
 pub mod design_parking_system; // 1603 ✓
 pub mod alert_using_same_key_card; // 1604 ✓
 
