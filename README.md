@@ -136,12 +136,12 @@
 - [x] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) - [Solution](src/alien_dictionary.rs)
 - [ ] [Cheapest Flights with K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) 
 
-### 1-D Dynamic Programming
+### 1-D Dynamic Programming ✓
 
 - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - [Solution](src/climbing_stairs.rs)
 - [x] [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) - [Solution](src/min_cost_climbing_stairs.rs)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
-- [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+- [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/house_robber_ii.rs)
 - [x] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/longest_palindromic_substring.rs)
 - [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/palindromic_substrings.rs)
 - [x] [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](src/decode_ways.rs)
@@ -236,7 +236,7 @@
 - [ ] [Word Break](https://leetcode.com/problems/word-break/)
 - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/house_robber.rs)
-- [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+- [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/house_robber_ii.rs)
 - [x] [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](src/decode_ways.rs)
 - [x] [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](src/unique_paths.rs)
 - [x] [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](src/jump_game.rs)
