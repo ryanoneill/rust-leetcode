@@ -1,12 +1,13 @@
 use std::cmp::Reverse;
 use std::collections::BinaryHeap;
 
-pub struct KthLargest {
+pub struct KthLargest<T> {
     k: usize,
-    heap: BinaryHeap<Reverse<i32>>,
+    heap: BinaryHeap<Reverse<T>>,
 }
 
-impl KthLargest {
+impl<T> KthLargest<T> 
+    where T: Ord + Copy + Default {
 
     pub fn new(k: usize) -> Self {
         Self {
@@ -15,16 +16,20 @@ impl KthLargest {
         }
     }
 
-    pub fn peek(&self) -> i32 {
-        let value = self.heap.peek();
-        if value.is_some() {
-            value.unwrap().0
-        } else {
-            0
-        }
+    pub fn full(&self) -> bool {
+        self.k == self.heap.len()
     }
 
-    fn add(&mut self, val: i32) -> i32 {
+    pub fn peek(&self) -> T {
+        let mut result: T = Default::default();
+        let value = self.heap.peek();
+        if value.is_some() {
+            result = value.unwrap().0
+        } 
+        result
+    }
+
+    pub fn add(&mut self, val: T) -> T {
         if self.heap.len() < self.k {
             self.heap.push(Reverse(val));
         } else if val > self.peek() {
@@ -34,7 +39,7 @@ impl KthLargest {
         self.peek()
     }
 
-    fn add_items(&mut self, items: &Vec<i32>) -> i32 {
+    pub fn add_items(&mut self, items: &Vec<T>) -> T {
         let mut result = self.peek();
         for item in items {
             result = self.add(*item);
