@@ -1,7 +1,7 @@
 use std::ops::Index;
 use std::ops::IndexMut;
 
-struct LowercaseLetterCounter {
+pub struct LowercaseLetterCounter {
     counts: Vec<usize>
 }
 

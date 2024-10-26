@@ -547,6 +547,7 @@ pub mod snakes_and_ladders; // 909 ✓
 
 pub mod sort_an_array; // 912 ✓
 
+pub mod word_subsets; // 916
 pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
