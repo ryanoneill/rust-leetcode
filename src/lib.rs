@@ -414,6 +414,8 @@ pub mod repeated_substring_pattern; // 459 ✓
 
 pub mod hamming_distance; // 461 ✓
 
+pub mod island_perimeter; // 463
+
 pub mod ones_and_zeroes; // 474
 
 pub mod sliding_window_median; // 480 ✓
