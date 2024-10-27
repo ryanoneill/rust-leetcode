@@ -6,30 +6,33 @@
 struct Solution;
 
 impl Solution {
-    fn has_lower_temp(temperatures: &Vec<i32>, stack: &Vec<usize>, temp: i32) -> bool {
-        if stack.is_empty() {
-            false
-        } else {
-            let last_index = stack.iter().last().unwrap();
-            let last_temp = temperatures[*last_index];
-            last_temp < temp
-        }
-    }
 
     pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {
-        let mut stack = vec![];
-        let mut result: Vec<i32> = vec![0; temperatures.len()];
+        let n = temperatures.len();
+        let mut stack: Vec<usize> = Vec::new();
+        let mut result = vec![0; n];
 
-        for (i, temp) in temperatures.iter().enumerate() {
-            while Self::has_lower_temp(&temperatures, &stack, *temp) {
-                let j: usize = stack.pop().unwrap();
-                result[j] = i as i32 - j as i32;
+        for i in 0..n {
+            let current = temperatures[i];
+
+            while !stack.is_empty() {
+                let n = stack.len();
+                let index = stack[n-1];
+                let previous = temperatures[index];
+                if current > previous {
+                    result[index] = (i - index) as i32;
+                    stack.pop();
+                } else {
+                    break;
+                }
             }
+
             stack.push(i);
         }
 
         result
     }
+
 }
 
 #[cfg(test)]
