@@ -355,6 +355,7 @@ pub mod valid_perfect_square; // 367 ✓
 
 pub mod sum_of_two_integers; // 371 ✓
 
+pub mod find_k_pairs_with_smallest_sums; // 373
 pub mod guess_number_higher_or_lower; // 374
 
 pub mod combination_sum_iv; // 377 ✓
