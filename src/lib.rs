@@ -103,6 +103,7 @@ pub mod merge_intervals; // 56 ✓
 pub mod insert_interval; // 57 ✓
 pub mod length_of_last_word; // 58
 
+pub mod rotate_list; // 61 ✓
 pub mod unique_paths; // 62 ✓
 pub mod unique_paths_ii; // 63
 pub mod minimum_path_sum; // 64 ✓
