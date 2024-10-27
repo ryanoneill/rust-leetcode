@@ -117,7 +117,7 @@
 - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) - *Unavailable in Rust*
 - [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) - [Solution](src/max_area_of_island.rs)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
-- [ ] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+- [x] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) - [Solution](src/surrounded_regions.rs)
 - [x] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) - [Solution](src/rotting_oranges.rs)
 - [x] [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) - [Solution](src/walls_and_gates.rs)
 - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/course_schedule.rs)
