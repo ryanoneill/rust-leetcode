@@ -167,6 +167,7 @@ pub mod valid_palindrome; // 125
 pub mod word_ladder; // 127 ✓
 pub mod longest_consecutive_sequence; // 128 ✓
 
+pub mod surrounded_regions; // 130 ✓
 pub mod palindrome_partitioning; // 131 ✓
 pub mod palindrome_partitioning_ii; // 132 ✓
 
