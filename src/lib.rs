@@ -830,6 +830,8 @@ pub mod total_cost_to_hire_k_workers; // 2462 ✓
 
 pub mod longest_square_streak_in_an_array; // 2501 ✓
 
+pub mod minimum_common_value; // 2540 ✓
+
 pub mod maximum_subsequence_score; // 2542 ✓
 
 pub mod kth_largest_sum_in_a_binary_tree; // 2583 ✓
