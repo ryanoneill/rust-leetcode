@@ -690,6 +690,8 @@ pub mod time_needed_to_inform_all_employees; // 1376 ✓
 
 pub mod design_underground_system; // 1396
 
+pub mod longest_happy_string; // 1405 ✓
+
 pub mod perform_string_shifts; // 1427 ✓
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
