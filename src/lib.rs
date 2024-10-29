@@ -589,6 +589,7 @@ pub mod minimum_cost_for_tickets; // 983 ✓
 
 pub mod interval_list_intersections; // 986 ✓
 
+pub mod cousins_in_binary_tree; // 993
 pub mod rotting_oranges; // 994
 
 pub mod next_greater_node_in_linked_list; // 1019 ✓
