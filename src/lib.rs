@@ -697,6 +697,8 @@ pub mod perform_string_shifts; // 1427 ✓
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
 
+pub mod destination_city; // 1436 ✓
+
 pub mod longest_continuous_subarray_with_absolute_diff; // 1438 ✓
 
 pub mod count_good_nodes_in_binary_tree; // 1448 ✓
