@@ -761,6 +761,8 @@ pub mod maximum_units_on_a_truck; // 1710 ✓
 
 pub mod find_the_highest_altitude; // 1732 ✓
 
+pub mod sum_of_unique_elements; // 1748 ✓
+
 pub mod longest_nice_substring; // 1763 ✓
 
 pub mod merge_strings_alternately; // 1768 ✓
