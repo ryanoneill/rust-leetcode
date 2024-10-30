@@ -689,6 +689,8 @@ pub mod longest_zigzag_path_in_a_binary_tree; // 1372 ✓
 
 pub mod time_needed_to_inform_all_employees; // 1376 ✓
 
+pub mod find_lucky_integer_in_an_array; // 1394 ✓
+
 pub mod design_underground_system; // 1396
 
 pub mod longest_happy_string; // 1405 ✓
