@@ -648,6 +648,7 @@ pub mod minimum_absolute_difference; // 1200 ✓
 pub mod smallest_string_with_swaps; // 1202
 
 pub mod unique_number_of_occurrences; // 1207 ✓
+pub mod get_equal_substring_within_budget; // 1208 ✓
 
 pub mod missing_number_in_arithmetic_progression; // 1228 ✓
 
