@@ -727,6 +727,8 @@ pub mod can_make_arithmetic_progression_from_sequence; // 1502
 
 pub mod minimum_difference_in_three_moves; // 1509 ✓
 
+pub mod number_of_good_pairs; // 1512 ✓
+
 pub mod path_with_maximum_probability; // 1514 ✓
 
 pub mod shuffle_string; // 1528 ✓
