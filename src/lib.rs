@@ -563,7 +563,7 @@ pub mod reverse_only_letters; // 917
 pub mod maximum_sum_circular_subarray; // 918 ✓
 
 pub mod unique_email_addresses; // 929 ✓
-
+pub mod binary_subarrays_with_sum; // 930 ✓
 pub mod minimum_falling_path_sum; // 931 ✓
 
 pub mod number_of_recent_calls; // 933 ✓
