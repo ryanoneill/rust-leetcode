@@ -759,6 +759,8 @@ pub mod max_number_of_k_sum_pairs; // 1679 ✓
 
 pub mod sum_of_absolute_differences_in_a_sorted_array; // 1685 ✓
 
+pub mod maximum_erasure_value; // 1695 ✓
+
 pub mod number_of_students_unable_to_eat_lunch; // 1700 ✓
 
 pub mod maximum_units_on_a_truck; // 1710 ✓
