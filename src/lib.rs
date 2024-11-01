@@ -530,6 +530,8 @@ pub mod jewels_and_stones; // 771
 
 pub mod minimum_distance_between_bst_nodes; // 783
 
+pub mod custom_sort_string; // 791 ✓
+
 pub mod all_paths_from_source_to_target; // 797
 
 pub mod linked_list_components; // 817
