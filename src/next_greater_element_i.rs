@@ -16,42 +16,45 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-    fn has_lesser(nums: &Vec<i32>, stack: &Vec<usize>, num: i32) -> bool {
-        if stack.is_empty() {
-            false
-        } else {
-            let last_index = stack.iter().last().unwrap();
-            let last_num = nums[*last_index];
-            last_num < num
-        }
-    }
 
     pub fn next_greater_element(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
-        let mut result = Vec::with_capacity(nums1.len());
-        let mut stack = vec![];
-        let mut greater = HashMap::new();
+        let mut stack = Vec::new();
+        let mut map: HashMap<i32, i32> = HashMap::new();
 
-        for (i, num2) in nums2.iter().enumerate() {
-            while Self::has_lesser(&nums2, &stack, *num2) {
-                let j: usize = stack.pop().unwrap();
-                greater.insert(nums2[j], num2);
+        let n = nums2.len();
+        for i in 0..n {
+            let num2 = nums2[i];
+
+            loop {
+                if stack.is_empty() {
+                    break;
+                } else {
+                    let s = stack.len();
+                    let peek = stack[s-1];
+                    if num2 > peek {
+                        map.insert(peek, num2);
+                        stack.pop();
+                    } else {
+                        break;
+                    }
+                }
             }
-            stack.push(i);
+            stack.push(num2);
         }
 
-        for num1 in nums1.iter() {
-            match greater.get(num1) {
-                Some(&g) => {
-                    result.push(*g);
-                }
-                None => {
-                    result.push(-1);
-                }
+        let m = nums1.len();
+        let mut result: Vec<i32> = vec![-1; m];
+
+        for i in 0..m {
+            let num1 = nums1[i];
+            if map.contains_key(&num1) {
+                result[i] = map[&num1];
             }
         }
 
         result
     }
+
 }
 
 #[cfg(test)]
