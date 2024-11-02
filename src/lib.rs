@@ -808,6 +808,8 @@ pub mod final_value_of_variable_after_performing_operations; // 2011
 
 pub mod sort_linked_list_already_sorted_using_absolute_values; // 2046 ✓
 
+pub mod reverse_nodes_in_even_length_groups; // 2074 ✓
+
 pub mod k_radius_subarray_averages; // 2090
 
 pub mod delete_the_middle_node_of_a_linked_list; // 2095 ✓
