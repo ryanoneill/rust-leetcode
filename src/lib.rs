@@ -800,6 +800,8 @@ pub mod nearest_exit_from_entrance_in_maze; // 1926
 
 pub mod concatenation_of_array; // 1929 ✓
 
+pub mod number_of_visible_people_in_a_queue; // 1944 ✓
+
 pub mod remove_stones_to_minimize_the_total; // 1962
 
 pub mod array_with_elements_not_equal_to_average_of_neighbors; // 1968
