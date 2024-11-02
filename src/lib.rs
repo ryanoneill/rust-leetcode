@@ -608,6 +608,8 @@ pub mod height_checker; // 1051
 pub mod shortest_way_to_form_string; // 1055 ✓
 pub mod confusing_number; // 1056 ✓
 
+pub mod number_of_valid_subarrays; // 1063 ✓
+
 pub mod greatest_common_divisor_of_strings; // 1071 ✓
 
 pub mod shortest_path_in_binary_matrix; // 1091
