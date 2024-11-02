@@ -320,6 +320,7 @@ pub mod range_sum_query_2d_immutable; // 304
 pub mod best_time_to_buy_and_sell_stock_with_cooldown; // 309 ✓
 pub mod minimum_height_trees; // 310
 
+pub mod remove_duplicate_letters; // 316 ✓
 pub mod shortest_distance_from_all_buildings; // 317 ✓
 
 pub mod bulb_switcher; // 319
