@@ -665,6 +665,8 @@ pub mod search_suggestions_system; // 1268 ✓
 pub mod group_the_people_given_the_group_size_they_belong_to; // 1282 ✓
 pub mod find_the_smallest_divisor_given_a_threshold; // 1283
 
+pub mod convert_binary_number_in_a_linked_list_to_integer; // 1290 ✓
+
 pub mod shortest_path_in_a_grid_with_obstacle_elimination; // 1293
 
 pub mod replace_elements_with_greater_element_on_right_side; // 1299 ✓
