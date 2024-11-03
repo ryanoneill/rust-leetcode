@@ -277,6 +277,8 @@ pub mod strobogrammatic_number; // 246
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
 
+pub mod verify_preorder_sequence_in_bst; // 255 ✓
+
 pub mod binary_tree_paths; // 257
 pub mod add_digits; // 258
 
