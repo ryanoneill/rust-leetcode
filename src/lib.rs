@@ -879,3 +879,5 @@ pub mod minimum_number_of_changes_to_make_binary_string_beautiful; // 2914 ✓
 
 pub mod longest_subarray_with_at_most_k_frequency; // 2958 ✓
 pub mod count_elements_with_maximum_frequency; // 3005 ✓
+
+pub mod string_compression_iii; // 3163 ✓
