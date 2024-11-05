@@ -859,6 +859,8 @@ pub mod robot_to_print_the_lexicographically_smallest_string; // 2434 ✓
 
 pub mod total_cost_to_hire_k_workers; // 2462 ✓
 
+pub mod circular_sentence; // 2490 ✓
+
 pub mod longest_square_streak_in_an_array; // 2501 ✓
 
 pub mod minimum_common_value; // 2540 ✓
