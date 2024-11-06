@@ -416,6 +416,8 @@ pub mod delete_node_in_a_bst; // 450 ✓
 pub mod sort_characters_by_frequency; // 451 ✓
 pub mod minimum_number_of_arrows_to_burst_balloons; // 452 ✓
 
+pub mod assign_cookies; // 455 ✓
+
 pub mod repeated_substring_pattern; // 459 ✓
 
 pub mod hamming_distance; // 461 ✓
