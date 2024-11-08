@@ -426,6 +426,8 @@ pub mod island_perimeter; // 463
 
 pub mod ones_and_zeroes; // 474
 
+pub mod number_complement; // 476 ✓
+
 pub mod sliding_window_median; // 480 ✓
 
 pub mod max_consecutive_ones; // 485 ✓
