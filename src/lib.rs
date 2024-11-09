@@ -442,6 +442,8 @@ pub mod find_mode_in_binary_search_tree; // 501 ✓
 
 pub mod next_greater_element_ii; // 503 ✓
 
+pub mod relative_ranks; // 506 ✓
+
 pub mod fibonacci_number; // 509
 
 pub mod find_largest_value_in_each_tree_row; // 515
