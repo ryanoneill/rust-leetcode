@@ -896,3 +896,5 @@ pub mod find_if_array_can_be_sorted; // 3011 ✓
 pub mod minimum_array_end; // 3133 ✓
 
 pub mod string_compression_iii; // 3163 ✓
+
+pub mod bitwise_or_adjacent_elements; // 3173 ✓
