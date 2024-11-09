@@ -438,6 +438,8 @@ pub mod next_greater_element_i; // 496
 
 pub mod diagonal_traverse; // 498 ✓
 
+pub mod find_mode_in_binary_search_tree; // 501 ✓
+
 pub mod next_greater_element_ii; // 503 ✓
 
 pub mod fibonacci_number; // 509
