@@ -885,6 +885,8 @@ pub mod neither_minimum_nor_maximum; // 2733
 
 pub mod total_distance_traveled; // 2739 ✓
 
+pub mod find_the_maximum_achievable_number; // 2769 ✓
+
 pub mod minimum_number_of_changes_to_make_binary_string_beautiful; // 2914 ✓
 
 pub mod longest_subarray_with_at_most_k_frequency; // 2958 ✓
