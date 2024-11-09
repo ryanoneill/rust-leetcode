@@ -893,6 +893,8 @@ pub mod count_elements_with_maximum_frequency; // 3005 ✓
 
 pub mod find_if_array_can_be_sorted; // 3011 ✓
 
+pub mod score_of_a_string; // 3110 ✓
+
 pub mod minimum_array_end; // 3133 ✓
 
 pub mod string_compression_iii; // 3163 ✓
