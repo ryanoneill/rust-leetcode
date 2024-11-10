@@ -541,6 +541,8 @@ pub mod jewels_and_stones; // 771
 
 pub mod minimum_distance_between_bst_nodes; // 783
 
+pub mod cheapest_flight_within_k_stops; // 787 ✓
+
 pub mod custom_sort_string; // 791 ✓
 
 pub mod rotate_string; // 796 ✓
