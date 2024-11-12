@@ -344,7 +344,7 @@ pub mod reconstruct_itinerary; // 332
 pub mod increasing_triplet_subsequence; // 334 ✓
 
 pub mod counting_bits; // 338 ✓
-
+pub mod nested_list_weight_sum; // 339 ✓
 pub mod longest_substring_with_at_most_k_distinct_characters; // 340 ✓
 pub mod flatten_nested_list_iterator; // 341 ✓
 pub mod power_of_four; // 342 ✓
