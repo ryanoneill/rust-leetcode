@@ -434,6 +434,8 @@ pub mod number_complement; // 476 ✓
 
 pub mod sliding_window_median; // 480 ✓
 
+pub mod license_key_formatting; // 482 ✓
+
 pub mod max_consecutive_ones; // 485 ✓
 
 pub mod target_sum; // 494 ✓
