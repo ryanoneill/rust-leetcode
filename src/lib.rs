@@ -881,6 +881,8 @@ pub mod minimum_common_value; // 2540 ✓
 
 pub mod maximum_subsequence_score; // 2542 ✓
 
+pub mod count_the_number_of_fair_pairs; // 2563 ✓
+
 pub mod kth_largest_sum_in_a_binary_tree; // 2583 ✓
 
 pub mod remove_trailing_zeros_from_a_string; // 2710 ✓
