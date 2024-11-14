@@ -428,6 +428,8 @@ pub mod hamming_distance; // 461 ✓
 
 pub mod island_perimeter; // 463
 
+pub mod validate_ip_address; // 468 ✓
+
 pub mod ones_and_zeroes; // 474
 
 pub mod number_complement; // 476 ✓
