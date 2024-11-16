@@ -499,7 +499,7 @@ pub mod average_of_levels_in_binary_tree; // 637
 pub mod maximum_average_subarray_i; // 643
 
 pub mod palindromic_substrings; // 647 ✓
-
+pub mod replace_words; // 648 ✓
 pub mod dota2_senate; // 649 ✓
 
 pub mod find_k_closest_elements; // 658
