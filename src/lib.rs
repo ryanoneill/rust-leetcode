@@ -891,6 +891,8 @@ pub mod count_the_number_of_fair_pairs; // 2563 ✓
 
 pub mod kth_largest_sum_in_a_binary_tree; // 2583 ✓
 
+pub mod find_score_of_an_array_after_marking_all_elements; // 2593 ✓
+
 pub mod remove_trailing_zeros_from_a_string; // 2710 ✓
 pub mod difference_of_number_of_distinct_values_on_diagonals; // 2711 ✓
 pub mod minimum_cost_to_make_all_characters_equal; // 2712
