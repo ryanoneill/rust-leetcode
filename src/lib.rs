@@ -27,6 +27,7 @@ macro_rules! assert_tree {
     };
 }
 
+pub mod interval;
 pub mod kth_largest;
 pub mod lowercase_letter_counter;
 pub mod list_node;
@@ -542,7 +543,7 @@ pub mod min_cost_climbing_stairs; // 746
 pub mod open_the_lock; // 752 ✓
 
 pub mod bold_words_in_string; // 758 ✓
-
+pub mod employee_free_time; // 759 ✓
 pub mod find_anagram_mappings; // 760 ✓
 
 pub mod jewels_and_stones; // 771
