@@ -565,6 +565,8 @@ pub mod keys_and_rooms; // 841 ✓
 
 pub mod backspace_string_compare; // 844 ✓
 
+pub mod maximum_distance_to_closest_person; // 849 ✓
+
 pub mod peak_index_in_a_mountain_array; // 852 ✓
 pub mod car_fleet; // 853 ✓
 
