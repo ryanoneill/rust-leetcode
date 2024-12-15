@@ -242,7 +242,7 @@ pub mod implement_trie; // 208 ✓
 pub mod minimum_size_subarray_sum; // 209 ✓
 pub mod course_schedule_ii; // 210 ✓
 pub mod design_add_and_search_words_data_structure; // 211 ✓
-pub mod word_search_ii; // 212
+pub mod word_search_ii; // 212 ✓
 pub mod house_robber_ii; // 213 ✓
 
 pub mod kth_largest_element_in_an_array; // 215 ✓

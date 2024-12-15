@@ -83,11 +83,11 @@
 - [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) - [Solution](src/binary_tree_maximum_path_sum.rs)
 - [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/serialize_and_deserialize_binary_tree.rs)
 
-### Tries
+### Tries ✓
 
 - [x] [Implement Trie - Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/) - [Solution](src/implement_trie.rs)
 - [x] [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) - [Solution](src/design_add_and_search_words_data_structure.rs)
-- [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
+- [x] [Word Search II](https://leetcode.com/problems/word-search-ii/) - [Solution](src/word_search_ii.rs)
 
 ### Heap / Priority Queue
 
@@ -304,7 +304,8 @@
 - [x] [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) - [Solution](src/lowest_common_ancestor_of_a_binary_search_tree.rs)
 - [x] [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) - [Solution](src/implement_trie.rs)
 - [ ] [Design Add and Search Word Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
-- [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
+- [x] [Word Search II](https://leetcode.com/problems/word-search-ii/) - [Solution](src/word_search_ii.rs)
+
 
 ### Heap ✓
 
