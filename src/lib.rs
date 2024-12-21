@@ -340,7 +340,7 @@ pub mod power_of_three; // 326
 pub mod odd_even_linked_list; // 328 ✓
 pub mod longest_increasing_path_in_a_matrix; // 329 ✓
 
-pub mod reconstruct_itinerary; // 332
+pub mod reconstruct_itinerary; // 332 ✓
 
 pub mod increasing_triplet_subsequence; // 334 ✓
 

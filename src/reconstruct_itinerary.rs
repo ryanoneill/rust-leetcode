@@ -1,5 +1,6 @@
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
 use std::collections::HashMap;
-use std::collections::HashSet;
 
 /// You are given a list of airline `tickets` where `tickets[i] = [fromi, toi]`
 /// represent the departure and arrival airports of one flight. Reconstruct
@@ -19,65 +20,35 @@ struct Solution;
 
 impl Solution {
 
-    fn to_adj_map(tickets: Vec<Vec<String>>) -> HashMap<String, HashSet<String>> {
-        let mut results = HashMap::new();
+    fn dfs(
+        result: &mut Vec<String>,
+        adj_map: &mut HashMap<String, BinaryHeap<Reverse<String>>>,
+        value: &str
+    ) {
+        while let Some(Reverse(next)) = adj_map.get_mut(value).and_then(|dests| dests.pop()) {
+            Self::dfs(result, adj_map, &next);
+        }
+        result.push(value.to_string());
+    }
+
+    pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
+        let mut result = vec![];
+        let mut adj_map: HashMap<String, BinaryHeap<Reverse<String>>> = HashMap::new();
 
         for ticket in tickets {
-            results
-                .entry(ticket[0].clone())
-                .or_insert(HashSet::new())
-                .insert(ticket[1].clone());
+            let source = ticket[0].clone();
+            let destination = ticket[1].clone();
+
+            adj_map
+                .entry(source)
+                .or_insert(BinaryHeap::new())
+                .push(Reverse(destination));
         }
 
-        results
-    }
+        Self::dfs(&mut result, &mut adj_map, "JFK");
 
-    fn remove(map: &mut HashMap<String, HashSet<String>>, key: &String, value: &String) {
-        if map.contains_key(key) {
-            let set = map.get_mut(key).unwrap();
-            if set.len() == 1 {
-                map.remove(key);
-            } else {
-                set.remove(value);
-            }
-        }
-    }
-
-    fn worker(
-        results: &mut Vec<String>,
-        map: HashMap<String, HashSet<String>>,
-        path: Vec<String>,
-        current: String
-    ) {
-        if map.len() == 0 {
-            if results.len() == 0 {
-                *results = path.clone();
-            } else if &path < &results{
-                *results = path.clone();
-            }
-        } else if map.contains_key(&current) {
-            for next in &map[&current] {
-                let mut next_path = path.clone();
-                next_path.push(next.clone());
-                let mut map = map.clone();
-                Self::remove(&mut map, &current, next);
-                Self::worker(results, map, next_path, next.clone());
-            }
-        }
-    }
-
-    // TODO: Improve
-    // Simple solution that I know if submitted will fail for time limit exceeded.
-    pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
-        let mut results = Vec::new();
-
-        let map = Self::to_adj_map(tickets);
-        let initial = vec!["JFK".to_string()];
-        let current = "JFK".to_string();
-
-        Self::worker(&mut results, map, initial, current);
-
-        results
+        result.reverse();
+        result
     }
 
 }
@@ -86,7 +57,6 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    #[ignore]
     #[test]
     fn example_1() {
         let tickets = vec![
@@ -99,7 +69,6 @@ mod tests {
         assert_eq!(result, vec!["JFK", "MUC", "LHR", "SFO", "SJC"]);
     }
 
-    #[ignore]
     #[test]
     fn example_2() {
         let tickets = vec![
@@ -111,6 +80,24 @@ mod tests {
         ];
         let result = Solution::find_itinerary(tickets);
         assert_eq!(result, vec!["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]);
+    }
+
+    #[test]
+    fn example_3() {
+        let tickets = vec![
+            vec![str!("EZE"), str!("AXA")],
+            vec![str!("TIA"), str!("ANU")],
+            vec![str!("ANU"), str!("JFK")],
+            vec![str!("JFK"), str!("ANU")],
+            vec![str!("ANU"), str!("EZE")],
+            vec![str!("TIA"), str!("ANU")],
+            vec![str!("AXA"), str!("TIA")],
+            vec![str!("TIA"), str!("JFK")],
+            vec![str!("ANU"), str!("TIA")],
+            vec![str!("JFK"), str!("TIA")],
+        ];
+        let result = Solution::find_itinerary(tickets);
+        assert_eq!(result, vec!["JFK","ANU","EZE","AXA","TIA","ANU","JFK","TIA","ANU","TIA","JFK"]);
     }
 
 }
