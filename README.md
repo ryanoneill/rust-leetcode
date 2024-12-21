@@ -129,7 +129,7 @@
 
 ### Advanced Graphs
 
-- [ ] [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+- [x] [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) - [Solution](src/reconstruct_itinerary.rs)
 - [x] [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) - [Solution](src/min_cost_to_connect_all_points.rs)
 - [x] [Network Delay Time](https://leetcode.com/problems/network-delay-time/) - [Solution](src/network_delay_time.rs)
 - [ ] [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
