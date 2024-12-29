@@ -782,6 +782,8 @@ pub mod alert_using_same_key_card; // 1604 ✓
 
 pub mod path_with_minimum_effort; // 1631 ✓
 
+pub mod number_of_ways_to_form_a_target_string_given_a_dictionary; // 1639 ✓
+
 pub mod furthest_building_you_can_reach; // 1642
 
 pub mod determine_if_two_strings_are_close; // 1657 ✓
