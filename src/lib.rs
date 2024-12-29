@@ -277,6 +277,7 @@ pub mod shortest_word_distance_iii; // 245 ✓
 
 pub mod strobogrammatic_number; // 246
 
+pub mod flatten_2d_vector; // 251 ✓
 pub mod meeting_rooms; // 252
 pub mod meeting_rooms_ii; // 253
 
