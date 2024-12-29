@@ -1,3 +1,7 @@
+use std::iter::Flatten;
+use std::iter::Peekable;
+use std::vec::IntoIter;
+
 /// Design an iterator to flatten a 2D vector. It should support the
 /// `next` and `hasNext` operations.
 ///
@@ -11,52 +15,23 @@
 /// * `hasNext()` returns `true` if there are still some elements in the vector, and `false`
 ///   otherwise.
 struct Vector2D {
-    items: Vec<Vec<i32>>,
-
-    i: usize,
-    j: usize,
+    iter: Peekable<Flatten<IntoIter<Vec<i32>>>>,
 } 
 
 impl Vector2D {
 
     fn new(vec: Vec<Vec<i32>>) -> Self {
-        let mut result = Self {
-            items: vec,
-            i: 0,
-            j: 0,
-        };
-        result.find();
-        result
-    }
-
-    fn find(&mut self) {
-        let m = self.items.len();
-        loop {
-            if self.i < m {
-                let n = self.items[self.i].len();
-                if self.j < n {
-                    break;
-                } else {
-                    self.i += 1;
-                    self.j = 0;
-                }
-            } else {
-                break;
-            }
+        Self { 
+            iter: vec.into_iter().flatten().peekable(),
         }
     }
 
     fn next(&mut self) -> i32 {
-        let result = self.items[self.i][self.j];
-        self.j += 1;
-        self.find();
-
-        result
+        self.iter.next().unwrap()
     }
 
-    fn has_next(&self) -> bool {
-        (self.i < self.items.len()) &&
-        (self.j < self.items[self.i].len())
+    fn has_next(&mut self) -> bool {
+        self.iter.peek().is_some()
     }
 
 }
