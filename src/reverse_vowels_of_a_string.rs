@@ -1,5 +1,3 @@
-use std::collections::VecDeque;
-
 /// Given a string `s`, reverse only all the vowels in the string and return
 /// it. 
 ///
@@ -9,32 +7,35 @@ struct Solution;
 
 impl Solution {
 
-    pub fn reverse_vowels(s: String) -> String {
-        let mut stack = Vec::new();
-        let mut queue = VecDeque::new();
+    fn is_vowel(c: char) -> bool {
+        match c {
+            'a' | 'e' | 'i' | 'o' | 'u' | 'A' | 'E' | 'I' | 'O' | 'U' => true,
+            _ => false,
+        }
+    }
 
+    pub fn reverse_vowels(s: String) -> String {
         let n = s.len();
         let mut letters: Vec<char> = s.chars().collect();
 
-        for i in 0..n {
-            let letter = letters[i];
-            match letter {
-                'a' | 'e' | 'i' | 'o' | 'u' | 'A' | 'E' | 'I' | 'O' | 'U' => {
-                    queue.push_back(i);
-                    stack.push(letter);
-                }
-                _ => { }
+        let mut left = 0;
+        let mut right = n-1;
+        
+        while left < right {
+            while left < n && !Self::is_vowel(letters[left]) {
+                left += 1;
+            }
+            while right > 0 && !Self::is_vowel(letters[right]) {
+                right -= 1;
+            }
+            if left < right {
+                letters.swap(left, right);
+                left += 1;
+                right -= 1;
             }
         }
 
-        let q = queue.len();
-        for _ in 0..q {
-            let index = queue.pop_front().unwrap();
-            let letter = stack.pop().unwrap();
-            letters[index] = letter;
-        }
-
-        letters.iter().collect()
+        letters.into_iter().collect()
     }
 
 }
