@@ -729,6 +729,8 @@ pub mod design_underground_system; // 1396
 
 pub mod longest_happy_string; // 1405 ✓
 
+pub mod maximum_score_after_splitting_a_string; // 1422 ✓
+
 pub mod perform_string_shifts; // 1427 ✓
 
 pub mod kids_with_the_greatest_number_of_candies; // 1431 ✓
